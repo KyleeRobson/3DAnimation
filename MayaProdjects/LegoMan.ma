@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LegoMan.ma
-//Last modified: Sun, Aug 24, 2025 08:52:49 PM
+//Last modified: Sun, Aug 24, 2025 08:56:16 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -11,18 +11,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "98E65B51-4490-2087-1563-2C8FBD6E58E4";
+fileInfo "UUID" "75D46A07-49F5-F1EA-0D88-18A5E157E39A";
 createNode transform -s -n "persp";
 	rename -uid "45D75CFD-40A9-042F-0C74-DB999F717374";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.84586517900584923 2.6565987676862823 8.1058762266920326 ;
-	setAttr ".r" -type "double3" -14.400000000000233 -4.8000000000000416 9.9742143531857283e-17 ;
+	setAttr ".t" -type "double3" 0.12747187656909664 1.8281180030017083 4.6941309482368974 ;
+	setAttr ".r" -type "double3" -15.000000000000327 3.6000000000000121 -9.9588849641593785e-17 ;
 	setAttr ".rpt" -type "double3" 2.1777314778322155e-19 5.1749886661823974e-19 6.5958879275138833e-20 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "946EC70B-4602-E54A-26F7-7FB26DC254EE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 8.3794742490565195;
+	setAttr ".coi" 4.8505307649088509;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
