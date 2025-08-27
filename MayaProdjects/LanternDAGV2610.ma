@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LanternDAGV2610.ma
-//Last modified: Mon, Aug 25, 2025 10:34:00 PM
+//Last modified: Tue, Aug 26, 2025 11:18:10 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,18 +11,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "E3C38B5D-49D2-E441-A5EE-829C475DF46E";
+fileInfo "UUID" "700146F3-451E-F1EA-413B-C0B124F55582";
 createNode transform -s -n "persp";
 	rename -uid "60B048E5-4637-E706-BD52-AABF351BC77B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.3802980464123866 3.3992979957896319 6.8898918504659266 ;
+	setAttr ".t" -type "double3" 12.075978569819904 3.9607993958797132 10.035162510505783 ;
 	setAttr ".r" -type "double3" -6.6000000000000458 49.600000000001323 -6.1341942213285725e-16 ;
 	setAttr ".rpt" -type "double3" 1.6823418801247963e-15 -6.6893599736212408e-16 -1.4520910021329041e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E6C45FDD-46D6-6622-3737-17B45F2E29F4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 15.944238975464849;
+	setAttr ".coi" 20.829529742482137;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3399,20 +3399,20 @@ createNode mesh -n "Candle2smShape" -p "Candle2sm";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3A387EF0-4B0F-6642-D009-509A25D6BDD1";
+	rename -uid "B4F257E6-48C9-10F3-1D99-BEBEF483DF26";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EC397469-4B3F-6620-8634-0E9366809E07";
+	rename -uid "3E64542F-4538-E26F-8CCF-A9B6A7D91482";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "409D7925-4657-090F-6569-FA8A5F325B04";
+	rename -uid "DF8DDFC8-4E35-25C8-929D-59AB3F5B1B6D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7BDEB130-4BE2-CE8E-25D7-B1A39410EF55";
+	rename -uid "FA90B674-4CE1-7439-1548-CC96D042A13B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7E8CCE8D-48B3-229B-2D9B-848CB4180650";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9C87B7AC-4F51-94C6-4D07-02AE91506E5C";
+	rename -uid "F583EDE9-430D-2BD3-2422-7EA719B3E1F4";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B83FF5BE-4D61-9B99-1530-C7B2FAF0086C";
 	setAttr ".g" yes;
