@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: CartoonCharacter.ma
-//Last modified: Fri, Oct 24, 2025 10:02:50 PM
+//Last modified: Wed, Oct 29, 2025 09:27:22 AM
 //Codeset: 1252
 file -rdi 1 -ns "GenericMeshCartoon" -rfn "GenericMeshCartoonRN" -op "v=0;" 
 		-typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DEssentialsResources/Maya/scenes/HumanMesh/GenericMeshCartoon.ma";
@@ -8,38 +8,38 @@ file -r -ns "GenericMeshCartoon" -dr 1 -rfn "GenericMeshCartoonRN" -op "v=0;" -t
 		 "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DEssentialsResources/Maya/scenes/HumanMesh/GenericMeshCartoon.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.2.1";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
+		 "mtoa" "5.4.2.1";
 requires "Mayatomr" "2010.0m - 3.7.53.5 ";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4504FE24-425A-E355-AC38-248797E94DCA";
+fileInfo "UUID" "3C50AAFB-4D97-BD39-9F35-75BCEEAA055E";
 createNode transform -s -n "persp";
-	rename -uid "98990EF6-4CC9-DF1C-6167-02830FF3FA80";
+	rename -uid "D6D8F04C-44F5-EBCC-970E-2499B998D05E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.4755668778504436 4.2415067077229285 -14.9032992708448 ;
-	setAttr ".r" -type "double3" -5.7383527295444337 182.60000000000457 0 ;
+	setAttr ".t" -type "double3" -4.5655066875232553 2.7121409810175749 17.058559152894073 ;
+	setAttr ".r" -type "double3" -1.5383527294099395 3.3999999999961177 -4.3560820575628949e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "5FB6911E-4982-369B-AE04-CDB85ABF4D1B";
+	rename -uid "857BCD92-45F8-F9B9-B641-67874C54CF5F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.76500622779055;
+	setAttr ".coi" 16.442108890605518;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -6.0227611064910889 3.4160019364207983 0.27887895703315735 ;
+	setAttr ".tp" -type "double3" -5.8422093391418457 1.9281532764434814 0.44914501905441284 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "16669FD7-4F39-3C7F-B52E-35A7D2028FEA";
+	rename -uid "E1A5096C-48D6-AEEC-E0BE-6DB857B15FCA";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "7E955417-4B91-E201-C3FA-2E937544485A";
+	rename -uid "11E64243-4CF6-7605-324E-04A654DA272B";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -49,13 +49,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".man" -type "string" "top_mask";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "2FC484F8-4422-DAEF-90C3-95AADADB6E3D";
+	rename -uid "3DAD6306-43D3-360B-7FB8-6EB19D249B34";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "CDABAE4E-4877-1C3E-57AD-0F83232970AD";
+	rename -uid "575D841A-488B-2F94-AC98-6CB0697DECAE";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -65,14 +64,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".man" -type "string" "front_mask";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "0AB7CB9D-4918-0D9F-D18F-D4B9FDF0952A";
+	rename -uid "B1E4A963-4C5C-FB16-73E4-2DB2FAD3AB9A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1000.1 0 0 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "FF317A9E-4262-D863-3B7E-0E95CEB4A81E";
+	rename -uid "0E74D6FC-48DF-EAC5-8C75-499217BAD181";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -82,11 +80,10 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "GenericMeshCartoonRNfosterParent1";
-	rename -uid "FB112637-4D46-3352-BA4D-D6A36389DFB8";
+	rename -uid "61C1E5A4-4BD3-E079-3A80-FCAD7BB299BF";
 createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoonRNfosterParent1";
-	rename -uid "BB4147E8-4A2E-5820-23AE-5FA7FDC84670";
+	rename -uid "86744EFA-40CF-68C5-CEEF-93ABEEDF242F";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr -s 2 ".iog[0].og";
@@ -94,7 +91,7 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "f[742:2489]" "f[2514:2537]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.54875409603118896 0.53149068355560303 ;
+	setAttr ".pv" -type "double2" 0.54875409603118896 0.33578047156333923 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 2970 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.543468 0.9104768 0.54555869
@@ -839,810 +836,172 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 2181 ".pt";
-	setAttr ".pt[0]" -type "float3" -0.071090087 -0.045465805 -0.00075776107 ;
-	setAttr ".pt[1]" -type "float3" -0.072119951 -0.055800602 0.0034338904 ;
-	setAttr ".pt[2]" -type "float3" -0.071619399 -0.082870349 -0.011654891 ;
-	setAttr ".pt[3]" -type "float3" -0.079590045 -0.08046189 -0.0019768488 ;
-	setAttr ".pt[4]" -type "float3" -0.07549496 -0.058640525 -0.0055122948 ;
-	setAttr ".pt[5]" -type "float3" -0.07116881 -0.063899219 -0.014887952 ;
-	setAttr ".pt[6]" -type "float3" -0.078306988 -0.10220885 -0.0034708001 ;
-	setAttr ".pt[7]" -type "float3" -0.08610402 -0.10802919 0.0037815135 ;
-	setAttr ".pt[8]" -type "float3" -0.087013595 -0.10373599 0.0014818006 ;
-	setAttr ".pt[9]" -type "float3" -0.075487159 -0.09523882 -0.0079835458 ;
-	setAttr ".pt[10]" -type "float3" -0.0710283 -0.039214693 -0.0057558995 ;
-	setAttr ".pt[11]" -type "float3" -0.09198232 -0.083188221 0.015284636 ;
-	setAttr ".pt[12]" -type "float3" -0.092077628 -0.0832697 0.019468574 ;
-	setAttr ".pt[13]" -type "float3" -0.08487235 -0.057742938 0.010951199 ;
-	setAttr ".pt[14]" -type "float3" -0.085032441 -0.061252475 0.0075236559 ;
-	setAttr ".pt[15]" -type "float3" -0.086160526 -0.079543084 0.0090104314 ;
-	setAttr ".pt[16]" -type "float3" -0.08319366 -0.065683737 0.0064561698 ;
-	setAttr ".pt[17]" -type "float3" -0.082986183 -0.094911754 0.00046096547 ;
-	setAttr ".pt[18]" -type "float3" -0.086269602 -0.090111211 0.0075530484 ;
-	setAttr ".pt[19]" -type "float3" -0.075564384 -0.09038879 -0.00634033 ;
-	setAttr ".pt[20]" -type "float3" -0.092305183 -0.098856561 0.016004674 ;
-	setAttr ".pt[21]" -type "float3" -0.091739215 -0.09551011 0.012012055 ;
-	setAttr ".pt[22]" -type "float3" -0.083475851 -0.10391637 0.0044944137 ;
-	setAttr ".pt[23]" -type "float3" -0.088217676 -0.096544743 0.014765217 ;
-	setAttr ".pt[24]" -type "float3" -0.078008257 -0.042958133 0.00091746886 ;
-	setAttr ".pt[25]" -type "float3" -0.076094382 -0.045934863 0.001081551 ;
-	setAttr ".pt[26]" -type "float3" -0.073395342 -0.042676859 -0.0070580738 ;
-	setAttr ".pt[27]" -type "float3" -0.079191662 -0.046575747 -0.0014973497 ;
-	setAttr ".pt[28]" -type "float3" -0.088373169 -0.08379364 0.017872451 ;
-	setAttr ".pt[29]" -type "float3" -0.081870966 -0.060941115 0.0097545907 ;
-	setAttr ".pt[30]" -type "float3" -0.074808903 -0.081089199 0.0021400251 ;
-	setAttr ".pt[31]" -type "float3" -0.074907325 -0.051627047 -0.0043213521 ;
-	setAttr ".pt[32]" -type "float3" -0.07882122 -0.10179535 0.00067426107 ;
-	setAttr ".pt[33]" -type "float3" -0.065056525 -0.046226911 -0.012172874 ;
-	setAttr ".pt[34]" -type "float3" -0.069581397 -0.087898508 -0.017118601 ;
-	setAttr ".pt[35]" -type "float3" -0.065527663 -0.063342839 -0.0195565 ;
-	setAttr ".pt[36]" -type "float3" 0 -0.10158681 -0.10750495 ;
-	setAttr ".pt[37]" -type "float3" 0 -0.060527965 -0.12016297 ;
-	setAttr ".pt[38]" -type "float3" 0 0.0092271455 -0.095185474 ;
-	setAttr ".pt[39]" -type "float3" 0 0.018107638 -0.092896365 ;
-	setAttr ".pt[40]" -type "float3" 0 -0.16090196 -0.097312711 ;
-	setAttr ".pt[41]" -type "float3" 0 -0.047370635 -0.12754099 ;
-	setAttr ".pt[42]" -type "float3" 0 -0.041599803 -0.11351012 ;
-	setAttr ".pt[43]" -type "float3" 0 -0.027276905 -0.1126684 ;
-	setAttr ".pt[44]" -type "float3" 0 -0.022089003 -0.11131236 ;
-	setAttr ".pt[45]" -type "float3" 0 -0.039717637 -0.062996052 ;
-	setAttr ".pt[46]" -type "float3" 0 -0.028441044 -0.025733955 ;
-	setAttr ".pt[47]" -type "float3" 0 -0.014952736 -0.020965021 ;
-	setAttr ".pt[48]" -type "float3" 0 0.027360531 -0.086483091 ;
-	setAttr ".pt[49]" -type "float3" 0 -0.20934457 -0.044352747 ;
-	setAttr ".pt[50]" -type "float3" -0.0015246767 -0.013735386 0.10597627 ;
-	setAttr ".pt[51]" -type "float3" 0 -0.12566312 0.12754099 ;
-	setAttr ".pt[52]" -type "float3" 0 -0.16469479 0.11946306 ;
-	setAttr ".pt[53]" -type "float3" 0 -0.19352536 0.093764119 ;
-	setAttr ".pt[54]" -type "float3" 0 -0.20692006 0.070114881 ;
-	setAttr ".pt[55]" -type "float3" 0 -0.22225855 0.036699489 ;
-	setAttr ".pt[56]" -type "float3" 0 -0.18589179 -0.074001141 ;
-	setAttr ".pt[57]" -type "float3" 0 -0.056115896 -0.12305737 ;
-	setAttr ".pt[61]" -type "float3" 0 -0.0081131179 -0.10455884 ;
-	setAttr ".pt[62]" -type "float3" 0 -0.0018072417 -0.10325427 ;
-	setAttr ".pt[63]" -type "float3" 0 -0.13355094 -0.10634907 ;
-	setAttr ".pt[64]" -type "float3" 0 -0.10953345 -0.10813265 ;
-	setAttr ".pt[65]" -type "float3" 0 -0.073606804 -0.11176885 ;
-	setAttr ".pt[66]" -type "float3" 0 -0.019860907 -0.10724121 ;
-	setAttr ".pt[67]" -type "float3" 0 -0.036877163 -0.078765675 ;
-	setAttr ".pt[68]" -type "float3" 0 -0.0097884256 -0.048453931 ;
-	setAttr ".pt[69]" -type "float3" 0 -0.0090394486 -0.1009775 ;
-	setAttr ".pt[71]" -type "float3" 0 -0.043797471 -0.12551078 ;
-	setAttr ".pt[72]" -type "float3" 0 -0.03485132 -0.11197424 ;
-	setAttr ".pt[73]" -type "float3" 0 0.0019724527 -0.10035169 ;
-	setAttr ".pt[74]" -type "float3" 0 -0.040365256 -0.11215794 ;
-	setAttr ".pt[75]" -type "float3" 0 -0.084418595 -0.10659952 ;
-	setAttr ".pt[76]" -type "float3" 0 -0.087092951 -0.10477959 ;
-	setAttr ".pt[77]" -type "float3" 0 -0.090147361 -0.10495225 ;
-	setAttr ".pt[78]" -type "float3" 0 -0.093095481 -0.10532981 ;
-	setAttr ".pt[79]" -type "float3" 0 -0.096103862 -0.10584635 ;
-	setAttr ".pt[80]" -type "float3" 0 -0.079668581 -0.10869028 ;
-	setAttr ".pt[81]" -type "float3" 0 -0.041554786 -0.12073274 ;
-	setAttr ".pt[82]" -type "float3" 0 -0.041810803 -0.1159272 ;
-	setAttr ".pt[83]" -type "float3" 0 -0.029001461 -0.092829421 ;
-	setAttr ".pt[84]" -type "float3" 0 -0.022439418 -0.10434598 ;
-	setAttr ".pt[85]" -type "float3" 0 -0.067212224 -0.11574521 ;
-	setAttr ".pt[86]" -type "float3" -0.03088801 0.012989453 -0.032256629 ;
-	setAttr ".pt[87]" -type "float3" -0.038639352 0.0083796047 -0.03659039 ;
-	setAttr ".pt[88]" -type "float3" -0.06907928 -0.063824132 0.049226388 ;
-	setAttr ".pt[89]" -type "float3" -0.0026248549 -0.0073302705 0.089756511 ;
-	setAttr ".pt[90]" -type "float3" -0.076296061 -0.092554361 0.013264657 ;
-	setAttr ".pt[91]" -type "float3" -0.0069670016 -0.082525551 -0.093085207 ;
-	setAttr ".pt[92]" -type "float3" -0.027225707 -0.071479499 -0.091971144 ;
-	setAttr ".pt[93]" -type "float3" -0.029506939 -0.06752716 -0.093307078 ;
-	setAttr ".pt[94]" -type "float3" -0.0099061923 -0.074425042 -0.096870676 ;
-	setAttr ".pt[95]" -type "float3" -0.081174791 -0.12172605 -0.0041850787 ;
-	setAttr ".pt[96]" -type "float3" -0.075673304 -0.11655523 -0.020456724 ;
-	setAttr ".pt[97]" -type "float3" -0.084324211 -0.12254046 0.018011883 ;
-	setAttr ".pt[98]" -type "float3" -0.060638227 -0.08160989 -0.065723129 ;
-	setAttr ".pt[99]" -type "float3" -0.068503045 -0.085367486 -0.038937226 ;
-	setAttr ".pt[100]" -type "float3" -0.068310551 -0.068535879 -0.038719151 ;
-	setAttr ".pt[101]" -type "float3" -0.063824415 -0.067631885 -0.06291227 ;
-	setAttr ".pt[102]" -type "float3" -0.04615644 -0.02070014 -0.065500669 ;
-	setAttr ".pt[103]" -type "float3" -0.048902463 -0.0068342555 -0.052641883 ;
-	setAttr ".pt[104]" -type "float3" -0.041043665 -0.0017341515 -0.063747704 ;
-	setAttr ".pt[105]" -type "float3" -0.039052002 -0.014520289 -0.073199503 ;
-	setAttr ".pt[106]" -type "float3" -0.052137293 -0.027976813 -0.059380703 ;
-	setAttr ".pt[107]" -type "float3" -0.055997301 -0.015331345 -0.043205447 ;
-	setAttr ".pt[108]" -type "float3" -0.060209088 -0.043420337 -0.058534313 ;
-	setAttr ".pt[109]" -type "float3" -0.060779486 -0.035816379 -0.038904306 ;
-	setAttr ".pt[110]" -type "float3" -0.030100973 0.0036282353 -0.076474428 ;
-	setAttr ".pt[111]" -type "float3" -0.028206242 -0.0060828095 -0.081540525 ;
-	setAttr ".pt[112]" -type "float3" -0.021596389 0.011291359 -0.085287176 ;
-	setAttr ".pt[113]" -type "float3" -0.019340072 0.0018265555 -0.088904478 ;
-	setAttr ".pt[114]" -type "float3" -0.056605145 -0.11555135 -0.080660835 ;
-	setAttr ".pt[115]" -type "float3" -0.060937122 -0.12844466 -0.066478193 ;
-	setAttr ".pt[116]" -type "float3" -0.069962516 -0.10924029 -0.042961471 ;
-	setAttr ".pt[117]" -type "float3" -0.058775712 -0.097683541 -0.068447202 ;
-	setAttr ".pt[118]" -type "float3" -0.018607985 -0.11160856 -0.10210409 ;
-	setAttr ".pt[119]" -type "float3" -0.025851602 -0.1344831 -0.10123159 ;
-	setAttr ".pt[120]" -type "float3" -0.042767163 -0.13694185 -0.088501826 ;
-	setAttr ".pt[121]" -type "float3" -0.038217939 -0.11732733 -0.097806372 ;
-	setAttr ".pt[122]" -type "float3" -0.01025038 -0.1100327 -0.10676245 ;
-	setAttr ".pt[123]" -type "float3" -0.011477337 -0.13340032 -0.10441703 ;
-	setAttr ".pt[124]" -type "float3" -0.053793907 -0.067341641 -0.082447037 ;
-	setAttr ".pt[125]" -type "float3" -0.053163961 -0.073488489 -0.079866767 ;
-	setAttr ".pt[126]" -type "float3" -0.052595846 -0.090387776 -0.076776966 ;
-	setAttr ".pt[127]" -type "float3" -0.049322639 -0.10070988 -0.088672206 ;
-	setAttr ".pt[128]" -type "float3" -0.036055569 -0.10666323 -0.098382227 ;
-	setAttr ".pt[129]" -type "float3" -0.016994078 -0.10257914 -0.10225125 ;
-	setAttr ".pt[130]" -type "float3" -0.0095659858 -0.10108206 -0.10614809 ;
-	setAttr ".pt[131]" -type "float3" -0.013100051 -0.084246993 -0.089528732 ;
-	setAttr ".pt[132]" -type "float3" -0.027300743 -0.087859899 -0.081257299 ;
-	setAttr ".pt[133]" -type "float3" -0.027367132 -0.081781611 -0.09414804 ;
-	setAttr ".pt[134]" -type "float3" -0.01791703 -0.083151281 -0.092416316 ;
-	setAttr ".pt[135]" -type "float3" -0.044552863 -0.084967792 -0.084035277 ;
-	setAttr ".pt[136]" -type "float3" -0.04036516 -0.081893638 -0.088782482 ;
-	setAttr ".pt[137]" -type "float3" -0.026517414 -0.091251358 -0.095334306 ;
-	setAttr ".pt[138]" -type "float3" -0.038870003 -0.088969961 -0.092105374 ;
-	setAttr ".pt[139]" -type "float3" -0.019844986 -0.089131474 -0.094305404 ;
-	setAttr ".pt[140]" -type "float3" -0.027443901 -0.080185324 -0.095984153 ;
-	setAttr ".pt[141]" -type "float3" -0.014071495 -0.082374141 -0.092600018 ;
-	setAttr ".pt[142]" -type "float3" -0.013729722 -0.084816039 -0.093409359 ;
-	setAttr ".pt[143]" -type "float3" -0.047842182 -0.084775299 -0.08104378 ;
-	setAttr ".pt[144]" -type "float3" -0.045877747 -0.080265701 -0.085296467 ;
-	setAttr ".pt[145]" -type "float3" -0.017468741 -0.091423541 -0.097005576 ;
-	setAttr ".pt[146]" -type "float3" -0.027215997 -0.093248457 -0.097751833 ;
-	setAttr ".pt[147]" -type "float3" -0.041652206 -0.090879276 -0.091644622 ;
-	setAttr ".pt[148]" -type "float3" -0.0037789182 -0.074182034 -0.10936108 ;
-	setAttr ".pt[149]" -type "float3" -0.0033229392 -0.06050843 -0.11697276 ;
-	setAttr ".pt[150]" -type "float3" -0.008885243 -0.05128067 -0.099152192 ;
-	setAttr ".pt[151]" -type "float3" -0.0039768536 -0.05589129 -0.12079876 ;
-	setAttr ".pt[152]" -type "float3" -0.01156264 -0.050653674 -0.10162345 ;
-	setAttr ".pt[153]" -type "float3" -0.020830629 -0.045637764 -0.095751628 ;
-	setAttr ".pt[154]" -type "float3" -0.04380887 -0.03284581 -0.078457728 ;
-	setAttr ".pt[155]" -type "float3" -0.035030026 -0.028698193 -0.086334057 ;
-	setAttr ".pt[156]" -type "float3" -0.010694008 -0.040494345 -0.1086458 ;
-	setAttr ".pt[157]" -type "float3" -0.0045185857 -0.047157831 -0.12643161 ;
-	setAttr ".pt[158]" -type "float3" -0.012571741 -0.0413009 -0.10504187 ;
-	setAttr ".pt[159]" -type "float3" -0.026700139 -0.023320509 -0.086598128 ;
-	setAttr ".pt[160]" -type "float3" -0.02336682 0.021805603 -0.07814955 ;
-	setAttr ".pt[161]" -type "float3" -0.031789076 0.015868515 -0.067756295 ;
-	setAttr ".pt[162]" -type "float3" -0.039103515 0.009037558 -0.053628735 ;
-	setAttr ".pt[163]" -type "float3" -0.045413636 0.0044912659 -0.041241914 ;
-	setAttr ".pt[164]" -type "float3" -0.052694626 -0.0039323857 -0.027923103 ;
-	setAttr ".pt[165]" -type "float3" -0.059150871 -0.026666643 -0.013127836 ;
-	setAttr ".pt[166]" -type "float3" -0.04807682 -0.0355222 -0.070760332 ;
-	setAttr ".pt[167]" -type "float3" -0.0092496956 -0.089747906 -0.095102452 ;
-	setAttr ".pt[168]" -type "float3" -0.0036154944 -0.084098265 -0.10488263 ;
-	setAttr ".pt[169]" -type "float3" -0.065167308 -0.13998681 -0.043710943 ;
-	setAttr ".pt[170]" -type "float3" -0.030315071 -0.16076839 -0.088328809 ;
-	setAttr ".pt[171]" -type "float3" -0.050050851 -0.15543441 -0.072743841 ;
-	setAttr ".pt[172]" -type "float3" -0.013329927 -0.16089928 -0.095561907 ;
-	setAttr ".pt[173]" -type "float3" -0.026530083 0.016791798 -0.043280188 ;
-	setAttr ".pt[174]" -type "float3" -0.033273287 0.012936792 -0.048360005 ;
-	setAttr ".pt[175]" -type "float3" -0.021860942 0.019927382 -0.054809317 ;
-	setAttr ".pt[176]" -type "float3" -0.027162297 0.018149607 -0.061500479 ;
-	setAttr ".pt[177]" -type "float3" -0.016960792 0.023990493 -0.065285541 ;
-	setAttr ".pt[178]" -type "float3" -0.021381339 0.023359451 -0.071891099 ;
-	setAttr ".pt[179]" -type "float3" -0.016773302 -0.02452801 -0.10348108 ;
-	setAttr ".pt[180]" -type "float3" -0.0034488162 -0.02797805 -0.11315884 ;
-	setAttr ".pt[181]" -type "float3" -0.02319481 -0.019414974 -0.089069068 ;
-	setAttr ".pt[182]" -type "float3" -0.021939177 -0.0095604677 -0.087424137 ;
-	setAttr ".pt[183]" -type "float3" -0.019669844 -0.012050854 -0.088934042 ;
-	setAttr ".pt[184]" -type "float3" -0.014035016 -0.0062072938 -0.096781455 ;
-	setAttr ".pt[185]" -type "float3" -0.014258264 -0.01003346 -0.10052704 ;
-	setAttr ".pt[186]" -type "float3" -0.020496434 -0.017412512 -0.08906316 ;
-	setAttr ".pt[187]" -type "float3" -0.0093350532 -0.02289298 -0.10895019 ;
-	setAttr ".pt[188]" -type "float3" -0.01511988 -0.022971777 -0.10164887 ;
-	setAttr ".pt[189]" -type "float3" -0.020651324 -0.014903815 -0.021057256 ;
-	setAttr ".pt[190]" -type "float3" -0.02360354 -0.025890695 -0.023048265 ;
-	setAttr ".pt[191]" -type "float3" -0.017859563 -0.019264249 -0.079358153 ;
-	setAttr ".pt[192]" -type "float3" -0.016981341 -0.014035286 -0.080879956 ;
-	setAttr ".pt[193]" -type "float3" -0.018190674 -0.033661008 -0.055783376 ;
-	setAttr ".pt[194]" -type "float3" -0.0142187 -0.022710947 -0.092661366 ;
-	setAttr ".pt[195]" -type "float3" -0.0065594548 -0.021039439 -0.10557211 ;
-	setAttr ".pt[196]" -type "float3" -0.011344161 -0.010587366 -0.094406158 ;
-	setAttr ".pt[197]" -type "float3" -0.048457932 -0.078372315 -0.083727755 ;
-	setAttr ".pt[198]" -type "float3" -0.027820131 -0.076226041 -0.09400513 ;
-	setAttr ".pt[199]" -type "float3" -0.05014395 -0.086190999 -0.079336293 ;
-	setAttr ".pt[200]" -type "float3" -0.045925003 -0.09577769 -0.089862935 ;
-	setAttr ".pt[201]" -type "float3" -0.032789253 -0.097684436 -0.098613247 ;
-	setAttr ".pt[202]" -type "float3" -0.016375069 -0.094400272 -0.099077836 ;
-	setAttr ".pt[203]" -type "float3" -0.01151808 -0.086771727 -0.093993932 ;
-	setAttr ".pt[204]" -type "float3" -0.011022311 -0.082064345 -0.092508726 ;
-	setAttr ".pt[205]" -type "float3" -0.050963819 -0.076470286 -0.082130149 ;
-	setAttr ".pt[206]" -type "float3" -0.027019573 -0.074217618 -0.091341689 ;
-	setAttr ".pt[207]" -type "float3" -0.051227581 -0.087918267 -0.078052536 ;
-	setAttr ".pt[208]" -type "float3" -0.047810078 -0.098277621 -0.089415446 ;
-	setAttr ".pt[209]" -type "float3" -0.03488664 -0.10247902 -0.098320901 ;
-	setAttr ".pt[210]" -type "float3" -0.016572556 -0.09854611 -0.10056438 ;
-	setAttr ".pt[211]" -type "float3" -0.010483891 -0.088480592 -0.094437584 ;
-	setAttr ".pt[212]" -type "float3" -0.0090156728 -0.082257628 -0.092578486 ;
-	setAttr ".pt[213]" -type "float3" -0.0788908 -0.12011719 0.061643746 ;
-	setAttr ".pt[214]" -type "float3" -0.076830924 -0.09070912 0.056171536 ;
-	setAttr ".pt[215]" -type "float3" -0.068663269 -0.17386127 0.078350738 ;
-	setAttr ".pt[216]" -type "float3" -0.057751343 -0.16614807 0.095052868 ;
-	setAttr ".pt[217]" -type "float3" -0.060935784 -0.1337899 0.098682389 ;
-	setAttr ".pt[218]" -type "float3" -0.073308848 -0.14258969 0.083514988 ;
-	setAttr ".pt[219]" -type "float3" -0.06350261 -0.10403692 0.094978333 ;
-	setAttr ".pt[220]" -type "float3" -0.073634624 -0.10961416 0.084200963 ;
-	setAttr ".pt[221]" -type "float3" -0.072093286 -0.079256758 0.076190978 ;
-	setAttr ".pt[222]" -type "float3" -0.052087069 -0.051241271 0.078629762 ;
-	setAttr ".pt[223]" -type "float3" -0.033764556 -0.045889966 0.082424834 ;
-	setAttr ".pt[224]" -type "float3" -0.040745877 -0.099519007 0.10735862 ;
-	setAttr ".pt[225]" -type "float3" -0.038292855 -0.13098389 0.1125678 ;
-	setAttr ".pt[226]" -type "float3" -0.038388662 -0.16224694 0.10686265 ;
-	setAttr ".pt[227]" -type "float3" -0.048562542 -0.19553334 0.069438867 ;
-	setAttr ".pt[228]" -type "float3" -0.026466345 -0.20470735 0.067872286 ;
-	setAttr ".pt[229]" -type "float3" -0.031980012 -0.19135027 0.089430809 ;
-	setAttr ".pt[230]" -type "float3" -0.04631767 -0.18791528 0.083221778 ;
-	setAttr ".pt[231]" -type "float3" -0.025993023 -0.21620923 0.037207697 ;
-	setAttr ".pt[232]" -type "float3" -0.049353831 -0.20728418 0.042979758 ;
-	setAttr ".pt[233]" -type "float3" -0.020315163 -0.20581079 -0.04472762 ;
-	setAttr ".pt[234]" -type "float3" -0.039898008 -0.19388579 -0.040612858 ;
-	setAttr ".pt[235]" -type "float3" -0.062488798 -0.18340361 -0.02521937 ;
-	setAttr ".pt[236]" -type "float3" -0.057626754 -0.17364329 -0.050865225 ;
-	setAttr ".pt[237]" -type "float3" -0.036547013 -0.17929226 -0.067047939 ;
-	setAttr ".pt[238]" -type "float3" -0.07967177 -0.16205689 -0.0029135426 ;
-	setAttr ".pt[239]" -type "float3" -0.075732067 -0.15029232 -0.025585473 ;
-	setAttr ".pt[240]" -type "float3" -0.018718146 -0.18372789 -0.072125621 ;
-	setAttr ".pt[241]" -type "float3" -0.070993781 -0.18416798 0.055641998 ;
-	setAttr ".pt[242]" -type "float3" -0.080418721 -0.15338041 0.057406697 ;
-	setAttr ".pt[243]" -type "float3" -0.0074225268 -0.042689316 -0.12078273 ;
-	setAttr ".pt[244]" -type "float3" -0.0070349071 -0.055059373 -0.1154046 ;
-	setAttr ".pt[245]" -type "float3" -0.0059592519 -0.059622288 -0.11144197 ;
-	setAttr ".pt[246]" -type "float3" -0.0056481175 -0.074251622 -0.10552987 ;
-	setAttr ".pt[247]" -type "float3" -0.0019469277 -0.041614942 -0.12158444 ;
-	setAttr ".pt[248]" -type "float3" -0.0066229859 -0.041614942 -0.11932292 ;
-	setAttr ".pt[249]" -type "float3" -0.0021478978 -0.041614942 -0.11296807 ;
-	setAttr ".pt[250]" -type "float3" -0.0092651881 -0.041660853 -0.11013811 ;
-	setAttr ".pt[251]" -type "float3" -0.0029466525 -0.034993432 -0.11267114 ;
-	setAttr ".pt[252]" -type "float3" -0.017348921 -0.030484172 -0.10166591 ;
-	setAttr ".pt[253]" -type "float3" -0.024679137 -0.021001069 -0.087996848 ;
-	setAttr ".pt[254]" -type "float3" -0.024645578 -0.0081050415 -0.084883355 ;
-	setAttr ".pt[255]" -type "float3" -0.015232962 -0.0028775772 -0.094619304 ;
-	setAttr ".pt[256]" -type "float3" -0.00252053 -0.040441357 -0.11227501 ;
-	setAttr ".pt[257]" -type "float3" -0.0087092035 -0.058642656 -0.105988 ;
-	setAttr ".pt[258]" -type "float3" -0.0074089486 -0.074747384 -0.10129843 ;
-	setAttr ".pt[259]" -type "float3" -0.0056342017 -0.083083615 -0.097221136 ;
-	setAttr ".pt[260]" -type "float3" -0.00352632 -0.086741418 -0.10325508 ;
-	setAttr ".pt[261]" -type "float3" -0.0043820995 -0.089516565 -0.10236026 ;
-	setAttr ".pt[262]" -type "float3" -0.0056986264 -0.091922 -0.10286015 ;
-	setAttr ".pt[263]" -type "float3" -0.0076437001 -0.09440285 -0.1037989 ;
-	setAttr ".pt[264]" -type "float3" -0.0040458874 -0.080568641 -0.10614979 ;
-	setAttr ".pt[265]" -type "float3" -0.005330367 -0.082011938 -0.10099687 ;
-	setAttr ".pt[266]" -type "float3" -0.013679676 -0.042329349 -0.10792738 ;
-	setAttr ".pt[267]" -type "float3" -0.010632836 -0.045762338 -0.11593669 ;
-	setAttr ".pt[268]" -type "float3" -0.0026842351 -0.043820031 -0.12486183 ;
-	setAttr ".pt[269]" -type "float3" -0.0075495262 -0.041614942 -0.11740401 ;
-	setAttr ".pt[270]" -type "float3" -0.0088539943 -0.041991301 -0.11779875 ;
-	setAttr ".pt[271]" -type "float3" -0.010832625 -0.054723322 -0.1087833 ;
-	setAttr ".pt[272]" -type "float3" -0.0081079267 -0.046953224 -0.12091992 ;
-	setAttr ".pt[273]" -type "float3" -0.010648269 -0.040839918 -0.1143038 ;
-	setAttr ".pt[274]" -type "float3" -0.0084890984 -0.041611247 -0.11403186 ;
-	setAttr ".pt[275]" -type "float3" -0.013019413 -0.032365412 -0.1060819 ;
-	setAttr ".pt[276]" -type "float3" -0.013345469 -0.025812926 -0.10727493 ;
-	setAttr ".pt[277]" -type "float3" -0.012230695 -0.022926895 -0.10648987 ;
-	setAttr ".pt[278]" -type "float3" -0.0091600129 -0.02160692 -0.10203765 ;
-	setAttr ".pt[279]" -type "float3" -0.017714547 -0.034856491 -0.099659145 ;
-	setAttr ".pt[280]" -type "float3" -0.0034765981 -0.022889404 -0.11045487 ;
-	setAttr ".pt[281]" -type "float3" -0.0025089676 -0.020880951 -0.10709961 ;
-	setAttr ".pt[282]" -type "float3" -0.0091470508 -0.026810186 -0.10999155 ;
-	setAttr ".pt[283]" -type "float3" -0.0091849864 -0.033512712 -0.10929114 ;
-	setAttr ".pt[284]" -type "float3" -0.0094898334 -0.062755823 -0.098757938 ;
-	setAttr ".pt[285]" -type "float3" -0.0081371684 -0.06584996 -0.10428977 ;
-	setAttr ".pt[286]" -type "float3" -0.0057933526 -0.067029268 -0.10851292 ;
-	setAttr ".pt[287]" -type "float3" -0.0035805886 -0.067249492 -0.11312862 ;
-	setAttr ".pt[288]" -type "float3" -0.002608248 -0.044994168 -0.11950634 ;
-	setAttr ".pt[289]" -type "float3" -0.0024028472 -0.045126729 -0.11573817 ;
-	setAttr ".pt[290]" -type "float3" -0.0059187324 -0.045126729 -0.11807813 ;
-	setAttr ".pt[291]" -type "float3" -0.0064862762 -0.045125835 -0.11459026 ;
-	setAttr ".pt[292]" -type "float3" -0.0055016452 -0.044830196 -0.11942569 ;
-	setAttr ".pt[293]" -type "float3" -0.003029881 -0.044431843 -0.11443902 ;
-	setAttr ".pt[294]" -type "float3" -0.0056766262 -0.044452153 -0.11307196 ;
-	setAttr ".pt[295]" -type "float3" -0.060077585 -0.076882437 0.08834783 ;
-	setAttr ".pt[296]" -type "float3" -0.040707212 -0.069420114 0.095507436 ;
-	setAttr ".pt[297]" -type "float3" -0.011178268 0.020015463 -0.05222284 ;
-	setAttr ".pt[301]" -type "float3" -0.0093642911 0.02526881 -0.084131159 ;
-	setAttr ".pt[302]" -type "float3" -0.009933237 0.015463105 -0.090083838 ;
-	setAttr ".pt[303]" -type "float3" -0.0086104805 0.0061925985 -0.093042471 ;
-	setAttr ".pt[304]" -type "float3" -0.0083541265 -0.00062850025 -0.097316541 ;
-	setAttr ".pt[305]" -type "float3" -0.0088472012 -0.0042969203 -0.10135466 ;
-	setAttr ".pt[306]" -type "float3" -0.0075697913 -0.0082510877 -0.10335101 ;
-	setAttr ".pt[307]" -type "float3" -0.0061581465 -0.010320889 -0.099522263 ;
-	setAttr ".pt[308]" -type "float3" 0 -0.0085839797 -0.085024774 ;
-	setAttr ".pt[309]" -type "float3" -0.059921626 -0.054203644 0.069997326 ;
-	setAttr ".pt[310]" -type "float3" -0.0035521153 -0.0046813404 0.071505092 ;
-	setAttr ".pt[311]" -type "float3" -0.044034354 5.1216222e-05 -0.019950682 ;
-	setAttr ".pt[312]" -type "float3" -0.013152245 0.020043105 -0.035439771 ;
-	setAttr ".pt[313]" -type "float3" -0.056092128 -0.024055807 -0.0050233835 ;
-	setAttr ".pt[314]" -type "float3" -0.059274446 -0.04981517 0.059579127 ;
-	setAttr ".pt[315]" -type "float3" -0.043946106 -0.082083404 0.075039349 ;
-	setAttr ".pt[316]" -type "float3" -0.0080239074 -0.093564704 0.073429577 ;
-	setAttr ".pt[317]" -type "float3" -0.069148801 -0.04619541 0.039698143 ;
-	setAttr ".pt[318]" -type "float3" -0.014067916 0.024574492 -0.023351133 ;
-	setAttr ".pt[319]" -type "float3" 0 -0.034682162 -0.042664208 ;
-	setAttr ".pt[320]" -type "float3" -0.021122007 -0.030029478 -0.038921908 ;
-	setAttr ".pt[321]" -type "float3" -0.016032508 -0.02099186 -0.086026222 ;
-	setAttr ".pt[322]" -type "float3" -0.01780159 -0.02019888 -0.09537147 ;
-	setAttr ".pt[323]" -type "float3" -0.019983266 -0.021974636 -0.096298948 ;
-	setAttr ".pt[324]" -type "float3" -0.021011896 -0.025746154 -0.094863527 ;
-	setAttr ".pt[325]" -type "float3" -0.02221293 -0.029086666 -0.093175083 ;
-	setAttr ".pt[326]" -type "float3" -0.028139176 -0.037093334 -0.091175482 ;
-	setAttr ".pt[327]" -type "float3" -0.040674102 -0.041563101 -0.085845597 ;
-	setAttr ".pt[328]" -type "float3" -0.047601707 -0.043222688 -0.0776309 ;
-	setAttr ".pt[329]" -type "float3" -0.055742968 -0.035292886 -0.058455229 ;
-	setAttr ".pt[330]" -type "float3" -0.058427822 -0.025572749 -0.040762398 ;
-	setAttr ".pt[331]" -type "float3" -0.056031596 -0.015224474 -0.019377809 ;
-	setAttr ".pt[332]" -type "float3" -0.050144792 -0.011944117 -0.011179633 ;
-	setAttr ".pt[333]" -type "float3" -0.036089968 0.0077873059 -0.014787016 ;
-	setAttr ".pt[334]" -type "float3" -0.046092793 -0.0019242009 -0.0025332745 ;
-	setAttr ".pt[335]" -type "float3" -0.054339908 -0.020044653 0.0043995706 ;
-	setAttr ".pt[337]" -type "float3" 0 -0.070264488 -0.11382508 ;
-	setAttr ".pt[338]" -type "float3" -0.0036830625 -0.070581123 -0.11130086 ;
-	setAttr ".pt[339]" -type "float3" -0.0057296022 -0.070552051 -0.10705204 ;
-	setAttr ".pt[340]" -type "float3" -0.007842646 -0.070249572 -0.10279398 ;
-	setAttr ".pt[341]" -type "float3" -0.0096386103 -0.06798321 -0.09795557 ;
-	setAttr ".pt[342]" -type "float3" -0.062431056 -0.054854542 -0.060879745 ;
-	setAttr ".pt[343]" -type "float3" -0.063671432 -0.047117777 -0.038766053 ;
-	setAttr ".pt[344]" -type "float3" -0.063802287 -0.043243565 -0.00513857 ;
-	setAttr ".pt[345]" -type "float3" -0.065898612 -0.048322774 0.0030918017 ;
-	setAttr ".pt[346]" -type "float3" -0.021804594 0.024245519 -0.009742829 ;
-	setAttr ".pt[347]" -type "float3" -0.023819596 0.017406911 -0.018516492 ;
-	setAttr ".pt[348]" -type "float3" -0.022003433 0.016516246 -0.033848185 ;
-	setAttr ".pt[349]" -type "float3" -0.018002557 0.018622562 -0.048334382 ;
-	setAttr ".pt[350]" -type "float3" -0.020436104 0.017393075 -0.039879356 ;
-	setAttr ".pt[351]" -type "float3" -0.012425602 0.020061962 -0.042197265 ;
-	setAttr ".pt[353]" -type "float3" -0.075824387 -0.10256768 -0.00098957331 ;
-	setAttr ".pt[354]" -type "float3" -0.068810418 -0.070938498 0.01040204 ;
-	setAttr ".pt[355]" -type "float3" -0.070190862 -0.048175253 0.031154111 ;
-	setAttr ".pt[356]" -type "float3" -0.060647324 -0.039491929 0.043643251 ;
-	setAttr ".pt[357]" -type "float3" -0.054015387 -0.038152613 0.061869759 ;
-	setAttr ".pt[358]" -type "float3" -0.060686424 -0.043112181 0.067097239 ;
-	setAttr ".pt[359]" -type "float3" -0.051073603 -0.0512015 0.083570555 ;
-	setAttr ".pt[360]" -type "float3" -0.0054200962 -0.0386106 0.085393883 ;
-	setAttr ".pt[361]" -type "float3" -0.029723398 0.021501791 -0.0013891849 ;
-	setAttr ".pt[362]" -type "float3" -0.031497374 0.027084583 0.0080368966 ;
-	setAttr ".pt[363]" -type "float3" -0.079148561 -0.095026806 0.030298406 ;
-	setAttr ".pt[364]" -type "float3" -0.082625948 -0.12379688 0.037296791 ;
-	setAttr ".pt[365]" -type "float3" -0.080344655 -0.164462 0.021977477 ;
-	setAttr ".pt[366]" -type "float3" -0.064050019 -0.19005357 -0.0032663462 ;
-	setAttr ".pt[367]" -type "float3" -0.042296261 -0.20640564 -0.015535657 ;
-	setAttr ".pt[368]" -type "float3" -0.019782413 -0.21333912 -0.018071342 ;
-	setAttr ".pt[369]" -type "float3" 0 -0.21767169 -0.014998311 ;
-	setAttr ".pt[370]" -type "float3" -0.077980198 -0.094445169 0.044331841 ;
-	setAttr ".pt[371]" -type "float3" -0.081201896 -0.12429489 0.051070854 ;
-	setAttr ".pt[372]" -type "float3" -0.081782557 -0.1601156 0.043499693 ;
-	setAttr ".pt[373]" -type "float3" -0.066785544 -0.19047005 0.026495917 ;
-	setAttr ".pt[374]" -type "float3" -0.043335047 -0.21038786 0.0068059498 ;
-	setAttr ".pt[375]" -type "float3" -0.020844257 -0.21973908 0.0036452883 ;
-	setAttr ".pt[376]" -type "float3" 0 -0.22387336 0.0093782814 ;
-	setAttr ".pt[377]" -type "float3" -0.073416159 -0.073508248 0.022483395 ;
-	setAttr ".pt[378]" -type "float3" -0.054187704 -0.018454744 0.037995879 ;
-	setAttr ".pt[379]" -type "float3" -0.057927091 -0.019982738 0.020814955 ;
-	setAttr ".pt[380]" -type "float3" -0.064743772 -0.045180373 0.012863081 ;
-	setAttr ".pt[381]" -type "float3" -0.062675454 -0.04203216 0.028476605 ;
-	setAttr ".pt[382]" -type "float3" -0.072001353 -0.070239127 0.037378907 ;
-	setAttr ".pt[383]" -type "float3" -0.056224249 -0.024944929 0.040741134 ;
-	setAttr ".pt[384]" -type "float3" -0.056465682 -0.037909545 0.054550085 ;
-	setAttr ".pt[385]" -type "float3" -0.065734692 -0.059378058 0.060033455 ;
-	setAttr ".pt[386]" -type "float3" -0.075851545 -0.083767712 0.066033974 ;
-	setAttr ".pt[387]" -type "float3" -0.076242484 -0.1146413 0.072693825 ;
-	setAttr ".pt[388]" -type "float3" -0.077225246 -0.14780909 0.070712313 ;
-	setAttr ".pt[389]" -type "float3" -0.07036259 -0.17783201 0.066602834 ;
-	setAttr ".pt[390]" -type "float3" -0.0489523 -0.20038348 0.05743495 ;
-	setAttr ".pt[391]" -type "float3" -0.026297534 -0.21062869 0.054397319 ;
-	setAttr ".pt[392]" -type "float3" 0 -0.21436882 0.055637818 ;
-	setAttr ".pt[393]" -type "float3" -0.026990451 -0.052318342 -0.096425831 ;
-	setAttr ".pt[394]" -type "float3" -0.05030844 -0.051548697 -0.079610802 ;
-	setAttr ".pt[395]" -type "float3" -0.029621765 -0.060731232 -0.095526733 ;
-	setAttr ".pt[396]" -type "float3" -0.053104132 -0.059656173 -0.081115603 ;
-	setAttr ".pt[400]" -type "float3" 0 -0.041809462 -0.12163705 ;
-	setAttr ".pt[401]" -type "float3" -0.0013004214 -0.041999705 -0.12028997 ;
-	setAttr ".pt[402]" -type "float3" -0.0012070385 -0.042036749 -0.11588679 ;
-	setAttr ".pt[403]" -type "float3" -0.0025529172 -0.045030199 -0.1184914 ;
-	setAttr ".pt[404]" -type "float3" 0 -0.041614942 -0.11296807 ;
-	setAttr ".pt[405]" -type "float3" 0 -0.045126729 -0.11573817 ;
-	setAttr ".pt[406]" -type "float3" 0 -0.045030199 -0.1184914 ;
-	setAttr ".pt[407]" -type "float3" 0 -0.041999705 -0.12028997 ;
-	setAttr ".pt[408]" -type "float3" 0 -0.044994168 -0.11950634 ;
-	setAttr ".pt[409]" -type "float3" 0.068810418 -0.070938498 0.01040204 ;
-	setAttr ".pt[410]" -type "float3" 0.072119951 -0.055800602 0.0034338904 ;
-	setAttr ".pt[411]" -type "float3" 0.071090087 -0.045465805 -0.00075776107 ;
-	setAttr ".pt[412]" -type "float3" 0.065898612 -0.048322774 0.0030918017 ;
-	setAttr ".pt[413]" -type "float3" 0.071619399 -0.082870349 -0.011654891 ;
-	setAttr ".pt[414]" -type "float3" 0.07116881 -0.063899219 -0.014887952 ;
-	setAttr ".pt[415]" -type "float3" 0.07549496 -0.058640525 -0.0055122948 ;
-	setAttr ".pt[416]" -type "float3" 0.079590045 -0.08046189 -0.0019768488 ;
-	setAttr ".pt[417]" -type "float3" 0.078306988 -0.10220885 -0.0034708001 ;
-	setAttr ".pt[418]" -type "float3" 0.075487159 -0.09523882 -0.0079835458 ;
-	setAttr ".pt[419]" -type "float3" 0.087013595 -0.10373599 0.0014818006 ;
-	setAttr ".pt[420]" -type "float3" 0.08610402 -0.10802919 0.0037815135 ;
-	setAttr ".pt[421]" -type "float3" 0.063802287 -0.043243565 -0.00513857 ;
-	setAttr ".pt[422]" -type "float3" 0.0710283 -0.039214693 -0.0057558995 ;
-	setAttr ".pt[423]" -type "float3" 0.09198232 -0.083188221 0.015284636 ;
-	setAttr ".pt[424]" -type "float3" 0.085032441 -0.061252475 0.0075236559 ;
-	setAttr ".pt[425]" -type "float3" 0.08487235 -0.057742938 0.010951199 ;
-	setAttr ".pt[426]" -type "float3" 0.092077628 -0.0832697 0.019468574 ;
-	setAttr ".pt[427]" -type "float3" 0.08319366 -0.065683737 0.0064561698 ;
-	setAttr ".pt[428]" -type "float3" 0.086160526 -0.079543084 0.0090104314 ;
-	setAttr ".pt[429]" -type "float3" 0.086269602 -0.090111211 0.0075530484 ;
-	setAttr ".pt[430]" -type "float3" 0.082986183 -0.094911754 0.00046096547 ;
-	setAttr ".pt[431]" -type "float3" 0.075564384 -0.09038879 -0.00634033 ;
-	setAttr ".pt[432]" -type "float3" 0.091739215 -0.09551011 0.012012055 ;
-	setAttr ".pt[433]" -type "float3" 0.092305183 -0.098856561 0.016004674 ;
-	setAttr ".pt[434]" -type "float3" 0.088217676 -0.096544743 0.014765217 ;
-	setAttr ".pt[435]" -type "float3" 0.083475851 -0.10391637 0.0044944137 ;
-	setAttr ".pt[436]" -type "float3" 0.076094382 -0.045934863 0.001081551 ;
-	setAttr ".pt[437]" -type "float3" 0.078008257 -0.042958133 0.00091746886 ;
-	setAttr ".pt[438]" -type "float3" 0.079191662 -0.046575747 -0.0014973497 ;
-	setAttr ".pt[439]" -type "float3" 0.073395342 -0.042676859 -0.0070580738 ;
-	setAttr ".pt[440]" -type "float3" 0.065056525 -0.046226911 -0.012172874 ;
-	setAttr ".pt[441]" -type "float3" 0.081870966 -0.060941115 0.0097545907 ;
-	setAttr ".pt[442]" -type "float3" 0.088373169 -0.08379364 0.017872451 ;
-	setAttr ".pt[443]" -type "float3" 0.075824387 -0.10256768 -0.00098957331 ;
-	setAttr ".pt[444]" -type "float3" 0.069581397 -0.087898508 -0.017118601 ;
-	setAttr ".pt[445]" -type "float3" 0.074808903 -0.081089199 0.0021400251 ;
-	setAttr ".pt[446]" -type "float3" 0.074907325 -0.051627047 -0.0043213521 ;
-	setAttr ".pt[447]" -type "float3" 0.065527663 -0.063342839 -0.0195565 ;
-	setAttr ".pt[448]" -type "float3" 0.07882122 -0.10179535 0.00067426107 ;
-	setAttr ".pt[449]" -type "float3" 0.076296061 -0.092554361 0.013264657 ;
-	setAttr ".pt[450]" -type "float3" 0.044034354 5.1216222e-05 -0.019950682 ;
-	setAttr ".pt[451]" -type "float3" 0.038639352 0.0083796047 -0.03659039 ;
-	setAttr ".pt[452]" -type "float3" 0.03088801 0.012989453 -0.032256629 ;
-	setAttr ".pt[453]" -type "float3" 0.036089968 0.0077873059 -0.014787016 ;
-	setAttr ".pt[454]" -type "float3" 0.0069670016 -0.082525551 -0.093085207 ;
-	setAttr ".pt[455]" -type "float3" 0.0099061923 -0.074425042 -0.096870676 ;
-	setAttr ".pt[456]" -type "float3" 0.029506939 -0.06752716 -0.093307078 ;
-	setAttr ".pt[457]" -type "float3" 0.027225707 -0.071479499 -0.091971144 ;
-	setAttr ".pt[458]" -type "float3" 0.060638227 -0.08160989 -0.065723129 ;
-	setAttr ".pt[459]" -type "float3" 0.063824415 -0.067631885 -0.06291227 ;
-	setAttr ".pt[460]" -type "float3" 0.068310551 -0.068535879 -0.038719151 ;
-	setAttr ".pt[461]" -type "float3" 0.068503045 -0.085367486 -0.038937226 ;
-	setAttr ".pt[462]" -type "float3" 0.04615644 -0.02070014 -0.065500669 ;
-	setAttr ".pt[463]" -type "float3" 0.039052002 -0.014520289 -0.073199503 ;
-	setAttr ".pt[464]" -type "float3" 0.041043665 -0.0017341515 -0.063747704 ;
-	setAttr ".pt[465]" -type "float3" 0.048902463 -0.0068342555 -0.052641883 ;
-	setAttr ".pt[466]" -type "float3" 0.055997301 -0.015331345 -0.043205447 ;
-	setAttr ".pt[467]" -type "float3" 0.052137293 -0.027976813 -0.059380703 ;
-	setAttr ".pt[468]" -type "float3" 0.055742968 -0.035292886 -0.058455229 ;
-	setAttr ".pt[469]" -type "float3" 0.058427822 -0.025572749 -0.040762398 ;
-	setAttr ".pt[470]" -type "float3" 0.060779486 -0.035816379 -0.038904306 ;
-	setAttr ".pt[471]" -type "float3" 0.060209088 -0.043420337 -0.058534313 ;
-	setAttr ".pt[472]" -type "float3" 0.062431056 -0.054854542 -0.060879745 ;
-	setAttr ".pt[473]" -type "float3" 0.063671432 -0.047117777 -0.038766053 ;
-	setAttr ".pt[474]" -type "float3" 0.028206242 -0.0060828095 -0.081540525 ;
-	setAttr ".pt[475]" -type "float3" 0.030100973 0.0036282353 -0.076474428 ;
-	setAttr ".pt[476]" -type "float3" 0.019340072 0.0018265555 -0.088904478 ;
-	setAttr ".pt[477]" -type "float3" 0.021596389 0.011291359 -0.085287176 ;
-	setAttr ".pt[478]" -type "float3" 0.0086104805 0.0061925985 -0.093042471 ;
-	setAttr ".pt[479]" -type "float3" 0.009933237 0.015463105 -0.090083838 ;
-	setAttr ".pt[480]" -type "float3" 0.056605145 -0.11555135 -0.080660835 ;
-	setAttr ".pt[481]" -type "float3" 0.058775712 -0.097683541 -0.068447202 ;
-	setAttr ".pt[482]" -type "float3" 0.069962516 -0.10924029 -0.042961471 ;
-	setAttr ".pt[483]" -type "float3" 0.060937122 -0.12844466 -0.066478193 ;
-	setAttr ".pt[484]" -type "float3" 0.018607985 -0.11160856 -0.10210409 ;
-	setAttr ".pt[485]" -type "float3" 0.038217939 -0.11732733 -0.097806372 ;
-	setAttr ".pt[486]" -type "float3" 0.042767163 -0.13694185 -0.088501826 ;
-	setAttr ".pt[487]" -type "float3" 0.025851602 -0.1344831 -0.10123159 ;
-	setAttr ".pt[488]" -type "float3" 0.01025038 -0.1100327 -0.10676245 ;
-	setAttr ".pt[489]" -type "float3" 0.011477337 -0.13340032 -0.10441703 ;
-	setAttr ".pt[490]" -type "float3" 0.053163961 -0.073488489 -0.079866767 ;
-	setAttr ".pt[491]" -type "float3" 0.053793907 -0.067341641 -0.082447037 ;
-	setAttr ".pt[492]" -type "float3" 0.053104132 -0.059656173 -0.081115603 ;
-	setAttr ".pt[493]" -type "float3" 0.049322639 -0.10070988 -0.088672206 ;
-	setAttr ".pt[494]" -type "float3" 0.052595846 -0.090387776 -0.076776966 ;
-	setAttr ".pt[495]" -type "float3" 0.016994078 -0.10257914 -0.10225125 ;
-	setAttr ".pt[496]" -type "float3" 0.036055569 -0.10666323 -0.098382227 ;
-	setAttr ".pt[497]" -type "float3" 0.0095659858 -0.10108206 -0.10614809 ;
-	setAttr ".pt[498]" -type "float3" 0.013100051 -0.084246993 -0.089528732 ;
-	setAttr ".pt[499]" -type "float3" 0.01791703 -0.083151281 -0.092416316 ;
-	setAttr ".pt[500]" -type "float3" 0.027367132 -0.081781611 -0.09414804 ;
-	setAttr ".pt[501]" -type "float3" 0.027300743 -0.087859899 -0.081257299 ;
-	setAttr ".pt[502]" -type "float3" 0.04036516 -0.081893638 -0.088782482 ;
-	setAttr ".pt[503]" -type "float3" 0.044552863 -0.084967792 -0.084035277 ;
-	setAttr ".pt[504]" -type "float3" 0.038870003 -0.088969961 -0.092105374 ;
-	setAttr ".pt[505]" -type "float3" 0.026517414 -0.091251358 -0.095334306 ;
-	setAttr ".pt[506]" -type "float3" 0.019844986 -0.089131474 -0.094305404 ;
-	setAttr ".pt[507]" -type "float3" 0.014071495 -0.082374141 -0.092600018 ;
-	setAttr ".pt[508]" -type "float3" 0.027443901 -0.080185324 -0.095984153 ;
-	setAttr ".pt[509]" -type "float3" 0.013729722 -0.084816039 -0.093409359 ;
-	setAttr ".pt[510]" -type "float3" 0.045877747 -0.080265701 -0.085296467 ;
-	setAttr ".pt[511]" -type "float3" 0.047842182 -0.084775299 -0.08104378 ;
-	setAttr ".pt[512]" -type "float3" 0.027215997 -0.093248457 -0.097751796 ;
-	setAttr ".pt[513]" -type "float3" 0.017468741 -0.091423541 -0.097005576 ;
-	setAttr ".pt[514]" -type "float3" 0.041652206 -0.090879276 -0.091644585 ;
-	setAttr ".pt[515]" -type "float3" 0.0033229392 -0.06050843 -0.11697276 ;
-	setAttr ".pt[516]" -type "float3" 0.0035805886 -0.067249492 -0.11312862 ;
-	setAttr ".pt[517]" -type "float3" 0.0059592519 -0.059622288 -0.11144197 ;
-	setAttr ".pt[518]" -type "float3" 0.0057933526 -0.067029268 -0.10851292 ;
-	setAttr ".pt[519]" -type "float3" 0.0039768536 -0.05589129 -0.12079876 ;
-	setAttr ".pt[520]" -type "float3" 0.0070349071 -0.055059373 -0.1154046 ;
-	setAttr ".pt[521]" -type "float3" 0.029621765 -0.060731232 -0.095526733 ;
-	setAttr ".pt[522]" -type "float3" 0.04380887 -0.03284581 -0.078457728 ;
-	setAttr ".pt[523]" -type "float3" 0.035030026 -0.028698193 -0.086334057 ;
-	setAttr ".pt[524]" -type "float3" 0.0045185857 -0.047157831 -0.12643161 ;
-	setAttr ".pt[525]" -type "float3" 0.0081079267 -0.046953224 -0.12091992 ;
-	setAttr ".pt[526]" -type "float3" 0.028139176 -0.037093334 -0.091175482 ;
-	setAttr ".pt[527]" -type "float3" 0.020830629 -0.045637764 -0.095751628 ;
-	setAttr ".pt[528]" -type "float3" 0.017714547 -0.034856491 -0.099659145 ;
-	setAttr ".pt[529]" -type "float3" 0.02221293 -0.029086666 -0.093175083 ;
-	setAttr ".pt[530]" -type "float3" 0.026700139 -0.023320509 -0.086598128 ;
-	setAttr ".pt[531]" -type "float3" 0.0093642911 0.02526881 -0.084131159 ;
-	setAttr ".pt[532]" -type "float3" 0.02336682 0.021805603 -0.07814955 ;
-	setAttr ".pt[533]" -type "float3" 0.031789076 0.015868515 -0.067756295 ;
-	setAttr ".pt[534]" -type "float3" 0.039103515 0.009037558 -0.053628735 ;
-	setAttr ".pt[535]" -type "float3" 0.045413636 0.0044912659 -0.041241914 ;
-	setAttr ".pt[536]" -type "float3" 0.052694626 -0.0039323857 -0.027923103 ;
-	setAttr ".pt[537]" -type "float3" 0.056031596 -0.015224474 -0.019377809 ;
-	setAttr ".pt[538]" -type "float3" 0.059150871 -0.026666643 -0.013127836 ;
-	setAttr ".pt[539]" -type "float3" 0.04807682 -0.0355222 -0.070760332 ;
-	setAttr ".pt[540]" -type "float3" 0.075673304 -0.11655523 -0.020456724 ;
-	setAttr ".pt[541]" -type "float3" 0.065167308 -0.13998681 -0.043710943 ;
-	setAttr ".pt[542]" -type "float3" 0.050050851 -0.15543441 -0.072743841 ;
-	setAttr ".pt[543]" -type "float3" 0.030315071 -0.16076839 -0.088328809 ;
-	setAttr ".pt[544]" -type "float3" 0.013329927 -0.16089928 -0.095561907 ;
-	setAttr ".pt[545]" -type "float3" 0.033273287 0.012936792 -0.048360005 ;
-	setAttr ".pt[546]" -type "float3" 0.026530083 0.016791798 -0.043280188 ;
-	setAttr ".pt[547]" -type "float3" 0.027162297 0.018149607 -0.061500479 ;
-	setAttr ".pt[548]" -type "float3" 0.021860942 0.019927382 -0.054809317 ;
-	setAttr ".pt[549]" -type "float3" 0.021381339 0.023359451 -0.071891099 ;
-	setAttr ".pt[550]" -type "float3" 0.016960792 0.023990493 -0.065285541 ;
-	setAttr ".pt[553]" -type "float3" 0.013152245 0.020043105 -0.035439771 ;
-	setAttr ".pt[554]" -type "float3" 0.012425602 0.020061962 -0.042197265 ;
-	setAttr ".pt[555]" -type "float3" 0.011178268 0.020015463 -0.05222284 ;
-	setAttr ".pt[556]" -type "float3" 0.0091811707 0.022226159 -0.059913233 ;
-	setAttr ".pt[557]" -type "float3" 0.0026842351 -0.043820031 -0.12486183 ;
-	setAttr ".pt[558]" -type "float3" 0.0074225268 -0.042689316 -0.12078273 ;
-	setAttr ".pt[559]" -type "float3" 0.017348921 -0.030484172 -0.10166591 ;
-	setAttr ".pt[560]" -type "float3" 0.021011896 -0.025746154 -0.094863527 ;
-	setAttr ".pt[561]" -type "float3" 0.024679137 -0.021001069 -0.087996848 ;
-	setAttr ".pt[562]" -type "float3" 0.024645578 -0.0081050415 -0.084883355 ;
-	setAttr ".pt[563]" -type "float3" 0.019669844 -0.012050854 -0.088934042 ;
-	setAttr ".pt[564]" -type "float3" 0.014258264 -0.01003346 -0.10052704 ;
-	setAttr ".pt[565]" -type "float3" 0.014035016 -0.0062072938 -0.096781455 ;
-	setAttr ".pt[566]" -type "float3" 0.021939177 -0.0095604677 -0.087424137 ;
-	setAttr ".pt[567]" -type "float3" 0.020496434 -0.017412512 -0.08906316 ;
-	setAttr ".pt[568]" -type "float3" 0.02319481 -0.019414974 -0.089069068 ;
-	setAttr ".pt[569]" -type "float3" 0.012230695 -0.022926895 -0.10648987 ;
-	setAttr ".pt[570]" -type "float3" 0.01511988 -0.022971777 -0.10164887 ;
-	setAttr ".pt[571]" -type "float3" 0.016773302 -0.02452801 -0.10348108 ;
-	setAttr ".pt[572]" -type "float3" 0.013345469 -0.025812926 -0.10727493 ;
-	setAttr ".pt[573]" -type "float3" 0.01780159 -0.02019888 -0.09537147 ;
-	setAttr ".pt[574]" -type "float3" 0.019983266 -0.021974636 -0.096298948 ;
-	setAttr ".pt[575]" -type "float3" 0.0034488162 -0.02797805 -0.11315884 ;
-	setAttr ".pt[576]" -type "float3" 0.0034765981 -0.022889404 -0.11045487 ;
-	setAttr ".pt[577]" -type "float3" 0.0093350532 -0.02289298 -0.10895019 ;
-	setAttr ".pt[578]" -type "float3" 0.0091470508 -0.026810186 -0.10999155 ;
-	setAttr ".pt[579]" -type "float3" 0.0088472012 -0.0042969203 -0.10135466 ;
-	setAttr ".pt[580]" -type "float3" 0.0075697913 -0.0082510877 -0.10335101 ;
-	setAttr ".pt[581]" -type "float3" 0.015232962 -0.0028775772 -0.094619304 ;
-	setAttr ".pt[582]" -type "float3" 0.0083541265 -0.00062850025 -0.097316541 ;
-	setAttr ".pt[583]" -type "float3" 0.020651324 -0.014903815 -0.021057256 ;
-	setAttr ".pt[584]" -type "float3" 0.016981341 -0.014035286 -0.080879956 ;
-	setAttr ".pt[585]" -type "float3" 0.017859563 -0.019264249 -0.079358153 ;
-	setAttr ".pt[586]" -type "float3" 0.02360354 -0.025890695 -0.023048265 ;
-	setAttr ".pt[587]" -type "float3" 0.021122007 -0.030029478 -0.038921908 ;
-	setAttr ".pt[588]" -type "float3" 0.016032508 -0.02099186 -0.086026222 ;
-	setAttr ".pt[589]" -type "float3" 0.0142187 -0.022710947 -0.092661366 ;
-	setAttr ".pt[590]" -type "float3" 0.018190674 -0.033661008 -0.055783376 ;
-	setAttr ".pt[591]" -type "float3" 0.0025089676 -0.020880951 -0.10709961 ;
-	setAttr ".pt[592]" -type "float3" 0.0065594548 -0.021039439 -0.10557211 ;
-	setAttr ".pt[593]" -type "float3" 0.0091600129 -0.02160692 -0.10203765 ;
-	setAttr ".pt[594]" -type "float3" 0.0061581465 -0.010320889 -0.099522263 ;
-	setAttr ".pt[595]" -type "float3" 0.011344161 -0.010587366 -0.094406158 ;
-	setAttr ".pt[596]" -type "float3" 0.050144792 -0.011944117 -0.011179633 ;
-	setAttr ".pt[597]" -type "float3" 0.056092128 -0.024055807 -0.0050233835 ;
-	setAttr ".pt[598]" -type "float3" 0.027820131 -0.076226041 -0.09400513 ;
-	setAttr ".pt[599]" -type "float3" 0.048457932 -0.078372315 -0.083727755 ;
-	setAttr ".pt[600]" -type "float3" 0.05014395 -0.086190999 -0.079336293 ;
-	setAttr ".pt[601]" -type "float3" 0.045925003 -0.09577769 -0.089862883 ;
-	setAttr ".pt[602]" -type "float3" 0.032789253 -0.097684436 -0.098613203 ;
-	setAttr ".pt[603]" -type "float3" 0.016375069 -0.094400272 -0.099077836 ;
-	setAttr ".pt[604]" -type "float3" 0.01151808 -0.086771727 -0.093993932 ;
-	setAttr ".pt[605]" -type "float3" 0.011022311 -0.082064345 -0.092508726 ;
-	setAttr ".pt[606]" -type "float3" 0.027019573 -0.074217618 -0.091341689 ;
-	setAttr ".pt[607]" -type "float3" 0.050963819 -0.076470286 -0.082130149 ;
-	setAttr ".pt[608]" -type "float3" 0.051227581 -0.087918267 -0.078052536 ;
-	setAttr ".pt[609]" -type "float3" 0.047810078 -0.098277621 -0.089415446 ;
-	setAttr ".pt[610]" -type "float3" 0.03488664 -0.10247902 -0.098320901 ;
-	setAttr ".pt[611]" -type "float3" 0.016572556 -0.09854611 -0.10056438 ;
-	setAttr ".pt[612]" -type "float3" 0.010483891 -0.088480592 -0.094437584 ;
-	setAttr ".pt[613]" -type "float3" 0.0090156728 -0.082257628 -0.092578486 ;
-	setAttr ".pt[614]" -type "float3" 0.0092496956 -0.089747906 -0.095102452 ;
-	setAttr ".pt[615]" -type "float3" 0.05030844 -0.051548697 -0.079610802 ;
-	setAttr ".pt[616]" -type "float3" 0.047601707 -0.043222688 -0.0776309 ;
-	setAttr ".pt[617]" -type "float3" 0.084324211 -0.12254046 0.018011883 ;
-	setAttr ".pt[618]" -type "float3" 0.079148561 -0.095026806 0.030298406 ;
-	setAttr ".pt[619]" -type "float3" 0.082625948 -0.12379688 0.037296791 ;
-	setAttr ".pt[620]" -type "float3" 0.068663269 -0.17386127 0.078350738 ;
-	setAttr ".pt[621]" -type "float3" 0.073308848 -0.14258969 0.083514988 ;
-	setAttr ".pt[622]" -type "float3" 0.060935784 -0.1337899 0.098682389 ;
-	setAttr ".pt[623]" -type "float3" 0.057751343 -0.16614807 0.095052868 ;
-	setAttr ".pt[624]" -type "float3" 0.073634624 -0.10961416 0.084200963 ;
-	setAttr ".pt[625]" -type "float3" 0.06350261 -0.10403692 0.094978333 ;
-	setAttr ".pt[626]" -type "float3" 0.072093286 -0.079256758 0.076190978 ;
-	setAttr ".pt[627]" -type "float3" 0.060077585 -0.076882437 0.08834783 ;
-	setAttr ".pt[628]" -type "float3" 0.052087069 -0.051241271 0.078629762 ;
-	setAttr ".pt[629]" -type "float3" 0.043188792 -0.036221676 0.071871877 ;
-	setAttr ".pt[630]" -type "float3" 0.035616893 -0.04021237 0.08155866 ;
-	setAttr ".pt[631]" -type "float3" 0.031273916 -0.045565583 0.082973406 ;
-	setAttr ".pt[632]" -type "float3" 0.036837049 -0.070695713 0.097343326 ;
-	setAttr ".pt[633]" -type "float3" 0.040745877 -0.099519007 0.10735862 ;
-	setAttr ".pt[634]" -type "float3" 0.038292855 -0.13098389 0.1125678 ;
-	setAttr ".pt[635]" -type "float3" 0.038388662 -0.16224694 0.10686265 ;
-	setAttr ".pt[636]" -type "float3" 0.048562542 -0.19553334 0.069438867 ;
-	setAttr ".pt[637]" -type "float3" 0.04631767 -0.18791528 0.083221778 ;
-	setAttr ".pt[638]" -type "float3" 0.031980012 -0.19135027 0.089430809 ;
-	setAttr ".pt[639]" -type "float3" 0.026466345 -0.20470735 0.067872286 ;
-	setAttr ".pt[640]" -type "float3" 0.025993023 -0.21620923 0.037207697 ;
-	setAttr ".pt[641]" -type "float3" 0.049353831 -0.20728418 0.042979758 ;
-	setAttr ".pt[642]" -type "float3" 0.0489523 -0.20038348 0.05743495 ;
-	setAttr ".pt[643]" -type "float3" 0.026297534 -0.21062869 0.054397319 ;
-	setAttr ".pt[644]" -type "float3" 0.020315163 -0.20581079 -0.04472762 ;
-	setAttr ".pt[645]" -type "float3" 0.019782413 -0.21333912 -0.018071342 ;
-	setAttr ".pt[646]" -type "float3" 0.039898008 -0.19388579 -0.040612858 ;
-	setAttr ".pt[647]" -type "float3" 0.042296261 -0.20640564 -0.015535657 ;
-	setAttr ".pt[648]" -type "float3" 0.062488798 -0.18340361 -0.02521937 ;
-	setAttr ".pt[649]" -type "float3" 0.036547013 -0.17929226 -0.067047939 ;
-	setAttr ".pt[650]" -type "float3" 0.057626754 -0.17364329 -0.050865225 ;
-	setAttr ".pt[651]" -type "float3" 0.07967177 -0.16205689 -0.0029135426 ;
-	setAttr ".pt[652]" -type "float3" 0.075732067 -0.15029232 -0.025585473 ;
-	setAttr ".pt[653]" -type "float3" 0.081174791 -0.12172605 -0.0041850787 ;
-	setAttr ".pt[654]" -type "float3" 0.018718146 -0.18372789 -0.072125621 ;
-	setAttr ".pt[655]" -type "float3" 0.064050019 -0.19005357 -0.0032663462 ;
-	setAttr ".pt[656]" -type "float3" 0.080344655 -0.164462 0.021977477 ;
-	setAttr ".pt[657]" -type "float3" 0.070993781 -0.18416798 0.055641998 ;
-	setAttr ".pt[658]" -type "float3" 0.07036259 -0.17783201 0.066602834 ;
-	setAttr ".pt[659]" -type "float3" 0.080418721 -0.15338041 0.057406697 ;
-	setAttr ".pt[660]" -type "float3" 0.0788908 -0.12011719 0.061643746 ;
-	setAttr ".pt[661]" -type "float3" 0.076242484 -0.1146413 0.072693825 ;
-	setAttr ".pt[662]" -type "float3" 0.077225246 -0.14780909 0.070712313 ;
-	setAttr ".pt[663]" -type "float3" 0.073416159 -0.073508248 0.022483395 ;
-	setAttr ".pt[664]" -type "float3" 0.059921626 -0.054203644 0.069997326 ;
-	setAttr ".pt[665]" -type "float3" 0.050881881 -0.036677144 0.063868374 ;
-	setAttr ".pt[666]" -type "float3" 0.076830924 -0.09070912 0.056171536 ;
-	setAttr ".pt[667]" -type "float3" 0.075851545 -0.083767712 0.066033974 ;
-	setAttr ".pt[668]" -type "float3" 0.0066229859 -0.041614942 -0.11932292 ;
-	setAttr ".pt[669]" -type "float3" 0.0055016452 -0.044830196 -0.11942569 ;
-	setAttr ".pt[670]" -type "float3" 0.0059187324 -0.045126729 -0.11807813 ;
-	setAttr ".pt[671]" -type "float3" 0.0075495262 -0.041614942 -0.11740401 ;
-	setAttr ".pt[672]" -type "float3" 0.0087092035 -0.058642656 -0.105988 ;
-	setAttr ".pt[673]" -type "float3" 0.010832625 -0.054723322 -0.1087833 ;
-	setAttr ".pt[674]" -type "float3" 0.0036154944 -0.084098265 -0.10488263 ;
-	setAttr ".pt[675]" -type "float3" 0.0040458874 -0.080568641 -0.10614979 ;
-	setAttr ".pt[676]" -type "float3" 0.0019469277 -0.041614942 -0.12158444 ;
-	setAttr ".pt[677]" -type "float3" 0.0088539943 -0.041991301 -0.11779875 ;
-	setAttr ".pt[678]" -type "float3" 0.0029466525 -0.034993432 -0.11267114 ;
-	setAttr ".pt[679]" -type "float3" 0.013019413 -0.032365412 -0.1060819 ;
-	setAttr ".pt[680]" -type "float3" 0.012571741 -0.0413009 -0.10504187 ;
-	setAttr ".pt[681]" -type "float3" 0.010694008 -0.040494345 -0.1086458 ;
-	setAttr ".pt[682]" -type "float3" 0.0091849864 -0.033512712 -0.10929114 ;
-	setAttr ".pt[683]" -type "float3" 0.00252053 -0.040441357 -0.11227501 ;
-	setAttr ".pt[684]" -type "float3" 0.0021478978 -0.041614942 -0.11296807 ;
-	setAttr ".pt[685]" -type "float3" 0.0092651881 -0.041660853 -0.11013811 ;
-	setAttr ".pt[686]" -type "float3" 0.008885243 -0.05128067 -0.099152192 ;
-	setAttr ".pt[687]" -type "float3" 0.01156264 -0.050653674 -0.10162345 ;
-	setAttr ".pt[688]" -type "float3" 0.013679676 -0.042329349 -0.10792738 ;
-	setAttr ".pt[689]" -type "float3" 0.0081371684 -0.06584996 -0.10428977 ;
-	setAttr ".pt[690]" -type "float3" 0.0094898334 -0.062755823 -0.098757938 ;
-	setAttr ".pt[691]" -type "float3" 0.0056342017 -0.083083615 -0.097221136 ;
-	setAttr ".pt[692]" -type "float3" 0.0074089486 -0.074747384 -0.10129843 ;
-	setAttr ".pt[693]" -type "float3" 0.005330367 -0.082012266 -0.10099687 ;
-	setAttr ".pt[694]" -type "float3" 0.00352632 -0.086741418 -0.10325508 ;
-	setAttr ".pt[695]" -type "float3" 0.0056986264 -0.091922104 -0.10286015 ;
-	setAttr ".pt[696]" -type "float3" 0.0043820995 -0.089516565 -0.10236026 ;
-	setAttr ".pt[697]" -type "float3" 0.0076437001 -0.09440285 -0.1037989 ;
-	setAttr ".pt[698]" -type "float3" 0.0037789182 -0.074182034 -0.10936108 ;
-	setAttr ".pt[699]" -type "float3" 0.0056481175 -0.074251622 -0.10552987 ;
-	setAttr ".pt[700]" -type "float3" 0.010632836 -0.045762338 -0.11593669 ;
-	setAttr ".pt[701]" -type "float3" 0.010648269 -0.040839918 -0.1143038 ;
-	setAttr ".pt[702]" -type "float3" 0.0084890984 -0.041611247 -0.11403186 ;
-	setAttr ".pt[703]" -type "float3" 0.0064862762 -0.045125835 -0.11459026 ;
-	setAttr ".pt[704]" -type "float3" 0.0056766262 -0.044452153 -0.11307196 ;
-	setAttr ".pt[705]" -type "float3" 0.0096386103 -0.06798321 -0.09795557 ;
-	setAttr ".pt[706]" -type "float3" 0.007842646 -0.070249572 -0.10279398 ;
-	setAttr ".pt[707]" -type "float3" 0.0057296022 -0.070552051 -0.10705204 ;
-	setAttr ".pt[708]" -type "float3" 0.0036830625 -0.070581123 -0.11130086 ;
-	setAttr ".pt[709]" -type "float3" 0.0024028472 -0.045126729 -0.11573817 ;
-	setAttr ".pt[710]" -type "float3" 0.0025529172 -0.045030199 -0.1184914 ;
-	setAttr ".pt[711]" -type "float3" 0.0013004214 -0.041999705 -0.12028997 ;
-	setAttr ".pt[712]" -type "float3" 0.0012070385 -0.042036749 -0.11588679 ;
-	setAttr ".pt[713]" -type "float3" 0.003029881 -0.044431843 -0.11443902 ;
-	setAttr ".pt[714]" -type "float3" 0.002608248 -0.044994168 -0.11950634 ;
-	setAttr ".pt[715]" -type "float3" 0.06907928 -0.063824132 0.049226388 ;
-	setAttr ".pt[716]" -type "float3" 0.065734692 -0.059378058 0.060033455 ;
-	setAttr ".pt[717]" -type "float3" 0.060647324 -0.039491929 0.043643251 ;
-	setAttr ".pt[718]" -type "float3" 0.056465682 -0.037909545 0.054550085 ;
-	setAttr ".pt[719]" -type "float3" 0.022003433 0.016516246 -0.033848185 ;
-	setAttr ".pt[720]" -type "float3" 0.014067916 0.024574492 -0.023351133 ;
-	setAttr ".pt[721]" -type "float3" 0.023819596 0.017406911 -0.018516492 ;
-	setAttr ".pt[722]" -type "float3" 0.020436104 0.017393075 -0.039879356 ;
-	setAttr ".pt[723]" -type "float3" 0.018002557 0.018622562 -0.048334382 ;
-	setAttr ".pt[724]" -type "float3" 0.040674102 -0.041563101 -0.085845597 ;
-	setAttr ".pt[725]" -type "float3" 0.046092793 -0.0019242009 -0.0025332745 ;
-	setAttr ".pt[726]" -type "float3" 0.054339908 -0.020044653 0.0043995706 ;
-	setAttr ".pt[728]" -type "float3" 0.021804594 0.024245519 -0.009742829 ;
-	setAttr ".pt[729]" -type "float3" 0.029723398 0.021501791 -0.0013891849 ;
-	setAttr ".pt[730]" -type "float3" 0.039106041 0.012073003 0.0059727561 ;
-	setAttr ".pt[731]" -type "float3" 0.054493051 -0.017794458 0.017067514 ;
-	setAttr ".pt[732]" -type "float3" 0.064743772 -0.045180373 0.012863081 ;
-	setAttr ".pt[733]" -type "float3" 0.026578501 -0.06419158 0.075221851 ;
-	setAttr ".pt[734]" -type "float3" 0.040654354 -0.030302333 0.065358691 ;
-	setAttr ".pt[735]" -type "float3" 0.045124602 -0.020791275 0.057649754 ;
-	setAttr ".pt[736]" -type "float3" 0.050031718 -0.019425539 0.048548397 ;
-	setAttr ".pt[737]" -type "float3" 0.054187704 -0.018454744 0.037995879 ;
-	setAttr ".pt[738]" -type "float3" 0.055748191 -0.017293526 0.026482735 ;
-	setAttr ".pt[739]" -type "float3" 0.072001353 -0.070239127 0.037378907 ;
-	setAttr ".pt[740]" -type "float3" 0.077980198 -0.094445169 0.044331841 ;
-	setAttr ".pt[741]" -type "float3" 0.081201896 -0.12429489 0.051070854 ;
-	setAttr ".pt[742]" -type "float3" 0.081782557 -0.1601156 0.043499693 ;
-	setAttr ".pt[743]" -type "float3" 0.066785544 -0.19047005 0.026495917 ;
-	setAttr ".pt[744]" -type "float3" 0.043335047 -0.21038786 0.0068059498 ;
-	setAttr ".pt[745]" -type "float3" 0.020844257 -0.21973908 0.0036452883 ;
-	setAttr ".pt[746]" -type "float3" 0.062675454 -0.04203216 0.028476605 ;
-	setAttr ".pt[747]" -type "float3" 0.026990451 -0.052318342 -0.096425831 ;
-	setAttr ".pt[890]" -type "float3" 0.00082349777 -0.0044531822 0.00052976608 ;
-	setAttr ".pt[891]" -type "float3" 0.0017728806 -0.0078389645 0.0016587973 ;
-	setAttr ".pt[892]" -type "float3" 8.9168549e-05 -0.0017125607 0.00085824728 ;
-	setAttr ".pt[893]" -type "float3" -0.00014686584 -0.0033359528 0.0015625805 ;
-	setAttr ".pt[894]" -type "float3" -7.3432922e-05 -0.0015027523 0.00017178059 ;
-	setAttr ".pt[895]" -type "float3" 0.00018358231 -0.0023970604 0.00021439791 ;
-	setAttr ".pt[896]" -type "float3" -0.00039339066 -0.0034513474 0.0012495583 ;
-	setAttr ".pt[897]" -type "float3" -0.00024652481 -0.001909256 0.00043436885 ;
-	setAttr ".pt[898]" -type "float3" 0.00097560883 -0.0062680244 0.0028440505 ;
-	setAttr ".pt[899]" -type "float3" 0.00238657 -0.010854959 0.003609851 ;
-	setAttr ".pt[901]" -type "float3" 0.00030946732 -0.001431942 0.00024521351 ;
-	setAttr ".pt[909]" -type "float3" 0.00011014938 -0.00052714348 0.00017796829 ;
-	setAttr ".pt[1018]" -type "float3" 0.0012774472 -0.068371475 0.028153624 ;
-	setAttr ".pt[1019]" -type "float3" 0.018719196 -0.065469027 0.036361329 ;
-	setAttr ".pt[1020]" -type "float3" -0.013043404 -0.059076726 0.031229861 ;
-	setAttr ".pt[1021]" -type "float3" 0.0036425591 -0.034087598 0.056260407 ;
-	setAttr ".pt[1022]" -type "float3" -0.0086455345 -0.04090035 0.061818287 ;
-	setAttr ".pt[1023]" -type "float3" 0.017053604 -0.042669654 0.064336225 ;
-	setAttr ".pt[1024]" -type "float3" -0.019164562 -0.060965598 0.049923301 ;
-	setAttr ".pt[1025]" -type "float3" -0.016624451 -0.054855764 0.060962863 ;
-	setAttr ".pt[1026]" -type "float3" 0.027183056 -0.060738027 0.05101987 ;
-	setAttr ".pt[1027]" -type "float3" 0.023272038 -0.05470252 0.062239259 ;
+	setAttr -s 2076 ".pt";
+	setAttr ".pt[50]" -type "float3" -0.0017280579 0.081617355 -0.011785269 ;
+	setAttr ".pt[89]" -type "float3" -0.002974987 0.06151104 -0.015861988 ;
+	setAttr ".pt[223]" -type "float3" -0.004781723 0.0034370422 -0.0037311614 ;
+	setAttr ".pt[296]" -type "float3" -0.004386425 0.0014457703 -0.0020807981 ;
+	setAttr ".pt[310]" -type "float3" -0.0040259361 0.042896748 -0.021312416 ;
+	setAttr ".pt[314]" -type "float3" -0.026259422 -0.032300472 -0.0082826018 ;
+	setAttr ".pt[315]" -type "float3" -0.026314735 -0.06598568 0.00068458915 ;
+	setAttr ".pt[316]" -type "float3" -0.0090942383 -0.077430725 -0.0015534163 ;
+	setAttr ".pt[317]" -type "float3" -0.027228832 -0.028792858 -0.020346209 ;
+	setAttr ".pt[355]" -type "float3" -0.017791748 -0.034433365 0.015965626 ;
+	setAttr ".pt[357]" -type "float3" -0.0035514832 -0.0016722679 -0.0022652149 ;
+	setAttr ".pt[358]" -type "float3" -0.019831657 -0.007809639 -0.0054115355 ;
+	setAttr ".pt[359]" -type "float3" -0.028004169 -0.017614841 0.0035901368 ;
+	setAttr ".pt[360]" -type "float3" -0.0061430931 -0.0057091713 0.0031085908 ;
+	setAttr ".pt[362]" -type "float3" 0.0086236 0.017014027 0.0023394823 ;
+	setAttr ".pt[379]" -type "float3" -0.0024695396 -0.0030479431 -0.0064238235 ;
+	setAttr ".pt[383]" -type "float3" -0.0070185661 -0.0062556267 -0.0088486895 ;
+	setAttr ".pt[630]" -type "float3" 0.010485649 -0.0051598549 0.0013098717 ;
+	setAttr ".pt[631]" -type "float3" 0.001958847 0.0038046837 -0.0031093955 ;
+	setAttr ".pt[733]" -type "float3" 0.0066304207 -0.045707226 0.00089144707 ;
+	setAttr ".pt[734]" -type "float3" 0.0051555634 -0.010184765 -0.001732111 ;
+	setAttr ".pt[890]" -type "float3" 0.00082346797 -0.0044531822 0.00052952766 ;
+	setAttr ".pt[891]" -type "float3" 0.0017728508 -0.0078389645 0.0016589016 ;
+	setAttr ".pt[892]" -type "float3" 8.9198351e-05 -0.0017125607 0.00085823983 ;
+	setAttr ".pt[893]" -type "float3" -0.00014680624 -0.0033359528 0.001562573 ;
+	setAttr ".pt[894]" -type "float3" -7.3581934e-05 -0.0015027523 0.0001719296 ;
+	setAttr ".pt[895]" -type "float3" 0.0001835525 -0.0023970604 0.00021448731 ;
+	setAttr ".pt[896]" -type "float3" -0.00039345026 -0.0034513474 0.0012495574 ;
+	setAttr ".pt[897]" -type "float3" -0.00024649501 -0.001909256 0.00043442845 ;
+	setAttr ".pt[898]" -type "float3" 0.00097572803 -0.0062680244 0.0028440282 ;
+	setAttr ".pt[899]" -type "float3" 0.00238657 -0.010854959 0.0036098324 ;
+	setAttr ".pt[900]" -type "float3" 0 0 1.3411045e-07 ;
+	setAttr ".pt[901]" -type "float3" 0.00030943751 -0.001431942 0.00024519861 ;
+	setAttr ".pt[902]" -type "float3" 2.9802322e-08 0 1.6391277e-07 ;
+	setAttr ".pt[903]" -type "float3" 2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[904]" -type "float3" -1.7881393e-07 0 0 ;
+	setAttr ".pt[905]" -type "float3" -2.3841858e-07 0 2.9802322e-08 ;
+	setAttr ".pt[906]" -type "float3" 2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[907]" -type "float3" 2.9802322e-08 0 -7.4505806e-09 ;
+	setAttr ".pt[908]" -type "float3" -2.9802322e-08 0 -5.2154064e-08 ;
+	setAttr ".pt[909]" -type "float3" 0.00011011958 -0.00052714348 0.00017796643 ;
+	setAttr ".pt[910]" -type "float3" -5.9604645e-08 0 1.3411045e-07 ;
+	setAttr ".pt[911]" -type "float3" 0 0 -1.6391277e-07 ;
+	setAttr ".pt[912]" -type "float3" -8.9406967e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[913]" -type "float3" 2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[914]" -type "float3" -8.9406967e-08 0 2.9802322e-08 ;
+	setAttr ".pt[915]" -type "float3" -2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[916]" -type "float3" -8.9406967e-08 0 -7.4505806e-09 ;
+	setAttr ".pt[917]" -type "float3" -2.9802322e-08 0 -1.0244548e-08 ;
+	setAttr ".pt[918]" -type "float3" -8.9406967e-08 0 -1.0430813e-07 ;
+	setAttr ".pt[919]" -type "float3" 0 0 -4.4703484e-08 ;
+	setAttr ".pt[920]" -type "float3" 2.9802322e-08 0 5.9604645e-08 ;
+	setAttr ".pt[921]" -type "float3" 0 0 -6.7055225e-08 ;
+	setAttr ".pt[922]" -type "float3" -2.9802322e-08 0 5.9604645e-08 ;
+	setAttr ".pt[923]" -type "float3" -2.9802322e-08 0 -1.1920929e-07 ;
+	setAttr ".pt[924]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[925]" -type "float3" -2.9802322e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[926]" -type "float3" -2.9802322e-08 0 2.0861626e-07 ;
+	setAttr ".pt[927]" -type "float3" -2.9802322e-08 0 1.7881393e-07 ;
+	setAttr ".pt[928]" -type "float3" -2.9802322e-08 0 4.4703484e-08 ;
+	setAttr ".pt[929]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[930]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[931]" -type "float3" 2.9802322e-08 0 0 ;
+	setAttr ".pt[932]" -type "float3" 0 0 1.1175871e-08 ;
+	setAttr ".pt[933]" -type "float3" -5.9604645e-08 0 2.2351742e-08 ;
+	setAttr ".pt[934]" -type "float3" -2.9802322e-08 0 5.9604645e-08 ;
+	setAttr ".pt[935]" -type "float3" 0 0 2.9802322e-08 ;
+	setAttr ".pt[936]" -type "float3" -2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[937]" -type "float3" 5.9604645e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[938]" -type "float3" -1.4901161e-07 0 -8.9406967e-08 ;
+	setAttr ".pt[939]" -type "float3" -5.9604645e-08 0 0 ;
+	setAttr ".pt[940]" -type "float3" -1.1920929e-07 0 7.4505806e-08 ;
+	setAttr ".pt[941]" -type "float3" -8.9406967e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[942]" -type "float3" -2.9802322e-08 0 1.4901161e-07 ;
+	setAttr ".pt[943]" -type "float3" -1.7881393e-07 0 -4.4703484e-08 ;
+	setAttr ".pt[944]" -type "float3" -1.1920929e-07 0 5.2154064e-08 ;
+	setAttr ".pt[945]" -type "float3" 0 0 -7.4505806e-09 ;
+	setAttr ".pt[946]" -type "float3" -1.7881393e-07 0 1.4901161e-08 ;
+	setAttr ".pt[947]" -type "float3" 2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[948]" -type "float3" 5.9604645e-08 0 1.3411045e-07 ;
+	setAttr ".pt[949]" -type "float3" -8.9406967e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[950]" -type "float3" -1.4901161e-07 0 2.0861626e-07 ;
+	setAttr ".pt[951]" -type "float3" 0 0 -1.4901161e-07 ;
+	setAttr ".pt[952]" -type "float3" 0 0 8.9406967e-08 ;
+	setAttr ".pt[953]" -type "float3" -2.9802322e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[954]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr ".pt[955]" -type "float3" -2.9802322e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[956]" -type "float3" -2.9802322e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[957]" -type "float3" -1.7881393e-07 0 0 ;
+	setAttr ".pt[958]" -type "float3" -5.9604645e-08 0 -3.7252903e-08 ;
+	setAttr ".pt[959]" -type "float3" 1.4901161e-07 0 1.8626451e-09 ;
+	setAttr ".pt[960]" -type "float3" 5.9604645e-08 0 -7.4505806e-08 ;
+	setAttr ".pt[961]" -type "float3" -1.1920929e-07 0 -1.4901161e-08 ;
+	setAttr ".pt[962]" -type "float3" -2.9802322e-08 0 1.3411045e-07 ;
+	setAttr ".pt[963]" -type "float3" 2.9802322e-08 0 -1.6391277e-07 ;
+	setAttr ".pt[964]" -type "float3" 0 0 4.4703484e-08 ;
+	setAttr ".pt[965]" -type "float3" -2.9802322e-08 0 -4.4703484e-08 ;
+	setAttr ".pt[966]" -type "float3" -5.9604645e-08 0 2.9802322e-08 ;
+	setAttr ".pt[968]" -type "float3" -2.9802322e-08 0 1.7881393e-07 ;
+	setAttr ".pt[969]" -type "float3" -2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[970]" -type "float3" 0 0 -2.9802322e-08 ;
+	setAttr ".pt[971]" -type "float3" -2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[972]" -type "float3" -2.9802322e-08 0 -1.1920929e-07 ;
+	setAttr ".pt[974]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[975]" -type "float3" 0 0 1.4901161e-08 ;
+	setAttr ".pt[976]" -type "float3" -2.9802322e-08 0 -1.8626451e-09 ;
+	setAttr ".pt[977]" -type "float3" -2.9802322e-08 0 -1.3038516e-08 ;
+	setAttr ".pt[1018]" -type "float3" 0.0048915744 -0.068371475 0.028153613 ;
+	setAttr ".pt[1019]" -type "float3" 0.070500523 -0.065469027 0.036361396 ;
+	setAttr ".pt[1020]" -type "float3" -0.050080568 -0.059076726 0.031229824 ;
+	setAttr ".pt[1021]" -type "float3" 0.020054042 -0.034087598 0.0562604 ;
+	setAttr ".pt[1022]" -type "float3" -0.040482938 -0.04090035 0.061818279 ;
+	setAttr ".pt[1023]" -type "float3" 0.0786331 -0.042669654 0.064336203 ;
+	setAttr ".pt[1024]" -type "float3" -0.019164413 -0.060965598 0.049923323 ;
+	setAttr ".pt[1025]" -type "float3" -0.01662451 -0.054855764 0.060962848 ;
+	setAttr ".pt[1026]" -type "float3" 0.027183056 -0.060738027 0.051019877 ;
+	setAttr ".pt[1027]" -type "float3" 0.023272008 -0.05470252 0.062239282 ;
 	setAttr ".pt[1028]" -type "float3" 0.002884388 -0.022892445 -0.09428966 ;
-	setAttr ".pt[1029]" -type "float3" -0.0085754413 -0.01570484 -0.10819613 ;
-	setAttr ".pt[1030]" -type "float3" 0.017969608 -0.023312628 -0.074982196 ;
-	setAttr ".pt[1031]" -type "float3" 0.00089883897 -0.041302979 -0.023969866 ;
-	setAttr ".pt[1032]" -type "float3" 0.018600941 -0.03891319 -0.011954956 ;
-	setAttr ".pt[1033]" -type "float3" -0.014123917 -0.033435881 -0.026029058 ;
-	setAttr ".pt[1034]" -type "float3" -0.028505802 -0.032457411 0.037275404 ;
-	setAttr ".pt[1035]" -type "float3" -0.021456242 -0.033620119 0.0057098009 ;
-	setAttr ".pt[1036]" -type "float3" -0.01911211 -0.047096014 0.030178457 ;
-	setAttr ".pt[1037]" -type "float3" -0.02301693 -0.046651542 0.046113774 ;
-	setAttr ".pt[1038]" -type "float3" 0.022143841 -0.05203402 0.033003416 ;
-	setAttr ".pt[1039]" -type "float3" 0.023627281 -0.039583087 0.01457328 ;
-	setAttr ".pt[1040]" -type "float3" 0.030241013 -0.035808921 0.042218387 ;
-	setAttr ".pt[1041]" -type "float3" 0.028882027 -0.048951983 0.048303932 ;
-	setAttr ".pt[1042]" -type "float3" 0.029359818 -0.026741594 0.014271982 ;
-	setAttr ".pt[1043]" -type "float3" 0.030341625 -0.023574352 0.037754253 ;
-	setAttr ".pt[1044]" -type "float3" -0.02745676 -0.02163896 0.024462327 ;
-	setAttr ".pt[1045]" -type "float3" -0.02614069 -0.021567971 -0.011795022 ;
-	setAttr ".pt[1046]" -type "float3" -0.018728733 -0.043804646 0.057242095 ;
-	setAttr ".pt[1047]" -type "float3" -0.023806095 -0.032367885 0.055371288 ;
-	setAttr ".pt[1048]" -type "float3" 0.0034141541 -0.01791358 0.061534628 ;
-	setAttr ".pt[1049]" -type "float3" -0.010274887 -0.025493681 0.068765983 ;
-	setAttr ".pt[1050]" -type "float3" 0.019526482 -0.022908956 0.071279451 ;
-	setAttr ".pt[1051]" -type "float3" 0.028439522 -0.033281922 0.057147618 ;
-	setAttr ".pt[1052]" -type "float3" 0.026194572 -0.045297503 0.057612736 ;
-	setAttr ".pt[1053]" -type "float3" 0.029691696 -0.021526664 0.055400867 ;
-	setAttr ".pt[1054]" -type "float3" -0.023904324 -0.021431446 0.049821146 ;
-	setAttr ".pt[1055]" -type "float3" -0.016962528 -0.030355155 0.065519236 ;
-	setAttr ".pt[1056]" -type "float3" -0.013238907 -0.039523065 0.062385961 ;
-	setAttr ".pt[1057]" -type "float3" -0.018099785 -0.021239877 0.062730901 ;
-	setAttr ".pt[1058]" -type "float3" 0.021945953 -0.040758967 0.063925162 ;
-	setAttr ".pt[1059]" -type "float3" 0.025109291 -0.029303312 0.067080997 ;
-	setAttr ".pt[1060]" -type "float3" 0.026668549 -0.019867629 0.065333575 ;
-	setAttr ".pt[1061]" -type "float3" 0.0039997101 -0.0061567128 0.065120831 ;
-	setAttr ".pt[1062]" -type "float3" 0.021044254 -0.010744721 0.071887799 ;
-	setAttr ".pt[1063]" -type "float3" -0.0140872 -0.012340456 0.068720296 ;
-	setAttr ".pt[1064]" -type "float3" -0.023009781 -0.015162528 -0.046556033 ;
+	setAttr ".pt[1029]" -type "float3" -0.013160458 -0.01570484 -0.10819613 ;
+	setAttr ".pt[1030]" -type "float3" 0.022470139 -0.023312628 -0.074982196 ;
+	setAttr ".pt[1031]" -type "float3" 0.0029321611 -0.041302979 -0.023969799 ;
+	setAttr ".pt[1032]" -type "float3" 0.068681493 -0.03891319 -0.011954963 ;
+	setAttr ".pt[1033]" -type "float3" -0.056833625 -0.033435881 -0.02602914 ;
+	setAttr ".pt[1034]" -type "float3" -0.11110353 -0.032457411 0.037275411 ;
+	setAttr ".pt[1035]" -type "float3" -0.084848374 -0.033620119 0.005709976 ;
+	setAttr ".pt[1036]" -type "float3" -0.073822886 -0.047096014 0.030178443 ;
+	setAttr ".pt[1037]" -type "float3" -0.088850737 -0.046651542 0.046113715 ;
+	setAttr ".pt[1038]" -type "float3" 0.081836343 -0.05203402 0.033003487 ;
+	setAttr ".pt[1039]" -type "float3" 0.086181343 -0.039583087 0.014573306 ;
+	setAttr ".pt[1040]" -type "float3" 0.110066 -0.035808921 0.042218417 ;
+	setAttr ".pt[1041]" -type "float3" 0.10724868 -0.048951983 0.048303861 ;
+	setAttr ".pt[1042]" -type "float3" 0.036797423 -0.026741594 0.014271982 ;
+	setAttr ".pt[1043]" -type "float3" 0.038061701 -0.023574352 0.037754253 ;
+	setAttr ".pt[1044]" -type "float3" -0.037824154 -0.02163896 0.024462327 ;
+	setAttr ".pt[1045]" -type "float3" -0.036368705 -0.021567971 -0.011795022 ;
+	setAttr ".pt[1046]" -type "float3" -0.074047208 -0.043804646 0.057242069 ;
+	setAttr ".pt[1047]" -type "float3" -0.092234254 -0.032367885 0.055371284 ;
+	setAttr ".pt[1048]" -type "float3" 0.018669456 -0.01791358 0.061534584 ;
+	setAttr ".pt[1049]" -type "float3" -0.045791954 -0.025493681 0.068766013 ;
+	setAttr ".pt[1050]" -type "float3" 0.08608216 -0.022908956 0.071279436 ;
+	setAttr ".pt[1051]" -type "float3" 0.1051908 -0.033281922 0.057147656 ;
+	setAttr ".pt[1052]" -type "float3" 0.10062157 -0.045297503 0.057612769 ;
+	setAttr ".pt[1053]" -type "float3" 0.037390023 -0.021526664 0.055400867 ;
+	setAttr ".pt[1054]" -type "float3" -0.032940671 -0.021431446 0.049821146 ;
+	setAttr ".pt[1055]" -type "float3" -0.067596376 -0.030355155 0.065519229 ;
+	setAttr ".pt[1056]" -type "float3" -0.05427739 -0.039523065 0.062385976 ;
+	setAttr ".pt[1057]" -type "float3" -0.025403267 -0.021239877 0.062730901 ;
+	setAttr ".pt[1058]" -type "float3" 0.088491425 -0.040758967 0.063925162 ;
+	setAttr ".pt[1059]" -type "float3" 0.097610265 -0.029303312 0.067080982 ;
+	setAttr ".pt[1060]" -type "float3" 0.033922926 -0.019867629 0.065333575 ;
+	setAttr ".pt[1061]" -type "float3" 0.0045904005 -0.0061567128 0.065120831 ;
+	setAttr ".pt[1062]" -type "float3" 0.027034648 -0.010744721 0.071887799 ;
+	setAttr ".pt[1063]" -type "float3" -0.020373253 -0.012340456 0.068720296 ;
+	setAttr ".pt[1064]" -type "float3" -0.032504089 -0.015162528 -0.046556033 ;
 	setAttr ".pt[1065]" -type "float3" -0.027541168 -0.012483537 0.010488823 ;
 	setAttr ".pt[1066]" -type "float3" -0.023497105 -0.01188159 0.050509516 ;
 	setAttr ".pt[1067]" -type "float3" 0.030183792 -0.012450963 0.031287119 ;
-	setAttr ".pt[1068]" -type "float3" 0.027632713 -0.017766237 -0.0232036 ;
+	setAttr ".pt[1068]" -type "float3" 0.034718141 -0.017766237 -0.0232036 ;
 	setAttr ".pt[1069]" -type "float3" 0.029423714 -0.010808408 0.059707269 ;
-	setAttr ".pt[1070]" -type "float3" -0.018113613 -0.0064226389 -0.12153952 ;
-	setAttr ".pt[1071]" -type "float3" 0.024498463 -0.012584716 -0.074726969 ;
-	setAttr ".pt[1072]" -type "float3" -0.0054240227 -0.0079329908 -0.16652386 ;
-	setAttr ".pt[1073]" -type "float3" -0.01279163 -0.0029565394 -0.17659263 ;
-	setAttr ".pt[1074]" -type "float3" 0.022940159 -0.0078030527 -0.11900446 ;
-	setAttr ".pt[1075]" -type "float3" 0.016147137 -0.013904214 -0.13008644 ;
+	setAttr ".pt[1070]" -type "float3" -0.02661013 -0.0064226389 -0.12153952 ;
+	setAttr ".pt[1071]" -type "float3" 0.031043617 -0.012584716 -0.074726969 ;
+	setAttr ".pt[1072]" -type "float3" -0.0091244848 -0.0079329908 -0.16652386 ;
+	setAttr ".pt[1073]" -type "float3" -0.019788461 -0.0029565394 -0.17659263 ;
+	setAttr ".pt[1074]" -type "float3" 0.029481135 -0.0078030527 -0.11900446 ;
+	setAttr ".pt[1075]" -type "float3" 0.020449128 -0.013904214 -0.13008644 ;
 	setAttr ".pt[1076]" -type "float3" 0.0047922134 -0.013041496 -0.15281495 ;
 	setAttr ".pt[1077]" -type "float3" 0.0041298866 -0.0011685193 0.067258775 ;
 	setAttr ".pt[1078]" -type "float3" 0.021052837 -0.0042298138 0.071885705 ;
@@ -1657,7 +1016,7 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1087]" -type "float3" 0.024403572 -0.0052117109 -0.079084218 ;
 	setAttr ".pt[1088]" -type "float3" -0.020821095 0.0024350435 -0.17519899 ;
 	setAttr ".pt[1089]" -type "float3" 0.022815704 -0.00094181299 -0.12200743 ;
-	setAttr ".pt[1090]" -type "float3" 0.016246319 -0.0086322147 -0.17227341 ;
+	setAttr ".pt[1090]" -type "float3" 0.021089904 -0.0086322147 -0.17227341 ;
 	setAttr ".pt[1091]" -type "float3" 0.0057072621 -0.0076860487 -0.18682545 ;
 	setAttr ".pt[1092]" -type "float3" 0.016523838 0.0020683855 -0.033195123 ;
 	setAttr ".pt[1093]" -type "float3" 0.0051693944 0.0089879036 -0.066402227 ;
@@ -1674,17 +1033,17 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1104]" -type "float3" -0.020020489 0.0093896827 -0.13701212 ;
 	setAttr ".pt[1105]" -type "float3" 0.0035219193 0.0094766617 -0.1174392 ;
 	setAttr ".pt[1106]" -type "float3" 0.025253773 0.014806064 -0.15727355 ;
-	setAttr ".pt[1107]" -type "float3" -0.013336655 -0.00058822334 -0.20529878 ;
-	setAttr ".pt[1108]" -type "float3" 0.025126934 -0.0047859848 -0.1519298 ;
-	setAttr ".pt[1109]" -type "float3" -0.0045666695 -0.0048408806 -0.19520907 ;
+	setAttr ".pt[1107]" -type "float3" -0.021058762 -0.00058822334 -0.20529878 ;
+	setAttr ".pt[1108]" -type "float3" 0.033009984 -0.0047859848 -0.1519298 ;
+	setAttr ".pt[1109]" -type "float3" -0.0081045143 -0.0048408806 -0.19520907 ;
 	setAttr ".pt[1110]" -type "float3" -0.019603733 0.01376598 -0.20238176 ;
 	setAttr ".pt[1111]" -type "float3" -0.0186348 0.010030188 -0.17751853 ;
 	setAttr ".pt[1112]" -type "float3" -0.01265144 0.010814384 -0.18054798 ;
 	setAttr ".pt[1113]" -type "float3" -0.013149738 0.013685666 -0.20741832 ;
 	setAttr ".pt[1114]" -type "float3" -0.0047326051 0.013825862 -0.20401686 ;
 	setAttr ".pt[1115]" -type "float3" -0.018914696 0.0052206218 -0.22273035 ;
-	setAttr ".pt[1116]" -type "float3" -0.013247967 0.001812458 -0.22248928 ;
-	setAttr ".pt[1117]" -type "float3" 0.012753963 -0.00097766425 -0.22893138 ;
+	setAttr ".pt[1116]" -type "float3" -0.02132713 0.001812458 -0.22248928 ;
+	setAttr ".pt[1117]" -type "float3" 0.017097281 -0.00097766425 -0.22893138 ;
 	setAttr ".pt[1118]" -type "float3" 0.011634354 0.0035766065 -0.23979984 ;
 	setAttr ".pt[1119]" -type "float3" 0.012332916 0.0043973029 -0.24814862 ;
 	setAttr ".pt[1120]" -type "float3" 0.012628078 0.0047433823 -0.25442731 ;
@@ -1704,12 +1063,12 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1134]" -type "float3" 0.0068159122 0.013174197 -0.25321084 ;
 	setAttr ".pt[1135]" -type "float3" 0.012307644 0.011124309 -0.25761572 ;
 	setAttr ".pt[1136]" -type "float3" 0.0077195186 0.011017025 -0.25740308 ;
-	setAttr ".pt[1137]" -type "float3" -0.0046811104 0.0020076036 -0.23442876 ;
+	setAttr ".pt[1137]" -type "float3" -0.0086908368 0.0020076036 -0.23442876 ;
 	setAttr ".pt[1138]" -type "float3" -0.0061364137 0.0050512701 -0.23968324 ;
 	setAttr ".pt[1139]" -type "float3" -0.0056033116 0.0055497885 -0.24385791 ;
 	setAttr ".pt[1140]" -type "float3" -0.0052885953 0.005843848 -0.24781644 ;
 	setAttr ".pt[1141]" -type "float3" -0.0054340363 0.0063863099 -0.25036931 ;
-	setAttr ".pt[1142]" -type "float3" -0.012291912 0.0049334317 -0.23671389 ;
+	setAttr ".pt[1142]" -type "float3" -0.020264842 0.0049334317 -0.23671389 ;
 	setAttr ".pt[1143]" -type "float3" -0.010570047 0.0052090734 -0.24122724 ;
 	setAttr ".pt[1144]" -type "float3" -0.010138514 0.0055408627 -0.24445088 ;
 	setAttr ".pt[1145]" -type "float3" -0.0097002983 0.0058293194 -0.24783188 ;
@@ -1767,22 +1126,22 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1197]" -type "float3" 0.015692234 0.01317215 -0.25100106 ;
 	setAttr ".pt[1198]" -type "float3" 0.024600506 0.011249755 -0.25525361 ;
 	setAttr ".pt[1199]" -type "float3" 0.016488552 0.011254109 -0.25519985 ;
-	setAttr ".pt[1200]" -type "float3" 0.024267673 -0.00043801963 -0.2257752 ;
-	setAttr ".pt[1201]" -type "float3" 0.024504662 0.0017955303 -0.23892963 ;
+	setAttr ".pt[1200]" -type "float3" 0.033885647 -0.00043801963 -0.2257752 ;
+	setAttr ".pt[1201]" -type "float3" 0.034872059 0.0017955303 -0.23892963 ;
 	setAttr ".pt[1202]" -type "float3" 0.025548935 0.0018302202 -0.24529159 ;
 	setAttr ".pt[1203]" -type "float3" 0.025263309 0.0023696125 -0.25209212 ;
 	setAttr ".pt[1204]" -type "float3" 0.024720669 0.0030737519 -0.25603622 ;
-	setAttr ".pt[1205]" -type "float3" 0.014988422 0.0014656782 -0.23891559 ;
+	setAttr ".pt[1205]" -type "float3" 0.020675331 0.0014656782 -0.23891559 ;
 	setAttr ".pt[1206]" -type "float3" 0.014502525 0.00180462 -0.24504057 ;
 	setAttr ".pt[1207]" -type "float3" 0.014995098 0.0023884475 -0.25202847 ;
 	setAttr ".pt[1208]" -type "float3" 0.016052246 0.0030843019 -0.2559821 ;
 	setAttr ".pt[1209]" -type "float3" -0.0044035912 0.013551127 -0.22334883 ;
 	setAttr ".pt[1210]" -type "float3" 0.0043797493 0.01377107 -0.21679169 ;
-	setAttr ".pt[1211]" -type "float3" -0.004529478 -0.0010322332 -0.21621373 ;
+	setAttr ".pt[1211]" -type "float3" -0.0082482696 -0.0010322332 -0.21621373 ;
 	setAttr ".pt[1212]" -type "float3" 0.004591465 -0.0032245219 -0.20882501 ;
 	setAttr ".pt[1213]" -type "float3" 0.025046825 0.014233351 -0.19487073 ;
-	setAttr ".pt[1214]" -type "float3" 0.025214195 0.00039900839 -0.19418737 ;
-	setAttr ".pt[1215]" -type "float3" 0.014548302 -0.005307883 -0.20164271 ;
+	setAttr ".pt[1214]" -type "float3" 0.034153223 0.00039900839 -0.19418737 ;
+	setAttr ".pt[1215]" -type "float3" 0.019173848 -0.005307883 -0.20164271 ;
 	setAttr ".pt[1216]" -type "float3" -0.018541809 0.013462914 -0.22270289 ;
 	setAttr ".pt[1217]" -type "float3" -0.01239156 0.013404358 -0.22626999 ;
 	setAttr ".pt[1218]" -type "float3" -0.01868486 0.0034730285 -0.20555285 ;
@@ -1799,8 +1158,8 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1229]" -type "float3" -0.012131693 0.015250353 -0.019379564 ;
 	setAttr ".pt[1230]" -type "float3" 0.0081543913 0.01572698 -0.001359053 ;
 	setAttr ".pt[1231]" -type "float3" -0.0033912659 0.0087093711 -0.070674717 ;
-	setAttr ".pt[1233]" -type "float3" 0.0065893531 0.049124517 0.091048874 ;
-	setAttr ".pt[1250]" -type "float3" 0.0045110621 0.042881876 0.092339993 ;
+	setAttr ".pt[1233]" -type "float3" 0.0044322014 0.022093773 0.0081085265 ;
+	setAttr ".pt[1250]" -type "float3" 0.018456459 0.016267776 0.012038648 ;
 	setAttr ".pt[1252]" -type "float3" 0.0068507195 -0.0034775734 -0.014517367 ;
 	setAttr ".pt[1253]" -type "float3" 0.090385437 -0.039201736 -0.018723786 ;
 	setAttr ".pt[1254]" -type "float3" 0.099310875 0.016810894 0.01228857 ;
@@ -1822,304 +1181,369 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[1279]" -type "float3" -0.019468307 -0.00053691864 -0.0090653747 ;
 	setAttr ".pt[1293]" -type "float3" 0.017454624 0.012312412 -0.0055866241 ;
 	setAttr ".pt[1294]" -type "float3" -0.0061850548 -0.00049638748 -0.0056196749 ;
-	setAttr ".pt[1296]" -type "float3" 0.00035902485 0.064100578 0.092604667 ;
-	setAttr ".pt[1299]" -type "float3" 0.0046964451 0.048483886 0.090896547 ;
+	setAttr ".pt[1296]" -type "float3" 0.039677143 0.039751053 0.025718957 ;
+	setAttr ".pt[1299]" -type "float3" 0.033557892 0.022625923 0.016865879 ;
 	setAttr ".pt[1301]" -type "float3" -0.00013923645 0.011947155 -0.0037558675 ;
 	setAttr ".pt[1302]" -type "float3" 0.0018930435 0.0038318634 -0.001460731 ;
-	setAttr ".pt[1305]" -type "float3" -0.016164556 0.030443238 0.039181076 ;
+	setAttr ".pt[1305]" -type "float3" 0.031710625 0.0067639351 0.001583559 ;
 	setAttr ".pt[1309]" -type "float3" 0.00042295456 0.0045185089 0.0022059381 ;
 	setAttr ".pt[1310]" -type "float3" 0.046069622 0.020256996 0.022529125 ;
 	setAttr ".pt[1311]" -type "float3" -0.005209446 0.038971424 0.042747557 ;
 	setAttr ".pt[1313]" -type "float3" -0.00034046173 -0.0034322739 0.0053936541 ;
 	setAttr ".pt[1314]" -type "float3" 0.013240337 0.041043282 0.073751509 ;
-	setAttr ".pt[1315]" -type "float3" -0.016054008 0.063007906 0.07975591 ;
-	setAttr ".pt[1317]" -type "float3" -0.035158511 0.036789283 0.012460241 ;
+	setAttr ".pt[1315]" -type "float3" 0.028265953 0.039988041 0.021311834 ;
+	setAttr ".pt[1317]" -type "float3" 0.0011572838 0.0021924973 -7.4028969e-05 ;
 	setAttr ".pt[1318]" -type "float3" -0.017577648 0.020721912 0.083278775 ;
 	setAttr ".pt[1319]" -type "float3" -0.011025429 -0.0096583366 0.04988528 ;
 	setAttr ".pt[1320]" -type "float3" -0.0084776878 -0.032469273 0.044302866 ;
 	setAttr ".pt[1321]" -type "float3" -0.012917519 0.027506351 0.062641755 ;
-	setAttr ".pt[1322]" -type "float3" -0.019022197 0.036844298 0.029118609 ;
-	setAttr ".pt[1323]" -type "float3" -0.028069146 0.039018184 0.0600513 ;
+	setAttr ".pt[1322]" -type "float3" 0.02528429 0.010449886 0.0042107105 ;
+	setAttr ".pt[1323]" -type "float3" 0.01775074 0.015627861 0.011485927 ;
 	setAttr ".pt[1329]" -type "float3" 0.0032944679 0.0013647079 -0.011243731 ;
 	setAttr ".pt[1330]" -type "float3" 0.10111666 0.0092058182 -0.019397199 ;
 	setAttr ".pt[1331]" -type "float3" 0.022365093 -0.0091743469 0.028495371 ;
-	setAttr ".pt[1377]" -type "float3" 0.022184372 -0.083225489 0.043599889 ;
-	setAttr ".pt[1378]" -type "float3" 0.023911476 -0.074870229 0.049883045 ;
-	setAttr ".pt[1379]" -type "float3" 0.022778988 -0.069565535 0.060694724 ;
-	setAttr ".pt[1380]" -type "float3" 0.022386551 -0.080531001 0.055145338 ;
-	setAttr ".pt[1381]" -type "float3" 0.018190384 -0.076417446 0.05791153 ;
-	setAttr ".pt[1382]" -type "float3" 0.016979218 -0.062360764 0.063271947 ;
-	setAttr ".pt[1383]" -type "float3" 0.0051980019 -0.053707004 0.058514729 ;
-	setAttr ".pt[1384]" -type "float3" 0.0063519478 -0.066681027 0.055071414 ;
-	setAttr ".pt[1385]" -type "float3" -0.0010910034 -0.07440722 0.058006436 ;
-	setAttr ".pt[1386]" -type "float3" -0.0041017532 -0.062471747 0.064163171 ;
-	setAttr ".pt[1387]" -type "float3" -0.01162529 -0.070525527 0.062986076 ;
-	setAttr ".pt[1388]" -type "float3" -0.0075478554 -0.080283165 0.058439061 ;
-	setAttr ".pt[1389]" -type "float3" 0.0018935204 -0.083678484 0.031454675 ;
-	setAttr ".pt[1390]" -type "float3" 0.0021476746 -0.07702446 0.034403943 ;
-	setAttr ".pt[1391]" -type "float3" 0.014530182 -0.076682687 0.037340198 ;
-	setAttr ".pt[1392]" -type "float3" 0.0095424652 -0.083242416 0.030933339 ;
-	setAttr ".pt[1393]" -type "float3" -0.014580727 -0.074931741 0.053571388 ;
-	setAttr ".pt[1394]" -type "float3" -0.0084934235 -0.076460123 0.042150144 ;
-	setAttr ".pt[1395]" -type "float3" -0.0055303574 -0.084509015 0.036217347 ;
-	setAttr ".pt[1396]" -type "float3" -0.013170719 -0.084261656 0.051367052 ;
-	setAttr ".pt[1397]" -type "float3" 0.016338825 -0.076730847 0.022744209 ;
-	setAttr ".pt[1398]" -type "float3" 0.018783092 -0.079531789 0.039017528 ;
-	setAttr ".pt[1399]" -type "float3" 0.016564369 -0.076716423 0.046043836 ;
-	setAttr ".pt[1400]" -type "float3" 0.0080041885 -0.072815299 0.043838594 ;
-	setAttr ".pt[1401]" -type "float3" 0.00057697296 -0.07006681 0.044766709 ;
-	setAttr ".pt[1402]" -type "float3" -0.0045843124 -0.07839489 0.0435009 ;
-	setAttr ".pt[1403]" -type "float3" 0.00060319901 -0.077253222 0.016493063 ;
-	setAttr ".pt[1404]" -type "float3" 0.010064125 -0.077958822 0.020822853 ;
-	setAttr ".pt[1405]" -type "float3" -0.0082297325 -0.080961108 0.028892249 ;
-	setAttr ".pt[1406]" -type "float3" -0.0081562996 -0.080663443 0.037277535 ;
-	setAttr ".pt[1407]" -type "float3" -0.003267765 -0.066919684 0.016203105 ;
-	setAttr ".pt[1408]" -type "float3" -0.0085549355 -0.067137361 0.026456833 ;
-	setAttr ".pt[1409]" -type "float3" 0.00024652481 -0.062052131 0.036193371 ;
-	setAttr ".pt[1410]" -type "float3" -0.0053710938 -0.06641221 0.034216754 ;
-	setAttr ".pt[1411]" -type "float3" 0.006734848 -0.063923359 0.036388308 ;
-	setAttr ".pt[1412]" -type "float3" 0.01545763 -0.070209742 0.038233105 ;
-	setAttr ".pt[1413]" -type "float3" 0.011574268 -0.056118488 0.012982547 ;
+	setAttr ".pt[1377]" -type "float3" 0.022184342 -0.083225489 0.043599866 ;
+	setAttr ".pt[1378]" -type "float3" 0.023911476 -0.074870229 0.04988309 ;
+	setAttr ".pt[1379]" -type "float3" 0.022778898 -0.069565535 0.060694739 ;
+	setAttr ".pt[1380]" -type "float3" 0.022386521 -0.080531001 0.055145368 ;
+	setAttr ".pt[1381]" -type "float3" 0.018190324 -0.076417446 0.05791153 ;
+	setAttr ".pt[1382]" -type "float3" 0.016979188 -0.062360764 0.063271955 ;
+	setAttr ".pt[1383]" -type "float3" 0.0051978528 -0.053707004 0.058514744 ;
+	setAttr ".pt[1384]" -type "float3" 0.0063519478 -0.066681027 0.055071373 ;
+	setAttr ".pt[1385]" -type "float3" -0.001091063 -0.07440722 0.058006439 ;
+	setAttr ".pt[1386]" -type "float3" -0.0041018426 -0.062471747 0.064163163 ;
+	setAttr ".pt[1387]" -type "float3" -0.01162526 -0.070525527 0.062986061 ;
+	setAttr ".pt[1388]" -type "float3" -0.0075478554 -0.080283165 0.058439095 ;
+	setAttr ".pt[1389]" -type "float3" 0.0018934906 -0.083678484 0.031454697 ;
+	setAttr ".pt[1390]" -type "float3" 0.0021474659 -0.07702446 0.034403905 ;
+	setAttr ".pt[1391]" -type "float3" 0.014530241 -0.076682687 0.037340239 ;
+	setAttr ".pt[1392]" -type "float3" 0.0095424056 -0.083242416 0.03093341 ;
+	setAttr ".pt[1393]" -type "float3" -0.014580786 -0.074931741 0.053571347 ;
+	setAttr ".pt[1394]" -type "float3" -0.0084934235 -0.076460123 0.042150132 ;
+	setAttr ".pt[1395]" -type "float3" -0.0055303872 -0.084509015 0.036217302 ;
+	setAttr ".pt[1396]" -type "float3" -0.013170689 -0.084261656 0.051367119 ;
+	setAttr ".pt[1397]" -type "float3" 0.016338795 -0.076730847 0.022744268 ;
+	setAttr ".pt[1398]" -type "float3" 0.018783092 -0.079531789 0.039017491 ;
+	setAttr ".pt[1399]" -type "float3" 0.01656422 -0.076716423 0.046043839 ;
+	setAttr ".pt[1400]" -type "float3" 0.0080040991 -0.072815299 0.043838594 ;
+	setAttr ".pt[1401]" -type "float3" 0.00057715178 -0.07006681 0.044766702 ;
+	setAttr ".pt[1402]" -type "float3" -0.0045844615 -0.07839489 0.043500893 ;
+	setAttr ".pt[1403]" -type "float3" 0.00060302019 -0.077253222 0.016492844 ;
+	setAttr ".pt[1404]" -type "float3" 0.010064155 -0.077958822 0.020822749 ;
+	setAttr ".pt[1405]" -type "float3" -0.0082299411 -0.080961108 0.028892174 ;
+	setAttr ".pt[1406]" -type "float3" -0.0081563294 -0.080663443 0.037277572 ;
+	setAttr ".pt[1407]" -type "float3" -0.0032677948 -0.066919684 0.016203076 ;
+	setAttr ".pt[1408]" -type "float3" -0.0085549355 -0.067137361 0.026456855 ;
+	setAttr ".pt[1409]" -type "float3" 0.00024649501 -0.062052131 0.036193363 ;
+	setAttr ".pt[1410]" -type "float3" -0.0053711832 -0.06641221 0.034216736 ;
+	setAttr ".pt[1411]" -type "float3" 0.0067348182 -0.063923359 0.036388304 ;
+	setAttr ".pt[1412]" -type "float3" 0.01545766 -0.070209742 0.038233086 ;
+	setAttr ".pt[1413]" -type "float3" 0.011574239 -0.056118488 0.012982547 ;
 	setAttr ".pt[1414]" -type "float3" 0.013784409 -0.058898449 0.021707296 ;
-	setAttr ".pt[1415]" -type "float3" 0.0060896873 -0.065228105 0.013011068 ;
-	setAttr ".pt[1416]" -type "float3" 0.00055599213 -0.060293674 0.0099331439 ;
-	setAttr ".pt[1417]" -type "float3" -0.0045790672 -0.03391552 0.012433276 ;
-	setAttr ".pt[1418]" -type "float3" -0.0033307076 -0.030419588 0.0066135526 ;
-	setAttr ".pt[1419]" -type "float3" 0.00062942505 -0.034373164 0.018543288 ;
-	setAttr ".pt[1420]" -type "float3" -0.002664566 -0.035583496 0.017304681 ;
-	setAttr ".pt[1421]" -type "float3" 0.0052609444 -0.041125059 0.021438725 ;
-	setAttr ".pt[1422]" -type "float3" 0.010548115 -0.046066046 0.019402053 ;
-	setAttr ".pt[1423]" -type "float3" 0.0050563812 -0.022536039 0.0032671094 ;
-	setAttr ".pt[1424]" -type "float3" 0.0080838203 -0.032334089 0.0093139261 ;
-	setAttr ".pt[1425]" -type "float3" 0.0037031174 -0.029408574 0.0034677386 ;
-	setAttr ".pt[1426]" -type "float3" 1.0490417e-05 -0.026308656 0.0027504563 ;
-	setAttr ".pt[1747]" -type "float3" -0.00082349777 -0.0044531822 0.00052976608 ;
-	setAttr ".pt[1748]" -type "float3" -0.0017728806 -0.0078389645 0.0016587973 ;
-	setAttr ".pt[1749]" -type "float3" -8.9168549e-05 -0.0017125607 0.00085824728 ;
-	setAttr ".pt[1750]" -type "float3" 0.00014686584 -0.0033359528 0.0015625805 ;
-	setAttr ".pt[1751]" -type "float3" 7.3432922e-05 -0.0015027523 0.00017178059 ;
-	setAttr ".pt[1752]" -type "float3" -0.00018358231 -0.0023970604 0.00021439791 ;
-	setAttr ".pt[1753]" -type "float3" 0.00039339066 -0.0034513474 0.0012495583 ;
-	setAttr ".pt[1754]" -type "float3" 0.00024652481 -0.001909256 0.00043436885 ;
-	setAttr ".pt[1755]" -type "float3" -0.00097560883 -0.0062680244 0.0028440505 ;
-	setAttr ".pt[1756]" -type "float3" -0.00238657 -0.010854959 0.003609851 ;
-	setAttr ".pt[1758]" -type "float3" -0.00030946732 -0.001431942 0.00024521351 ;
-	setAttr ".pt[1766]" -type "float3" -0.00011014938 -0.00052714348 0.00017796829 ;
-	setAttr ".pt[1864]" -type "float3" -0.0012774472 -0.068371475 0.028153624 ;
-	setAttr ".pt[1865]" -type "float3" -0.018719196 -0.065469027 0.036361329 ;
-	setAttr ".pt[1866]" -type "float3" 0.013043404 -0.059076726 0.031229861 ;
-	setAttr ".pt[1867]" -type "float3" -0.0036425591 -0.034087598 0.056260407 ;
-	setAttr ".pt[1868]" -type "float3" 0.0086455345 -0.04090035 0.061818287 ;
-	setAttr ".pt[1869]" -type "float3" -0.017053604 -0.042669654 0.064336225 ;
-	setAttr ".pt[1870]" -type "float3" 0.019164562 -0.060965598 0.049923301 ;
-	setAttr ".pt[1871]" -type "float3" 0.016624451 -0.054855764 0.060962863 ;
-	setAttr ".pt[1872]" -type "float3" -0.027183056 -0.060738027 0.05101987 ;
-	setAttr ".pt[1873]" -type "float3" -0.023272038 -0.05470252 0.062239259 ;
+	setAttr ".pt[1415]" -type "float3" 0.0060896277 -0.065228105 0.013011023 ;
+	setAttr ".pt[1416]" -type "float3" 0.00055602193 -0.060293674 0.0099330842 ;
+	setAttr ".pt[1417]" -type "float3" -0.0045790672 -0.03391552 0.012433324 ;
+	setAttr ".pt[1418]" -type "float3" -0.003330797 -0.030419588 0.0066135824 ;
+	setAttr ".pt[1419]" -type "float3" 0.00062933564 -0.034373164 0.018543292 ;
+	setAttr ".pt[1420]" -type "float3" -0.0026645362 -0.035583496 0.017304664 ;
+	setAttr ".pt[1421]" -type "float3" 0.0052609444 -0.041125059 0.021438744 ;
+	setAttr ".pt[1422]" -type "float3" 0.010548085 -0.046066046 0.019402038 ;
+	setAttr ".pt[1423]" -type "float3" 0.0050563812 -0.022536039 0.0032669604 ;
+	setAttr ".pt[1424]" -type "float3" 0.0080837607 -0.032334089 0.0093140155 ;
+	setAttr ".pt[1425]" -type "float3" 0.0037030578 -0.029408574 0.0034677088 ;
+	setAttr ".pt[1426]" -type "float3" 1.0222197e-05 -0.026308656 0.0027502477 ;
+	setAttr ".pt[1747]" -type "float3" -0.00082349777 -0.0044531822 0.00052952766 ;
+	setAttr ".pt[1748]" -type "float3" -0.0017728806 -0.0078389645 0.0016589016 ;
+	setAttr ".pt[1749]" -type "float3" -8.9228153e-05 -0.0017125607 0.00085823983 ;
+	setAttr ".pt[1750]" -type "float3" 0.00014674664 -0.0033359528 0.001562573 ;
+	setAttr ".pt[1751]" -type "float3" 7.3522329e-05 -0.0015027523 0.0001719296 ;
+	setAttr ".pt[1752]" -type "float3" -0.00018358231 -0.0023970604 0.00021448731 ;
+	setAttr ".pt[1753]" -type "float3" 0.00039339066 -0.0034513474 0.0012495574 ;
+	setAttr ".pt[1754]" -type "float3" 0.0002464354 -0.001909256 0.00043442845 ;
+	setAttr ".pt[1755]" -type "float3" -0.00097575784 -0.0062680244 0.0028440282 ;
+	setAttr ".pt[1756]" -type "float3" -0.0023865998 -0.010854959 0.0036098324 ;
+	setAttr ".pt[1757]" -type "float3" -2.9802322e-08 0 1.3411045e-07 ;
+	setAttr ".pt[1758]" -type "float3" -0.00030946732 -0.001431942 0.00024519861 ;
+	setAttr ".pt[1759]" -type "float3" -5.9604645e-08 0 1.6391277e-07 ;
+	setAttr ".pt[1760]" -type "float3" -8.9406967e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[1761]" -type "float3" 1.1920929e-07 0 0 ;
+	setAttr ".pt[1762]" -type "float3" 1.7881393e-07 0 2.9802322e-08 ;
+	setAttr ".pt[1763]" -type "float3" -8.9406967e-08 0 1.4901161e-08 ;
+	setAttr ".pt[1764]" -type "float3" -8.9406967e-08 0 -7.4505806e-09 ;
+	setAttr ".pt[1765]" -type "float3" -2.9802322e-08 0 -5.2154064e-08 ;
+	setAttr ".pt[1766]" -type "float3" -0.00011014938 -0.00052714348 0.00017796643 ;
+	setAttr ".pt[1767]" -type "float3" 0 0 1.3411045e-07 ;
+	setAttr ".pt[1768]" -type "float3" -2.9802322e-08 0 -1.6391277e-07 ;
+	setAttr ".pt[1769]" -type "float3" 2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[1770]" -type "float3" -8.9406967e-08 0 1.4901161e-08 ;
+	setAttr ".pt[1771]" -type "float3" 2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[1772]" -type "float3" -2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[1773]" -type "float3" 2.9802322e-08 0 -7.4505806e-09 ;
+	setAttr ".pt[1774]" -type "float3" 0 0 -1.0244548e-08 ;
+	setAttr ".pt[1775]" -type "float3" 5.9604645e-08 0 -1.0430813e-07 ;
+	setAttr ".pt[1776]" -type "float3" -5.9604645e-08 0 -4.4703484e-08 ;
+	setAttr ".pt[1777]" -type "float3" -8.9406967e-08 0 5.9604645e-08 ;
+	setAttr ".pt[1778]" -type "float3" -5.9604645e-08 0 -6.7055225e-08 ;
+	setAttr ".pt[1779]" -type "float3" 0 0 5.9604645e-08 ;
+	setAttr ".pt[1780]" -type "float3" -2.9802322e-08 0 -1.1920929e-07 ;
+	setAttr ".pt[1781]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[1782]" -type "float3" -2.9802322e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[1783]" -type "float3" -8.9406967e-08 0 0 ;
+	setAttr ".pt[1784]" -type "float3" -5.9604645e-08 0 1.1175871e-08 ;
+	setAttr ".pt[1785]" -type "float3" 0 0 2.2351742e-08 ;
+	setAttr ".pt[1786]" -type "float3" -2.9802322e-08 0 5.9604645e-08 ;
+	setAttr ".pt[1787]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[1788]" -type "float3" -2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[1789]" -type "float3" -8.9406967e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[1790]" -type "float3" 8.9406967e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[1791]" -type "float3" 2.9802322e-08 0 0 ;
+	setAttr ".pt[1792]" -type "float3" 8.9406967e-08 0 7.4505806e-08 ;
+	setAttr ".pt[1793]" -type "float3" 5.9604645e-08 0 -8.9406967e-08 ;
+	setAttr ".pt[1794]" -type "float3" 0 0 1.4901161e-07 ;
+	setAttr ".pt[1795]" -type "float3" 1.1920929e-07 0 -4.4703484e-08 ;
+	setAttr ".pt[1796]" -type "float3" 5.9604645e-08 0 5.2154064e-08 ;
+	setAttr ".pt[1797]" -type "float3" -5.9604645e-08 0 -7.4505806e-09 ;
+	setAttr ".pt[1798]" -type "float3" 1.1920929e-07 0 1.4901161e-08 ;
+	setAttr ".pt[1799]" -type "float3" -5.9604645e-08 0 1.4901161e-08 ;
+	setAttr ".pt[1800]" -type "float3" -8.9406967e-08 0 1.3411045e-07 ;
+	setAttr ".pt[1801]" -type "float3" 2.9802322e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[1802]" -type "float3" 8.9406967e-08 0 2.0861626e-07 ;
+	setAttr ".pt[1803]" -type "float3" -2.9802322e-08 0 -1.4901161e-07 ;
+	setAttr ".pt[1804]" -type "float3" -2.9802322e-08 0 8.9406967e-08 ;
+	setAttr ".pt[1805]" -type "float3" 0 0 -8.9406967e-08 ;
+	setAttr ".pt[1806]" -type "float3" 0 0 -8.9406967e-08 ;
+	setAttr ".pt[1807]" -type "float3" 1.1920929e-07 0 0 ;
+	setAttr ".pt[1808]" -type "float3" 0 0 -3.7252903e-08 ;
+	setAttr ".pt[1809]" -type "float3" -2.0861626e-07 0 1.8626451e-09 ;
+	setAttr ".pt[1810]" -type "float3" -1.1920929e-07 0 -7.4505806e-08 ;
+	setAttr ".pt[1811]" -type "float3" 8.9406967e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[1812]" -type "float3" 0 0 1.3411045e-07 ;
+	setAttr ".pt[1813]" -type "float3" -5.9604645e-08 0 -1.6391277e-07 ;
+	setAttr ".pt[1814]" -type "float3" -2.9802322e-08 0 4.4703484e-08 ;
+	setAttr ".pt[1815]" -type "float3" 2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[1816]" -type "float3" -5.9604645e-08 0 0 ;
+	setAttr ".pt[1817]" -type "float3" -2.9802322e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[1818]" -type "float3" -2.9802322e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[1819]" -type "float3" 0 0 -1.1920929e-07 ;
+	setAttr ".pt[1820]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr ".pt[1821]" -type "float3" 0 0 2.9802322e-08 ;
+	setAttr ".pt[1822]" -type "float3" -2.9802322e-08 0 1.4901161e-08 ;
+	setAttr ".pt[1823]" -type "float3" 0 0 -1.3038516e-08 ;
+	setAttr ".pt[1864]" -type "float3" 0.0010448098 -0.068371475 0.028153613 ;
+	setAttr ".pt[1865]" -type "float3" -0.066288829 -0.065469027 0.036361396 ;
+	setAttr ".pt[1866]" -type "float3" 0.05747211 -0.059076726 0.031229824 ;
+	setAttr ".pt[1867]" -type "float3" -0.014576107 -0.034087598 0.0562604 ;
+	setAttr ".pt[1868]" -type "float3" 0.047688216 -0.04090035 0.061818279 ;
+	setAttr ".pt[1869]" -type "float3" -0.074772209 -0.042669654 0.064336203 ;
+	setAttr ".pt[1870]" -type "float3" 0.019164354 -0.060965598 0.049923323 ;
+	setAttr ".pt[1871]" -type "float3" 0.016624451 -0.054855764 0.060962848 ;
+	setAttr ".pt[1872]" -type "float3" -0.027183086 -0.060738027 0.051019877 ;
+	setAttr ".pt[1873]" -type "float3" -0.023272038 -0.05470252 0.062239282 ;
 	setAttr ".pt[1874]" -type "float3" -0.002884388 -0.022892505 -0.09428966 ;
-	setAttr ".pt[1875]" -type "float3" 0.0085754413 -0.015704662 -0.10819613 ;
-	setAttr ".pt[1876]" -type "float3" -0.017969608 -0.023312628 -0.074982196 ;
-	setAttr ".pt[1877]" -type "float3" -0.00089883897 -0.041302979 -0.023969866 ;
-	setAttr ".pt[1878]" -type "float3" -0.018600941 -0.03891319 -0.011954956 ;
-	setAttr ".pt[1879]" -type "float3" 0.014123917 -0.033435881 -0.026029058 ;
-	setAttr ".pt[1880]" -type "float3" 0.028505802 -0.032457411 0.037275404 ;
-	setAttr ".pt[1881]" -type "float3" 0.021456242 -0.033620119 0.0057098009 ;
-	setAttr ".pt[1882]" -type "float3" 0.01911211 -0.047096014 0.030178457 ;
-	setAttr ".pt[1883]" -type "float3" 0.02301693 -0.046651542 0.046113774 ;
-	setAttr ".pt[1884]" -type "float3" -0.022143841 -0.05203402 0.033003416 ;
-	setAttr ".pt[1885]" -type "float3" -0.023627281 -0.039583087 0.01457328 ;
-	setAttr ".pt[1886]" -type "float3" -0.030241013 -0.035808921 0.042218387 ;
-	setAttr ".pt[1887]" -type "float3" -0.028882027 -0.048951983 0.048303917 ;
-	setAttr ".pt[1888]" -type "float3" -0.029359818 -0.026741594 0.014271982 ;
-	setAttr ".pt[1889]" -type "float3" -0.030341625 -0.023574352 0.037754253 ;
-	setAttr ".pt[1890]" -type "float3" 0.02745676 -0.02163896 0.024462327 ;
-	setAttr ".pt[1891]" -type "float3" 0.02614069 -0.021567971 -0.011795022 ;
-	setAttr ".pt[1892]" -type "float3" 0.018728733 -0.043804646 0.057242095 ;
-	setAttr ".pt[1893]" -type "float3" 0.023806095 -0.032367885 0.055371281 ;
-	setAttr ".pt[1894]" -type "float3" -0.0034141541 -0.01791358 0.061534628 ;
-	setAttr ".pt[1895]" -type "float3" 0.010274887 -0.025493681 0.068765894 ;
-	setAttr ".pt[1896]" -type "float3" -0.019526482 -0.022908956 0.071279451 ;
-	setAttr ".pt[1897]" -type "float3" -0.028439522 -0.033281922 0.057147618 ;
-	setAttr ".pt[1898]" -type "float3" -0.026194572 -0.045297503 0.057612736 ;
-	setAttr ".pt[1899]" -type "float3" -0.029691696 -0.021526664 0.055400867 ;
-	setAttr ".pt[1900]" -type "float3" 0.023904324 -0.021431446 0.049821146 ;
-	setAttr ".pt[1901]" -type "float3" 0.016962528 -0.030355155 0.065519243 ;
-	setAttr ".pt[1902]" -type "float3" 0.013238907 -0.039523065 0.062385961 ;
-	setAttr ".pt[1903]" -type "float3" 0.018099785 -0.021239877 0.062730901 ;
-	setAttr ".pt[1904]" -type "float3" -0.021945953 -0.040758967 0.063925162 ;
-	setAttr ".pt[1905]" -type "float3" -0.025109291 -0.029303312 0.067080997 ;
-	setAttr ".pt[1906]" -type "float3" -0.026668549 -0.019867629 0.065333575 ;
-	setAttr ".pt[1907]" -type "float3" -0.0039997101 -0.0061567128 0.065120831 ;
-	setAttr ".pt[1908]" -type "float3" -0.021044254 -0.010744721 0.071887799 ;
-	setAttr ".pt[1909]" -type "float3" 0.0140872 -0.012340456 0.068720296 ;
-	setAttr ".pt[1910]" -type "float3" 0.023009781 -0.015162528 -0.046556033 ;
+	setAttr ".pt[1875]" -type "float3" 0.032550544 -0.015704662 -0.10819613 ;
+	setAttr ".pt[1876]" -type "float3" -0.040786538 -0.023312628 -0.074982196 ;
+	setAttr ".pt[1877]" -type "float3" 0.0030609071 -0.041302979 -0.023969799 ;
+	setAttr ".pt[1878]" -type "float3" -0.064408883 -0.03891319 -0.011954963 ;
+	setAttr ".pt[1879]" -type "float3" 0.064428106 -0.033435881 -0.02602914 ;
+	setAttr ".pt[1880]" -type "float3" 0.12012613 -0.032457411 0.037275411 ;
+	setAttr ".pt[1881]" -type "float3" 0.093183577 -0.033620119 0.005709976 ;
+	setAttr ".pt[1882]" -type "float3" 0.08184728 -0.047096014 0.030178443 ;
+	setAttr ".pt[1883]" -type "float3" 0.097273439 -0.046651542 0.046113715 ;
+	setAttr ".pt[1884]" -type "float3" -0.077907994 -0.05203402 0.033003487 ;
+	setAttr ".pt[1885]" -type "float3" -0.082355306 -0.039583087 0.014573306 ;
+	setAttr ".pt[1886]" -type "float3" -0.10685824 -0.035808921 0.042218417 ;
+	setAttr ".pt[1887]" -type "float3" -0.10398887 -0.048951983 0.04830388 ;
+	setAttr ".pt[1888]" -type "float3" -0.067303181 -0.026741594 0.014271982 ;
+	setAttr ".pt[1889]" -type "float3" -0.069739759 -0.023574352 0.037754253 ;
+	setAttr ".pt[1890]" -type "float3" 0.081212103 -0.02163896 0.024462327 ;
+	setAttr ".pt[1891]" -type "float3" 0.079178162 -0.021567971 -0.011795022 ;
+	setAttr ".pt[1892]" -type "float3" 0.082093149 -0.043804646 0.057242069 ;
+	setAttr ".pt[1893]" -type "float3" 0.10074931 -0.032367885 0.055371277 ;
+	setAttr ".pt[1894]" -type "float3" -0.013150111 -0.01791358 0.061534584 ;
+	setAttr ".pt[1895]" -type "float3" 0.053129256 -0.025493681 0.068765886 ;
+	setAttr ".pt[1896]" -type "float3" -0.082399428 -0.022908956 0.071279436 ;
+	setAttr ".pt[1897]" -type "float3" -0.10187294 -0.033281922 0.057147656 ;
+	setAttr ".pt[1898]" -type "float3" -0.09722048 -0.045297503 0.057612769 ;
+	setAttr ".pt[1899]" -type "float3" -0.068977848 -0.021526664 0.055400867 ;
+	setAttr ".pt[1900]" -type "float3" 0.070804469 -0.021431446 0.049821146 ;
+	setAttr ".pt[1901]" -type "float3" 0.075474739 -0.030355155 0.065519229 ;
+	setAttr ".pt[1902]" -type "float3" 0.061812058 -0.039523065 0.062385976 ;
+	setAttr ".pt[1903]" -type "float3" 0.05607542 -0.021239877 0.062730901 ;
+	setAttr ".pt[1904]" -type "float3" -0.084808379 -0.040758967 0.063925162 ;
+	setAttr ".pt[1905]" -type "float3" -0.09414044 -0.029303312 0.067080982 ;
+	setAttr ".pt[1906]" -type "float3" -0.063668288 -0.019867629 0.065333575 ;
+	setAttr ".pt[1907]" -type "float3" -0.0066803428 -0.0061567128 0.065120831 ;
+	setAttr ".pt[1908]" -type "float3" -0.051534254 -0.010744721 0.071887799 ;
+	setAttr ".pt[1909]" -type "float3" 0.046822872 -0.012340456 0.068720296 ;
+	setAttr ".pt[1910]" -type "float3" 0.072268486 -0.015162528 -0.046556033 ;
 	setAttr ".pt[1911]" -type "float3" 0.027541168 -0.012483537 0.010488823 ;
 	setAttr ".pt[1912]" -type "float3" 0.023497105 -0.01188159 0.050509516 ;
 	setAttr ".pt[1913]" -type "float3" -0.030183792 -0.012450963 0.031287119 ;
-	setAttr ".pt[1914]" -type "float3" -0.027632713 -0.017766237 -0.0232036 ;
+	setAttr ".pt[1914]" -type "float3" -0.063762382 -0.017766237 -0.0232036 ;
 	setAttr ".pt[1915]" -type "float3" -0.029423714 -0.010808408 0.059707269 ;
-	setAttr ".pt[1916]" -type "float3" 0.018113613 -0.0064226389 -0.12153952 ;
-	setAttr ".pt[1917]" -type "float3" -0.024498463 -0.012584716 -0.074726969 ;
-	setAttr ".pt[1918]" -type "float3" 0.0054240227 -0.0079329908 -0.16652386 ;
-	setAttr ".pt[1919]" -type "float3" 0.01279163 -0.0029565394 -0.17659263 ;
-	setAttr ".pt[1920]" -type "float3" -0.022940159 -0.0078030527 -0.11900446 ;
-	setAttr ".pt[1921]" -type "float3" -0.016147137 -0.013904214 -0.13008644 ;
+	setAttr ".pt[1916]" -type "float3" 0.062233582 -0.0064226389 -0.12153952 ;
+	setAttr ".pt[1917]" -type "float3" -0.057845525 -0.012584716 -0.074726969 ;
+	setAttr ".pt[1918]" -type "float3" 0.024843497 -0.0079329908 -0.16652386 ;
+	setAttr ".pt[1919]" -type "float3" 0.049187958 -0.0029565394 -0.17659263 ;
+	setAttr ".pt[1920]" -type "float3" -0.056265723 -0.0078030527 -0.11900446 ;
+	setAttr ".pt[1921]" -type "float3" -0.037941571 -0.013904214 -0.13008644 ;
 	setAttr ".pt[1922]" -type "float3" -0.0047922134 -0.013041496 -0.15281495 ;
-	setAttr ".pt[1923]" -type "float3" -0.0041298866 -0.0011685193 0.067258775 ;
-	setAttr ".pt[1924]" -type "float3" -0.021052837 -0.0042298138 0.071885705 ;
-	setAttr ".pt[1925]" -type "float3" 0.013902187 -0.005145371 0.068600878 ;
-	setAttr ".pt[1926]" -type "float3" 0.024224754 -0.0025267154 -0.075069793 ;
-	setAttr ".pt[1927]" -type "float3" 0.026449203 -0.0012390763 -0.0008841604 ;
-	setAttr ".pt[1928]" -type "float3" 0.023531437 -0.0035345256 0.048903897 ;
-	setAttr ".pt[1929]" -type "float3" -0.030107498 -0.0049052238 0.030113149 ;
-	setAttr ".pt[1930]" -type "float3" -0.027536869 -0.010380208 -0.027976371 ;
-	setAttr ".pt[1931]" -type "float3" -0.029381275 -0.0034838319 0.059573051 ;
-	setAttr ".pt[1932]" -type "float3" 0.023378845 0.00088426517 -0.13035467 ;
-	setAttr ".pt[1933]" -type "float3" -0.024403572 -0.0052117109 -0.079084218 ;
-	setAttr ".pt[1934]" -type "float3" 0.020821095 0.0024350435 -0.17519899 ;
-	setAttr ".pt[1935]" -type "float3" -0.022815704 -0.00094181299 -0.12200743 ;
-	setAttr ".pt[1936]" -type "float3" -0.016246319 -0.0086322147 -0.17227341 ;
+	setAttr ".pt[1923]" -type "float3" -0.0067912037 -0.0011685193 0.067258775 ;
+	setAttr ".pt[1924]" -type "float3" -0.051541567 -0.0042298138 0.071885705 ;
+	setAttr ".pt[1925]" -type "float3" 0.046440583 -0.005145371 0.068600878 ;
+	setAttr ".pt[1926]" -type "float3" 0.077626295 -0.0025267154 -0.075069793 ;
+	setAttr ".pt[1927]" -type "float3" 0.079980902 -0.0012390763 -0.0008841604 ;
+	setAttr ".pt[1928]" -type "float3" 0.070053101 -0.0035345256 0.048903897 ;
+	setAttr ".pt[1929]" -type "float3" -0.06910336 -0.0049052238 0.030113149 ;
+	setAttr ".pt[1930]" -type "float3" -0.063680753 -0.010380208 -0.027976371 ;
+	setAttr ".pt[1931]" -type "float3" -0.068622515 -0.0034838319 0.059573051 ;
+	setAttr ".pt[1932]" -type "float3" 0.078967072 0.00088426517 -0.13035467 ;
+	setAttr ".pt[1933]" -type "float3" -0.057887007 -0.0052117109 -0.079084218 ;
+	setAttr ".pt[1934]" -type "float3" 0.075053528 0.0024350435 -0.17519899 ;
+	setAttr ".pt[1935]" -type "float3" -0.056316771 -0.00094181299 -0.12200743 ;
+	setAttr ".pt[1936]" -type "float3" -0.040830068 -0.0086322147 -0.17227341 ;
 	setAttr ".pt[1937]" -type "float3" -0.0057072621 -0.0076860487 -0.18682545 ;
-	setAttr ".pt[1938]" -type "float3" -0.016523838 0.0020683855 -0.033195123 ;
+	setAttr ".pt[1938]" -type "float3" -0.036632869 0.0020683855 -0.033195123 ;
 	setAttr ".pt[1939]" -type "float3" -0.0051693944 0.0089879036 -0.066402227 ;
 	setAttr ".pt[1940]" -type "float3" 0.0014061928 0.015295834 -0.030231759 ;
-	setAttr ".pt[1941]" -type "float3" -0.01884079 0.016141355 0.023508444 ;
-	setAttr ".pt[1942]" -type "float3" 0.022672176 0.0075219795 -0.097712442 ;
-	setAttr ".pt[1943]" -type "float3" 0.021492004 0.01536797 -0.008828219 ;
+	setAttr ".pt[1941]" -type "float3" -0.041763406 0.016141355 0.023508444 ;
+	setAttr ".pt[1942]" -type "float3" 0.074816763 0.0075219795 -0.097712442 ;
+	setAttr ".pt[1943]" -type "float3" 0.066670753 0.01536797 -0.008828219 ;
 	setAttr ".pt[1944]" -type "float3" -0.00088262465 0.015717715 0.055187613 ;
-	setAttr ".pt[1945]" -type "float3" -0.021606922 0.016105479 0.056546204 ;
-	setAttr ".pt[1946]" -type "float3" 0.020627022 0.015615026 0.042061139 ;
-	setAttr ".pt[1947]" -type "float3" -0.017827511 0.015055018 0.070547655 ;
-	setAttr ".pt[1948]" -type "float3" -0.0025510788 0.014459559 0.072757408 ;
-	setAttr ".pt[1949]" -type "float3" 0.015122414 0.014480413 0.066623248 ;
-	setAttr ".pt[1950]" -type "float3" 0.020020489 0.0093896827 -0.13701212 ;
+	setAttr ".pt[1945]" -type "float3" -0.049051285 0.016105479 0.056546204 ;
+	setAttr ".pt[1946]" -type "float3" 0.06242691 0.015615026 0.042061139 ;
+	setAttr ".pt[1947]" -type "float3" -0.042043738 0.015055018 0.070547655 ;
+	setAttr ".pt[1948]" -type "float3" -0.00057054008 0.014459559 0.072757408 ;
+	setAttr ".pt[1949]" -type "float3" 0.049420979 0.014480413 0.066623248 ;
+	setAttr ".pt[1950]" -type "float3" 0.069566928 0.0093896827 -0.13701212 ;
 	setAttr ".pt[1951]" -type "float3" -0.0035219193 0.0094766617 -0.1174392 ;
-	setAttr ".pt[1952]" -type "float3" -0.025253773 0.014806064 -0.15727355 ;
-	setAttr ".pt[1953]" -type "float3" 0.013335224 -0.00058822334 -0.20529875 ;
-	setAttr ".pt[1954]" -type "float3" -0.025126934 -0.0047859848 -0.1519298 ;
-	setAttr ".pt[1955]" -type "float3" 0.0045666695 -0.0048409104 -0.19520907 ;
-	setAttr ".pt[1956]" -type "float3" 0.019603733 0.01376598 -0.20238176 ;
-	setAttr ".pt[1957]" -type "float3" 0.0186348 0.010030188 -0.17751853 ;
+	setAttr ".pt[1952]" -type "float3" -0.066768251 0.014806064 -0.15727355 ;
+	setAttr ".pt[1953]" -type "float3" 0.053467061 -0.00058822334 -0.20529875 ;
+	setAttr ".pt[1954]" -type "float3" -0.065364428 -0.0047859848 -0.1519298 ;
+	setAttr ".pt[1955]" -type "float3" 0.023148678 -0.0048409104 -0.19520907 ;
+	setAttr ".pt[1956]" -type "float3" 0.074566759 0.01376598 -0.20238176 ;
+	setAttr ".pt[1957]" -type "float3" 0.068650901 0.010030188 -0.17751853 ;
 	setAttr ".pt[1958]" -type "float3" 0.01265144 0.010814384 -0.18054798 ;
 	setAttr ".pt[1959]" -type "float3" 0.013149738 0.013685668 -0.20741832 ;
 	setAttr ".pt[1960]" -type "float3" 0.0047326051 0.013825862 -0.20401686 ;
-	setAttr ".pt[1961]" -type "float3" 0.018914696 0.0052206218 -0.22273035 ;
-	setAttr ".pt[1962]" -type "float3" 0.013247967 0.001812458 -0.22248928 ;
-	setAttr ".pt[1963]" -type "float3" -0.012753963 -0.00097766425 -0.22893138 ;
-	setAttr ".pt[1964]" -type "float3" -0.011634354 0.0035766065 -0.23979984 ;
-	setAttr ".pt[1965]" -type "float3" -0.012332916 0.0043973029 -0.24814862 ;
-	setAttr ".pt[1966]" -type "float3" -0.012628078 0.0047433823 -0.25442731 ;
-	setAttr ".pt[1967]" -type "float3" -0.012335777 0.0054567307 -0.25838614 ;
-	setAttr ".pt[1968]" -type "float3" -0.0035247803 0.00061909854 -0.23077615 ;
-	setAttr ".pt[1969]" -type "float3" -0.0050649624 0.0040131211 -0.24076873 ;
-	setAttr ".pt[1970]" -type "float3" -0.0056128502 0.0045041442 -0.24857435 ;
-	setAttr ".pt[1971]" -type "float3" -0.0063204728 0.0048146099 -0.25429633 ;
-	setAttr ".pt[1972]" -type "float3" -0.0074338932 0.0055021048 -0.25814262 ;
-	setAttr ".pt[1973]" -type "float3" -0.013062954 0.011195634 -0.22542715 ;
-	setAttr ".pt[1974]" -type "float3" -0.011948586 0.012704741 -0.24094681 ;
-	setAttr ".pt[1975]" -type "float3" -0.0057902317 0.012471909 -0.24174225 ;
-	setAttr ".pt[1976]" -type "float3" -0.0034527779 0.010513499 -0.23155007 ;
-	setAttr ".pt[1977]" -type "float3" -0.012458326 0.013240593 -0.24819306 ;
-	setAttr ".pt[1978]" -type "float3" -0.0063061696 0.013220431 -0.24852031 ;
-	setAttr ".pt[1979]" -type "float3" -0.012606144 0.013172561 -0.25337219 ;
-	setAttr ".pt[1980]" -type "float3" -0.0068159122 0.013174197 -0.25321084 ;
-	setAttr ".pt[1981]" -type "float3" -0.012307644 0.011124309 -0.25761572 ;
-	setAttr ".pt[1982]" -type "float3" -0.0077195186 0.011017025 -0.25740308 ;
-	setAttr ".pt[1983]" -type "float3" 0.0046811104 0.0020076036 -0.23442876 ;
-	setAttr ".pt[1984]" -type "float3" 0.0061364137 0.0050512701 -0.23968324 ;
-	setAttr ".pt[1985]" -type "float3" 0.0056033116 0.0055497885 -0.24385791 ;
-	setAttr ".pt[1986]" -type "float3" 0.0052885953 0.005843848 -0.24781644 ;
-	setAttr ".pt[1987]" -type "float3" 0.0054340363 0.0063863099 -0.25036931 ;
-	setAttr ".pt[1988]" -type "float3" 0.012291912 0.0049334317 -0.23671389 ;
-	setAttr ".pt[1989]" -type "float3" 0.010570047 0.0052090734 -0.24122724 ;
-	setAttr ".pt[1990]" -type "float3" 0.010138514 0.0055408627 -0.24445088 ;
-	setAttr ".pt[1991]" -type "float3" 0.0097002983 0.0058293194 -0.24783188 ;
-	setAttr ".pt[1992]" -type "float3" 0.0089821834 0.0063810796 -0.25038648 ;
-	setAttr ".pt[1993]" -type "float3" 0.0045952778 0.01006382 -0.2355354 ;
-	setAttr ".pt[1994]" -type "float3" 0.0058445893 0.011716871 -0.2402254 ;
-	setAttr ".pt[1995]" -type "float3" 0.0099749602 0.011646055 -0.24172562 ;
-	setAttr ".pt[1996]" -type "float3" 0.012037273 0.010091923 -0.23685156 ;
-	setAttr ".pt[1997]" -type "float3" 0.0054326039 0.013200143 -0.24373922 ;
-	setAttr ".pt[1998]" -type "float3" 0.0096769352 0.013169341 -0.24441294 ;
-	setAttr ".pt[1999]" -type "float3" 0.0052208938 0.013159897 -0.24698558 ;
-	setAttr ".pt[2000]" -type "float3" 0.0093746185 0.01316081 -0.24698442 ;
-	setAttr ".pt[2001]" -type "float3" 0.0053806324 0.010807358 -0.24989426 ;
-	setAttr ".pt[2002]" -type "float3" 0.0087537728 0.010780275 -0.24989325 ;
-	setAttr ".pt[2003]" -type "float3" -0.0019278508 0.0040732622 -0.23847678 ;
-	setAttr ".pt[2004]" -type "float3" -0.0026402473 0.0045320541 -0.24436191 ;
-	setAttr ".pt[2005]" -type "float3" -0.0031151753 0.0048890412 -0.25182596 ;
-	setAttr ".pt[2006]" -type "float3" -0.0030479413 0.0055530518 -0.25562108 ;
-	setAttr ".pt[2007]" -type "float3" 0.0033655167 0.0042624772 -0.24108271 ;
-	setAttr ".pt[2008]" -type "float3" 0.0028271675 0.0047027767 -0.24666372 ;
-	setAttr ".pt[2009]" -type "float3" 0.0022130068 0.0049704015 -0.25170541 ;
-	setAttr ".pt[2010]" -type "float3" 0.001332283 0.0056015849 -0.25543857 ;
-	setAttr ".pt[2011]" -type "float3" -0.0023426972 0.012298774 -0.2390271 ;
-	setAttr ".pt[2012]" -type "float3" 0.0027685165 0.011931319 -0.24179475 ;
-	setAttr ".pt[2013]" -type "float3" -0.0029067993 0.013275707 -0.2445519 ;
-	setAttr ".pt[2014]" -type "float3" 0.0022935867 0.013183732 -0.24639937 ;
-	setAttr ".pt[2015]" -type "float3" -0.0031857491 0.013173539 -0.25067151 ;
-	setAttr ".pt[2016]" -type "float3" 0.0018444099 0.013174241 -0.25063616 ;
-	setAttr ".pt[2017]" -type "float3" -0.0030765552 0.010912288 -0.25490391 ;
-	setAttr ".pt[2018]" -type "float3" 0.0011019725 0.010785948 -0.25475717 ;
-	setAttr ".pt[2019]" -type "float3" 0.013300899 0.0071290955 -0.24092482 ;
-	setAttr ".pt[2020]" -type "float3" 0.012855534 0.0076170266 -0.24311587 ;
-	setAttr ".pt[2021]" -type "float3" 0.012625217 0.0078400671 -0.24516824 ;
-	setAttr ".pt[2022]" -type "float3" 0.012850292 0.00825046 -0.2466104 ;
-	setAttr ".pt[2023]" -type "float3" 0.018280029 0.0058302283 -0.23382759 ;
-	setAttr ".pt[2024]" -type "float3" 0.016880993 0.0072490051 -0.24088407 ;
-	setAttr ".pt[2025]" -type "float3" 0.016522408 0.0076057687 -0.24315222 ;
-	setAttr ".pt[2026]" -type "float3" 0.016167164 0.0078321621 -0.24520154 ;
-	setAttr ".pt[2027]" -type "float3" 0.015697952 0.0082440227 -0.24663883 ;
-	setAttr ".pt[2028]" -type "float3" 0.013134953 0.011910386 -0.24113481 ;
-	setAttr ".pt[2029]" -type "float3" 0.016525265 0.011872128 -0.24089195 ;
-	setAttr ".pt[2030]" -type "float3" 0.018953323 0.010648109 -0.23293887 ;
-	setAttr ".pt[2031]" -type "float3" 0.012852196 0.013159174 -0.24296828 ;
-	setAttr ".pt[2032]" -type "float3" 0.016290665 0.013159996 -0.24300531 ;
-	setAttr ".pt[2033]" -type "float3" 0.012681492 0.013145726 -0.24466555 ;
-	setAttr ".pt[2034]" -type "float3" 0.016015053 0.013145966 -0.24470337 ;
-	setAttr ".pt[2035]" -type "float3" 0.012883186 0.011398159 -0.24630512 ;
-	setAttr ".pt[2036]" -type "float3" 0.015573028 0.011392582 -0.24633791 ;
-	setAttr ".pt[2037]" -type "float3" -0.022543907 0.011034913 -0.22333911 ;
-	setAttr ".pt[2038]" -type "float3" -0.024578571 0.012436636 -0.24015899 ;
-	setAttr ".pt[2039]" -type "float3" -0.015896797 0.012477979 -0.2400597 ;
-	setAttr ".pt[2040]" -type "float3" -0.02547884 0.013261503 -0.24552953 ;
-	setAttr ".pt[2041]" -type "float3" -0.01537323 0.013266269 -0.24537951 ;
-	setAttr ".pt[2042]" -type "float3" -0.025165081 0.013170565 -0.2510618 ;
-	setAttr ".pt[2043]" -type "float3" -0.015692234 0.01317215 -0.25100106 ;
-	setAttr ".pt[2044]" -type "float3" -0.024600506 0.011249755 -0.25525361 ;
-	setAttr ".pt[2045]" -type "float3" -0.016488552 0.011254109 -0.25519985 ;
-	setAttr ".pt[2046]" -type "float3" -0.024267673 -0.00043801963 -0.2257752 ;
-	setAttr ".pt[2047]" -type "float3" -0.024504662 0.0017955303 -0.23892963 ;
-	setAttr ".pt[2048]" -type "float3" -0.025548935 0.0018302202 -0.24529159 ;
-	setAttr ".pt[2049]" -type "float3" -0.025263309 0.0023696125 -0.25209212 ;
-	setAttr ".pt[2050]" -type "float3" -0.024720669 0.0030737519 -0.25603622 ;
-	setAttr ".pt[2051]" -type "float3" -0.014988422 0.0014656782 -0.23891559 ;
-	setAttr ".pt[2052]" -type "float3" -0.014502525 0.0018045455 -0.24504057 ;
-	setAttr ".pt[2053]" -type "float3" -0.014995098 0.0023884475 -0.25202847 ;
-	setAttr ".pt[2054]" -type "float3" -0.016052246 0.0030843019 -0.2559821 ;
+	setAttr ".pt[1961]" -type "float3" 0.075224794 0.0052206218 -0.22273035 ;
+	setAttr ".pt[1962]" -type "float3" 0.055218458 0.001812458 -0.22248928 ;
+	setAttr ".pt[1963]" -type "float3" -0.034761157 -0.00097766425 -0.22893138 ;
+	setAttr ".pt[1964]" -type "float3" -0.032059066 0.0035766065 -0.23979984 ;
+	setAttr ".pt[1965]" -type "float3" -0.035545032 0.0043973029 -0.24814862 ;
+	setAttr ".pt[1966]" -type "float3" -0.037137624 0.0047433823 -0.25442731 ;
+	setAttr ".pt[1967]" -type "float3" -0.036235049 0.0054567307 -0.25838614 ;
+	setAttr ".pt[1968]" -type "float3" -0.0033270493 0.00061909854 -0.23077615 ;
+	setAttr ".pt[1969]" -type "float3" -0.0089599947 0.0040131211 -0.24076873 ;
+	setAttr ".pt[1970]" -type "float3" -0.011220793 0.0045041442 -0.24857435 ;
+	setAttr ".pt[1971]" -type "float3" -0.013946672 0.0048146099 -0.25429633 ;
+	setAttr ".pt[1972]" -type "float3" -0.018123984 0.0055021048 -0.25814262 ;
+	setAttr ".pt[1973]" -type "float3" -0.03566451 0.011195634 -0.22542715 ;
+	setAttr ".pt[1974]" -type "float3" -0.033379816 0.012704741 -0.24094681 ;
+	setAttr ".pt[1975]" -type "float3" -0.011615669 0.012471909 -0.24174225 ;
+	setAttr ".pt[1976]" -type "float3" -0.0031253987 0.010513499 -0.23155007 ;
+	setAttr ".pt[1977]" -type "float3" -0.036030613 0.013240593 -0.24819306 ;
+	setAttr ".pt[1978]" -type "float3" -0.013735878 0.013220431 -0.24852031 ;
+	setAttr ".pt[1979]" -type "float3" -0.036993895 0.013172561 -0.25337219 ;
+	setAttr ".pt[1980]" -type "float3" -0.015727671 0.013174197 -0.25321084 ;
+	setAttr ".pt[1981]" -type "float3" -0.036125157 0.011124309 -0.25761572 ;
+	setAttr ".pt[1982]" -type "float3" -0.019187529 0.011017025 -0.25740308 ;
+	setAttr ".pt[1983]" -type "float3" 0.025693333 0.0020076036 -0.23442876 ;
+	setAttr ".pt[1984]" -type "float3" 0.031347271 0.0050512701 -0.23968324 ;
+	setAttr ".pt[1985]" -type "float3" 0.029754337 0.0055497885 -0.24385791 ;
+	setAttr ".pt[1986]" -type "float3" 0.028824806 0.005843848 -0.24781644 ;
+	setAttr ".pt[1987]" -type "float3" 0.029418048 0.0063863099 -0.25036931 ;
+	setAttr ".pt[1988]" -type "float3" 0.053715292 0.0049334317 -0.23671389 ;
+	setAttr ".pt[1989]" -type "float3" 0.047880094 0.0052090734 -0.24122724 ;
+	setAttr ".pt[1990]" -type "float3" 0.046516314 0.0055408627 -0.24445088 ;
+	setAttr ".pt[1991]" -type "float3" 0.04507957 0.0058293194 -0.24783188 ;
+	setAttr ".pt[1992]" -type "float3" 0.042529643 0.0063810796 -0.25038648 ;
+	setAttr ".pt[1993]" -type "float3" 0.025544818 0.01006382 -0.2355354 ;
+	setAttr ".pt[1994]" -type "float3" 0.030386465 0.011716871 -0.2402254 ;
+	setAttr ".pt[1995]" -type "float3" 0.045848168 0.011646055 -0.24172562 ;
+	setAttr ".pt[1996]" -type "float3" 0.052953795 0.010091923 -0.23685156 ;
+	setAttr ".pt[1997]" -type "float3" 0.029116219 0.013200143 -0.24373922 ;
+	setAttr ".pt[1998]" -type "float3" 0.044847615 0.013169341 -0.24441294 ;
+	setAttr ".pt[1999]" -type "float3" 0.028526094 0.013159897 -0.24698558 ;
+	setAttr ".pt[2000]" -type "float3" 0.043799363 0.01316081 -0.24698442 ;
+	setAttr ".pt[2001]" -type "float3" 0.02922092 0.010807358 -0.24989426 ;
+	setAttr ".pt[2002]" -type "float3" 0.041678648 0.010780275 -0.24989325 ;
+	setAttr ".pt[2003]" -type "float3" 0.0022030678 0.0040732622 -0.23847678 ;
+	setAttr ".pt[2004]" -type "float3" -0.00035273409 0.0045320541 -0.24436191 ;
+	setAttr ".pt[2005]" -type "float3" -0.0021375592 0.0048890412 -0.25182596 ;
+	setAttr ".pt[2006]" -type "float3" -0.0019217809 0.0055530518 -0.25562108 ;
+	setAttr ".pt[2007]" -type "float3" 0.021386907 0.0042624772 -0.24108271 ;
+	setAttr ".pt[2008]" -type "float3" 0.019673197 0.0047027767 -0.24666372 ;
+	setAttr ".pt[2009]" -type "float3" 0.017446715 0.0049704015 -0.25170541 ;
+	setAttr ".pt[2010]" -type "float3" 0.014253121 0.0056015849 -0.25543857 ;
+	setAttr ".pt[2011]" -type "float3" 0.00073707802 0.012298774 -0.2390271 ;
+	setAttr ".pt[2012]" -type "float3" 0.019288907 0.011931319 -0.24179475 ;
+	setAttr ".pt[2013]" -type "float3" -0.0013215947 0.013275707 -0.2445519 ;
+	setAttr ".pt[2014]" -type "float3" 0.017689759 0.013183732 -0.24639937 ;
+	setAttr ".pt[2015]" -type "float3" -0.0024103525 0.013173539 -0.25067151 ;
+	setAttr ".pt[2016]" -type "float3" 0.01606827 0.013174241 -0.25063616 ;
+	setAttr ".pt[2017]" -type "float3" -0.002027564 0.010912288 -0.25490391 ;
+	setAttr ".pt[2018]" -type "float3" 0.013406735 0.010785948 -0.25475717 ;
+	setAttr ".pt[2019]" -type "float3" 0.058010843 0.0071290955 -0.24092482 ;
+	setAttr ".pt[2020]" -type "float3" 0.056633156 0.0076170266 -0.24311587 ;
+	setAttr ".pt[2021]" -type "float3" 0.055940118 0.0078400671 -0.24516824 ;
+	setAttr ".pt[2022]" -type "float3" 0.056811325 0.00825046 -0.2466104 ;
+	setAttr ".pt[2023]" -type "float3" 0.074889548 0.0058302283 -0.23382759 ;
+	setAttr ".pt[2024]" -type "float3" 0.071114123 0.0072490051 -0.24088407 ;
+	setAttr ".pt[2025]" -type "float3" 0.070122279 0.0076057687 -0.24315222 ;
+	setAttr ".pt[2026]" -type "float3" 0.069019899 0.0078321621 -0.24520154 ;
+	setAttr ".pt[2027]" -type "float3" 0.067337573 0.0082440227 -0.24663883 ;
+	setAttr ".pt[2028]" -type "float3" 0.057487268 0.011910386 -0.24113481 ;
+	setAttr ".pt[2029]" -type "float3" 0.06987758 0.011872128 -0.24089195 ;
+	setAttr ".pt[2030]" -type "float3" 0.077292658 0.010648109 -0.23293887 ;
+	setAttr ".pt[2031]" -type "float3" 0.056603141 0.013159174 -0.24296828 ;
+	setAttr ".pt[2032]" -type "float3" 0.069243908 0.013159996 -0.24300531 ;
+	setAttr ".pt[2033]" -type "float3" 0.056089535 0.013145726 -0.24466555 ;
+	setAttr ".pt[2034]" -type "float3" 0.068375565 0.013145966 -0.24470337 ;
+	setAttr ".pt[2035]" -type "float3" 0.056931704 0.011398159 -0.24630512 ;
+	setAttr ".pt[2036]" -type "float3" 0.066873759 0.011392582 -0.24633791 ;
+	setAttr ".pt[2037]" -type "float3" -0.067580275 0.011034913 -0.22333911 ;
+	setAttr ".pt[2038]" -type "float3" -0.078368641 0.012436636 -0.24015899 ;
+	setAttr ".pt[2039]" -type "float3" -0.047487043 0.012477979 -0.2400597 ;
+	setAttr ".pt[2040]" -type "float3" -0.083058596 0.013261503 -0.24552953 ;
+	setAttr ".pt[2041]" -type "float3" -0.04643029 0.013266269 -0.24537951 ;
+	setAttr ".pt[2042]" -type "float3" -0.083135411 0.013170565 -0.2510618 ;
+	setAttr ".pt[2043]" -type "float3" -0.048324283 0.01317215 -0.25100106 ;
+	setAttr ".pt[2044]" -type "float3" -0.081543945 0.011249755 -0.25525361 ;
+	setAttr ".pt[2045]" -type "float3" -0.051578674 0.011254109 -0.25519985 ;
+	setAttr ".pt[2046]" -type "float3" -0.073440239 -0.00043801963 -0.2257752 ;
+	setAttr ".pt[2047]" -type "float3" -0.077536985 0.0017955303 -0.23892963 ;
+	setAttr ".pt[2048]" -type "float3" -0.083074078 0.0018302202 -0.24529159 ;
+	setAttr ".pt[2049]" -type "float3" -0.083602645 0.0023696125 -0.25209212 ;
+	setAttr ".pt[2050]" -type "float3" -0.08197739 0.0030737519 -0.25603622 ;
+	setAttr ".pt[2051]" -type "float3" -0.043915398 0.0014656782 -0.23891559 ;
+	setAttr ".pt[2052]" -type "float3" -0.043137372 0.0018045455 -0.24504057 ;
+	setAttr ".pt[2053]" -type "float3" -0.045822989 0.0023884475 -0.25202847 ;
+	setAttr ".pt[2054]" -type "float3" -0.049967017 0.0030843019 -0.2559821 ;
 	setAttr ".pt[2055]" -type "float3" 0.0044035912 0.013551127 -0.22334883 ;
 	setAttr ".pt[2056]" -type "float3" -0.0043797493 0.01377107 -0.21679169 ;
-	setAttr ".pt[2057]" -type "float3" 0.004526617 -0.0010322332 -0.21621373 ;
+	setAttr ".pt[2057]" -type "float3" 0.02404096 -0.0010322332 -0.21621373 ;
 	setAttr ".pt[2058]" -type "float3" -0.004591465 -0.0032245219 -0.20882501 ;
-	setAttr ".pt[2059]" -type "float3" -0.025046825 0.014233351 -0.19487073 ;
-	setAttr ".pt[2060]" -type "float3" -0.025214195 0.00039900839 -0.19418737 ;
-	setAttr ".pt[2061]" -type "float3" -0.014548302 -0.005307883 -0.20164271 ;
-	setAttr ".pt[2062]" -type "float3" 0.018541809 0.013462914 -0.22270289 ;
+	setAttr ".pt[2059]" -type "float3" -0.070903897 0.014233351 -0.19487073 ;
+	setAttr ".pt[2060]" -type "float3" -0.070890196 0.00039900839 -0.19418737 ;
+	setAttr ".pt[2061]" -type "float3" -0.038009111 -0.005307883 -0.20164271 ;
+	setAttr ".pt[2062]" -type "float3" 0.074066445 0.013462914 -0.22270289 ;
 	setAttr ".pt[2063]" -type "float3" 0.01239156 0.013404358 -0.22626999 ;
-	setAttr ".pt[2064]" -type "float3" 0.01868486 0.0034730285 -0.20555286 ;
+	setAttr ".pt[2064]" -type "float3" 0.071742997 0.0034730285 -0.20555286 ;
 	setAttr ".pt[2065]" -type "float3" 0.011584282 0.0084525049 -0.073650204 ;
 	setAttr ".pt[2066]" -type "float3" 0.01294947 0.0095475465 -0.13148642 ;
 	setAttr ".pt[2067]" -type "float3" -0.0046653729 0.014080163 -0.19694537 ;
 	setAttr ".pt[2068]" -type "float3" 0.0048041362 0.0099478289 -0.12660554 ;
 	setAttr ".pt[2069]" -type "float3" -0.0039973259 0.0114225 -0.16754879 ;
 	setAttr ".pt[2070]" -type "float3" 0.0046243649 0.011641394 -0.17640935 ;
-	setAttr ".pt[2071]" -type "float3" -0.015357019 0.0046790093 -0.094711609 ;
-	setAttr ".pt[2072]" -type "float3" -0.014798641 0.0070505887 -0.14071384 ;
-	setAttr ".pt[2073]" -type "float3" -0.016658306 0.014605903 -0.17146327 ;
-	setAttr ".pt[2074]" -type "float3" -0.016875744 0.014117356 -0.20144355 ;
+	setAttr ".pt[2071]" -type "float3" -0.035364904 0.0046790093 -0.094711609 ;
+	setAttr ".pt[2072]" -type "float3" -0.035384063 0.0070505887 -0.14071384 ;
+	setAttr ".pt[2073]" -type "float3" -0.042358063 0.014605903 -0.17146327 ;
+	setAttr ".pt[2074]" -type "float3" -0.045766853 0.014117356 -0.20144355 ;
 	setAttr ".pt[2075]" -type "float3" 0.012131693 0.015250353 -0.019379564 ;
 	setAttr ".pt[2076]" -type "float3" -0.0081543913 0.01572698 -0.001359053 ;
 	setAttr ".pt[2077]" -type "float3" 0.0033912659 0.0087093711 -0.070674717 ;
-	setAttr ".pt[2094]" -type "float3" 0.011268095 0.042378277 0.088495091 ;
+	setAttr ".pt[2094]" -type "float3" -0.0066447258 0.015697002 0.0076808631 ;
 	setAttr ".pt[2096]" -type "float3" -0.074656963 -0.028208256 -0.017147958 ;
 	setAttr ".pt[2097]" -type "float3" -0.089129925 0.0082793236 0.0068513751 ;
 	setAttr ".pt[2100]" -type "float3" 0.013219833 0.017183304 0.028021038 ;
@@ -2135,95 +1559,139 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".pt[2117]" -type "float3" 0.024691582 0.0014042854 -0.019381773 ;
 	setAttr ".pt[2131]" -type "float3" -0.016988754 0.013130665 -0.0058282018 ;
 	setAttr ".pt[2132]" -type "float3" 0.014314175 -0.0027632713 -0.010590404 ;
-	setAttr ".pt[2134]" -type "float3" 0.017822009 0.056961879 0.089882053 ;
-	setAttr ".pt[2136]" -type "float3" 0.014939426 0.044353671 0.084036648 ;
-	setAttr ".pt[2141]" -type "float3" 0.049500659 0.024475362 0.037783895 ;
+	setAttr ".pt[2134]" -type "float3" -0.025143147 0.03166008 0.022633225 ;
+	setAttr ".pt[2136]" -type "float3" -0.017374992 0.017944813 0.0090909302 ;
 	setAttr ".pt[2144]" -type "float3" -0.031180382 0.014098167 0.015257418 ;
 	setAttr ".pt[2145]" -type "float3" 0.013062 0.023236275 0.02307412 ;
 	setAttr ".pt[2148]" -type "float3" -0.0015645027 0.038491726 0.063673675 ;
-	setAttr ".pt[2149]" -type "float3" 0.028715655 0.053843454 0.081674397 ;
-	setAttr ".pt[2151]" -type "float3" 0.041537177 0.034854814 0.012525559 ;
+	setAttr ".pt[2149]" -type "float3" -0.019987583 0.029601097 0.023486286 ;
 	setAttr ".pt[2152]" -type "float3" 0.017496109 0.026253223 0.074358255 ;
 	setAttr ".pt[2153]" -type "float3" 0.0067315102 -0.00085067749 0.014032722 ;
 	setAttr ".pt[2155]" -type "float3" 0.021272182 0.028343201 0.060276046 ;
-	setAttr ".pt[2156]" -type "float3" 0.046688285 0.027624281 0.025403459 ;
-	setAttr ".pt[2157]" -type "float3" 0.041119955 0.03908886 0.0598257 ;
+	setAttr ".pt[2157]" -type "float3" -0.0090312958 0.01570797 0.011230238 ;
 	setAttr ".pt[2162]" -type "float3" -0.087287903 0.0083246231 -0.018805146 ;
 	setAttr ".pt[2163]" -type "float3" -0.011005878 -0.012176514 0.014158368 ;
-	setAttr ".pt[2209]" -type "float3" -0.022184372 -0.083225489 0.043599889 ;
-	setAttr ".pt[2210]" -type "float3" -0.023911476 -0.074870229 0.04988312 ;
-	setAttr ".pt[2211]" -type "float3" -0.022778988 -0.069565535 0.060694724 ;
-	setAttr ".pt[2212]" -type "float3" -0.022386551 -0.080531001 0.055145338 ;
+	setAttr ".pt[2209]" -type "float3" -0.022184372 -0.083225489 0.043599866 ;
+	setAttr ".pt[2210]" -type "float3" -0.023911536 -0.074870229 0.049883142 ;
+	setAttr ".pt[2211]" -type "float3" -0.022778958 -0.069565535 0.060694739 ;
+	setAttr ".pt[2212]" -type "float3" -0.022386551 -0.080531001 0.055145368 ;
 	setAttr ".pt[2213]" -type "float3" -0.018190384 -0.076417446 0.05791153 ;
-	setAttr ".pt[2214]" -type "float3" -0.016979218 -0.062360764 0.063271947 ;
-	setAttr ".pt[2215]" -type "float3" -0.0051980019 -0.053707004 0.058514729 ;
-	setAttr ".pt[2216]" -type "float3" -0.0063519478 -0.066681027 0.055071414 ;
-	setAttr ".pt[2217]" -type "float3" 0.0010910034 -0.07440722 0.058006436 ;
-	setAttr ".pt[2218]" -type "float3" 0.0041017532 -0.062471747 0.064163171 ;
-	setAttr ".pt[2219]" -type "float3" 0.01162529 -0.070525527 0.062986076 ;
-	setAttr ".pt[2220]" -type "float3" 0.0075478554 -0.080283165 0.058439061 ;
-	setAttr ".pt[2221]" -type "float3" -0.0018935204 -0.083678484 0.031454675 ;
-	setAttr ".pt[2222]" -type "float3" -0.0021476746 -0.07702446 0.034403943 ;
-	setAttr ".pt[2223]" -type "float3" -0.014530182 -0.076682687 0.037340198 ;
-	setAttr ".pt[2224]" -type "float3" -0.0095424652 -0.083242416 0.030933339 ;
-	setAttr ".pt[2225]" -type "float3" 0.014580727 -0.074931741 0.053571388 ;
-	setAttr ".pt[2226]" -type "float3" 0.0084934235 -0.076460123 0.042150144 ;
-	setAttr ".pt[2227]" -type "float3" 0.0055303574 -0.084509015 0.036217347 ;
-	setAttr ".pt[2228]" -type "float3" 0.013170719 -0.084261656 0.051367052 ;
-	setAttr ".pt[2229]" -type "float3" -0.016338825 -0.076730847 0.022744209 ;
-	setAttr ".pt[2230]" -type "float3" -0.018783092 -0.079531789 0.039017528 ;
-	setAttr ".pt[2231]" -type "float3" -0.016564369 -0.076716423 0.046043836 ;
-	setAttr ".pt[2232]" -type "float3" -0.0080041885 -0.072815299 0.043838594 ;
-	setAttr ".pt[2233]" -type "float3" -0.00057697296 -0.07006681 0.044766709 ;
-	setAttr ".pt[2234]" -type "float3" 0.0045843124 -0.07839489 0.0435009 ;
-	setAttr ".pt[2235]" -type "float3" -0.00060319901 -0.077253222 0.016493063 ;
-	setAttr ".pt[2236]" -type "float3" -0.010064125 -0.077958822 0.020822853 ;
-	setAttr ".pt[2237]" -type "float3" 0.0082297325 -0.080961108 0.028892249 ;
-	setAttr ".pt[2238]" -type "float3" 0.0081562996 -0.080663443 0.037277535 ;
-	setAttr ".pt[2239]" -type "float3" 0.003267765 -0.066919684 0.016203105 ;
-	setAttr ".pt[2240]" -type "float3" 0.0085549355 -0.067137361 0.026456833 ;
-	setAttr ".pt[2241]" -type "float3" -0.00024652481 -0.062052131 0.036193341 ;
-	setAttr ".pt[2242]" -type "float3" 0.0053710938 -0.06641221 0.034216754 ;
-	setAttr ".pt[2243]" -type "float3" -0.006734848 -0.063923359 0.036388308 ;
-	setAttr ".pt[2244]" -type "float3" -0.01545763 -0.070209742 0.038233105 ;
-	setAttr ".pt[2245]" -type "float3" -0.011571884 -0.056118488 0.012982547 ;
-	setAttr ".pt[2246]" -type "float3" -0.013784409 -0.058898449 0.021707296 ;
-	setAttr ".pt[2247]" -type "float3" -0.0060896873 -0.065228105 0.013011068 ;
-	setAttr ".pt[2248]" -type "float3" -0.00055599213 -0.060293674 0.0099331439 ;
-	setAttr ".pt[2249]" -type "float3" 0.0045790672 -0.03391552 0.012433276 ;
-	setAttr ".pt[2250]" -type "float3" 0.0033307076 -0.030419588 0.0066135526 ;
-	setAttr ".pt[2251]" -type "float3" -0.00062942505 -0.034373164 0.018543288 ;
-	setAttr ".pt[2252]" -type "float3" 0.002664566 -0.035583496 0.017304681 ;
-	setAttr ".pt[2253]" -type "float3" -0.0052609444 -0.041125059 0.021438725 ;
-	setAttr ".pt[2254]" -type "float3" -0.010548115 -0.046066046 0.019402053 ;
-	setAttr ".pt[2255]" -type "float3" -0.0050563812 -0.022536039 0.0032671094 ;
-	setAttr ".pt[2256]" -type "float3" -0.0080814362 -0.032334089 0.0093139261 ;
-	setAttr ".pt[2257]" -type "float3" -0.0037031174 -0.029408574 0.0034677386 ;
-	setAttr ".pt[2258]" -type "float3" -1.0490417e-05 -0.026308656 0.0027504563 ;
-	setAttr ".pt[2514]" -type "float3" -0.032901742 -0.020684032 0.10592027 ;
-	setAttr ".pt[2515]" -type "float3" -0.0541142 -0.0057065552 0.097452976 ;
-	setAttr ".pt[2516]" -type "float3" -0.065693475 0.0040484704 0.084492885 ;
-	setAttr ".pt[2517]" -type "float3" -0.073094055 0.0065103658 0.071612217 ;
-	setAttr ".pt[2518]" -type "float3" -0.081410818 0.0009351382 0.053663742 ;
-	setAttr ".pt[2519]" -type "float3" -0.083185963 -0.00085690524 0.031641819 ;
-	setAttr ".pt[2520]" -type "float3" -0.088014223 -0.027704613 0.02083973 ;
-	setAttr ".pt[2521]" -type "float3" -0.061460715 0.035050556 -0.0057721417 ;
-	setAttr ".pt[2522]" -type "float3" -0.050996207 0.038900971 -0.024575241 ;
+	setAttr ".pt[2214]" -type "float3" -0.016979247 -0.062360764 0.063271955 ;
+	setAttr ".pt[2215]" -type "float3" -0.0051978827 -0.053707004 0.058514744 ;
+	setAttr ".pt[2216]" -type "float3" -0.0063519776 -0.066681027 0.055071373 ;
+	setAttr ".pt[2217]" -type "float3" 0.0010910034 -0.07440722 0.058006439 ;
+	setAttr ".pt[2218]" -type "float3" 0.004101783 -0.062471747 0.064163163 ;
+	setAttr ".pt[2219]" -type "float3" 0.011625201 -0.070525527 0.062986061 ;
+	setAttr ".pt[2220]" -type "float3" 0.0075477958 -0.080283165 0.058439095 ;
+	setAttr ".pt[2221]" -type "float3" -0.0018935204 -0.083678484 0.031454697 ;
+	setAttr ".pt[2222]" -type "float3" -0.0021474957 -0.07702446 0.034403905 ;
+	setAttr ".pt[2223]" -type "float3" -0.014530271 -0.076682687 0.037340239 ;
+	setAttr ".pt[2224]" -type "float3" -0.0095424354 -0.083242416 0.03093341 ;
+	setAttr ".pt[2225]" -type "float3" 0.014580727 -0.074931741 0.053571347 ;
+	setAttr ".pt[2226]" -type "float3" 0.0084933639 -0.076460123 0.042150132 ;
+	setAttr ".pt[2227]" -type "float3" 0.0055303276 -0.084509015 0.036217302 ;
+	setAttr ".pt[2228]" -type "float3" 0.01317063 -0.084261656 0.051367119 ;
+	setAttr ".pt[2229]" -type "float3" -0.016338825 -0.076730847 0.022744268 ;
+	setAttr ".pt[2230]" -type "float3" -0.018783122 -0.079531789 0.039017491 ;
+	setAttr ".pt[2231]" -type "float3" -0.01656428 -0.076716423 0.046043839 ;
+	setAttr ".pt[2232]" -type "float3" -0.0080041289 -0.072815299 0.043838594 ;
+	setAttr ".pt[2233]" -type "float3" -0.00057718158 -0.07006681 0.044766702 ;
+	setAttr ".pt[2234]" -type "float3" 0.0045844018 -0.07839489 0.043500893 ;
+	setAttr ".pt[2235]" -type "float3" -0.0006030798 -0.077253222 0.016492844 ;
+	setAttr ".pt[2236]" -type "float3" -0.010064185 -0.077958822 0.020822749 ;
+	setAttr ".pt[2237]" -type "float3" 0.0082298815 -0.080961108 0.028892174 ;
+	setAttr ".pt[2238]" -type "float3" 0.0081562698 -0.080663443 0.037277572 ;
+	setAttr ".pt[2239]" -type "float3" 0.0032677352 -0.066919684 0.016203076 ;
+	setAttr ".pt[2240]" -type "float3" 0.0085548759 -0.067137361 0.026456855 ;
+	setAttr ".pt[2241]" -type "float3" -0.00024655461 -0.062052131 0.036193348 ;
+	setAttr ".pt[2242]" -type "float3" 0.0053711236 -0.06641221 0.034216736 ;
+	setAttr ".pt[2243]" -type "float3" -0.006734848 -0.063923359 0.036388304 ;
+	setAttr ".pt[2244]" -type "float3" -0.01545769 -0.070209742 0.038233086 ;
+	setAttr ".pt[2245]" -type "float3" -0.011571914 -0.056118488 0.012982547 ;
+	setAttr ".pt[2246]" -type "float3" -0.013784438 -0.058898449 0.021707296 ;
+	setAttr ".pt[2247]" -type "float3" -0.0060896575 -0.065228105 0.013011023 ;
+	setAttr ".pt[2248]" -type "float3" -0.00055605173 -0.060293674 0.0099330842 ;
+	setAttr ".pt[2249]" -type "float3" 0.0045790076 -0.03391552 0.012433324 ;
+	setAttr ".pt[2250]" -type "float3" 0.0033307374 -0.030419588 0.0066135824 ;
+	setAttr ".pt[2251]" -type "float3" -0.00062939525 -0.034373164 0.018543292 ;
+	setAttr ".pt[2252]" -type "float3" 0.0026644766 -0.035583496 0.017304664 ;
+	setAttr ".pt[2253]" -type "float3" -0.005261004 -0.041125059 0.021438744 ;
+	setAttr ".pt[2254]" -type "float3" -0.010548115 -0.046066046 0.019402038 ;
+	setAttr ".pt[2255]" -type "float3" -0.005056411 -0.022536039 0.0032669604 ;
+	setAttr ".pt[2256]" -type "float3" -0.008081466 -0.032334089 0.0093140155 ;
+	setAttr ".pt[2257]" -type "float3" -0.0037031174 -0.029408574 0.0034677088 ;
+	setAttr ".pt[2258]" -type "float3" -1.0281801e-05 -0.026308656 0.0027502477 ;
+	setAttr ".pt[2437]" -type "float3" 0 0 1.0430813e-07 ;
+	setAttr ".pt[2438]" -type "float3" -2.2351742e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[2439]" -type "float3" 5.2154064e-08 0 -5.9604645e-08 ;
+	setAttr ".pt[2440]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[2441]" -type "float3" -5.9604645e-08 0 4.4703484e-08 ;
+	setAttr ".pt[2442]" -type "float3" -5.9604645e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[2443]" -type "float3" 8.9406967e-08 0 0 ;
+	setAttr ".pt[2444]" -type "float3" -2.3841858e-07 0 -2.2351742e-08 ;
+	setAttr ".pt[2445]" -type "float3" -1.0430813e-07 0 -2.9802322e-08 ;
+	setAttr ".pt[2446]" -type "float3" 1.4901161e-08 0 1.1920929e-07 ;
+	setAttr ".pt[2447]" -type "float3" -2.9802322e-08 0 2.682209e-07 ;
+	setAttr ".pt[2448]" -type "float3" -1.4901161e-08 0 1.1920929e-07 ;
+	setAttr ".pt[2450]" -type "float3" 0 0 2.9802322e-08 ;
+	setAttr ".pt[2451]" -type "float3" 1.4901161e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[2452]" -type "float3" 7.4505806e-08 0 -1.3411045e-07 ;
+	setAttr ".pt[2453]" -type "float3" 2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[2454]" -type "float3" -5.9604645e-08 0 4.4703484e-08 ;
+	setAttr ".pt[2458]" -type "float3" -2.9802322e-07 0 2.9802322e-08 ;
+	setAttr ".pt[2459]" -type "float3" 8.9406967e-08 0 -4.4703484e-08 ;
+	setAttr ".pt[2460]" -type "float3" 0 0 1.4901161e-07 ;
+	setAttr ".pt[2461]" -type "float3" -7.4505806e-09 0 -8.9406967e-08 ;
+	setAttr ".pt[2462]" -type "float3" 0 0 8.9406967e-08 ;
+	setAttr ".pt[2463]" -type "float3" -1.4901161e-08 0 0 ;
+	setAttr ".pt[2476]" -type "float3" 1.4901161e-08 0 1.1920929e-07 ;
+	setAttr ".pt[2477]" -type "float3" 2.9802322e-08 0 2.682209e-07 ;
+	setAttr ".pt[2478]" -type "float3" -1.4901161e-08 0 1.1920929e-07 ;
+	setAttr ".pt[2479]" -type "float3" 1.0430813e-07 0 -2.9802322e-08 ;
+	setAttr ".pt[2480]" -type "float3" 2.3841858e-07 0 -2.2351742e-08 ;
+	setAttr ".pt[2481]" -type "float3" -8.9406967e-08 0 0 ;
+	setAttr ".pt[2482]" -type "float3" 5.9604645e-08 0 -1.4901161e-08 ;
+	setAttr ".pt[2483]" -type "float3" 5.9604645e-08 0 4.4703484e-08 ;
+	setAttr ".pt[2484]" -type "float3" -1.4901161e-08 0 0 ;
+	setAttr ".pt[2485]" -type "float3" -5.2154064e-08 0 -5.9604645e-08 ;
+	setAttr ".pt[2486]" -type "float3" 2.2351742e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[2487]" -type "float3" 0 0 1.0430813e-07 ;
+	setAttr ".pt[2488]" -type "float3" 0 0 8.9406967e-08 ;
+	setAttr ".pt[2489]" -type "float3" 7.4505806e-09 0 -8.9406967e-08 ;
+	setAttr ".pt[2490]" -type "float3" 0 0 1.4901161e-07 ;
+	setAttr ".pt[2491]" -type "float3" -8.9406967e-08 0 -4.4703484e-08 ;
+	setAttr ".pt[2492]" -type "float3" 2.9802322e-07 0 2.9802322e-08 ;
+	setAttr ".pt[2496]" -type "float3" 5.9604645e-08 0 4.4703484e-08 ;
+	setAttr ".pt[2497]" -type "float3" -2.9802322e-08 0 2.9802322e-08 ;
+	setAttr ".pt[2498]" -type "float3" -7.4505806e-08 0 -1.3411045e-07 ;
+	setAttr ".pt[2499]" -type "float3" -1.4901161e-08 0 -2.9802322e-08 ;
+	setAttr ".pt[2500]" -type "float3" 0 0 2.9802322e-08 ;
+	setAttr ".pt[2512]" -type "float3" 1.4901161e-08 0 0 ;
+	setAttr ".pt[2513]" -type "float3" 0 0 -4.4703484e-08 ;
+	setAttr ".pt[2514]" -type "float3" -0.018872023 -0.026086748 0.031557631 ;
+	setAttr ".pt[2515]" -type "float3" -0.026754232 -0.010550607 0.029470112 ;
+	setAttr ".pt[2516]" -type "float3" -0.029249433 -7.9189427e-05 0.023474496 ;
+	setAttr ".pt[2517]" -type "float3" -0.031260747 0.0026748637 0.019111114 ;
+	setAttr ".pt[2518]" -type "float3" -0.036780328 -0.0027793748 0.011002083 ;
+	setAttr ".pt[2519]" -type "float3" -0.037674323 -0.005041129 -0.0005570543 ;
+	setAttr ".pt[2520]" -type "float3" -0.04545166 -0.036970712 -0.00044855103 ;
+	setAttr ".pt[2521]" -type "float3" -0.026995022 0.013132233 -0.017025022 ;
+	setAttr ".pt[2522]" -type "float3" -0.025058102 0.0088093262 -0.027845137 ;
 	setAttr ".pt[2523]" -type "float3" -0.017997501 0.011235056 -0.034246955 ;
 	setAttr ".pt[2524]" -type "float3" -0.0096061723 0.013435338 -0.036830854 ;
 	setAttr ".pt[2525]" -type "float3" -2.5776849e-08 0.015179208 -0.037940472 ;
 	setAttr ".pt[2526]" -type "float3" 0.0096061723 0.013435338 -0.036830854 ;
 	setAttr ".pt[2527]" -type "float3" 0.017997548 0.011235056 -0.034246955 ;
-	setAttr ".pt[2528]" -type "float3" 0.053675104 0.038900971 -0.024575241 ;
-	setAttr ".pt[2529]" -type "float3" 0.068834715 0.025630282 -0.0085482914 ;
-	setAttr ".pt[2530]" -type "float3" 0.086614974 -0.0064861681 0.012205314 ;
-	setAttr ".pt[2531]" -type "float3" 0.09013626 -0.0087785739 0.031074233 ;
-	setAttr ".pt[2532]" -type "float3" 0.088428333 -0.009130897 0.051545411 ;
-	setAttr ".pt[2533]" -type "float3" 0.082460597 -0.0078099687 0.070234232 ;
-	setAttr ".pt[2534]" -type "float3" 0.070315577 0.0018165717 0.08703386 ;
-	setAttr ".pt[2535]" -type "float3" 0.055285133 0.0015339861 0.097001277 ;
-	setAttr ".pt[2536]" -type "float3" 0.031592973 -0.015147405 0.10788126 ;
-	setAttr ".pt[2537]" -type "float3" -3.6396894e-05 -0.023959799 0.10687667 ;
+	setAttr ".pt[2528]" -type "float3" 0.025058154 0.0088093262 -0.027845137 ;
+	setAttr ".pt[2529]" -type "float3" 0.032316525 0.0024553726 -0.020171491 ;
+	setAttr ".pt[2530]" -type "float3" 0.040829677 -0.012921909 -0.010234732 ;
+	setAttr ".pt[2531]" -type "float3" 0.04251565 -0.014019496 -0.0012003559 ;
+	setAttr ".pt[2532]" -type "float3" 0.041697897 -0.014188181 0.008601171 ;
+	setAttr ".pt[2533]" -type "float3" 0.038840551 -0.01355572 0.017549323 ;
+	setAttr ".pt[2534]" -type "float3" 0.031451944 -0.0026088106 0.026354384 ;
+	setAttr ".pt[2535]" -type "float3" 0.025045248 -0.0023442395 0.028958138 ;
+	setAttr ".pt[2536]" -type "float3" 0.01435256 -0.019811571 0.033780228 ;
+	setAttr ".pt[2537]" -type "float3" -0.0015592834 -0.02964025 0.031201422 ;
 	setAttr -s 2538 ".vt";
 	setAttr ".vt[0:165]"  -5.39596939 5.52685738 0.31891602 -5.38721895 5.61466885 0.28330085
 		 -5.39147186 5.8446722 0.41150558 -5.32374763 5.82420826 0.32927424 -5.35854244 5.63879871 0.35931385
@@ -8835,29 +8303,41 @@ createNode mesh -n "GenericMeshCartoon:polySurfaceShape2" -p "GenericMeshCartoon
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C618E288-416B-0DCB-84ED-5C9637E3442A";
+	rename -uid "C035520C-427D-04F7-9C83-4F9C81679EE2";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "81075629-4561-C8A7-E5FC-559E66E0D382";
+	rename -uid "0E627251-4831-CF09-E102-8E9CDE4E9C7A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FA779315-488B-C304-51CB-1B8E253FF2FD";
+	rename -uid "29935E8E-41A4-0FF8-3313-519603CBFCB3";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "2D3C75FA-45BB-2A7A-AD11-B188FD5B4B9A";
+	rename -uid "0F15F5D5-4B8D-1749-889D-1A8A2D8DC9BE";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "D9792FA2-4618-762E-D4AE-4CAF3F58C511";
+	rename -uid "FDDA9D13-41C3-F3AA-309C-D7BEBAA85704";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "11C8C3A1-4281-FADE-D2AB-7393CA394D1B";
+	rename -uid "227D95B0-4525-B76E-4CF9-1DBEED42BDE3";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "3DE1F267-4743-5515-79AA-C485995171EF";
+	rename -uid "0B6BA9B4-451C-E520-CEE9-3599098C4849";
 	setAttr ".g" yes;
+createNode aiOptions -s -n "defaultArnoldRenderOptions";
+	rename -uid "84B994F0-4DD1-A987-A53A-6F8A9795BC4F";
+	setAttr ".version" -type "string" "5.4.2.1";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "0899EDC4-4B1F-3473-9208-D39A96B15DCD";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "C5D82BAF-4CB6-D307-8215-D3A0FA5F0104";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "CE18DA28-4C09-1A2E-C17F-67943A3DBC6D";
+	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "4ED81F5E-4615-5B3F-FB12-6A97742AA3B1";
 createNode reference -n "GenericMeshCartoonRN";
-	rename -uid "6B7A1C21-459F-901A-D787-A1B3AA472B7D";
-	setAttr -s 15 ".phl";
+	rename -uid "E6CD1FC1-4769-639E-7722-CB9EC3407BE1";
+	setAttr -s 14 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -8872,2804 +8352,4343 @@ createNode reference -n "GenericMeshCartoonRN";
 	setAttr ".phl[12]" 0;
 	setAttr ".phl[13]" 0;
 	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GenericMeshCartoonRN"
 		"GenericMeshCartoonRN" 0
-		"GenericMeshCartoonRN" 1092
+		"GenericMeshCartoonRN" 2182
 		0 "|GenericMeshCartoonRNfosterParent1|GenericMeshCartoon:polySurfaceShape2" 
 		"|GenericMeshCartoon:polySurface2" "-s -r "
-		2 "|GenericMeshCartoon:group3|GenericMeshCartoon:pSphere1" "translate" " -type \"double3\" -1.9093244156675433 7.96353605980389823 0.58586288171023726"
-		
-		2 "|GenericMeshCartoon:group3|GenericMeshCartoon:pSphere1" "scale" " -type \"double3\" 0.087694671593498447 0.10002629794595905 0.10002629794595905"
-		
-		2 "|GenericMeshCartoon:group3|GenericMeshCartoon:pSphere2" "translate" " -type \"double3\" -2.20752571528375041 7.96353605980389823 0.58586288171023726"
-		
-		2 "|GenericMeshCartoon:group3|GenericMeshCartoon:pSphere2" "scale" " -type \"double3\" 0.087694671593498447 0.10002629794595905 0.10002629794595905"
-		
-		2 "|GenericMeshCartoon:Head:polySurface2" "translate" " -type \"double3\" 16.0529708151824444 0 0"
-		
-		2 "|GenericMeshCartoon:polySurface2" "translate" " -type \"double3\" -2.50873422648605526 -0.70428134234765949 0"
-		
-		2 "|GenericMeshCartoon:polySurface2" "scale" " -type \"double3\" 0.85821919055986173 0.81160649942965724 0.68440908567202496"
+		2 "|GenericMeshCartoon:group2|GenericMeshCartoon:Head:pSphere1" "translate" 
+		" -type \"double3\" 7.78766314913326596 8.97782654244221234 0.80127444211785337"
+		2 "|GenericMeshCartoon:group2|GenericMeshCartoon:Head:pSphere2" "translate" 
+		" -type \"double3\" 7.4139990125714581 8.97782654244221234 0.80127444211785337"
+		2 "|GenericMeshCartoon:Head:polySurface2" "translate" " -type \"double3\" 8.53105158647554873 0 0"
 		
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"instObjGroups.objectGroups" " -s 4"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"uvPivot" " -type \"double2\" 0.54875409603118896 0.49886554479598999"
+		"uvPivot" " -type \"double2\" 0.55112636089324951 0.39842796325683594"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts" " -s 1057"
+		"pnts" " -s 2154"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[0]" " -type \"float3\" 0.054405499000000003 -0.040015309999999998 0.002301123"
-		
+		"pnts[0]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1]" " -type \"float3\" 0.055881698 -0.025201397 -0.0037071926"
+		"pnts[1]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2]" " -type \"float3\" 0.055164266000000003 0.013600312999999999 0.017921078999999999"
-		
+		"pnts[2]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[3]" " -type \"float3\" 0.066589451999999993 0.010148064 0.0040485709999999999"
-		
+		"pnts[3]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[4]" " -type \"float3\" 0.060719497999999997 -0.021130722000000001 0.0091162910999999999"
-		
+		"pnts[4]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[5]" " -type \"float3\" 0.054518346000000002 -0.013592839000000001 0.02255532"
-		
+		"pnts[5]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[6]" " -type \"float3\" 0.064750232000000005 0.041320260999999997 0.0061899987000000002"
-		
+		"pnts[6]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[7]" " -type \"float3\" 0.075926512000000002 0.049663107999999997 -0.0042054750999999998"
-		
+		"pnts[7]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[8]" " -type \"float3\" 0.077230215000000005 0.043509144 -0.00090906652999999998"
-		
+		"pnts[8]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[9]" " -type \"float3\" 0.060708276999999998 0.031329382000000003 0.012658595999999999"
-		
+		"pnts[9]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[10]" " -type \"float3\" 0.054316985999999998 -0.048975672999999997 0.0094654662999999993"
-		
+		"pnts[10]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[11]" " -type \"float3\" 0.084352448999999996 0.014056037 -0.020694014"
+		"pnts[11]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[12]" " -type \"float3\" 0.084489099999999998 0.014172821 -0.026691270999999999"
-		
+		"pnts[12]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[13]" " -type \"float3\" 0.074160956 -0.022417367000000001 -0.014482513000000001"
-		
+		"pnts[13]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[14]" " -type \"float3\" 0.074390464000000003 -0.017386756999999999 -0.0095694791999999997"
-		
+		"pnts[14]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[15]" " -type \"float3\" 0.076007478000000003 0.0088310669999999997 -0.011700621"
-		
+		"pnts[15]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[16]" " -type \"float3\" 0.071754738999999998 -0.011034967999999999 -0.0080393413000000007"
-		
+		"pnts[16]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[17]" " -type \"float3\" 0.071457311999999995 0.030860611999999999 0.00055419724"
-		
+		"pnts[17]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[18]" " -type \"float3\" 0.076163865999999997 0.023979416 -0.0096116085000000004"
-		
+		"pnts[18]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[19]" " -type \"float3\" 0.060818962999999997 0.024377291999999998 0.010303194"
-		
+		"pnts[19]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[20]" " -type \"float3\" 0.084815300999999996 0.036515082999999997 -0.021726212000000002"
-		
+		"pnts[20]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[21]" " -type \"float3\" 0.084003969999999997 0.031718202000000001 -0.016003123000000001"
-		
+		"pnts[21]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[22]" " -type \"float3\" 0.072159179000000004 0.043767825000000003 -0.0052273544000000002"
-		
+		"pnts[22]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[23]" " -type \"float3\" 0.078956134999999997 0.033201295999999998 -0.019949545999999999"
-		
+		"pnts[23]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[24]" " -type \"float3\" 0.064322009999999999 -0.043609805000000001 -0.00010015356"
-		
+		"pnts[24]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[25]" " -type \"float3\" 0.061578705999999997 -0.03934294 -0.00033534713999999998"
-		
+		"pnts[25]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[26]" " -type \"float3\" 0.057709925000000002 -0.044012994 0.011332022000000001"
-		
+		"pnts[26]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[27]" " -type \"float3\" 0.066018350000000003 -0.038424238999999999 0.0033612481999999999"
-		
+		"pnts[27]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[28]" " -type \"float3\" 0.079179145000000006 0.014923809 -0.02440341"
+		"pnts[28]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[29]" " -type \"float3\" 0.069858767000000002 -0.017833048000000001 -0.012767315"
-		
+		"pnts[29]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[30]" " -type \"float3\" 0.059736065999999997 0.011047299 -0.0018525690999999999"
-		
+		"pnts[30]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[31]" " -type \"float3\" 0.059877113000000003 -0.031183817999999999 0.0074091861000000004"
-		
+		"pnts[31]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[32]" " -type \"float3\" 0.065487318000000003 0.040727496000000002 0.00024845919999999999"
-		
+		"pnts[32]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[33]" " -type \"float3\" 0.045757063000000001 -0.038924325000000003 0.018663539999999999"
-		
+		"pnts[33]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[34]" " -type \"float3\" 0.052242957 0.020807666999999998 0.025752809000000002"
-		
+		"pnts[34]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[35]" " -type \"float3\" 0.046432412999999999 -0.014390435 0.029247210999999999"
-		
+		"pnts[35]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[39]" " -type \"float3\" 0 0 0.029520404"
+		"pnts[36]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[40]" " -type \"float3\" 5.4635543999999996e-05 -0.047268569000000003 -0.054008017999999998"
-		
+		"pnts[37]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[48]" " -type \"float3\" 0 0 0.047354436999999999"
+		"pnts[38]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[49]" " -type \"float3\" 5.4635543999999996e-05 -0.097875163000000001 -0.027280796"
-		
+		"pnts[39]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[50]" " -type \"float3\" 0.00015725909999999999 0.021208729999999999 0.054533156999999999"
-		
+		"pnts[40]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[51]" " -type \"float3\" 5.4635543999999996e-05 -0.010455565999999999 0.059468515"
-		
+		"pnts[41]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[52]" " -type \"float3\" 5.4635543999999996e-05 -0.051230848000000002 0.055391840999999997"
-		
+		"pnts[42]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[53]" " -type \"float3\" 5.4635543999999996e-05 -0.081349305999999996 0.042422387999999998"
-		
+		"pnts[43]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[54]" " -type \"float3\" 5.4635543999999996e-05 -0.095342315999999996 0.030487381000000001"
-		
+		"pnts[44]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[55]" " -type \"float3\" 5.4635543999999996e-05 -0.11136596999999999 0.013623692999999999"
-		
+		"pnts[45]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[56]" " -type \"float3\" 5.4635543999999996e-05 -0.073374718000000005 -0.042243405999999997"
-		
+		"pnts[46]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[47]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[48]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[49]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[50]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[51]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[52]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[53]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[54]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[55]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[56]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[57]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[58]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[63]" " -type \"float3\" 5.4635543999999996e-05 -0.018695732999999999 -0.058568370000000002"
-		
+		"pnts[59]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[60]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[61]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[62]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[63]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[64]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[65]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[66]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[67]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[68]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[69]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[70]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[71]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[72]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[73]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[74]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[75]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[76]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[77]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[78]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[79]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[80]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[81]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[82]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[83]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[84]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[85]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[86]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[87]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[88]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[89]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[90]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[91]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[92]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[93]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[94]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[95]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[96]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[97]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[98]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[99]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[100]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[101]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[102]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[103]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[104]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[105]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[106]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[107]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[108]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[109]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[110]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[111]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[112]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[113]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[114]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[115]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[116]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[117]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[118]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[119]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[120]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[121]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[122]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[123]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[124]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[125]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[126]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[127]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[128]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[129]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[130]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[131]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[132]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[133]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[134]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[135]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[136]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[137]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[138]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[139]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[140]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[141]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[142]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[143]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[144]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[145]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[146]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[147]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[148]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[149]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[150]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[151]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[152]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[153]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[154]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[155]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[156]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[157]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[158]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[159]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[160]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[161]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[162]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[163]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[164]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[165]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[166]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[167]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[168]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[169]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[170]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[171]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[172]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[173]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[174]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[175]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[176]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[177]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[178]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[179]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[180]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[181]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[182]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[183]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[184]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[185]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[186]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[187]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[188]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[189]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[190]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[191]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[192]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[193]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[194]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[195]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[196]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[197]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[198]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[199]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[200]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[201]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[202]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[203]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[204]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[205]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[206]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[207]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[208]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[209]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[210]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[211]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[212]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[213]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[214]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[215]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[216]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[217]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[218]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[219]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[220]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[221]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[222]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[223]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[224]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[225]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[226]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[227]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[228]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[229]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[230]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[231]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[232]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[233]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[234]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[235]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[236]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[237]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[238]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[239]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[240]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[241]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[242]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[243]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[244]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[245]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[246]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[247]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[248]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[249]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[250]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[251]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[252]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[253]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[254]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[255]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[256]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[257]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[258]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[259]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[260]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[261]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[262]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[263]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[264]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[265]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[266]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[267]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[268]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[269]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[270]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[271]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[272]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[273]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[274]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[275]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[276]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[277]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[278]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[279]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[280]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[281]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[282]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[283]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[284]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[285]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[286]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[287]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[288]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[289]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[290]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[291]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[292]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[293]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[294]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[295]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[296]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[297]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[298]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[299]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[300]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[301]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[302]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[303]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[304]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[305]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[306]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[307]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[308]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[309]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[310]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[311]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[312]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[313]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[314]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[315]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[316]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[317]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[318]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[319]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[320]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[321]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[322]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[323]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[324]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[325]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[326]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[327]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[328]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[329]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[330]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[331]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[332]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[333]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[334]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[335]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[336]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[337]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[338]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[339]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[340]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[341]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[342]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[343]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[344]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[345]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[346]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[347]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[348]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[349]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[350]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[351]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[352]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[353]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[354]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[355]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[356]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[357]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[358]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[359]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[360]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[361]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[362]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[363]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[364]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[365]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[366]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[367]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[368]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[369]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[370]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[371]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[372]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[373]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[374]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[375]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[376]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[377]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[378]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[379]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[380]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[381]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[382]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[383]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[384]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[385]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[386]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[387]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[388]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[389]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[390]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[391]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[392]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[393]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[394]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[395]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[396]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[397]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[398]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[399]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[400]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[401]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[402]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[403]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[404]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[405]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[406]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[407]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[408]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[409]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[410]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[411]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[412]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[413]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[414]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[415]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[416]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[417]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[418]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[419]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[420]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[421]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[422]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[423]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[424]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[425]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[426]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[427]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[428]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[429]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[430]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[431]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[432]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[433]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[434]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[435]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[436]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[437]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[438]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[439]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[440]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[441]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[442]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[443]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[444]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[445]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[446]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[447]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[448]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[449]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[450]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[451]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[452]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[453]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[454]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[455]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[456]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[457]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[458]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[459]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[460]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[461]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[462]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[463]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[464]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[465]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[466]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[467]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[468]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[469]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[470]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[471]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[472]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[473]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[474]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[475]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[476]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[477]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[478]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[479]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[480]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[481]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[482]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[483]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[484]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[485]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[486]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[487]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[488]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[489]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[490]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[491]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[492]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[493]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[494]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[495]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[496]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[497]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[498]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[499]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[500]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[501]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[502]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[503]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[504]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[505]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[506]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[507]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[508]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[509]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[510]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[511]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[512]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[513]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[514]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[515]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[516]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[517]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[518]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[519]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[520]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[521]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[522]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[523]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[524]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[525]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[526]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[527]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[528]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[529]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[530]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[531]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[532]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[533]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[534]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[535]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[536]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[537]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[538]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[539]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[540]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[541]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[542]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[543]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[544]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[545]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[546]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[547]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[548]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[549]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[550]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[551]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[552]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[553]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[554]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[555]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[556]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[557]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[558]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[559]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[560]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[561]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[562]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[563]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[564]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[565]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[566]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[567]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[568]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[569]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[570]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[571]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[572]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[573]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[574]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[575]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[576]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[577]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[578]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[579]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[580]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[581]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[64]" " -type \"float3\" 5.4635543999999996e-05 0.0063945609000000004 -0.059468515"
-		
+		"pnts[582]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[70]" " -type \"float3\" 0 0 0.017834033999999999"
+		"pnts[583]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[88]" " -type \"float3\" -0.00062610384000000004 -0.0011019828000000001 -0.0059919780999999998"
-		
+		"pnts[584]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[90]" " -type \"float3\" 0.061867878000000001 0.027481426999999999 -0.01779859"
-		
+		"pnts[585]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[93]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[586]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[95]" " -type \"float3\" -0.039831090999999999 6.1923172e-05 -0.0052476181000000004"
-		
+		"pnts[587]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[96]" " -type \"float3\" -0.038135308999999999 -0.00094086210999999999 -0.015221235"
-		
+		"pnts[588]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[97]" " -type \"float3\" -0.040987073999999998 -0.00068545574000000004 0.0028997608000000002"
-		
+		"pnts[589]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[99]" " -type \"float3\" -0.00071112387000000002 0.0020767836999999998 0.0070167496000000003"
-		
+		"pnts[590]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[100]" " -type \"float3\" -0.00073953427000000003 -0.00040675187 0.0069845732999999997"
-		
+		"pnts[591]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[101]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[592]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[106]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[593]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[108]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[594]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[114]" " -type \"float3\" -0.028512177999999999 0.00010788208 -0.045604348000000003"
-		
+		"pnts[595]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[115]" " -type \"float3\" -0.030698423999999998 -0.013361387000000001 -0.038446820999999999"
-		
+		"pnts[596]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[116]" " -type \"float3\" -0.035253230000000003 0.0067008170000000004 -0.026578667"
-		
+		"pnts[597]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[117]" " -type \"float3\" -0.029607594000000001 0.018773827999999999 -0.039440508999999999"
-		
+		"pnts[598]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[118]" " -type \"float3\" -0.0093362172999999996 0.0042267735000000002 -0.056426086"
-		
+		"pnts[599]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[119]" " -type \"float3\" -0.012991844000000001 -0.019669532999999999 -0.055985755999999998"
-		
+		"pnts[600]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[120]" " -type \"float3\" -0.021528607000000002 -0.022238133 -0.049561440999999998"
-		
+		"pnts[601]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[121]" " -type \"float3\" -0.019232742000000001 -0.0017474731000000001 -0.054257158"
-		
+		"pnts[602]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[122]" " -type \"float3\" -0.0051183938 0.0058730203000000002 -0.058777004000000001"
-		
+		"pnts[603]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[123]" " -type \"float3\" -0.0057376040999999999 -0.018538410000000002 -0.057593327"
-		
+		"pnts[604]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[124]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[605]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[154]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[606]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[165]" " -type \"float3\" -0.0020910590000000001 -0.0065846471000000004 0.0032085204"
-		
+		"pnts[607]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[166]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[608]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[169]" " -type \"float3\" -0.032833233000000003 -0.025419112000000001 -0.026956895000000002"
-		
+		"pnts[609]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[170]" " -type \"float3\" -0.015244433999999999 -0.047129028000000003 -0.049474109000000002"
-		
+		"pnts[610]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[171]" " -type \"float3\" -0.025204454000000001 -0.041556722999999997 -0.041608899999999997"
-		
+		"pnts[611]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[172]" " -type \"float3\" -0.0066725509000000001 -0.047265779000000001 -0.053124439000000002"
-		
+		"pnts[612]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[213]" " -type \"float3\" -0.039759050999999997 -0.0046619362999999999 0.026212269"
-		
+		"pnts[613]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[214]" " -type \"float3\" -0.038236673999999998 0.028525551999999999 0.016906237000000001"
-		
+		"pnts[614]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[215]" " -type \"float3\" -0.034597557000000001 -0.060806748000000001 0.034643753999999999"
-		
+		"pnts[615]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[216]" " -type \"float3\" -0.029090654000000001 -0.052749041000000003 0.043072801000000001"
-		
+		"pnts[616]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[217]" " -type \"float3\" -0.030697713000000001 -0.018945368000000001 0.044904514999999999"
-		
+		"pnts[617]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[218]" " -type \"float3\" -0.036942016000000001 -0.028138293000000002 0.037249994000000002"
-		
+		"pnts[618]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[219]" " -type \"float3\" -0.031993109999999998 0.012136642 0.043035202000000002"
-		
+		"pnts[619]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[220]" " -type \"float3\" -0.037106432000000002 0.0063103022999999999 0.037596188000000003"
-		
+		"pnts[620]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[224]" " -type \"float3\" -0.020508519999999999 0.016856354 0.049283120999999999"
-		
+		"pnts[621]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[225]" " -type \"float3\" -0.019270553999999999 -0.016014053 0.051912051000000001"
-		
+		"pnts[622]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[226]" " -type \"float3\" -0.019318900999999999 -0.048673666999999997 0.049032829999999999"
-		
+		"pnts[623]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[227]" " -type \"float3\" -0.024453341999999999 -0.083446971999999994 0.030146223999999999"
-		
+		"pnts[624]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[228]" " -type \"float3\" -0.013302079 -0.093030794999999999 0.029355617000000001"
-		
+		"pnts[625]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[229]" " -type \"float3\" -0.016084652000000001 -0.079076983000000003 0.040235530999999998"
-		
+		"pnts[626]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[230]" " -type \"float3\" -0.023320433000000002 -0.075488545000000004 0.037102006"
-		
+		"pnts[627]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[231]" " -type \"float3\" -0.013063228 -0.1050464 0.013880165"
+		"pnts[628]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[232]" " -type \"float3\" -0.024852701000000001 -0.095722713000000001 0.01679315"
-		
+		"pnts[629]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[233]" " -type \"float3\" -0.01019779 -0.094183533999999999 -0.027469990999999999"
-		
+		"pnts[630]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[234]" " -type \"float3\" -0.020080633000000001 -0.081725799000000002 -0.025393401999999999"
-		
+		"pnts[631]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[235]" " -type \"float3\" -0.031481466999999999 -0.070775419000000006 -0.017624786"
-		
+		"pnts[632]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[236]" " -type \"float3\" -0.029027766 -0.060579094999999999 -0.030567434000000001"
-		
+		"pnts[633]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[237]" " -type \"float3\" -0.018389474999999999 -0.066480375999999994 -0.038734339"
-		
+		"pnts[634]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[238]" " -type \"float3\" -0.040153187 -0.048475115999999999 -0.0063677463000000002"
-		
+		"pnts[635]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[239]" " -type \"float3\" -0.038164936000000003 -0.036184969999999997 -0.017809551"
-		
+		"pnts[636]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[240]" " -type \"float3\" -0.0093918144999999998 -0.071114159999999996 -0.041296883999999999"
-		
+		"pnts[637]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[241]" " -type \"float3\" -0.035773671999999999 -0.071573927999999995 0.023183380999999999"
-		
+		"pnts[638]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[242]" " -type \"float3\" -0.040530160000000003 -0.039410997000000003 0.024073977"
-		
+		"pnts[639]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[300]" " -type \"float3\" 0 0 0.017834033999999999"
+		"pnts[640]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[301]" " -type \"float3\" 0 0 0.047354436999999999"
+		"pnts[641]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[302]" " -type \"float3\" 0 0 0.029520404"
+		"pnts[642]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[313]" " -type \"float3\" -0.0025423844000000001 -0.006969884 0.002012691"
+		"pnts[643]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[327]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[644]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[328]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[645]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[329]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[646]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[335]" " -type \"float3\" -0.0028009287000000001 -0.0075617358000000003 0.00062231451999999999"
-		
+		"pnts[647]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[342]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[648]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[344]" " -type \"float3\" 0.043959234 -0.043200693999999998 0.0085805793999999998"
-		
+		"pnts[649]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[345]" " -type \"float3\" 0.046964093999999998 -0.035920068999999999 -0.0032168412999999999"
-		
+		"pnts[650]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[353]" " -type \"float3\" 0.061191753000000002 0.041834518000000001 0.0026334014000000002"
-		
+		"pnts[651]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[354]" " -type \"float3\" 0.051137857000000002 -0.0035027781999999999 -0.013695317"
-		
+		"pnts[652]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[356]" " -type \"float3\" -0.0018702586000000001 -0.0046922518 -0.0051681729999999999"
-		
+		"pnts[653]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[363]" " -type \"float3\" -0.039889122999999999 0.021549281 0.010393266999999999"
-		
+		"pnts[654]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[364]" " -type \"float3\" -0.041644067 -0.0085059945000000008 0.013925130000000001"
-		
+		"pnts[655]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[365]" " -type \"float3\" -0.040492768999999998 -0.050987642 0.0061939624"
+		"pnts[656]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[366]" " -type \"float3\" -0.032269366000000001 -0.077722386000000004 -0.0065457974999999996"
-		
+		"pnts[657]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[367]" " -type \"float3\" -0.021290943 -0.094804949999999999 -0.012737728"
+		"pnts[658]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[368]" " -type \"float3\" -0.0099289128999999997 -0.10204808 -0.014017406"
+		"pnts[659]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[369]" " -type \"float3\" 5.4635543999999996e-05 -0.10657423000000001 -0.012466546"
-		
+		"pnts[660]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[370]" " -type \"float3\" -0.038658525999999999 0.025097048 0.012560475"
+		"pnts[661]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[371]" " -type \"float3\" -0.040925384000000002 -0.0090262833999999997 0.020876459999999999"
-		
+		"pnts[662]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[372]" " -type \"float3\" -0.041218452000000003 -0.046447075999999997 0.017055547000000001"
-		
+		"pnts[663]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[373]" " -type \"float3\" -0.033649924999999997 -0.078157491999999995 0.0084742736000000003"
-		
+		"pnts[664]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[374]" " -type \"float3\" -0.021815195999999999 -0.098965033999999993 -0.0014626268999999999"
-		
+		"pnts[665]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[375]" " -type \"float3\" -0.010464790999999999 -0.10873397 -0.0030577132000000002"
-		
+		"pnts[666]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[376]" " -type \"float3\" 5.4635543999999996e-05 -0.11305294 -0.00016445281999999999"
-		
+		"pnts[667]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[381]" " -type \"float3\" -0.0015709992999999999 -0.0043174336000000001 -0.0029303017"
-		
+		"pnts[668]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[382]" " -type \"float3\" -0.00019494619000000001 -0.00015543387999999999 -0.004243854"
-		
+		"pnts[669]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[387]" " -type \"float3\" -0.038422528999999997 0.0010585500999999999 0.031788897000000003"
-		
+		"pnts[670]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[388]" " -type \"float3\" -0.038918514000000001 -0.033590852999999997 0.030788895"
-		
+		"pnts[671]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[389]" " -type \"float3\" -0.035455136999999998 -0.064954868999999998 0.028714963999999999"
-		
+		"pnts[672]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[390]" " -type \"float3\" -0.024650051999999999 -0.088513754 0.024088228"
+		"pnts[673]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[391]" " -type \"float3\" -0.013216897 -0.099216677000000003 0.022555221"
+		"pnts[674]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[392]" " -type \"float3\" 5.4635543999999996e-05 -0.1031238 0.023181278"
+		"pnts[675]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[393]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[676]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[394]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[677]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[395]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[678]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[396]" " -type \"float3\" -0.021710988000000001 0 0"
+		"pnts[679]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[409]" " -type \"float3\" -0.023944574999999999 -0.0034417474999999999 -0.013387672999999999"
-		
+		"pnts[680]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[410]" " -type \"float3\" -0.028117914000000001 -0.022531026999999999 -0.0046006450000000004"
-		
+		"pnts[681]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[411]" " -type \"float3\" -0.026819255 -0.035563536 0.00068515027000000004"
+		"pnts[682]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[412]" " -type \"float3\" -0.020272713000000001 -0.031960763000000003 -0.0041692596999999996"
-		
+		"pnts[683]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[413]" " -type \"float3\" -0.027486775000000001 0.011604657000000001 0.014426736000000001"
-		
+		"pnts[684]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[414]" " -type \"float3\" -0.026918542 -0.01231844 0.018503723999999999"
+		"pnts[685]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[415]" " -type \"float3\" -0.032374036000000002 -0.018949835000000002 0.0066807539999999997"
-		
+		"pnts[686]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[416]" " -type \"float3\" -0.037538037000000003 0.0085675287999999999 0.0022224536999999999"
-		
+		"pnts[687]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[417]" " -type \"float3\" -0.035919993999999997 0.035991128999999997 0.0041063669999999997"
-		
+		"pnts[688]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[418]" " -type \"float3\" -0.032364111000000001 0.027201703000000001 0.0097970738999999998"
-		
+		"pnts[689]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[419]" " -type \"float3\" -0.046899288999999997 0.037916876000000002 -0.002139003"
-		
+		"pnts[690]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[420]" " -type \"float3\" -0.045752302000000002 0.043330695000000002 -0.0050390050999999996"
-		
+		"pnts[691]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[421]" " -type \"float3\" -0.017629209999999999 -0.038365811 0.0062094749999999999"
-		
+		"pnts[692]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[422]" " -type \"float3\" -0.026741404 -0.043446351000000001 0.0069879475000000002"
-		
+		"pnts[693]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[423]" " -type \"float3\" -0.053164981 0.012005528999999999 -0.019544762"
+		"pnts[694]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[424]" " -type \"float3\" -0.044401065000000003 -0.015656117000000001 -0.0097579584000000007"
-		
+		"pnts[695]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[425]" " -type \"float3\" -0.044199138999999998 -0.020081753000000001 -0.014080184000000001"
-		
+		"pnts[696]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[426]" " -type \"float3\" -0.053285204000000003 0.012108291 -0.024820828999999999"
-		
+		"pnts[697]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[427]" " -type \"float3\" -0.042082294999999999 -0.010068165 -0.0084118266000000001"
-		
+		"pnts[698]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[428]" " -type \"float3\" -0.045823500000000003 0.0074089033999999998 -0.011632824"
-		
+		"pnts[699]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[429]" " -type \"float3\" -0.045961171000000002 0.020735615999999998 -0.0097950212999999998"
-		
+		"pnts[700]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[430]" " -type \"float3\" -0.041820588999999998 0.026789263000000001 -0.00085170234999999998"
-		
+		"pnts[701]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[431]" " -type \"float3\" -0.032461549999999999 0.021085654999999998 0.0077249296000000004"
-		
+		"pnts[702]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[432]" " -type \"float3\" -0.052858464000000001 0.027543791000000001 -0.015417961000000001"
-		
+		"pnts[703]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[433]" " -type \"float3\" -0.053572214999999999 0.031763769999999997 -0.020452766000000001"
-		
+		"pnts[704]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[434]" " -type \"float3\" -0.048417702 0.028848477000000001 -0.018889765999999999"
-		
+		"pnts[705]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[435]" " -type \"float3\" -0.042438089999999998 0.03814435 -0.0059379916999999999"
-		
+		"pnts[706]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[436]" " -type \"float3\" -0.033129881999999999 -0.034971985999999997 -0.0016342756999999999"
-		
+		"pnts[707]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[437]" " -type \"float3\" -0.035543352 -0.038725782 -0.0014273654"
+		"pnts[708]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[438]" " -type \"float3\" -0.037035658999999999 -0.034163794999999997 0.00161779"
-		
+		"pnts[709]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[439]" " -type \"float3\" -0.029726315 -0.039080467000000001 0.0086300223999999995"
-		
+		"pnts[710]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[440]" " -type \"float3\" -0.019210834 -0.034603744999999998 0.015079927"
+		"pnts[711]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[441]" " -type \"float3\" -0.040414314999999999 -0.016048740999999998 -0.012571221"
-		
+		"pnts[712]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[442]" " -type \"float3\" -0.048613815999999997 0.012768972999999999 -0.022808082"
-		
+		"pnts[713]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[443]" " -type \"float3\" -0.032789434999999999 0.036443584000000001 0.00097746832999999998"
-		
+		"pnts[714]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[444]" " -type \"float3\" -0.024916798 0.017945293000000001 0.021316633000000001"
-		
+		"pnts[715]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[445]" " -type \"float3\" -0.031508769999999998 0.0093586313999999993 -0.0029690464000000001"
-		
+		"pnts[716]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[446]" " -type \"float3\" -0.031632925999999999 -0.027794047999999998 0.0051789376999999996"
-		
+		"pnts[717]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[447]" " -type \"float3\" -0.019804942999999998 -0.013020112 0.024390904000000001"
-		
+		"pnts[718]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[448]" " -type \"float3\" -0.036568448000000003 0.035469687999999999 -0.0011206746999999999"
-		
+		"pnts[719]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[449]" " -type \"float3\" -0.033384274999999998 0.023816461000000001 -0.016997524999999999"
-		
+		"pnts[720]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[456]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[721]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[459]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[722]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[467]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[723]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[468]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[724]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[471]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[725]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[472]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[726]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[479]" " -type \"float3\" 0 0 0.029520404"
+		"pnts[727]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[480]" " -type \"float3\" 0.028621443999999999 0.00010788208 -0.045604348000000003"
-		
+		"pnts[728]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[482]" " -type \"float3\" 0.035362500999999998 0.0067008170000000004 -0.026578667"
-		
+		"pnts[729]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[483]" " -type \"float3\" 0.030807688999999999 -0.013361387000000001 -0.038446820999999999"
-		
+		"pnts[730]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[484]" " -type \"float3\" 0.0094454884999999999 0.0042267735000000002 -0.056426086"
-		
+		"pnts[731]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[485]" " -type \"float3\" 0.019342010999999999 -0.0017474731000000001 -0.054257158"
-		
+		"pnts[732]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[486]" " -type \"float3\" 0.021637876 -0.022238133 -0.049561440999999998"
+		"pnts[733]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[487]" " -type \"float3\" 0.013101111 -0.019669532999999999 -0.055985755999999998"
-		
+		"pnts[734]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[488]" " -type \"float3\" 0.0052276607999999997 0.0058730203000000002 -0.058777004000000001"
-		
+		"pnts[735]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[489]" " -type \"float3\" 0.0058468734 -0.018538410000000002 -0.057593327"
+		"pnts[736]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[491]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[737]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[492]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[738]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[521]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[739]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[522]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[740]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[523]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[741]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[526]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[742]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[527]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[743]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[531]" " -type \"float3\" 0 0 0.047354436999999999"
+		"pnts[744]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[539]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[745]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[540]" " -type \"float3\" 0.038244571999999998 -0.00094086210999999999 -0.015221235"
-		
+		"pnts[746]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[541]" " -type \"float3\" 0.0329425 -0.025419112000000001 -0.026956895000000002"
-		
+		"pnts[747]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[542]" " -type \"float3\" 0.025313728000000001 -0.041556722999999997 -0.041608899999999997"
-		
+		"pnts[748]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[543]" " -type \"float3\" 0.015353701000000001 -0.047129028000000003 -0.049474109000000002"
-		
+		"pnts[749]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[544]" " -type \"float3\" 0.0067818202000000001 -0.047265779000000001 -0.053124439000000002"
-		
+		"pnts[750]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[551]" " -type \"float3\" 0 0 0.017834033999999999"
+		"pnts[751]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[615]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[752]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[616]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[753]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[617]" " -type \"float3\" 0.042610391999999997 -0.0071934499000000001 0.0041926536000000004"
-		
+		"pnts[754]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[619]" " -type \"float3\" 0.041753340999999999 -0.0085059945000000008 0.013925130000000001"
-		
+		"pnts[755]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[620]" " -type \"float3\" 0.034706831 -0.060806748000000001 0.034643753999999999"
-		
+		"pnts[756]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[621]" " -type \"float3\" 0.037051290000000001 -0.028138293000000002 0.037249994000000002"
-		
+		"pnts[757]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[622]" " -type \"float3\" 0.030806981000000001 -0.018945368000000001 0.044904514999999999"
-		
+		"pnts[758]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[623]" " -type \"float3\" 0.029199922 -0.052749041000000003 0.043072801000000001"
-		
+		"pnts[759]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[624]" " -type \"float3\" 0.037215706000000001 0.0063103022999999999 0.037596188000000003"
-		
+		"pnts[760]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[625]" " -type \"float3\" 0.03210238 0.012136642 0.043035202000000002"
+		"pnts[761]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[633]" " -type \"float3\" 0.020617798 0.016856354 0.049283120999999999"
+		"pnts[762]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[634]" " -type \"float3\" 0.019379824 -0.016014053 0.051912051000000001"
+		"pnts[763]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[635]" " -type \"float3\" 0.019428171000000001 -0.048673666999999997 0.049032829999999999"
-		
+		"pnts[764]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[636]" " -type \"float3\" 0.024562612000000001 -0.083446971999999994 0.030146223999999999"
-		
+		"pnts[765]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[637]" " -type \"float3\" 0.023429701000000001 -0.075488545000000004 0.037102006"
-		
+		"pnts[766]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[638]" " -type \"float3\" 0.016193922999999999 -0.079076983000000003 0.040235530999999998"
-		
+		"pnts[767]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[639]" " -type \"float3\" 0.013411357 -0.093030794999999999 0.029355617000000001"
-		
+		"pnts[768]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[640]" " -type \"float3\" 0.0131725 -0.1050464 0.013880165"
+		"pnts[769]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[641]" " -type \"float3\" 0.024961969000000001 -0.095722713000000001 0.01679315"
-		
+		"pnts[770]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[642]" " -type \"float3\" 0.024759322 -0.088513754 0.024088228"
+		"pnts[771]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[643]" " -type \"float3\" 0.013326164 -0.099216677000000003 0.022555221"
+		"pnts[772]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[644]" " -type \"float3\" 0.010307060999999999 -0.094183533999999999 -0.027469990999999999"
-		
+		"pnts[773]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[645]" " -type \"float3\" 0.010038182 -0.10204808 -0.014017406"
+		"pnts[774]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[646]" " -type \"float3\" 0.020189901999999999 -0.081725799000000002 -0.025393401999999999"
-		
+		"pnts[775]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[647]" " -type \"float3\" 0.021400200000000001 -0.094804949999999999 -0.012737728"
-		
+		"pnts[776]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[648]" " -type \"float3\" 0.031590740999999999 -0.070775419000000006 -0.017624786"
-		
+		"pnts[777]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[649]" " -type \"float3\" 0.018498745 -0.066480375999999994 -0.038734339"
+		"pnts[778]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[650]" " -type \"float3\" 0.029137036000000002 -0.060579094999999999 -0.030567434000000001"
-		
+		"pnts[779]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[651]" " -type \"float3\" 0.040262449999999998 -0.048475115999999999 -0.0063677463000000002"
-		
+		"pnts[780]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[652]" " -type \"float3\" 0.038274202 -0.036184969999999997 -0.017809551"
+		"pnts[781]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[653]" " -type \"float3\" 0.041020975000000001 -0.0063426532000000002 -0.0070094513000000004"
-		
+		"pnts[782]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[654]" " -type \"float3\" 0.0095010838000000007 -0.071114159999999996 -0.041296883999999999"
-		
+		"pnts[783]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[655]" " -type \"float3\" 0.032378632999999997 -0.077722386000000004 -0.0065457974999999996"
-		
+		"pnts[784]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[656]" " -type \"float3\" 0.040602036000000001 -0.050987642 0.0061939624"
+		"pnts[785]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[657]" " -type \"float3\" 0.035882939000000003 -0.071573927999999995 0.023183380999999999"
-		
+		"pnts[786]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[658]" " -type \"float3\" 0.035564404000000001 -0.064954868999999998 0.028714963999999999"
-		
+		"pnts[787]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[659]" " -type \"float3\" 0.040639438 -0.039410997000000003 0.024073977"
+		"pnts[788]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[660]" " -type \"float3\" 0.039868325000000003 -0.0046619362999999999 0.026212269"
-		
+		"pnts[789]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[661]" " -type \"float3\" 0.038531806000000002 0.0010585500999999999 0.031788897000000003"
-		
+		"pnts[790]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[662]" " -type \"float3\" 0.039027779999999998 -0.033590852999999997 0.030788895"
-		
+		"pnts[791]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[724]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[792]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[741]" " -type \"float3\" 0.041034646000000001 -0.0090262833999999997 0.020876459999999999"
-		
+		"pnts[793]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[794]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[795]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[796]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[797]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[798]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[799]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[800]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[801]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[802]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[803]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[804]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[805]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[806]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[807]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[808]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[809]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[810]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[811]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[812]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[813]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[814]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[815]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[816]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[817]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[818]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[819]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[820]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[821]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[822]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[823]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[824]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[825]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[826]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[827]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[828]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[829]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[830]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[831]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[832]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[833]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[834]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[835]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[836]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[837]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[838]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[839]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[742]" " -type \"float3\" 0.041327721999999997 -0.046447075999999997 0.017055547000000001"
+		"pnts[840]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[841]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[842]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[843]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[844]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[845]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[846]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[847]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[848]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[849]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[850]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[851]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[852]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[853]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[854]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[855]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[856]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[857]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[858]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[859]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[860]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[861]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[862]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[863]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[864]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[865]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[866]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[867]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[868]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[869]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[870]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[871]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[872]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[873]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[874]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[875]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[876]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[877]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[878]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[879]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[880]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[881]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[882]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[883]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[884]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[885]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[886]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[887]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[888]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[889]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[890]" " -type \"float3\" 0.041791296999999998 0.015044235 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[891]" " -type \"float3\" 0.015929295 0.030714597999999999 0.059772446999999999"
 		
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[892]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[743]" " -type \"float3\" 0.033759192 -0.078157491999999995 0.0084742736000000003"
+		"pnts[893]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[894]" " -type \"float3\" 0.015929295 0.060831122000000001 -0.068294451000000006"
 		
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[744]" " -type \"float3\" 0.021924461999999999 -0.098965033999999993 -0.0014626268999999999"
+		"pnts[895]" " -type \"float3\" 0.015929295 0.060831151999999999 -0.074023521999999994"
 		
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[745]" " -type \"float3\" 0.010574062 -0.10873397 -0.0030577132000000002"
+		"pnts[896]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[747]" " -type \"float3\" 0.024693423999999999 0 0"
+		"pnts[897]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[890]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
+		"pnts[898]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[891]" " -type \"float3\" -4.6566128999999998e-10 0 0"
+		"pnts[899]" " -type \"float3\" 0.015929295 0.060831122000000001 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[892]" " -type \"float3\" 0 0 0"
+		"pnts[900]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[893]" " -type \"float3\" -3.7252903000000002e-09 0 9.3132257000000002e-10"
+		"pnts[901]" " -type \"float3\" 0.010505062000000001 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[894]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[902]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[895]" " -type \"float3\" 1.8626450999999999e-09 3.7252903000000002e-09 3.7252903000000002e-09"
-		
+		"pnts[903]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[896]" " -type \"float3\" 0 0 0"
+		"pnts[904]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[897]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[905]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[898]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[906]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[899]" " -type \"float3\" -9.3132257000000002e-10 -3.7252903000000002e-09 -9.3132257000000002e-10"
-		
+		"pnts[907]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[908]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[909]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[910]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[911]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[912]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[913]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[914]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[915]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[916]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[917]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[900]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
+		"pnts[918]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[901]" " -type \"float3\" 0 0 7.4505806000000003e-09"
+		"pnts[919]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[920]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		"pnts[920]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[921]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[921]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[922]" " -type \"float3\" 1.8626450999999999e-09 0 3.7252903000000002e-09"
+		"pnts[922]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[923]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[924]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[925]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[925]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[926]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		"pnts[926]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[927]" " -type \"float3\" 3.7252903000000002e-09 -1.8626450999999999e-09 0"
+		"pnts[927]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[928]" " -type \"float3\" 3.7252903000000002e-09 0 -3.7252903000000002e-09"
+		"pnts[928]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[929]" " -type \"float3\" 3.7252903000000002e-09 -4.6566128999999998e-10 -3.7252903000000002e-09"
-		
+		"pnts[929]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[930]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[930]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[931]" " -type \"float3\" -7.4505806000000003e-09 1.8626450999999999e-09 1.8626450999999999e-09"
-		
+		"pnts[931]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[932]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[933]" " -type \"float3\" 0 0 -2.3283064000000002e-10"
+		"pnts[933]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[934]" " -type \"float3\" -1.8626450999999999e-09 -4.6566128999999998e-10 0"
-		
+		"pnts[934]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[935]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[935]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[936]" " -type \"float3\" 0 1.8626450999999999e-09 1.8626450999999999e-09"
+		"pnts[936]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[937]" " -type \"float3\" -7.4505806000000003e-09 0 1.8626450999999999e-09"
+		"pnts[937]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[938]" " -type \"float3\" 1.8626450999999999e-09 0 3.7252903000000002e-09"
+		"pnts[938]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[939]" " -type \"float3\" 3.7252903000000002e-09 0 1.8626450999999999e-09"
+		"pnts[939]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[942]" " -type \"float3\" -0.022413605999999999 -0.080265231000000006 0.016714644000000001"
-		
+		"pnts[940]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[943]" " -type \"float3\" 0.010231653 -0.072631671999999994 0.030292934000000001"
-		
+		"pnts[941]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[944]" " -type \"float3\" -0.049964837999999998 -0.064056657000000003 0.026937157"
-		
+		"pnts[942]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[945]" " -type \"float3\" -0.013740083 -0.055103086000000003 0.11942825"
+		"pnts[943]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[946]" " -type \"float3\" -0.046440609000000001 -0.053333405 0.10295964000000001"
-		
+		"pnts[944]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[947]" " -type \"float3\" 0.016872347999999999 -0.055415653000000002 0.10698915000000001"
-		
+		"pnts[945]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[952]" " -type \"float3\" -0.0197121 0.00011534527999999999 -0.016795200999999999"
-		
+		"pnts[946]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[953]" " -type \"float3\" -0.044970162000000001 0.012101905 -0.014042199"
+		"pnts[947]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[954]" " -type \"float3\" 0.0094739291999999999 0.0038017400000000001 -0.0099294734999999992"
-		
+		"pnts[948]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[955]" " -type \"float3\" -0.023485044 -0.030607121000000001 0.0010075949"
+		"pnts[949]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[956]" " -type \"float3\" 0.0090789589999999993 -0.021349218 0.01039353"
+		"pnts[950]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[957]" " -type \"float3\" -0.053809351999999998 -0.018725136 0.0082879233999999993"
-		
+		"pnts[951]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[958]" " -type \"float3\" -0.064294881999999998 -0.014405619999999999 0.049383715000000002"
-		
+		"pnts[952]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[959]" " -type \"float3\" -0.05127839 -0.017915101999999999 0.026018104"
+		"pnts[953]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[960]" " -type \"float3\" -0.045394547 -0.041724186000000003 0.034629773000000003"
-		
+		"pnts[954]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[961]" " -type \"float3\" -0.052933194000000003 -0.041008732999999999 0.051509070999999997"
-		
+		"pnts[955]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[962]" " -type \"float3\" 0.015593493 -0.044733670000000003 0.034538279999999998"
-		
+		"pnts[956]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[963]" " -type \"float3\" 0.017532859000000001 -0.020696849999999999 0.027204250999999999"
-		
+		"pnts[957]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[964]" " -type \"float3\" 0.02923823 -0.013434807 0.051102042"
+		"pnts[958]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[965]" " -type \"float3\" 0.028249895000000001 -0.039701723000000001 0.053290448999999997"
-		
+		"pnts[959]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[966]" " -type \"float3\" 0.027074010999999999 0.0032550247999999999 0.033067807999999997"
-		
+		"pnts[960]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[967]" " -type \"float3\" 0.028766659999999999 0.0090603689000000008 0.050698537000000002"
-		
+		"pnts[961]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[968]" " -type \"float3\" -0.063071749999999996 0.0059869531999999998 0.045305442000000001"
-		
+		"pnts[962]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[969]" " -type \"float3\" -0.062236495000000003 0.0043155067 0.024590188999999998"
-		
+		"pnts[963]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[970]" " -type \"float3\" -0.045806192000000003 -0.038414760999999999 0.070559925999999995"
-		
+		"pnts[964]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[971]" " -type \"float3\" -0.054691455999999999 -0.013715796000000001 0.068383290999999999"
-		
+		"pnts[965]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[972]" " -type \"float3\" -0.014523691 -0.0052486601999999997 0.13420704999999999"
-		
+		"pnts[966]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[973]" " -type \"float3\" -0.048934676000000003 -0.010873518 0.1109115"
+		"pnts[967]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[974]" " -type \"float3\" 0.020245013999999999 -0.0037194921000000001 0.11660635"
-		
+		"pnts[968]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[975]" " -type \"float3\" 0.027155003 -0.010509971999999999 0.069275222999999997"
-		
+		"pnts[969]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[976]" " -type \"float3\" 0.025579708 -0.037247955999999999 0.070760079000000004"
-		
+		"pnts[970]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[977]" " -type \"float3\" 0.028636379 0.011745831999999999 0.068323560000000005"
-		
+		"pnts[971]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[978]" " -type \"float3\" -0.055095561000000001 0.0073752905999999998 0.065858512999999994"
-		
+		"pnts[972]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[979]" " -type \"float3\" -0.042631431999999997 -0.012200478000000001 0.087030313999999998"
-		
+		"pnts[973]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[980]" " -type \"float3\" -0.036128147999999999 -0.033904240000000002 0.084362641000000002"
-		
+		"pnts[974]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[981]" " -type \"float3\" -0.044711575000000003 0.0065749082999999996 0.083666794000000003"
-		
+		"pnts[975]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[982]" " -type \"float3\" 0.020238115000000001 -0.034158777000000001 0.087321959000000005"
-		
+		"pnts[976]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[983]" " -type \"float3\" 0.024274448000000001 -0.0075297052999999999 0.089719005000000004"
-		
+		"pnts[977]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[984]" " -type \"float3\" 0.025976066999999999 0.012190489000000001 0.086009218999999998"
-		
+		"pnts[978]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[985]" " -type \"float3\" -0.013955301 0.032260586000000001 0.12724514000000001"
-		
+		"pnts[979]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[986]" " -type \"float3\" 0.018401783000000001 0.027477879 0.10404463999999999"
-		
+		"pnts[980]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[987]" " -type \"float3\" -0.055163315999999997 0.022600636 0.10068998999999999"
-		
+		"pnts[981]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[988]" " -type \"float3\" -0.074388421999999996 0.015588803 0.012781275"
+		"pnts[982]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[989]" " -type \"float3\" -0.080657668000000002 0.023562805999999999 0.041168670999999997"
-		
+		"pnts[983]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[990]" " -type \"float3\" -0.070967114999999997 0.025934450000000001 0.069155230999999998"
-		
+		"pnts[984]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[991]" " -type \"float3\" 0.028285461000000001 0.028812346999999999 0.047721092"
-		
+		"pnts[985]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[992]" " -type \"float3\" 0.024963730999999999 0.018012007999999999 0.015887268"
-		
+		"pnts[986]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[993]" " -type \"float3\" 0.028576797000000001 0.030765220999999999 0.074909887999999994"
-		
+		"pnts[987]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[994]" " -type \"float3\" -0.068409331000000004 0.030927828000000001 -0.012203762"
-		
+		"pnts[988]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[995]" " -type \"float3\" 0.021726074000000001 0.024999091000000001 -0.0045125820000000002"
-		
+		"pnts[989]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[996]" " -type \"float3\" -0.039669514000000003 0.025780932999999999 -0.035635684000000001"
-		
+		"pnts[990]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[997]" " -type \"float3\" -0.059422664 0.036415726000000002 -0.035127703000000003"
-		
+		"pnts[991]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[998]" " -type \"float3\" 0.021701055 0.031854927999999998 -0.020992608999999999"
-		
+		"pnts[992]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[999]" " -type \"float3\" 0.0082841980999999992 0.018212162 -0.028680395000000001"
-		
+		"pnts[993]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1000]" " -type \"float3\" -0.015275052000000001 0.016396952999999999 -0.036390736999999999"
-		
+		"pnts[994]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1001]" " -type \"float3\" -0.013977801 0.045911542999999999 0.12687607000000001"
-		
+		"pnts[995]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1002]" " -type \"float3\" 0.018400289 0.040865365000000001 0.10404498"
+		"pnts[996]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1003]" " -type \"float3\" -0.054933764000000003 0.038031202 0.10153724"
+		"pnts[997]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1004]" " -type \"float3\" -0.079208723999999994 0.041427772000000002 0.0080461054999999993"
-		
+		"pnts[998]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1005]" " -type \"float3\" -0.079360150000000004 0.045876901999999997 0.038805682000000001"
-		
+		"pnts[999]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1006]" " -type \"float3\" -0.071203775999999996 0.042202561999999999 0.069225878000000005"
-		
+		"pnts[1000]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1007]" " -type \"float3\" 0.028298618000000001 0.042021897000000002 0.047468509999999998"
-		
+		"pnts[1001]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1008]" " -type \"float3\" 0.024980255999999999 0.031249137999999999 0.015499222"
-		
+		"pnts[1002]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1009]" " -type \"float3\" 0.028584102 0.044012967 0.074933074000000002"
+		"pnts[1003]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1010]" " -type \"float3\" -0.081753067999999998 0.047623642000000001 -0.012026538999999999"
-		
+		"pnts[1004]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1011]" " -type \"float3\" 0.021884748999999998 0.038990456999999999 -0.0047070397999999999"
-		
+		"pnts[1005]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1012]" " -type \"float3\" -0.080175482000000006 0.050122403000000003 -0.030933946"
-		
+		"pnts[1006]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1013]" " -type \"float3\" 0.021905233999999999 0.045857518999999999 -0.021301400000000002"
-		
+		"pnts[1007]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1014]" " -type \"float3\" 0.011529648999999999 0.025715900999999999 -0.045966446000000001"
-		
+		"pnts[1008]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1015]" " -type \"float3\" -0.012525773 0.025706786999999998 -0.051518291000000001"
-		
+		"pnts[1009]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1016]" " -type \"float3\" 0.006323202 0.053350076000000003 0.016494399"
+		"pnts[1010]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1017]" " -type \"float3\" -0.014805143999999999 0.066718251000000006 0.0068458332999999996"
-		
+		"pnts[1011]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1018]" " -type \"float3\" -0.028454291 0.079894154999999994 0.023871677000000001"
-		
+		"pnts[1012]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1019]" " -type \"float3\" 0.0095968675 0.079748258000000002 0.045270484"
+		"pnts[1013]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1020]" " -type \"float3\" -0.077746220000000005 0.063465774000000003 0.0016164311"
-		
+		"pnts[1014]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1021]" " -type \"float3\" -0.069641254999999999 0.079881720000000003 0.036438722"
-		
+		"pnts[1015]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1022]" " -type \"float3\" -0.023217776999999998 0.079821384999999995 0.073941611000000004"
-		
+		"pnts[1016]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1023]" " -type \"float3\" 0.014858065 0.079754434999999999 0.072370976000000004"
-		
+		"pnts[1017]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1024]" " -type \"float3\" -0.065709822000000001 0.079839088000000002 0.064810864999999995"
-		
+		"pnts[1018]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1025]" " -type \"float3\" 0.011102051999999999 0.079935737000000007 0.099330992000000007"
-		
+		"pnts[1019]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1026]" " -type \"float3\" -0.019378745999999999 0.080038472999999999 0.10782524"
-		
+		"pnts[1020]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1027]" " -type \"float3\" -0.056981809000000001 0.080034904000000004 0.097390695999999999"
-		
+		"pnts[1021]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1028]" " -type \"float3\" -0.074723206 0.067827634999999997 -0.013256543000000001"
-		
+		"pnts[1022]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1029]" " -type \"float3\" -0.018144792 0.067869179000000002 -0.012586979"
+		"pnts[1023]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1030]" " -type \"float3\" 0.031229122000000002 0.079978697000000001 -0.035935691999999998"
-		
+		"pnts[1024]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1031]" " -type \"float3\" -0.063768767000000004 0.040746237999999997 -0.050489250999999999"
-		
+		"pnts[1025]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1032]" " -type \"float3\" 0.029743296999999998 0.036087583999999999 -0.0349258"
-		
+		"pnts[1026]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1033]" " -type \"float3\" -0.038695067 0.031102620000000001 -0.050483152000000003"
-		
+		"pnts[1027]" " -type \"float3\" 0 0 2.3283064000000002e-10"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1034]" " -type \"float3\" -0.081025489000000006 0.080158249000000001 -0.044314183"
-		
+		"pnts[1232]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1035]" " -type \"float3\" -0.075269676999999993 0.069657682999999998 -0.03079324"
-		
+		"pnts[1233]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1036]" " -type \"float3\" -0.060043729999999997 0.071748092999999999 -0.032680283999999997"
-		
+		"pnts[1234]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1037]" " -type \"float3\" -0.063963272000000002 0.080172032000000004 -0.047750241999999998"
-		
+		"pnts[1235]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1038]" " -type \"float3\" -0.039947971999999998 0.080147885000000002 -0.049125942999999998"
-		
+		"pnts[1236]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1039]" " -type \"float3\" -0.082592972000000001 0.056158867000000001 -0.060324020999999999"
-		
+		"pnts[1237]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1040]" " -type \"float3\" -0.065908394999999995 0.046306986000000001 -0.062448534999999999"
-		
+		"pnts[1238]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1041]" " -type \"float3\" 0.0085317734999999992 0.039080272999999999 -0.081853761999999997"
-		
+		"pnts[1239]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1042]" " -type \"float3\" 0.0066904896000000002 0.051223765999999997 -0.094694681000000003"
-		
+		"pnts[1240]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1043]" " -type \"float3\" 0.0099337156999999999 0.053182788000000002 -0.10892544999999999"
-		
+		"pnts[1241]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1044]" " -type \"float3\" 0.01144333 0.054032403999999999 -0.12340176999999999"
-		
+		"pnts[1242]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1045]" " -type \"float3\" 0.010733271000000001 0.056197180999999999 -0.13420704999999999"
-		
+		"pnts[1243]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1046]" " -type \"float3\" -0.017304351999999999 0.043144025000000003 -0.080034255999999998"
-		
+		"pnts[1244]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1047]" " -type \"float3\" -0.012542328 0.052359726000000002 -0.094262562999999994"
-		
+		"pnts[1245]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1048]" " -type \"float3\" -0.010549298 0.053433590000000003 -0.10850454"
+		"pnts[1246]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1049]" " -type \"float3\" -0.0082009639999999998 0.054250933000000001 -0.12289899"
-		
+		"pnts[1247]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1050]" " -type \"float3\" -0.0046360589999999997 0.056339484000000002 -0.13344412999999999"
-		
+		"pnts[1248]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1051]" " -type \"float3\" 0.0092233252000000002 0.073223889 -0.077199570999999995"
-		
+		"pnts[1249]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1052]" " -type \"float3\" 0.0078615937000000007 0.078202382000000001 -0.095526247999999994"
-		
+		"pnts[1250]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1053]" " -type \"float3\" -0.010296246 0.077633187000000006 -0.095050223000000003"
-		
+		"pnts[1251]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1054]" " -type \"float3\" -0.017455211000000002 0.071540630999999993 -0.078242830999999999"
-		
+		"pnts[1252]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1055]" " -type \"float3\" 0.010352795999999999 0.080248876999999996 -0.10861456999999999"
-		
+		"pnts[1253]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1056]" " -type \"float3\" -0.0084296074000000006 0.080252333999999995 -0.10834219"
-		
+		"pnts[1254]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1057]" " -type \"float3\" 0.011301612000000001 0.080260641999999993 -0.12066997"
-		
+		"pnts[1255]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1058]" " -type \"float3\" -0.0067051858999999997 0.080260395999999998 -0.12026048"
-		
+		"pnts[1256]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1059]" " -type \"float3\" 0.010638122999999999 0.073965906999999997 -0.13179426"
-		
+		"pnts[1257]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1060]" " -type \"float3\" -0.0037309475999999999 0.073629460999999993 -0.13112593"
-		
+		"pnts[1258]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1061]" " -type \"float3\" -0.041522741000000002 0.046430266999999997 -0.079084611999999999"
-		
+		"pnts[1259]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1062]" " -type \"float3\" -0.046407990000000003 0.055242706000000003 -0.084842092999999993"
-		
+		"pnts[1260]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1063]" " -type \"float3\" -0.045174844999999998 0.056613017000000002 -0.092723428999999996"
-		
+		"pnts[1261]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1064]" " -type \"float3\" -0.044459507000000002 0.057433624000000003 -0.10185666"
-		
+		"pnts[1262]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1065]" " -type \"float3\" -0.044980533000000003 0.059111662000000002 -0.10907585"
-		
+		"pnts[1263]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1066]" " -type \"float3\" -0.065271728000000001 0.054847140000000003 -0.076728076000000006"
-		
+		"pnts[1264]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1067]" " -type \"float3\" -0.060485802999999998 0.055572953000000001 -0.084957941999999995"
-		
+		"pnts[1265]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1068]" " -type \"float3\" -0.059401101999999997 0.056537941000000001 -0.092940315999999995"
-		
+		"pnts[1266]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1069]" " -type \"float3\" -0.058239274000000001 0.057390057000000001 -0.10195951"
-		
+		"pnts[1267]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1070]" " -type \"float3\" -0.056107870999999997 0.059095304000000001 -0.10912922999999999"
-		
+		"pnts[1268]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1071]" " -type \"float3\" -0.041449785000000003 0.070413083000000001 -0.078356809999999999"
-		
+		"pnts[1269]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1072]" " -type \"float3\" -0.045629642999999998 0.075552761999999996 -0.085116282000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1073]" " -type \"float3\" -0.058813982000000001 0.075488888000000004 -0.085218892000000004"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1074]" " -type \"float3\" -0.064682013999999996 0.070606380999999996 -0.075845181999999997"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1075]" " -type \"float3\" -0.044630959999999997 0.080255865999999995 -0.092467539000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1076]" " -type \"float3\" -0.057996592999999999 0.080261140999999994 -0.092594825000000006"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1077]" " -type \"float3\" -0.044190630000000002 0.080262817 -0.1001073"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1078]" " -type \"float3\" -0.057128586000000002 0.080262660999999999 -0.10010817"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1079]" " -type \"float3\" -0.044813298000000001 0.072972223000000003 -0.10758706"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1080]" " -type \"float3\" -0.055383465999999999 0.072887308999999997 -0.10758475000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1081]" " -type \"float3\" -0.021880770000000001 0.052547161000000002 -0.087458745000000004"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1082]" " -type \"float3\" -0.019735927 0.053699121000000002 -0.099922030999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1083]" " -type \"float3\" -0.018211832000000001 0.054479800000000002 -0.1151969"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1084]" " -type \"float3\" -0.018384615 0.056499522000000003 -0.12554175000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1085]" " -type \"float3\" -0.038042753999999998 0.052796658000000003 -0.088080390999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1086]" " -type \"float3\" -0.036675245000000002 0.053940170000000003 -0.099919669000000003"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1087]" " -type \"float3\" -0.034799203000000001 0.054735642000000001 -0.11482059"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1088]" " -type \"float3\" -0.032108113000000001 0.056651685 -0.12497013999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1089]" " -type \"float3\" -0.020657727000000001 0.077058463999999993 -0.088137283999999996"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1090]" " -type \"float3\" -0.036296307999999999 0.076249018000000002 -0.088772818000000003"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1091]" " -type \"float3\" -0.018918761999999999 0.080242841999999995 -0.099643371999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1092]" " -type \"float3\" -0.034988299 0.080258705 -0.099708535000000001"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1093]" " -type \"float3\" -0.017976498 0.080260433000000006 -0.11236569"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1094]" " -type \"float3\" -0.033624277000000001 0.080260366 -0.11225671"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1095]" " -type \"float3\" -0.018294834999999999 0.073301159000000005 -0.12329278"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1096]" " -type \"float3\" -0.031391351999999997 0.072905130999999998 -0.12283181"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1097]" " -type \"float3\" -0.069095813000000006 0.061484825 -0.082859531"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1098]" " -type \"float3\" -0.068011023000000004 0.062981843999999995 -0.087758592999999996"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1099]" " -type \"float3\" -0.067472643999999998 0.063671216000000003 -0.093062431000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1100]" " -type \"float3\" -0.068224378000000002 0.064956017000000005 -0.097289986999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1101]" " -type \"float3\" -0.082941270999999997 0.057658150999999998 -0.072078995000000007"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1102]" " -type \"float3\" -0.080176122000000002 0.061857928 -0.082861378999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1103]" " -type \"float3\" -0.079439468999999999 0.062947236000000004 -0.087878883000000005"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1104]" " -type \"float3\" -0.078570164999999997 0.063646398000000007 -0.093169600000000005"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1105]" " -type \"float3\" -0.077158696999999998 0.064935923000000006 -0.097380972999999996"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1106]" " -type \"float3\" -0.068679713000000003 0.076326273 -0.082920089000000002"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1107]" " -type \"float3\" -0.079151428999999995 0.076198123000000006 -0.082608342000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1108]" " -type \"float3\" -0.084954001000000001 0.072211108999999996 -0.070722653999999996"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1109]" " -type \"float3\" -0.067979939000000003 0.080262928999999997 -0.087579756999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1110]" " -type \"float3\" -0.078687109000000005 0.080262817 -0.087701029999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1111]" " -type \"float3\" -0.067580976000000001 0.080265231000000006 -0.091997466999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1112]" " -type \"float3\" -0.077997409000000004 0.080265217 -0.092118450000000004"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1113]" " -type \"float3\" -0.068326168000000007 0.074824436999999994 -0.096334143999999997"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1114]" " -type \"float3\" -0.076764367999999999 0.074806914000000002 -0.096436447999999994"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1115]" " -type \"float3\" 0.035326943 0.072726614999999994 -0.075027077999999997"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1116]" " -type \"float3\" 0.045512154999999999 0.077432923000000001 -0.092460334000000005"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1117]" " -type \"float3\" 0.019681934000000002 0.077555268999999996 -0.092337176000000007"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1118]" " -type \"float3\" 0.049921565000000001 0.080245315999999997 -0.10178136"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1119]" " -type \"float3\" 0.019061562000000001 0.080244443999999998 -0.10160813"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1120]" " -type \"float3\" 0.050376020000000001 0.080260985000000007 -0.11348643"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1121]" " -type \"float3\" 0.020894119999999999 0.080260738999999998 -0.11329789"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1122]" " -type \"float3\" 0.049181207999999997 0.074359155999999996 -0.1243896"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1123]" " -type \"float3\" 0.023754162999999998 0.074372834999999998 -0.12421863"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1124]" " -type \"float3\" 0.040139526000000002 0.040883292000000002 -0.077745847000000007"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1125]" " -type \"float3\" 0.044630490000000002 0.045962658000000003 -0.091919072000000004"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1126]" " -type \"float3\" 0.049858026 0.045466591000000001 -0.10212354"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1127]" " -type \"float3\" 0.050805367999999997 0.046636588999999999 -0.1161267"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1128]" " -type \"float3\" 0.049545705000000002 0.048726502999999997 -0.12684618"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1129]" " -type \"float3\" 0.016583132 0.044997618000000003 -0.091886088000000005"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1130]" " -type \"float3\" 0.016243251 0.04542467 -0.10197276"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1131]" " -type \"float3\" 0.01879492 0.046706065999999997 -0.11592833"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1132]" " -type \"float3\" 0.022386605 0.048759781000000002 -0.12666980999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1133]" " -type \"float3\" -0.040041967999999997 0.080195299999999997 -0.064825721000000003"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1134]" " -type \"float3\" -0.015140717999999999 0.080157295000000003 -0.064250976000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1135]" " -type \"float3\" -0.039779349999999998 0.039249007000000002 -0.062881537000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1136]" " -type \"float3\" -0.014820343 0.034656278999999998 -0.062434046999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1137]" " -type \"float3\" 0.036281854000000002 0.080077536000000005 -0.055012907999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1138]" " -type \"float3\" 0.03607117 0.045507750999999999 -0.055307387999999999"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1139]" " -type \"float3\" 0.010223093000000001 0.030570604000000001 -0.061576679000000002"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1140]" " -type \"float3\" -0.081678994000000005 0.080210513999999997 -0.059513616999999998"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1141]" " -type \"float3\" -0.064239777999999997 0.080220639999999996 -0.062893607000000004"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1142]" " -type \"float3\" -0.078809164000000001 0.051806916000000001 -0.047677751999999997"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1143]" " -type \"float3\" -0.051742546 0.065611041999999994 0.0094646708999999996"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1144]" " -type \"float3\" -0.057543895999999997 0.068210072999999996 -0.011733894"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1145]" " -type \"float3\" -0.014776681999999999 0.080104016 -0.050199647"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1146]" " -type \"float3\" -0.037566319000000001 0.069086194000000004 -0.012090180000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1147]" " -type \"float3\" -0.016800499 0.072755255000000005 -0.034125119000000002"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1148]" " -type \"float3\" -0.038524926000000001 0.073679737999999995 -0.033427507000000002"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1149]" " -type \"float3\" 0.0062055163999999996 0.057700779000000001 -0.0089534521000000002"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1150]" " -type \"float3\" 0.0068774619000000004 0.062410023000000002 -0.028643986"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1151]" " -type \"float3\" 0.012828195000000001 0.080013290000000001 -0.042275026"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1152]" " -type \"float3\" 0.016541420000000001 0.080097601000000004 -0.058241121"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1153]" " -type \"float3\" -0.050935082 0.079901971000000002 0.030894633000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1154]" " -type \"float3\" -0.0093315002000000005 0.079819716999999998 0.034150828000000001"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1155]" " -type \"float3\" -0.033242092000000001 0.066166482999999998 0.0084271263000000006"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1264]" " -type \"float3\" 3.7252903000000002e-09 -1.8626450999999999e-09 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1265]" " -type \"float3\" 2.3283064000000002e-10 3.7252903000000002e-09 -1.8626450999999999e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1266]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1267]" " -type \"float3\" 0 1.8626450999999999e-09 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1268]" " -type \"float3\" 4.6566128999999998e-10 -2.3283064000000002e-10 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1269]" " -type \"float3\" -1.8626450999999999e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1270]" " -type \"float3\" 1.8626450999999999e-09 -1.8626450999999999e-09 0"
-		
+		"pnts[1270]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1271]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1272]" " -type \"float3\" -2.3283064000000002e-10 0 -3.7252903000000002e-09"
-		
+		"pnts[1272]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1273]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1274]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[1274]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1275]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1276]" " -type \"float3\" 0 0 -2.3283064000000002e-10"
+		"pnts[1276]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1277]" " -type \"float3\" 7.4505806000000003e-09 0 0"
+		"pnts[1277]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1278]" " -type \"float3\" -1.1641532000000001e-10 0 3.7252903000000002e-09"
-		
+		"pnts[1278]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1279]" " -type \"float3\" 0 -9.3132257000000002e-10 -3.7252903000000002e-09"
-		
+		"pnts[1279]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1289]" " -type \"float3\" -3.7252903000000002e-09 -1.8626450999999999e-09 1.8626450999999999e-09"
-		
+		"pnts[1280]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1281]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1282]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1283]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1284]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1285]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1286]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1287]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1288]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1289]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1290]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1292]" " -type \"float3\" 0 1.8626450999999999e-09 3.7252903000000002e-09"
+		"pnts[1291]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1293]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[1292]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1293]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1294]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1295]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1296]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1297]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1298]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1299]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1300]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1301]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1302]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1303]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1304]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1305]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1306]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1307]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1308]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1309]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1310]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1311]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1312]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1313]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1314]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1315]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1316]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1317]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1318]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1319]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1320]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1321]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1322]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1323]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1324]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1325]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1326]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1327]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1341]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[1328]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1342]" " -type \"float3\" 0 3.7252903000000002e-09 -1.8626450999999999e-09"
-		
+		"pnts[1329]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1343]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[1330]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1344]" " -type \"float3\" 0 3.7252903000000002e-09 4.6566128999999998e-10"
+		"pnts[1331]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1345]" " -type \"float3\" 1.8626450999999999e-09 -3.7252903000000002e-09 -4.6566128999999998e-10"
-		
+		"pnts[1332]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1333]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1334]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1335]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1336]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1337]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1338]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1339]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1340]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1341]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1342]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1343]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1344]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1345]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1346]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1347]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[1347]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1348]" " -type \"float3\" -4.6566128999999998e-10 3.7252903000000002e-09 -1.8626450999999999e-09"
-		
+		"pnts[1348]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1349]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[1349]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1350]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1671]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
+		"pnts[1351]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1352]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1353]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1354]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1355]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1356]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1357]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1358]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1359]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1360]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1361]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1362]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1363]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1364]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1365]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1366]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1367]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1368]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1369]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1370]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1371]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1372]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1373]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1374]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1375]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1376]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1377]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1378]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1379]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1380]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1381]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1382]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1383]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1384]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1385]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1386]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1387]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1388]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1389]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1390]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1391]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1392]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1393]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1394]" " -type \"float3\" 0 0 0.068581938999999995"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1395]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1396]" " -type \"float3\" 0 0 0.080636337000000002"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1397]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1398]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1399]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1400]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1401]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1402]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1403]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1404]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1405]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1406]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1407]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1408]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1409]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1410]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1411]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1412]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1413]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1414]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1415]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1416]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1417]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1418]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1419]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1420]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1421]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1422]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1423]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1424]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1425]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1426]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1427]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1428]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1429]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1430]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1431]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1432]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1433]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1434]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1435]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1436]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1437]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1438]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1439]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1440]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1441]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1442]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1443]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1444]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1445]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1446]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1447]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1448]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1449]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1450]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1451]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1452]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1453]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1454]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1455]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1456]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1457]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1458]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1459]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1460]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1461]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1462]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1463]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1464]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1465]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1466]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1467]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1468]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1469]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1470]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1471]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1472]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1473]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1474]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1475]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1476]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1477]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1478]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1479]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1480]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1481]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1482]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1483]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1484]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1485]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1486]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1487]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1488]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1489]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1490]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1491]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1492]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1493]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1494]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1495]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1496]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1497]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1498]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1499]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1500]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1501]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1502]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1503]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1504]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1505]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1506]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1507]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1508]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1509]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1510]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1511]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1512]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1513]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1514]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1515]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1516]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1517]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1518]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1519]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1520]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1521]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1522]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1523]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1524]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1525]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1526]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1527]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1528]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1529]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1530]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1531]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1532]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1533]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1534]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1535]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1536]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1537]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1538]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1539]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1540]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1541]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1542]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1543]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1544]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1545]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1546]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1547]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1548]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1549]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1550]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1551]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1552]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1553]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1554]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1555]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1556]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1557]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1558]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1559]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1560]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1561]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1562]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1563]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1564]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1565]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1566]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1567]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1568]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1569]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1570]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1571]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1572]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1573]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1574]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1575]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1576]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1577]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1578]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1579]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1580]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1581]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1582]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1583]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1584]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1585]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1586]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1587]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1588]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1589]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1590]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1591]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1592]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1593]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1594]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1595]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1596]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1597]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1598]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1599]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1600]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1601]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1602]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1603]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1604]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1605]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1606]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1607]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1608]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1609]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1610]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1611]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1612]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1613]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1614]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1615]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1616]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1617]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1618]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1619]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1620]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1621]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1622]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1623]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1624]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1625]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1626]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1627]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1628]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1629]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1630]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1631]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1632]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1633]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1634]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1635]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1636]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1637]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1638]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1639]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1640]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1641]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1642]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1643]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1644]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1645]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1646]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1647]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1648]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1649]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1650]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1651]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1652]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1653]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1654]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1655]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1656]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1657]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1658]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1659]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1660]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1661]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1662]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1663]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1664]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1665]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1666]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1667]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1668]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1669]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1670]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1671]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1672]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1673]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1674]" " -type \"float3\" 3.7252903000000002e-09 0 9.3132257000000002e-10"
+		"pnts[1674]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1675]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[1675]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1676]" " -type \"float3\" -1.8626450999999999e-09 3.7252903000000002e-09 3.7252903000000002e-09"
-		
+		"pnts[1676]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1677]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1678]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[1678]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1679]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[1679]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[1680]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[1681]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1682]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
+		"pnts[1682]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1683]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		"pnts[1683]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1684]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[1684]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1685]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[1685]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1686]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[1686]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1727]" " -type \"float3\" 0.015842576000000001 -0.080265231000000006 0.016714644000000001"
-		
+		"pnts[1687]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1728]" " -type \"float3\" -0.016802668999999999 -0.072631671999999994 0.030292934000000001"
-		
+		"pnts[1688]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1729]" " -type \"float3\" 0.04339378 -0.064056657000000003 0.026937157"
+		"pnts[1689]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1730]" " -type \"float3\" 0.0071690538999999998 -0.055103086000000003 0.11942825"
-		
+		"pnts[1690]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1731]" " -type \"float3\" 0.039869566000000002 -0.053333405 0.10295964000000001"
-		
+		"pnts[1691]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1732]" " -type \"float3\" -0.023443371000000001 -0.055415653000000002 0.10698915000000001"
-		
+		"pnts[1692]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1733]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[1693]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1734]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[1694]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1735]" " -type \"float3\" -0.072771384999999994 0 0"
+		"pnts[1695]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1736]" " -type \"float3\" -0.072771384999999994 0 0"
+		"pnts[1696]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1737]" " -type \"float3\" 0.013141085 0.00011535567 -0.016795200999999999"
+		"pnts[1697]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1738]" " -type \"float3\" 0.038399134000000001 0.012101883000000001 -0.014042199"
-		
+		"pnts[1698]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1739]" " -type \"float3\" -0.016044945000000001 0.0038017465000000001 -0.0099294734999999992"
-		
+		"pnts[1699]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1740]" " -type \"float3\" 0.016914029000000001 -0.030607121000000001 0.0010075949"
-		
+		"pnts[1700]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1741]" " -type \"float3\" -0.015649970999999999 -0.021349218 0.01039353"
+		"pnts[1701]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1742]" " -type \"float3\" 0.047238308999999999 -0.018725136 0.0082879233999999993"
-		
+		"pnts[1702]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1743]" " -type \"float3\" 0.074272476000000004 -0.014405619999999999 0.049383715000000002"
-		
+		"pnts[1703]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1744]" " -type \"float3\" 0.061255987999999997 -0.017915101999999999 0.026018104"
-		
+		"pnts[1704]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1745]" " -type \"float3\" 0.055372115 -0.041724186000000003 0.034629773000000003"
-		
+		"pnts[1705]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1746]" " -type \"float3\" 0.062910757999999997 -0.041008732999999999 0.051509070999999997"
-		
+		"pnts[1706]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1747]" " -type \"float3\" -0.022164508999999999 -0.044733670000000003 0.034538279999999998"
-		
+		"pnts[1707]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1748]" " -type \"float3\" -0.024103880000000001 -0.020696849999999999 0.027204250999999999"
-		
+		"pnts[1708]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1749]" " -type \"float3\" -0.035809245000000003 -0.013434807 0.051102042"
+		"pnts[1709]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1750]" " -type \"float3\" -0.034820914000000001 -0.039701723000000001 0.053290453000000002"
-		
+		"pnts[1710]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1751]" " -type \"float3\" -0.033645026000000001 0.0032550247999999999 0.033067807999999997"
-		
+		"pnts[1711]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1752]" " -type \"float3\" -0.035337678999999997 0.0090603689000000008 0.050698537000000002"
-		
+		"pnts[1712]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1753]" " -type \"float3\" 0.073049298999999998 0.0059869531999999998 0.045305442000000001"
-		
+		"pnts[1713]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1754]" " -type \"float3\" 0.072214088999999995 0.0043155067 0.024590188999999998"
-		
+		"pnts[1714]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1755]" " -type \"float3\" 0.055783775000000001 -0.038414760999999999 0.070559925999999995"
-		
+		"pnts[1715]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1756]" " -type \"float3\" 0.064668976000000003 -0.013715796000000001 0.068383298999999995"
-		
+		"pnts[1716]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1757]" " -type \"float3\" 0.0079526613000000003 -0.0052486601999999997 0.13420704999999999"
-		
+		"pnts[1717]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1758]" " -type \"float3\" 0.042363617999999999 -0.010873518 0.1109115"
+		"pnts[1718]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1759]" " -type \"float3\" -0.026816033 -0.0037194921000000001 0.11660635"
+		"pnts[1719]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1760]" " -type \"float3\" -0.033726022000000001 -0.010509971999999999 0.069275222999999997"
-		
+		"pnts[1720]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1761]" " -type \"float3\" -0.032150722999999999 -0.037247955999999999 0.070760079000000004"
-		
+		"pnts[1721]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1762]" " -type \"float3\" -0.035207398000000001 0.011745831999999999 0.068323560000000005"
-		
+		"pnts[1722]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1763]" " -type \"float3\" 0.065073124999999996 0.0073752905999999998 0.065858512999999994"
-		
+		"pnts[1723]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1764]" " -type \"float3\" 0.052609030000000001 -0.012200478000000001 0.087030313999999998"
-		
+		"pnts[1724]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1765]" " -type \"float3\" 0.046105746000000003 -0.033904240000000002 0.084362641000000002"
-		
+		"pnts[1725]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1766]" " -type \"float3\" 0.054689106000000001 0.0065749082999999996 0.083666794000000003"
-		
+		"pnts[1726]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1767]" " -type \"float3\" -0.026809133999999998 -0.034158777000000001 0.087321959000000005"
-		
+		"pnts[1727]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1768]" " -type \"float3\" -0.030845463 -0.0075297052999999999 0.089719005000000004"
-		
+		"pnts[1728]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1769]" " -type \"float3\" -0.032547086000000003 0.012190489000000001 0.086009218999999998"
-		
+		"pnts[1729]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1770]" " -type \"float3\" 0.0073842713999999997 0.032260586000000001 0.12724514000000001"
-		
+		"pnts[1730]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1771]" " -type \"float3\" -0.024972804000000001 0.027477879 0.10404463999999999"
-		
+		"pnts[1731]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1772]" " -type \"float3\" 0.048592257999999999 0.022600636 0.10068998999999999"
-		
+		"pnts[1732]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1773]" " -type \"float3\" 0.067817382999999995 0.015588803 0.012781275"
+		"pnts[1733]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1774]" " -type \"float3\" 0.074086629000000001 0.023562805999999999 0.041168670999999997"
-		
+		"pnts[1734]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1775]" " -type \"float3\" 0.064396075999999997 0.025934450000000001 0.069155230999999998"
-		
+		"pnts[1735]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1776]" " -type \"float3\" -0.034856475999999997 0.028812346999999999 0.047721092"
-		
+		"pnts[1736]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1777]" " -type \"float3\" -0.031534746000000002 0.018012007999999999 0.015887268"
-		
+		"pnts[1737]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1778]" " -type \"float3\" -0.035147815999999998 0.030765220999999999 0.074909887999999994"
-		
+		"pnts[1738]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1779]" " -type \"float3\" 0.061838295000000001 0.030927828000000001 -0.012203762"
-		
+		"pnts[1739]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1780]" " -type \"float3\" -0.028297089000000001 0.024999091000000001 -0.0045125820000000002"
-		
+		"pnts[1740]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1781]" " -type \"float3\" 0.033098493 0.025780932999999999 -0.035635675999999998"
-		
+		"pnts[1741]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1782]" " -type \"float3\" 0.052851621000000001 0.036415726000000002 -0.035127703000000003"
-		
+		"pnts[1742]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1783]" " -type \"float3\" -0.02827207 0.031854927999999998 -0.020992608999999999"
-		
+		"pnts[1743]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1784]" " -type \"float3\" -0.014855211 0.018212162 -0.028680395000000001"
+		"pnts[1744]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1785]" " -type \"float3\" 0.0087040373999999997 0.016396952999999999 -0.036390736999999999"
-		
+		"pnts[1745]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1786]" " -type \"float3\" 0.0074067869999999997 0.045911542999999999 0.12687607000000001"
-		
+		"pnts[1746]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1787]" " -type \"float3\" -0.024971305999999999 0.040865365000000001 0.10404498"
-		
+		"pnts[1747]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1788]" " -type \"float3\" 0.048362705999999998 0.038031202 0.10153724"
+		"pnts[1748]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1789]" " -type \"float3\" 0.072637699999999999 0.041427772000000002 0.0080461054999999993"
-		
+		"pnts[1749]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1790]" " -type \"float3\" 0.072789124999999996 0.045876901999999997 0.038805682000000001"
-		
+		"pnts[1750]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1791]" " -type \"float3\" 0.064632735999999996 0.042202561999999999 0.069225878000000005"
-		
+		"pnts[1751]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1792]" " -type \"float3\" -0.034869633999999997 0.042021897000000002 0.047468509999999998"
-		
+		"pnts[1752]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1793]" " -type \"float3\" -0.031551271999999998 0.031249137999999999 0.015499222"
-		
+		"pnts[1753]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1794]" " -type \"float3\" -0.035155117999999999 0.044012967 0.074933074000000002"
-		
+		"pnts[1754]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1795]" " -type \"float3\" 0.075181953999999995 0.047623642000000001 -0.012026538999999999"
-		
+		"pnts[1755]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1796]" " -type \"float3\" -0.028455764000000001 0.038990456999999999 -0.0047070397999999999"
-		
+		"pnts[1756]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1797]" " -type \"float3\" 0.073604456999999998 0.050122403000000003 -0.030933946"
-		
+		"pnts[1757]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1798]" " -type \"float3\" -0.028476253 0.045857518999999999 -0.021301400000000002"
-		
+		"pnts[1758]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1799]" " -type \"float3\" -0.018100663999999999 0.025715900999999999 -0.045966446000000001"
-		
+		"pnts[1759]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1800]" " -type \"float3\" 0.0059547462000000004 0.025706786999999998 -0.051518288000000002"
-		
+		"pnts[1760]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1801]" " -type \"float3\" -0.01289422 0.053350076000000003 0.016494399"
+		"pnts[1761]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1802]" " -type \"float3\" 0.0082341293000000003 0.066718251000000006 0.0068458332999999996"
-		
+		"pnts[1762]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1803]" " -type \"float3\" 0.021883249 0.079894154999999994 0.023871677000000001"
-		
+		"pnts[1763]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1804]" " -type \"float3\" -0.016167886999999999 0.079748258000000002 0.045270484"
-		
+		"pnts[1764]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1805]" " -type \"float3\" 0.071175180000000005 0.063465774000000003 0.0016164311"
-		
+		"pnts[1765]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1806]" " -type \"float3\" 0.063070200000000007 0.079881720000000003 0.036438722"
-		
+		"pnts[1766]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1807]" " -type \"float3\" 0.016646761 0.079821384999999995 0.073941611000000004"
-		
+		"pnts[1767]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1808]" " -type \"float3\" -0.021429084000000001 0.079754434999999999 0.072370976000000004"
-		
+		"pnts[1768]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1809]" " -type \"float3\" 0.059138771 0.079839088000000002 0.064810864999999995"
-		
+		"pnts[1769]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1810]" " -type \"float3\" -0.017673068 0.079935737000000007 0.099330992000000007"
-		
+		"pnts[1770]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1811]" " -type \"float3\" 0.012807732 0.080038472999999999 0.10782524"
+		"pnts[1771]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1812]" " -type \"float3\" 0.050410750999999997 0.080034904000000004 0.097390695999999999"
-		
+		"pnts[1772]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1813]" " -type \"float3\" 0.068152182000000006 0.067827634999999997 -0.013256540000000001"
-		
+		"pnts[1773]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1814]" " -type \"float3\" 0.011573781 0.067869179000000002 -0.012586979"
+		"pnts[1774]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1815]" " -type \"float3\" -0.037800136999999998 0.079978697000000001 -0.035935691999999998"
-		
+		"pnts[1775]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1816]" " -type \"float3\" 0.057197955000000002 0.040746248999999998 -0.050489258000000002"
-		
+		"pnts[1776]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1817]" " -type \"float3\" -0.036314312000000001 0.036087583999999999 -0.0349258"
-		
+		"pnts[1777]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1818]" " -type \"float3\" 0.032124046000000003 0.031102620000000001 -0.050483152000000003"
-		
+		"pnts[1778]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1819]" " -type \"float3\" 0.074454479000000004 0.080158249000000001 -0.044314183"
-		
+		"pnts[1779]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1820]" " -type \"float3\" 0.068698637000000007 0.069657682999999998 -0.03079324"
-		
+		"pnts[1780]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1821]" " -type \"float3\" 0.053472700999999997 0.071748092999999999 -0.032680283999999997"
-		
+		"pnts[1781]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1822]" " -type \"float3\" 0.057392235999999999 0.080172032000000004 -0.047750241999999998"
-		
+		"pnts[1782]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1823]" " -type \"float3\" 0.033376936000000003 0.080147885000000002 -0.049125942999999998"
-		
+		"pnts[1783]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1824]" " -type \"float3\" 0.076021961999999998 0.056158867000000001 -0.060324020999999999"
-		
+		"pnts[1784]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1825]" " -type \"float3\" 0.059337344 0.046306986000000001 -0.062448534999999999"
-		
+		"pnts[1785]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1826]" " -type \"float3\" -0.015102786 0.039080272999999999 -0.081853761999999997"
-		
+		"pnts[1786]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1827]" " -type \"float3\" -0.013261504 0.051223765999999997 -0.094694681000000003"
-		
+		"pnts[1787]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1828]" " -type \"float3\" -0.016504735 0.053182788000000002 -0.10892544999999999"
-		
+		"pnts[1788]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1829]" " -type \"float3\" -0.018014348999999999 0.054032403999999999 -0.12340176999999999"
-		
+		"pnts[1789]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1830]" " -type \"float3\" -0.017304285999999999 0.056197180999999999 -0.13420704999999999"
-		
+		"pnts[1790]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1831]" " -type \"float3\" 0.010733337000000001 0.043143999000000002 -0.080034255999999998"
-		
+		"pnts[1791]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1832]" " -type \"float3\" 0.0059713162 0.052359726000000002 -0.094262562999999994"
-		
+		"pnts[1792]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1833]" " -type \"float3\" 0.0039782858999999997 0.053433590000000003 -0.10850454"
-		
+		"pnts[1793]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1834]" " -type \"float3\" 0.0016299514000000001 0.054250933000000001 -0.12289899"
-		
+		"pnts[1794]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1835]" " -type \"float3\" -0.0019349613999999999 0.056339484000000002 -0.13344412999999999"
-		
+		"pnts[1795]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1836]" " -type \"float3\" -0.015794341 0.073223889 -0.077199570999999995"
+		"pnts[1796]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1837]" " -type \"float3\" -0.014432606000000001 0.078202382000000001 -0.095526247999999994"
-		
+		"pnts[1797]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1838]" " -type \"float3\" 0.0037252344000000001 0.077633187000000006 -0.095050223000000003"
-		
+		"pnts[1798]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1839]" " -type \"float3\" 0.010884196 0.071540630999999993 -0.078242830999999999"
-		
+		"pnts[1799]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1840]" " -type \"float3\" -0.016923814999999998 0.080248876999999996 -0.10861456999999999"
-		
+		"pnts[1800]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1841]" " -type \"float3\" 0.0018585799000000001 0.080252333999999995 -0.10834219"
-		
+		"pnts[1801]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1842]" " -type \"float3\" -0.017872631999999999 0.080260641999999993 -0.12066997"
-		
+		"pnts[1802]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1843]" " -type \"float3\" 0.00013417284999999999 0.080260395999999998 -0.12026048"
-		
+		"pnts[1803]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1844]" " -type \"float3\" -0.017209142 0.073965906999999997 -0.13179426"
+		"pnts[1804]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1845]" " -type \"float3\" -0.0028400728000000002 0.073629460999999993 -0.13112593"
-		
+		"pnts[1805]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1846]" " -type \"float3\" 0.034951719999999999 0.046430266999999997 -0.079084611999999999"
-		
+		"pnts[1806]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1847]" " -type \"float3\" 0.039836961999999997 0.055242706000000003 -0.084842092999999993"
-		
+		"pnts[1807]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1848]" " -type \"float3\" 0.038603801 0.056613017000000002 -0.092723428999999996"
-		
+		"pnts[1808]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1849]" " -type \"float3\" 0.037888471 0.057433624000000003 -0.10185666"
+		"pnts[1809]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1850]" " -type \"float3\" 0.038409489999999998 0.059111662000000002 -0.10907585"
-		
+		"pnts[1810]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1851]" " -type \"float3\" 0.058700677 0.054847140000000003 -0.076728076000000006"
-		
+		"pnts[1811]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1852]" " -type \"float3\" 0.053914752000000003 0.055572953000000001 -0.084957941999999995"
-		
+		"pnts[1812]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1853]" " -type \"float3\" 0.052830073999999998 0.056537941000000001 -0.092940315999999995"
-		
+		"pnts[1813]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1854]" " -type \"float3\" 0.051668230000000002 0.057390057000000001 -0.10195951"
-		
+		"pnts[1814]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1855]" " -type \"float3\" 0.049536812999999999 0.059095304000000001 -0.10912922999999999"
-		
+		"pnts[1815]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1856]" " -type \"float3\" 0.034878749000000001 0.070413083000000001 -0.078356809999999999"
-		
+		"pnts[1816]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1857]" " -type \"float3\" 0.039058599999999999 0.075552761999999996 -0.085116282000000001"
-		
+		"pnts[1817]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1858]" " -type \"float3\" 0.052242938000000003 0.075488888000000004 -0.085218892000000004"
-		
+		"pnts[1818]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1859]" " -type \"float3\" 0.058110978000000001 0.070606380999999996 -0.075845181999999997"
-		
+		"pnts[1819]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1860]" " -type \"float3\" 0.038059939000000001 0.080255865999999995 -0.092467539000000001"
-		
+		"pnts[1820]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1861]" " -type \"float3\" 0.051425535000000001 0.080261140999999994 -0.092594825000000006"
-		
+		"pnts[1821]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1862]" " -type \"float3\" 0.037619608999999998 0.080262817 -0.1001073"
+		"pnts[1822]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1863]" " -type \"float3\" 0.050557543000000003 0.080262660999999999 -0.10010817"
-		
+		"pnts[1823]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1864]" " -type \"float3\" 0.038242254000000003 0.072972223000000003 -0.10758706"
-		
+		"pnts[1824]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1865]" " -type \"float3\" 0.048812423000000001 0.072887308999999997 -0.10758475000000001"
-		
+		"pnts[1825]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1866]" " -type \"float3\" 0.015309741 0.052547161000000002 -0.087458745000000004"
-		
+		"pnts[1826]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1867]" " -type \"float3\" 0.013164912000000001 0.053699121000000002 -0.099922030999999994"
-		
+		"pnts[1827]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1868]" " -type \"float3\" 0.011640822 0.054479800000000002 -0.1151969"
+		"pnts[1828]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1869]" " -type \"float3\" 0.011813601 0.056499522000000003 -0.12554175000000001"
-		
+		"pnts[1829]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1870]" " -type \"float3\" 0.031471733000000002 0.052796658000000003 -0.088080390999999994"
-		
+		"pnts[1830]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1871]" " -type \"float3\" 0.030104223999999999 0.053940170000000003 -0.099919669000000003"
-		
+		"pnts[1831]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1872]" " -type \"float3\" 0.028228166999999998 0.054735642000000001 -0.11482059"
-		
+		"pnts[1832]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1873]" " -type \"float3\" 0.025537088999999999 0.056651685 -0.12497013999999999"
-		
+		"pnts[1833]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1874]" " -type \"float3\" 0.014086713000000001 0.077058463999999993 -0.088137283999999996"
-		
+		"pnts[1834]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1875]" " -type \"float3\" 0.029725287 0.076249018000000002 -0.088772818000000003"
-		
+		"pnts[1835]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1876]" " -type \"float3\" 0.012347748 0.080242841999999995 -0.099643371999999994"
-		
+		"pnts[1836]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1877]" " -type \"float3\" 0.028417278000000001 0.080258705 -0.099708535000000001"
-		
+		"pnts[1837]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1878]" " -type \"float3\" 0.011405488 0.080260433000000006 -0.11236569"
+		"pnts[1838]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1879]" " -type \"float3\" 0.027053256000000001 0.080260366 -0.11225671"
+		"pnts[1839]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1880]" " -type \"float3\" 0.011723806 0.073301159000000005 -0.12329278"
+		"pnts[1840]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1881]" " -type \"float3\" 0.024820313 0.072905130999999998 -0.12283181"
+		"pnts[1841]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1882]" " -type \"float3\" 0.062524758 0.061484825 -0.082859531"
+		"pnts[1842]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1883]" " -type \"float3\" 0.061439987000000001 0.062981843999999995 -0.087758592999999996"
-		
+		"pnts[1843]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1884]" " -type \"float3\" 0.060901608000000003 0.063671216000000003 -0.093062431000000001"
-		
+		"pnts[1844]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1885]" " -type \"float3\" 0.061653342 0.064956017000000005 -0.097289986999999994"
-		
+		"pnts[1845]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1886]" " -type \"float3\" 0.076370261999999994 0.057658150999999998 -0.072078995000000007"
-		
+		"pnts[1846]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1887]" " -type \"float3\" 0.073605232000000007 0.061857928 -0.082861378999999999"
-		
+		"pnts[1847]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1888]" " -type \"float3\" 0.072868428999999998 0.062947236000000004 -0.087878883000000005"
-		
+		"pnts[1848]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1889]" " -type \"float3\" 0.071999124999999997 0.063646398000000007 -0.093169600000000005"
-		
+		"pnts[1849]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1890]" " -type \"float3\" 0.070587656999999998 0.064935923000000006 -0.097380972999999996"
-		
+		"pnts[1850]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1891]" " -type \"float3\" 0.062108662000000002 0.076326273 -0.082920089000000002"
-		
+		"pnts[1851]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1892]" " -type \"float3\" 0.072580389999999995 0.076198123000000006 -0.082608342000000001"
-		
+		"pnts[1852]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1893]" " -type \"float3\" 0.078382990999999999 0.072211108999999996 -0.070722653999999996"
-		
+		"pnts[1853]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1894]" " -type \"float3\" 0.061408903000000001 0.080262928999999997 -0.087579756999999994"
-		
+		"pnts[1854]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1895]" " -type \"float3\" 0.072116069000000005 0.080262817 -0.087701029999999999"
-		
+		"pnts[1855]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1896]" " -type \"float3\" 0.061009939999999999 0.080265231000000006 -0.091997466999999999"
-		
+		"pnts[1856]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1897]" " -type \"float3\" 0.071426383999999996 0.080265217 -0.092118450000000004"
-		
+		"pnts[1857]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1898]" " -type \"float3\" 0.061755116999999998 0.074824436999999994 -0.096334189000000001"
-		
+		"pnts[1858]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1899]" " -type \"float3\" 0.070193343000000005 0.074806914000000002 -0.096436447999999994"
-		
+		"pnts[1859]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1900]" " -type \"float3\" -0.041897956 0.072726614999999994 -0.075027077999999997"
-		
+		"pnts[1860]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1901]" " -type \"float3\" -0.052083182999999998 0.077432923000000001 -0.092460334000000005"
-		
+		"pnts[1861]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1902]" " -type \"float3\" -0.026252955000000001 0.077555268999999996 -0.092337176000000007"
-		
+		"pnts[1862]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1903]" " -type \"float3\" -0.056492585999999997 0.080245315999999997 -0.10178136"
-		
+		"pnts[1863]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1904]" " -type \"float3\" -0.025632583 0.080244443999999998 -0.10160813"
+		"pnts[1864]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1905]" " -type \"float3\" -0.056947040999999997 0.080260985000000007 -0.11348643"
-		
+		"pnts[1865]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1906]" " -type \"float3\" -0.027465135000000002 0.080260738999999998 -0.11329789"
-		
+		"pnts[1866]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1907]" " -type \"float3\" -0.055752229 0.074359155999999996 -0.1243896"
+		"pnts[1867]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1908]" " -type \"float3\" -0.030325181999999999 0.074372834999999998 -0.12421863"
-		
+		"pnts[1868]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1909]" " -type \"float3\" -0.046710555000000001 0.040883292000000002 -0.077745847000000007"
-		
+		"pnts[1869]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1910]" " -type \"float3\" -0.051201519000000001 0.045962658000000003 -0.091919072000000004"
-		
+		"pnts[1870]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1911]" " -type \"float3\" -0.056429054999999999 0.045466591000000001 -0.10212354"
-		
+		"pnts[1871]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1912]" " -type \"float3\" -0.057376396000000003 0.046636588999999999 -0.1161267"
-		
+		"pnts[1872]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1913]" " -type \"float3\" -0.056116725999999999 0.048726502999999997 -0.12684618"
-		
+		"pnts[1873]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1914]" " -type \"float3\" -0.023154154 0.044997618000000003 -0.091886088000000005"
-		
+		"pnts[2078]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1915]" " -type \"float3\" -0.022814273999999999 0.045424699999999998 -0.10197276"
-		
+		"pnts[2079]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1916]" " -type \"float3\" -0.025365940999999999 0.046706065999999997 -0.11592833"
-		
+		"pnts[2080]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1917]" " -type \"float3\" -0.02895762 0.048759781000000002 -0.12666980999999999"
-		
+		"pnts[2081]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1918]" " -type \"float3\" 0.033470947000000001 0.080195299999999997 -0.064825721000000003"
-		
+		"pnts[2082]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1919]" " -type \"float3\" 0.0085697033999999998 0.080157295000000003 -0.064250976000000001"
-		
+		"pnts[2083]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1920]" " -type \"float3\" 0.033208850999999998 0.039249007000000002 -0.062881537000000001"
-		
+		"pnts[2084]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1921]" " -type \"float3\" 0.0082493136000000005 0.034656278999999998 -0.062434046999999999"
-		
+		"pnts[2085]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1922]" " -type \"float3\" -0.042852867000000003 0.080077536000000005 -0.055012907999999999"
-		
+		"pnts[2086]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1923]" " -type \"float3\" -0.042642186999999998 0.045507750999999999 -0.055307387999999999"
-		
+		"pnts[2087]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1924]" " -type \"float3\" -0.016794107999999999 0.030570604000000001 -0.061576679000000002"
-		
+		"pnts[2088]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1925]" " -type \"float3\" 0.075107984000000003 0.080210513999999997 -0.059513616999999998"
-		
+		"pnts[2089]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1926]" " -type \"float3\" 0.057668742000000002 0.080220639999999996 -0.062893607000000004"
-		
+		"pnts[2090]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1927]" " -type \"float3\" 0.072238140000000006 0.051806916000000001 -0.047677751999999997"
-		
+		"pnts[2091]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1928]" " -type \"float3\" 0.045171488000000003 0.065611041999999994 0.0094646708999999996"
-		
+		"pnts[2092]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1929]" " -type \"float3\" 0.050972837999999999 0.068210049999999994 -0.011733894"
-		
+		"pnts[2093]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1930]" " -type \"float3\" 0.0082056531999999995 0.080104016 -0.050199647"
+		"pnts[2094]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1931]" " -type \"float3\" 0.030995298000000001 0.069086194000000004 -0.012090180000000001"
-		
+		"pnts[2095]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1932]" " -type \"float3\" 0.010229484 0.072755255000000005 -0.034125119000000002"
-		
+		"pnts[2096]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1933]" " -type \"float3\" 0.031953502000000002 0.073679737999999995 -0.033427507000000002"
-		
+		"pnts[2097]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1934]" " -type \"float3\" -0.012776529999999999 0.057700779000000001 -0.0089534521000000002"
-		
+		"pnts[2098]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1935]" " -type \"float3\" -0.013448475999999999 0.062410023000000002 -0.028643986"
-		
+		"pnts[2099]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1936]" " -type \"float3\" -0.019399211 0.080013290000000001 -0.042275026"
+		"pnts[2100]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1937]" " -type \"float3\" -0.023112438999999999 0.080097601000000004 -0.058241121"
-		
+		"pnts[2101]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1938]" " -type \"float3\" 0.044364024000000002 0.079901971000000002 0.030894633000000001"
-		
+		"pnts[2102]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1939]" " -type \"float3\" 0.0027604727000000002 0.079819716999999998 0.034150828000000001"
-		
+		"pnts[2103]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[1940]" " -type \"float3\" 0.026671052000000001 0.066166482999999998 0.0084271263000000006"
-		
+		"pnts[2104]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2074]" " -type \"float3\" -0.072771384999999994 0 0"
+		"pnts[2105]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2077]" " -type \"float3\" -0.072771384999999994 0 0"
+		"pnts[2106]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2078]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2107]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2081]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2108]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2082]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2109]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2085]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2110]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2088]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2111]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2089]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2112]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2112]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[2113]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2113]" " -type \"float3\" 0 3.7252903000000002e-09 -1.8626450999999999e-09"
-		
+		"pnts[2114]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2114]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[2115]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2115]" " -type \"float3\" 0 3.7252903000000002e-09 4.6566128999999998e-10"
+		"pnts[2116]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2116]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 -4.6566128999999998e-10"
-		
+		"pnts[2117]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2118]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2118]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2120]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2119]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2120]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2121]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2300]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
+		"pnts[2122]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2301]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2123]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2302]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2124]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2303]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2125]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2126]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2127]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2128]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2129]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2130]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2131]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2132]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2133]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2134]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2135]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2136]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2137]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2138]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2139]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2140]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2141]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2142]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2143]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2144]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2145]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2146]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2147]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2148]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2149]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2150]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2151]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2152]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2153]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2154]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2155]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2156]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2157]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2158]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2159]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2160]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2161]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2162]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2163]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2164]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2165]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2166]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2167]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2168]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2169]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2170]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2171]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2172]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2173]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2174]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2175]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2176]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2177]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2178]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2179]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2180]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2181]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2182]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2183]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2184]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2185]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2186]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2187]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2188]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2189]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2190]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2191]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2192]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2193]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2194]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2195]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2196]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2197]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2198]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2199]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2200]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2201]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2202]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2203]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2204]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2205]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2206]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2207]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2208]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2209]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2210]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2211]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2212]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2213]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2214]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2215]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2216]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2217]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2218]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2219]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2220]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2221]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2222]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2223]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2224]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2225]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2226]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2227]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2228]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2229]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2230]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2231]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2232]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2233]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2234]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2235]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2236]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2237]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2238]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2239]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2240]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2241]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2242]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2243]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2244]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2245]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2246]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2247]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2248]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2249]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2250]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2251]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2252]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2253]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2254]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2255]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2256]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2257]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2258]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2259]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2260]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2261]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2262]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2263]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2264]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2265]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2266]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2267]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2268]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2269]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2270]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2271]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2272]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2273]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2274]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2275]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2276]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2277]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2278]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2279]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2280]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2281]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2282]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2283]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2284]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2285]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2286]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2287]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2288]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2289]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2290]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2291]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2292]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2293]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2294]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2295]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2296]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2297]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2298]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2299]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2300]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2301]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2302]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2303]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2304]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2305]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2306]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2307]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2308]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2309]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2309]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2310]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 0"
-		
+		"pnts[2310]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2311]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2311]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2312]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2312]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2313]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2313]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2314]" " -type \"float3\" 9.3132257000000002e-10 0 1.8626450999999999e-09"
+		"pnts[2314]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2315]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2316]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
+		"pnts[2316]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2321]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2317]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2322]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2318]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2319]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2320]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2321]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2322]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2323]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2324]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2324]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2325]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2325]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2338]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2326]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2339]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2327]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2340]" " -type \"float3\" 1.8626450999999999e-09 -3.7252903000000002e-09 0"
-		
+		"pnts[2328]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2341]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2329]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2330]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2331]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2332]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2333]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2334]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2335]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2336]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2337]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2338]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2339]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2340]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2341]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2342]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2348]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2343]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2349]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2344]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2350]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
+		"pnts[2345]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2351]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2346]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2352]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2347]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2348]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2349]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2350]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2351]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2352]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2353]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2354]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2354]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2355]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2355]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2356]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2357]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2358]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2359]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2360]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2361]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2362]" " -type \"float3\" -9.3132257000000002e-10 0 1.8626450999999999e-09"
-		
+		"pnts[2362]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2363]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2363]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2401]" " -type \"float3\" -4.6566128999999998e-10 0 0"
+		"pnts[2364]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2402]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
+		"pnts[2365]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2403]" " -type \"float3\" -3.7252903000000002e-09 0 9.3132257000000002e-10"
-		
+		"pnts[2366]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2367]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2368]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2369]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2370]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2371]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2372]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2373]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2374]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2375]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2376]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2377]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2378]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2379]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2380]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2381]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2382]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2383]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2384]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2385]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2386]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2387]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2388]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2389]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2390]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2391]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2392]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2393]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2394]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2395]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2396]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2397]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2398]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2399]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2400]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2401]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2402]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2403]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2404]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2405]" " -type \"float3\" 1.8626450999999999e-09 3.7252903000000002e-09 3.7252903000000002e-09"
-		
+		"pnts[2405]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2406]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2406]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2407]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2408]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2408]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2409]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[2409]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2410]" " -type \"float3\" -9.3132257000000002e-10 -3.7252903000000002e-09 -9.3132257000000002e-10"
-		
+		"pnts[2410]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2411]" " -type \"float3\" 0 0 7.4505806000000003e-09"
+		"pnts[2411]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2412]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2412]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2413]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
+		"pnts[2413]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2414]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2415]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2416]" " -type \"float3\" 3.7252903000000002e-09 0 9.3132257000000002e-10"
+		"pnts[2416]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2417]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2417]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2418]" " -type \"float3\" -1.8626450999999999e-09 3.7252903000000002e-09 3.7252903000000002e-09"
-		
+		"pnts[2418]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2419]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2420]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2420]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2421]" " -type \"float3\" 0 0 9.3132257000000002e-10"
+		"pnts[2421]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2423]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
+		"pnts[2422]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2424]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2423]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2424]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2425]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2426]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		"pnts[2426]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2427]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2427]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2428]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2428]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2429]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2429]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2430]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 0"
-		
+		"pnts[2430]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2431]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2431]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2432]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2437]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2433]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2438]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2434]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2439]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2435]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2440]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
+		"pnts[2436]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2441]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2437]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2442]" " -type \"float3\" 0 -3.7252903000000002e-09 1.8626450999999999e-09"
-		
+		"pnts[2438]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2443]" " -type \"float3\" 0 3.7252903000000002e-09 3.7252903000000002e-09"
+		"pnts[2439]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2440]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2441]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2442]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2443]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2444]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2445]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2446]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2447]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2448]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2449]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2450]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2450]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2451]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2451]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2452]" " -type \"float3\" 1.8626450999999999e-09 -3.7252903000000002e-09 0"
-		
+		"pnts[2452]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2453]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2453]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2454]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2454]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2455]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2455]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2456]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2456]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2457]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
+		"pnts[2457]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2458]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2459]" " -type \"float3\" 1.8626450999999999e-09 1.8626450999999999e-09 3.7252903000000002e-09"
-		
+		"pnts[2459]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2460]" " -type \"float3\" 0 -9.3132257000000002e-10 -1.8626450999999999e-09"
-		
+		"pnts[2460]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2461]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[2461]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2462]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2462]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2463]" " -type \"float3\" -3.7252903000000002e-09 -2.3283064000000002e-10 3.7252903000000002e-09"
-		
+		"pnts[2463]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2464]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2465]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2465]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2466]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[2466]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2467]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2468]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[2468]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2469]" " -type \"float3\" -7.4505806000000003e-09 0 0"
+		"pnts[2469]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2470]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2470]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2471]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2472]" " -type \"float3\" 0 1.8626450999999999e-09 1.8626450999999999e-09"
+		"pnts[2472]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2473]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2473]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2474]" " -type \"float3\" -4.6566128999999998e-10 1.8626450999999999e-09 -2.3283064000000002e-10"
-		
+		"pnts[2474]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2475]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2475]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2476]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2477]" " -type \"float3\" 1.8626450999999999e-09 9.3132257000000002e-10 0"
+		"pnts[2477]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2478]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2479]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		"pnts[2479]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2480]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2480]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2481]" " -type \"float3\" -3.7252903000000002e-09 -4.6566128999999998e-10 0"
-		
+		"pnts[2481]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2482]" " -type \"float3\" 0 0 -4.6566128999999998e-10"
+		"pnts[2482]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2483]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2484]" " -type \"float3\" 0 0 2.3283064000000002e-10"
+		"pnts[2484]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2485]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2485]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2486]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		"pnts[2486]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2487]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2487]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2488]" " -type \"float3\" 3.7252903000000002e-09 1.8626450999999999e-09 0"
+		"pnts[2488]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2489]" " -type \"float3\" 0 -9.3132257000000002e-10 3.7252903000000002e-09"
-		
+		"pnts[2489]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2490]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2491]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2491]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2492]" " -type \"float3\" -9.3132257000000002e-10 0 0"
+		"pnts[2492]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2493]" " -type \"float3\" 0 -1.8626450999999999e-09 3.7252903000000002e-09"
-		
+		"pnts[2493]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2494]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2494]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2495]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2495]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2496]" " -type \"float3\" 0 -4.6566128999999998e-10 7.4505806000000003e-09"
-		
+		"pnts[2496]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2497]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2497]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2498]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2499]" " -type \"float3\" -3.7252903000000002e-09 0 -9.3132257000000002e-10"
-		
+		"pnts[2499]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2500]" " -type \"float3\" 0 0 -4.6566128999999998e-10"
+		"pnts[2500]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2501]" " -type \"float3\" -9.3132257000000002e-10 0 0"
+		"pnts[2501]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2502]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2502]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2503]" " -type \"float3\" -4.6566128999999998e-10 1.8626450999999999e-09 0"
-		
+		"pnts[2503]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2504]" " -type \"float3\" 0 0 -7.4505806000000003e-09"
+		"pnts[2504]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2505]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		"pnts[2505]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2506]" " -type \"float3\" -9.3132257000000002e-10 0 -3.7252903000000002e-09"
-		
+		"pnts[2506]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2507]" " -type \"float3\" -9.3132257000000002e-10 0 0"
+		"pnts[2507]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2508]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2509]" " -type \"float3\" 0 1.8626450999999999e-09 3.7252903000000002e-09"
+		"pnts[2509]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2510]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2510]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2511]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2511]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2512]" " -type \"float3\" -3.7252903000000002e-09 0 1.8626450999999999e-09"
-		
+		"pnts[2512]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2513]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2514]" " -type \"float3\" 4.6566128999999998e-10 0 0"
+		"pnts[2514]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2515]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2515]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2516]" " -type \"float3\" 3.7252903000000002e-09 -1.8626450999999999e-09 0"
-		
+		"pnts[2516]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2517]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2518]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2518]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2519]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2520]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
+		"pnts[2520]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2521]" " -type \"float3\" -9.3132257000000002e-10 0 -3.7252903000000002e-09"
-		
+		"pnts[2521]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2522]" " -type \"float3\" -1.8626450999999999e-09 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2522]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2523]" " -type \"float3\" 1.8626450999999999e-09 0 0"
+		"pnts[2523]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2524]" " -type \"float3\" 1.8626450999999999e-09 0 7.4505806000000003e-09"
+		"pnts[2524]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2525]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2526]" " -type \"float3\" 1.8626450999999999e-09 0 0"
+		"pnts[2526]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2527]" " -type \"float3\" 1.8626450999999999e-09 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2527]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2528]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2529]" " -type \"float3\" -3.7252903000000002e-09 0 -1.8626450999999999e-09"
-		
+		"pnts[2529]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2530]" " -type \"float3\" 0 3.7252903000000002e-09 -4.6566128999999998e-10"
-		
+		"pnts[2530]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2531]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2531]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2532]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2532]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2533]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		"pnts[2533]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2534]" " -type \"float3\" 9.3132257000000002e-10 0 0"
+		"pnts[2534]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2535]" " -type \"float3\" 0 -1.1641532000000001e-10 0"
+		"pnts[2535]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2536]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2536]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2537]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2538]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2538]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2539]" " -type \"float3\" 0 0 3.7252903000000002e-09"
+		"pnts[2539]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2540]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
+		"pnts[2540]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2541]" " -type \"float3\" -2.3283064000000002e-10 1.8626450999999999e-09 -4.6566128999999998e-10"
-		
+		"pnts[2541]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2542]" " -type \"float3\" 0 1.8626450999999999e-09 0"
+		"pnts[2542]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2543]" " -type \"float3\" 9.3132257000000002e-10 0 3.7252903000000002e-09"
+		"pnts[2543]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2544]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2545]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
+		"pnts[2545]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2546]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2546]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2547]" " -type \"float3\" -1.8626450999999999e-09 1.8626450999999999e-09 3.7252903000000002e-09"
-		
+		"pnts[2547]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2548]" " -type \"float3\" 0 0 1.8626450999999999e-09"
+		"pnts[2548]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2549]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2550]" " -type \"float3\" 0 -9.3132257000000002e-10 -1.8626450999999999e-09"
-		
+		"pnts[2550]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2551]" " -type \"float3\" 0 -2.3283064000000002e-10 3.7252903000000002e-09"
-		
+		"pnts[2551]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2552]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2552]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2553]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		"pnts[2553]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2554]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2555]" " -type \"float3\" 3.7252903000000002e-09 0 0"
+		"pnts[2555]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2556]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		"pnts[2556]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2557]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2558]" " -type \"float3\" -3.7252903000000002e-09 0 0"
+		"pnts[2558]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
 		"pnts[2559]" " -type \"float3\" 0 0 0"
 		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2560]" " -type \"float3\" 9.3132257000000002e-10 1.8626450999999999e-09 1.8626450999999999e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2561]" " -type \"float3\" 4.6566128999999998e-10 1.8626450999999999e-09 -2.3283064000000002e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2562]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2563]" " -type \"float3\" 9.3132257000000002e-10 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2564]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2565]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2566]" " -type \"float3\" 0 9.3132257000000002e-10 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2567]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2568]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2569]" " -type \"float3\" 0 0 -4.6566128999999998e-10"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2570]" " -type \"float3\" 3.7252903000000002e-09 -4.6566128999999998e-10 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2571]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2572]" " -type \"float3\" 0 0 2.3283064000000002e-10"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2573]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2574]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2575]" " -type \"float3\" 3.7252903000000002e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2576]" " -type \"float3\" -3.7252903000000002e-09 1.8626450999999999e-09 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2577]" " -type \"float3\" -1.8626450999999999e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2578]" " -type \"float3\" 0 -9.3132257000000002e-10 3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2579]" " -type \"float3\" 3.7252903000000002e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2580]" " -type \"float3\" 0 -1.8626450999999999e-09 3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2581]" " -type \"float3\" -1.8626450999999999e-09 0 3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2582]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2583]" " -type \"float3\" 9.3132257000000002e-10 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2584]" " -type \"float3\" -9.3132257000000002e-10 -4.6566128999999998e-10 7.4505806000000003e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2585]" " -type \"float3\" 0 0 -4.6566128999999998e-10"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2586]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2587]" " -type \"float3\" 3.7252903000000002e-09 0 -9.3132257000000002e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2588]" " -type \"float3\" 3.7252903000000002e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2589]" " -type \"float3\" 4.6566128999999998e-10 1.8626450999999999e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2590]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2591]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2592]" " -type \"float3\" 9.3132257000000002e-10 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2593]" " -type \"float3\" 9.3132257000000002e-10 0 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2594]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2595]" " -type \"float3\" 3.7252903000000002e-09 0 1.8626450999999999e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2596]" " -type \"float3\" 0 1.8626450999999999e-09 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2597]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2598]" " -type \"float3\" 0 0 1.8626450999999999e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2599]" " -type \"float3\" -4.6566128999999998e-10 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2600]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2601]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2602]" " -type \"float3\" -3.7252903000000002e-09 3.7252903000000002e-09 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2603]" " -type \"float3\" 4.6566128999999998e-10 0 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2604]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2605]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2606]" " -type \"float3\" 1.8626450999999999e-09 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2607]" " -type \"float3\" -1.8626450999999999e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2608]" " -type \"float3\" 1.8626450999999999e-09 0 7.4505806000000003e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2609]" " -type \"float3\" -1.8626450999999999e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2610]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2611]" " -type \"float3\" 3.7252903000000002e-09 0 -1.8626450999999999e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2612]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2613]" " -type \"float3\" 0 3.7252903000000002e-09 -4.6566128999999998e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2614]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2615]" " -type \"float3\" 0 0 1.8626450999999999e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2616]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2617]" " -type \"float3\" -9.3132257000000002e-10 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2618]" " -type \"float3\" -2.3283064000000002e-10 1.8626450999999999e-09 -4.6566128999999998e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2619]" " -type \"float3\" 0 -3.7252903000000002e-09 3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2620]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2621]" " -type \"float3\" 1.8626450999999999e-09 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2622]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2623]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2624]" " -type \"float3\" 3.7252903000000002e-09 -3.7252903000000002e-09 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2625]" " -type \"float3\" 3.7252903000000002e-09 0 4.6566128999999998e-10"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2626]" " -type \"float3\" -3.7252903000000002e-09 0 4.6566128999999998e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2627]" " -type \"float3\" 0 0 -1.8626450999999999e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2628]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2629]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2630]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2631]" " -type \"float3\" 0 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2632]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2633]" " -type \"float3\" 0 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2634]" " -type \"float3\" 0 3.7252903000000002e-09 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2635]" " -type \"float3\" 0 3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2636]" " -type \"float3\" -3.7252903000000002e-09 0 -1.8626450999999999e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2637]" " -type \"float3\" 3.7252903000000002e-09 0 4.6566128999999998e-10"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2638]" " -type \"float3\" -3.7252903000000002e-09 0 4.6566128999999998e-10"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2639]" " -type \"float3\" -3.7252903000000002e-09 -3.7252903000000002e-09 0"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2640]" " -type \"float3\" 0 0 3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2641]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2642]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2643]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2644]" " -type \"float3\" 0 -3.7252903000000002e-09 3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2645]" " -type \"float3\" 0 0 -3.7252903000000002e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2646]" " -type \"float3\" 1.8626450999999999e-09 0 7.4505806000000003e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2647]" " -type \"float3\" -1.8626450999999999e-09 -3.7252903000000002e-09 -3.7252903000000002e-09"
-		
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2648]" " -type \"float3\" -1.8626450999999999e-09 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2649]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2650]" " -type \"float3\" 0 0 0"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"pnts[2651]" " -type \"float3\" 3.7252903000000002e-09 0 1.8626450999999999e-09"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"dispResolution" " 1"
-		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
-		"displaySmoothMesh" " 0"
+		"pnts[2560]" " -type \"float3\" 0 0 0"
+		2 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape" 
+		"pnts[2561]" " -type \"float3\" 0 0 0"
+		3 "GenericMeshCartoon:groupId62.message" "GenericMeshCartoon:Head:lambert1SG.groupNodes" 
+		"-na"
+		3 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[0]" 
+		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "-na"
+		3 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.compInstObjGroups.compObjectGroups[0]" 
+		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "-na"
 		3 "GenericMeshCartoon:Head:lambert1SG.memberWireframeColor" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "GenericMeshCartoon:groupId62.groupId" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[0].objectGroupId" 
@@ -11680,12 +12699,6 @@ createNode reference -n "GenericMeshCartoonRN";
 		""
 		3 "GenericMeshCartoon:groupId59.groupId" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		""
-		3 "GenericMeshCartoon:groupId62.message" "GenericMeshCartoon:Head:lambert1SG.groupNodes" 
-		"-na"
-		3 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[0]" 
-		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "-na"
-		3 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.compInstObjGroups.compObjectGroups[0]" 
-		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "-na"
 		3 "GenericMeshCartoon:groupId63.message" "GenericMeshCartoon:lambert1SG.groupNodes" 
 		"-na"
 		3 "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[1]" 
@@ -11706,71 +12719,21 @@ createNode reference -n "GenericMeshCartoonRN";
 		"GenericMeshCartoonRN.placeHolderList[7]" ""
 		5 3 "GenericMeshCartoonRN" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.worldMatrix" 
 		"GenericMeshCartoonRN.placeHolderList[8]" ""
-		5 3 "GenericMeshCartoonRN" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.worldMatrix" 
-		"GenericMeshCartoonRN.placeHolderList[9]" ""
 		5 0 "GenericMeshCartoonRN" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[1]" 
-		"GenericMeshCartoon:lambert1SG.dagSetMembers" "GenericMeshCartoonRN.placeHolderList[10]" 
-		"GenericMeshCartoonRN.placeHolderList[11]" "GenericMeshCartoon:lambert1SG.dsm"
+		"GenericMeshCartoon:lambert1SG.dagSetMembers" "GenericMeshCartoonRN.placeHolderList[9]" 
+		"GenericMeshCartoonRN.placeHolderList[10]" "GenericMeshCartoon:lambert1SG.dsm"
 		5 4 "GenericMeshCartoonRN" "GenericMeshCartoon:lambert1SG.groupNodes" 
-		"GenericMeshCartoonRN.placeHolderList[12]" ""
+		"GenericMeshCartoonRN.placeHolderList[11]" ""
 		5 0 "GenericMeshCartoonRN" "|GenericMeshCartoon:polySurface2|GenericMeshCartoon:polySurface2Shape.instObjGroups.objectGroups[0]" 
-		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "GenericMeshCartoonRN.placeHolderList[13]" 
-		"GenericMeshCartoonRN.placeHolderList[14]" "GenericMeshCartoon:Head:lambert1SG.dsm"
+		"GenericMeshCartoon:Head:lambert1SG.dagSetMembers" "GenericMeshCartoonRN.placeHolderList[12]" 
+		"GenericMeshCartoonRN.placeHolderList[13]" "GenericMeshCartoon:Head:lambert1SG.dsm"
 		
 		5 4 "GenericMeshCartoonRN" "GenericMeshCartoon:Head:lambert1SG.groupNodes" 
-		"GenericMeshCartoonRN.placeHolderList[15]" "";
+		"GenericMeshCartoonRN.placeHolderList[14]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode aiOptions -s -n "defaultArnoldRenderOptions";
-	rename -uid "9D96FC79-934C-710E-5311-F7B21FED7BD4";
-	setAttr ".version" -type "string" "5.3.3.2";
-createNode aiAOVFilter -s -n "defaultArnoldFilter";
-	rename -uid "B15B95AB-DA47-BD26-DC97-C68E0A4F2D82";
-	setAttr ".ai_translator" -type "string" "gaussian";
-createNode aiAOVDriver -s -n "defaultArnoldDriver";
-	rename -uid "FE1108B8-CA48-4F21-B3CE-E3A8EAE422E9";
-	setAttr ".ai_translator" -type "string" "exr";
-createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
-	rename -uid "10864793-0E4B-4713-6661-05A5E46D5CA0";
-	setAttr ".ai_translator" -type "string" "maya";
-	setAttr ".output_mode" 0;
-createNode polyExtrudeFace -n "polyExtrudeFace1";
-	rename -uid "B270C47F-49D5-A0EC-D138-1DB425140B49";
-	setAttr ".ics" -type "componentList" 5 "f[868:939]" "f[1694:1736]" "f[1739:1765]" "f[2394:2405]" "f[2440:2451]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -6.0227609 2.7453487 -0.015041471 ;
-	setAttr ".rs" 50398;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -6.8152174949645996 2.1154818534851074 -0.6839173436164856 ;
-	setAttr ".cbx" -type "double3" -5.2303042411804199 3.3752155303955078 0.65383440256118774 ;
-createNode groupId -n "GenericMeshCartoon:groupId64";
-	rename -uid "1268B997-4EDB-53BE-6A6B-33982230B84E";
-	setAttr ".ihi" 0;
-createNode groupParts -n "GenericMeshCartoon:groupParts1";
-	rename -uid "ABC7EFA4-4B3F-0E2C-1514-28AD42E2CBAE";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 2 "f[0:741]" "f[2490:2513]";
-createNode groupId -n "GenericMeshCartoon:groupId65";
-	rename -uid "11C408A6-4F7A-6393-2A55-2C96DC913E92";
-	setAttr ".ihi" 0;
-createNode groupParts -n "GenericMeshCartoon:groupParts2";
-	rename -uid "0CABC524-4233-33FC-82E1-1F821672439C";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 2 "f[742:2489]" "f[2514:2537]";
-createNode polyExtrudeFace -n "polyExtrudeFace2";
-	rename -uid "87E5C01B-4254-C2CE-9F75-DCB58FF9B454";
-	setAttr ".ics" -type "componentList" 4 "f[868:939]" "f[1694:1765]" "f[2394:2405]" "f[2440:2451]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".ws" yes;
-	setAttr ".s" -type "double3" 1.0240471365159347 1 1.0402732522996199 ;
-	setAttr ".pvt" -type "float3" -6.0227609 2.7453487 -0.015041471 ;
-	setAttr ".rs" 50065;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -6.8152174949645996 2.1154818534851074 -0.6839173436164856 ;
-	setAttr ".cbx" -type "double3" -5.2303042411804199 3.3752155303955078 0.65383440256118774 ;
 createNode script -n "uiConfigurationScriptNode";
-	rename -uid "D1EB416D-4F2B-6607-E615-42A595FDC229";
+	rename -uid "06152FBF-4AAD-1863-9DD5-BC801D4158A5";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
@@ -11785,7 +12748,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 664\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -11807,27 +12770,2398 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|:persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
 		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 664\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 664\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
+		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "484C540D-4495-2CCD-9999-2592D090A24E";
+	rename -uid "D71FE521-4C68-FDB8-7DB3-DC9C47DD814E";
 	setAttr ".b" -type "string" "playbackOptions -min 4 -max 63 -ast 0 -aet 201 ";
 	setAttr ".st" 6;
+createNode polySplitEdge -n "polySplitEdge1";
+	rename -uid "087CABD2-4BE1-0FF7-CE27-21BA18DDADE4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 29 "e[1827:1828]" "e[1844]" "e[1851:1852]" "e[1854]" "e[1856]" "e[1858:1861]" "e[1905]" "e[1983:1992]" "e[3510]" "e[3516]" "e[3538]" "e[3546]" "e[3548]" "e[3551]" "e[3553]" "e[3556]" "e[3558:3559]" "e[3561]" "e[3582]" "e[3657]" "e[3661]" "e[3682]" "e[3685]" "e[3703]" "e[3712]" "e[3720]" "e[3729]" "e[3735]" "e[3743]";
+createNode groupId -n "GenericMeshCartoon:groupId64";
+	rename -uid "10565C4D-446E-C2A5-BCE0-F391D0CC348A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "GenericMeshCartoon:groupParts1";
+	rename -uid "4D0BEA1F-4817-5E67-A379-4F8FCB819942";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:741]" "f[2490:2513]";
+createNode groupId -n "GenericMeshCartoon:groupId65";
+	rename -uid "0375CF20-4EBA-81CA-B834-E981AD381D3C";
+	setAttr ".ihi" 0;
+createNode groupParts -n "GenericMeshCartoon:groupParts2";
+	rename -uid "0F7159D9-484A-8BE0-9F0D-D2B8A32EE82E";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[742:2489]" "f[2514:2537]";
+createNode polyTweak -n "polyTweak1";
+	rename -uid "E08CEC37-4BDF-DF7B-BD1A-AF9FC0E686C8";
+	setAttr ".uopa" yes;
+	setAttr -s 314 ".tk";
+	setAttr ".tk[890]" -type "float3" 0.020763986 0.0022604312 -0.026755702 ;
+	setAttr ".tk[891]" -type "float3" 0.026307672 0.0049822144 -0.01368713 ;
+	setAttr ".tk[892]" -type "float3" 0.0015904822 -0.00026491133 0.030781921 ;
+	setAttr ".tk[893]" -type "float3" -0.013165596 -0.0014666351 0.026448661 ;
+	setAttr ".tk[894]" -type "float3" -0.014051979 -0.0041321502 -0.026716424 ;
+	setAttr ".tk[895]" -type "float3" 0.0052207285 -0.0015029778 -0.030781912 ;
+	setAttr ".tk[896]" -type "float3" -0.023903865 -0.0038231423 0.011273341 ;
+	setAttr ".tk[897]" -type "float3" -0.026308149 -0.0055098329 -0.0090121776 ;
+	setAttr ".tk[898]" -type "float3" 0.016415274 0.0027934895 0.022329345 ;
+	setAttr ".tk[899]" -type "float3" 0.025282273 0.0055098338 0.0036326246 ;
+	setAttr ".tk[900]" -type "float3" 0.03515378 0.021106066 -0.062773682 ;
+	setAttr ".tk[901]" -type "float3" 0.047982354 0.031826276 -0.046343956 ;
+	setAttr ".tk[902]" -type "float3" 0.0050509353 0.0068091061 0.064419761 ;
+	setAttr ".tk[903]" -type "float3" -0.022838067 -0.0014238423 0.057579257 ;
+	setAttr ".tk[904]" -type "float3" -0.034515209 -0.03182628 -0.042966686 ;
+	setAttr ".tk[905]" -type "float3" -0.0026657698 -0.022556817 -0.064419776 ;
+	setAttr ".tk[906]" -type "float3" -0.042983543 -0.01045208 0.026658423 ;
+	setAttr ".tk[907]" -type "float3" -0.047982354 -0.027913857 -0.012067599 ;
+	setAttr ".tk[908]" -type "float3" 0.039824456 0.0093911607 0.03678523 ;
+	setAttr ".tk[909]" -type "float3" 0.046554297 0.023282364 0.0035304611 ;
+	setAttr ".tk[910]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[911]" -type "float3" 0 1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[912]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[913]" -type "float3" 0 3.7252903e-09 6.519258e-09 ;
+	setAttr ".tk[914]" -type "float3" 0 -1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[915]" -type "float3" 0 0 -4.6566129e-10 ;
+	setAttr ".tk[916]" -type "float3" 0 0 -2.7939677e-09 ;
+	setAttr ".tk[917]" -type "float3" -4.7683716e-07 0 -3.259629e-09 ;
+	setAttr ".tk[918]" -type "float3" 0 0 9.3132257e-10 ;
+	setAttr ".tk[919]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[920]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[921]" -type "float3" -4.7683716e-07 0 1.3969839e-09 ;
+	setAttr ".tk[922]" -type "float3" -4.7683716e-07 0 0 ;
+	setAttr ".tk[923]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[924]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[925]" -type "float3" 0 0 -1.1175871e-08 ;
+	setAttr ".tk[926]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[927]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[928]" -type "float3" 0 8.6147338e-09 0 ;
+	setAttr ".tk[929]" -type "float3" 0 -5.5879354e-09 0 ;
+	setAttr ".tk[930]" -type "float3" 0 0 7.4505806e-09 ;
+	setAttr ".tk[931]" -type "float3" 0 0 -2.5611371e-09 ;
+	setAttr ".tk[932]" -type "float3" 0 3.7252903e-09 2.3283064e-10 ;
+	setAttr ".tk[933]" -type "float3" 0 0 -2.3283064e-09 ;
+	setAttr ".tk[934]" -type "float3" 0 -6.8452209e-08 0 ;
+	setAttr ".tk[935]" -type "float3" 0 -1.8626451e-09 1.6763806e-08 ;
+	setAttr ".tk[936]" -type "float3" 0 3.7252903e-09 4.6566129e-09 ;
+	setAttr ".tk[938]" -type "float3" 0 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[939]" -type "float3" 0 1.6763806e-08 0 ;
+	setAttr ".tk[940]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[941]" -type "float3" 0 7.4505806e-09 0 ;
+	setAttr ".tk[942]" -type "float3" 0 -8.3819032e-09 0 ;
+	setAttr ".tk[943]" -type "float3" 0 1.3038516e-08 0 ;
+	setAttr ".tk[944]" -type "float3" 0 1.1175871e-08 0 ;
+	setAttr ".tk[945]" -type "float3" 0 -7.4505806e-09 0 ;
+	setAttr ".tk[946]" -type "float3" 0 2.9802322e-08 0 ;
+	setAttr ".tk[947]" -type "float3" 0 7.4505806e-09 0 ;
+	setAttr ".tk[948]" -type "float3" 0 3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[949]" -type "float3" 0 0 -9.3132257e-09 ;
+	setAttr ".tk[950]" -type "float3" 0 5.5879354e-09 0 ;
+	setAttr ".tk[951]" -type "float3" 0 1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[952]" -type "float3" -4.7683716e-07 0 -1.8626451e-09 ;
+	setAttr ".tk[953]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[954]" -type "float3" 0 -1.8626451e-09 5.5879354e-09 ;
+	setAttr ".tk[955]" -type "float3" 0 1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[956]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[957]" -type "float3" -4.7683716e-07 -1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[958]" -type "float3" 0 0 -2.7939677e-09 ;
+	setAttr ".tk[959]" -type "float3" 0 3.7252903e-09 -2.3283064e-09 ;
+	setAttr ".tk[960]" -type "float3" 0 -3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[961]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[962]" -type "float3" 0 -1.8626451e-09 5.5879354e-09 ;
+	setAttr ".tk[963]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[964]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[966]" -type "float3" 0 1.8626451e-09 -7.4505806e-09 ;
+	setAttr ".tk[967]" -type "float3" 0 9.3132257e-10 9.3132257e-10 ;
+	setAttr ".tk[968]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[969]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[970]" -type "float3" 0 9.3132257e-10 -7.4505806e-09 ;
+	setAttr ".tk[971]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[972]" -type "float3" 0 1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[973]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[974]" -type "float3" -4.7683716e-07 0 -1.8626451e-09 ;
+	setAttr ".tk[975]" -type "float3" 0 -1.5716068e-09 0 ;
+	setAttr ".tk[976]" -type "float3" 0 0 -7.9162419e-09 ;
+	setAttr ".tk[977]" -type "float3" 0 0 4.6566129e-10 ;
+	setAttr ".tk[1018]" -type "float3" 0 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[1019]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[1020]" -type "float3" 0 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[1021]" -type "float3" -4.7683716e-07 -3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[1022]" -type "float3" 0 3.7252903e-09 -7.9162419e-09 ;
+	setAttr ".tk[1023]" -type "float3" 0 0 -6.9849193e-09 ;
+	setAttr ".tk[1024]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[1025]" -type "float3" 0 0 -4.1909516e-09 ;
+	setAttr ".tk[1026]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[1027]" -type "float3" 0 0 -2.4447218e-09 ;
+	setAttr ".tk[1377]" -type "float3" 0 0 -2.7939677e-09 ;
+	setAttr ".tk[1378]" -type "float3" 0 -3.7252903e-09 -1.3969839e-09 ;
+	setAttr ".tk[1379]" -type "float3" 0 0 -7.3341653e-09 ;
+	setAttr ".tk[1380]" -type "float3" -4.7683716e-07 0 -7.4505806e-09 ;
+	setAttr ".tk[1381]" -type "float3" 0 1.8626451e-09 -3.259629e-09 ;
+	setAttr ".tk[1382]" -type "float3" -4.7683716e-07 0 -3.259629e-09 ;
+	setAttr ".tk[1383]" -type "float3" 0 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[1384]" -type "float3" 0 1.8626451e-09 -6.0535967e-09 ;
+	setAttr ".tk[1385]" -type "float3" 0 1.8626451e-09 -6.9849193e-09 ;
+	setAttr ".tk[1386]" -type "float3" 0 -3.7252903e-09 -4.4237822e-09 ;
+	setAttr ".tk[1387]" -type "float3" 0 0 -6.0244929e-09 ;
+	setAttr ".tk[1388]" -type "float3" 0 1.8626451e-09 -4.9185473e-09 ;
+	setAttr ".tk[1389]" -type "float3" -4.7683716e-07 0 3.7252903e-09 ;
+	setAttr ".tk[1390]" -type "float3" 0 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[1391]" -type "float3" 0 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[1392]" -type "float3" 0 -1.8626451e-09 -9.3132257e-10 ;
+	setAttr ".tk[1393]" -type "float3" 0 3.7252903e-09 -5.1222742e-09 ;
+	setAttr ".tk[1394]" -type "float3" 0 3.7252903e-09 9.3132257e-10 ;
+	setAttr ".tk[1395]" -type "float3" 0 1.8626451e-09 3.7252903e-09 ;
+	setAttr ".tk[1396]" -type "float3" -4.7683716e-07 -1.8626451e-09 -1.3969839e-09 ;
+	setAttr ".tk[1397]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[1398]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[1399]" -type "float3" 0 1.8626451e-09 -4.5401976e-09 ;
+	setAttr ".tk[1400]" -type "float3" 0 1.8626451e-09 -4.7730282e-09 ;
+	setAttr ".tk[1401]" -type "float3" -4.7683716e-07 1.8626451e-09 -6.6356733e-09 ;
+	setAttr ".tk[1402]" -type "float3" -4.7683716e-07 0 -9.3132257e-10 ;
+	setAttr ".tk[1403]" -type "float3" -4.7683716e-07 0 -1.8626451e-09 ;
+	setAttr ".tk[1404]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[1405]" -type "float3" 0 0 -6.519258e-09 ;
+	setAttr ".tk[1406]" -type "float3" 0 0 -9.3132257e-10 ;
+	setAttr ".tk[1408]" -type "float3" 0 0 -2.3283064e-09 ;
+	setAttr ".tk[1409]" -type "float3" 0 0 -4.0745363e-09 ;
+	setAttr ".tk[1410]" -type "float3" 0 -9.3132257e-10 -3.4924597e-09 ;
+	setAttr ".tk[1411]" -type "float3" 0 1.8626451e-09 -2.2118911e-09 ;
+	setAttr ".tk[1412]" -type "float3" -4.7683716e-07 0 2.3283064e-10 ;
+	setAttr ".tk[1413]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[1414]" -type "float3" -4.7683716e-07 0 -4.6566129e-09 ;
+	setAttr ".tk[1415]" -type "float3" -4.7683716e-07 0 -5.5879354e-09 ;
+	setAttr ".tk[1416]" -type "float3" 0 -9.3132257e-10 1.8626451e-09 ;
+	setAttr ".tk[1417]" -type "float3" -0.049181323 -0.0080627482 0.014428125 ;
+	setAttr ".tk[1418]" -type "float3" -0.042783652 -0.0098746289 -0.023716409 ;
+	setAttr ".tk[1419]" -type "float3" -0.00976153 0.002902234 0.053167798 ;
+	setAttr ".tk[1420]" -type "float3" -0.03326796 -0.003404533 0.043089364 ;
+	setAttr ".tk[1421]" -type "float3" 0.016487697 0.0097447904 0.045108598 ;
+	setAttr ".tk[1422]" -type "float3" 0.040565923 0.010639001 0.020651521 ;
+	setAttr ".tk[1423]" -type "float3" 0.04426609 -0.010639001 -0.04244905 ;
+	setAttr ".tk[1424]" -type "float3" 0.049181323 -0.0037315516 -0.0071098176 ;
+	setAttr ".tk[1425]" -type "float3" 0.017536687 -0.0023900112 -0.050480627 ;
+	setAttr ".tk[1426]" -type "float3" -0.01420165 -0.0090086842 -0.053167798 ;
+	setAttr ".tk[1747]" -type "float3" -0.041407783 0.0045077717 -0.053356484 ;
+	setAttr ".tk[1748]" -type "float3" -0.05246393 0.0099355849 -0.027295016 ;
+	setAttr ".tk[1749]" -type "float3" -0.0031717899 -0.00052829058 0.061385624 ;
+	setAttr ".tk[1750]" -type "float3" 0.026254913 -0.0029247843 0.052744191 ;
+	setAttr ".tk[1751]" -type "float3" 0.028021682 -0.0082403803 -0.053278171 ;
+	setAttr ".tk[1752]" -type "float3" -0.010411277 -0.0029972508 -0.061385613 ;
+	setAttr ".tk[1753]" -type "float3" 0.047669303 -0.0076241512 0.022481414 ;
+	setAttr ".tk[1754]" -type "float3" 0.05246393 -0.010987768 -0.017972179 ;
+	setAttr ".tk[1755]" -type "float3" -0.032735545 0.0055708061 0.044529404 ;
+	setAttr ".tk[1756]" -type "float3" -0.050419085 0.01098777 0.0072442219 ;
+	setAttr ".tk[1757]" -type "float3" -0.030302681 0.01819329 -0.054110508 ;
+	setAttr ".tk[1758]" -type "float3" -0.041360468 0.027434045 -0.039948191 ;
+	setAttr ".tk[1759]" -type "float3" -0.0043538869 0.0058694063 0.055529427 ;
+	setAttr ".tk[1760]" -type "float3" 0.019685915 -0.0012273437 0.049632955 ;
+	setAttr ".tk[1761]" -type "float3" 0.029751889 -0.027434047 -0.037037015 ;
+	setAttr ".tk[1762]" -type "float3" 0.0022979318 -0.019443832 -0.055529438 ;
+	setAttr ".tk[1763]" -type "float3" 0.037051532 -0.0090096267 0.02297939 ;
+	setAttr ".tk[1764]" -type "float3" 0.041360468 -0.024061568 -0.010402193 ;
+	setAttr ".tk[1765]" -type "float3" -0.034328844 0.0080951219 0.031708632 ;
+	setAttr ".tk[1766]" -type "float3" -0.040129907 0.020069245 0.0030432353 ;
+	setAttr ".tk[1767]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[1768]" -type "float3" 0 1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[1769]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[1770]" -type "float3" -4.7683716e-07 3.7252903e-09 6.519258e-09 ;
+	setAttr ".tk[1771]" -type "float3" 0 -1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[1772]" -type "float3" -4.7683716e-07 0 -4.6566129e-10 ;
+	setAttr ".tk[1773]" -type "float3" -4.7683716e-07 0 -2.7939677e-09 ;
+	setAttr ".tk[1774]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[1775]" -type "float3" -4.7683716e-07 0 9.3132257e-10 ;
+	setAttr ".tk[1776]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[1777]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[1778]" -type "float3" 0 0 1.3969839e-09 ;
+	setAttr ".tk[1780]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[1781]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[1782]" -type "float3" 0 0 -1.1175871e-08 ;
+	setAttr ".tk[1783]" -type "float3" 0 0 -2.5611371e-09 ;
+	setAttr ".tk[1784]" -type "float3" 0 3.7252903e-09 2.3283064e-10 ;
+	setAttr ".tk[1785]" -type "float3" 0 0 -2.3283064e-09 ;
+	setAttr ".tk[1786]" -type "float3" 0 -6.9383532e-08 0 ;
+	setAttr ".tk[1787]" -type "float3" 0 -1.8626451e-09 1.6763806e-08 ;
+	setAttr ".tk[1788]" -type "float3" 0 3.7252903e-09 4.6566129e-09 ;
+	setAttr ".tk[1790]" -type "float3" 0 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[1791]" -type "float3" 0 1.6763806e-08 0 ;
+	setAttr ".tk[1792]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[1793]" -type "float3" 0 7.4505806e-09 0 ;
+	setAttr ".tk[1794]" -type "float3" 0 -7.4505806e-09 0 ;
+	setAttr ".tk[1795]" -type "float3" 0 1.3038516e-08 0 ;
+	setAttr ".tk[1796]" -type "float3" 0 1.1175871e-08 0 ;
+	setAttr ".tk[1797]" -type "float3" 0 -7.4505806e-09 0 ;
+	setAttr ".tk[1798]" -type "float3" 0 2.9802322e-08 0 ;
+	setAttr ".tk[1799]" -type "float3" 0 7.4505806e-09 0 ;
+	setAttr ".tk[1800]" -type "float3" 0 3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[1801]" -type "float3" -4.7683716e-07 0 -9.3132257e-09 ;
+	setAttr ".tk[1802]" -type "float3" 0 5.5879354e-09 0 ;
+	setAttr ".tk[1803]" -type "float3" -4.7683716e-07 1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[1804]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[1805]" -type "float3" 0 1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[1806]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[1807]" -type "float3" 0 -1.8626451e-09 -3.7252903e-09 ;
+	setAttr ".tk[1808]" -type "float3" -4.7683716e-07 0 -2.7939677e-09 ;
+	setAttr ".tk[1809]" -type "float3" -4.7683716e-07 3.7252903e-09 -2.3283064e-09 ;
+	setAttr ".tk[1810]" -type "float3" 0 -3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[1811]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[1812]" -type "float3" 0 -1.8626451e-09 5.5879354e-09 ;
+	setAttr ".tk[1813]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[1814]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[1815]" -type "float3" -4.7683716e-07 1.8626451e-09 -7.4505806e-09 ;
+	setAttr ".tk[1816]" -type "float3" -4.7683716e-07 9.3132257e-10 9.3132257e-10 ;
+	setAttr ".tk[1817]" -type "float3" 0 9.3132257e-10 -7.4505806e-09 ;
+	setAttr ".tk[1818]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[1819]" -type "float3" 0 1.8626451e-09 1.8626451e-09 ;
+	setAttr ".tk[1820]" -type "float3" 0 0 1.8626451e-09 ;
+	setAttr ".tk[1821]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[1822]" -type "float3" 0 -1.5716068e-09 0 ;
+	setAttr ".tk[1823]" -type "float3" 0 0 4.6566129e-10 ;
+	setAttr ".tk[1864]" -type "float3" 0 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[1865]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[1866]" -type "float3" -4.7683716e-07 -3.7252903e-09 -4.6566129e-09 ;
+	setAttr ".tk[1867]" -type "float3" 0 -3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[1868]" -type "float3" 0 3.7252903e-09 -7.9162419e-09 ;
+	setAttr ".tk[1869]" -type "float3" 0 0 -6.9849193e-09 ;
+	setAttr ".tk[1870]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[1871]" -type "float3" 0 0 -4.1909516e-09 ;
+	setAttr ".tk[1872]" -type "float3" -4.7683716e-07 0 -3.7252903e-09 ;
+	setAttr ".tk[1873]" -type "float3" 0 0 -2.4447218e-09 ;
+	setAttr ".tk[2209]" -type "float3" 0 0 -2.7939677e-09 ;
+	setAttr ".tk[2210]" -type "float3" 0 -3.7252903e-09 0 ;
+	setAttr ".tk[2211]" -type "float3" 0 0 -7.3341653e-09 ;
+	setAttr ".tk[2212]" -type "float3" 0 0 -7.4505806e-09 ;
+	setAttr ".tk[2213]" -type "float3" -4.7683716e-07 1.8626451e-09 -3.259629e-09 ;
+	setAttr ".tk[2214]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[2215]" -type "float3" 0 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[2216]" -type "float3" -4.7683716e-07 1.8626451e-09 -6.0535967e-09 ;
+	setAttr ".tk[2217]" -type "float3" 0 1.8626451e-09 -6.9849193e-09 ;
+	setAttr ".tk[2218]" -type "float3" 0 -3.7252903e-09 -4.4237822e-09 ;
+	setAttr ".tk[2219]" -type "float3" 0 0 -6.0244929e-09 ;
+	setAttr ".tk[2220]" -type "float3" 0 1.8626451e-09 -4.9185473e-09 ;
+	setAttr ".tk[2221]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[2222]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[2223]" -type "float3" 0 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[2224]" -type "float3" -4.7683716e-07 -1.8626451e-09 -9.3132257e-10 ;
+	setAttr ".tk[2225]" -type "float3" 0 3.7252903e-09 -5.1222742e-09 ;
+	setAttr ".tk[2226]" -type "float3" 0 3.7252903e-09 9.3132257e-10 ;
+	setAttr ".tk[2227]" -type "float3" 0 1.8626451e-09 3.7252903e-09 ;
+	setAttr ".tk[2228]" -type "float3" 0 -1.8626451e-09 -1.3969839e-09 ;
+	setAttr ".tk[2229]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[2230]" -type "float3" 0 0 -3.259629e-09 ;
+	setAttr ".tk[2231]" -type "float3" 0 1.8626451e-09 -4.5401976e-09 ;
+	setAttr ".tk[2232]" -type "float3" 0 1.8626451e-09 -4.7730282e-09 ;
+	setAttr ".tk[2233]" -type "float3" 0 1.8626451e-09 -6.6356733e-09 ;
+	setAttr ".tk[2234]" -type "float3" 0 0 -9.3132257e-10 ;
+	setAttr ".tk[2235]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[2236]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[2237]" -type "float3" 0 0 -6.519258e-09 ;
+	setAttr ".tk[2238]" -type "float3" -4.7683716e-07 0 -9.3132257e-10 ;
+	setAttr ".tk[2240]" -type "float3" 0 0 -2.3283064e-09 ;
+	setAttr ".tk[2241]" -type "float3" -4.7683716e-07 0 -3.4924597e-09 ;
+	setAttr ".tk[2242]" -type "float3" 0 -9.3132257e-10 -3.4924597e-09 ;
+	setAttr ".tk[2243]" -type "float3" -4.7683716e-07 1.8626451e-09 -2.2118911e-09 ;
+	setAttr ".tk[2244]" -type "float3" 0 0 2.3283064e-10 ;
+	setAttr ".tk[2245]" -type "float3" 0 0 -3.7252903e-09 ;
+	setAttr ".tk[2246]" -type "float3" 0 0 -4.6566129e-09 ;
+	setAttr ".tk[2247]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[2248]" -type "float3" 0 -9.3132257e-10 1.8626451e-09 ;
+	setAttr ".tk[2249]" -type "float3" 0.074643441 -0.012236943 0.021897772 ;
+	setAttr ".tk[2250]" -type "float3" 0.064932995 -0.014986861 -0.035994716 ;
+	setAttr ".tk[2251]" -type "float3" 0.014815476 0.0044047581 0.080693483 ;
+	setAttr ".tk[2252]" -type "float3" 0.050491482 -0.0051671052 0.06539733 ;
+	setAttr ".tk[2253]" -type "float3" -0.025023701 0.014789802 0.068461932 ;
+	setAttr ".tk[2254]" -type "float3" -0.061567198 0.016146962 0.031343106 ;
+	setAttr ".tk[2255]" -type "float3" -0.067183353 -0.016146962 -0.064425498 ;
+	setAttr ".tk[2256]" -type "float3" -0.074643441 -0.0056634247 -0.010790668 ;
+	setAttr ".tk[2257]" -type "float3" -0.026615415 -0.0036273529 -0.076615162 ;
+	setAttr ".tk[2258]" -type "float3" 0.02155442 -0.013672601 -0.080693483 ;
+	setAttr ".tk[2437]" -type "float3" 0 2.6077032e-08 0 ;
+	setAttr ".tk[2450]" -type "float3" 0 1.4901161e-08 0 ;
+	setAttr ".tk[2451]" -type "float3" 0 4.4703484e-08 0 ;
+	setAttr ".tk[2487]" -type "float3" 0 2.9802322e-08 0 ;
+	setAttr ".tk[2500]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr ".tk[2538]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[2539]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[2540]" -type "float3" 0 3.7252903e-09 -8.3819032e-09 ;
+	setAttr ".tk[2541]" -type "float3" -4.7683716e-07 -3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[2542]" -type "float3" 0 0 -6.0535967e-09 ;
+	setAttr ".tk[2543]" -type "float3" 0 0 -1.8626451e-09 ;
+	setAttr ".tk[2544]" -type "float3" 0 0 2.7939677e-09 ;
+	setAttr ".tk[2545]" -type "float3" -4.7683716e-07 3.7252903e-09 -7.4505806e-09 ;
+	setAttr ".tk[2546]" -type "float3" 0 3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[2547]" -type "float3" 0 0 1.1175871e-08 ;
+	setAttr ".tk[2548]" -type "float3" -4.7683716e-07 0 5.5879354e-09 ;
+	setAttr ".tk[2549]" -type "float3" 0 3.7252903e-09 5.5879354e-09 ;
+	setAttr ".tk[2550]" -type "float3" 0 0 5.5879354e-09 ;
+	setAttr ".tk[2551]" -type "float3" 0 0 1.1175871e-08 ;
+	setAttr ".tk[2552]" -type "float3" 0 3.7252903e-09 -1.8626451e-09 ;
+	setAttr ".tk[2553]" -type "float3" 0 3.7252903e-09 -7.4505806e-09 ;
+	setAttr ".tk[2554]" -type "float3" -4.7683716e-07 0 2.7939677e-09 ;
+	setAttr ".tk[2555]" -type "float3" -4.7683716e-07 0 -1.8626451e-09 ;
+	setAttr ".tk[2556]" -type "float3" 0 0 -6.0535967e-09 ;
+	setAttr ".tk[2557]" -type "float3" 0 -3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".tk[2558]" -type "float3" -4.7683716e-07 3.7252903e-09 -8.3819032e-09 ;
+	setAttr ".tk[2559]" -type "float3" 0 0 3.7252903e-09 ;
+	setAttr ".tk[2560]" -type "float3" 0 0 -5.5879354e-09 ;
+	setAttr ".tk[2561]" -type "float3" 0 0 -3.7252903e-09 ;
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "BC036361-4F68-7318-96BF-DF901EF51741";
+	setAttr ".dc" -type "componentList" 2 "f[1536:1545]" "f[2362:2371]";
+createNode polyMergeVert -n "polyMergeVert1";
+	rename -uid "D5290BCC-4731-AC64-2237-C9846A3A1C71";
+	setAttr ".ics" -type "componentList" 2 "vtx[890:899]" "vtx[1417:1426]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".am" yes;
+createNode polyTweak -n "GenericMeshCartoon:polyTweak1";
+	rename -uid "D754187A-44CE-937B-7E4A-EDB30736ACEC";
+	setAttr ".uopa" yes;
+	setAttr -s 2154 ".tk";
+	setAttr ".tk[0]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[3]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[4]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[5]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[6]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[7]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[8]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[9]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[10]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[11]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[12]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[13]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[14]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[15]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[16]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[17]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[18]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[19]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[20]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[21]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[22]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[23]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[24]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[25]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[26]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[27]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[28]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[29]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[30]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[31]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[32]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[33]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[34]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[35]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[36]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[37]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[38]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[39]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[40]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[41]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[42]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[43]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[44]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[45]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[46]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[47]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[48]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[49]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[50]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[51]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[52]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[53]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[54]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[55]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[56]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[57]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[58]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[59]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[60]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[61]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[62]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[63]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[64]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[65]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[66]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[67]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[68]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[69]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[70]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[71]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[72]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[73]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[74]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[75]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[76]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[77]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[78]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[79]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[80]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[81]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[82]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[83]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[84]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[85]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[86]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[87]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[88]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[89]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[90]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[91]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[92]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[93]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[94]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[95]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[96]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[97]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[98]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[99]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[100]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[101]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[102]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[103]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[104]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[105]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[106]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[107]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[108]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[109]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[110]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[111]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[112]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[113]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[114]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[115]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[116]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[117]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[118]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[119]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[120]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[121]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[122]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[123]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[124]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[125]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[126]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[127]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[128]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[129]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[130]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[131]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[132]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[133]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[134]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[135]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[136]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[137]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[138]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[139]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[140]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[141]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[142]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[143]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[144]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[145]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[146]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[147]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[148]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[149]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[150]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[151]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[152]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[153]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[154]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[155]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[156]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[157]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[158]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[159]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[160]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[161]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[162]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[163]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[164]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[165]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[166]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[167]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[168]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[169]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[170]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[171]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[172]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[173]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[174]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[175]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[176]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[177]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[178]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[179]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[180]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[181]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[182]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[183]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[184]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[185]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[186]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[187]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[188]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[189]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[190]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[191]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[192]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[193]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[194]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[195]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[196]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[197]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[198]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[199]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[200]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[201]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[202]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[203]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[204]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[205]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[206]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[207]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[208]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[209]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[210]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[211]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[212]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[213]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[214]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[215]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[216]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[217]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[218]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[219]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[220]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[221]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[222]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[223]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[224]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[225]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[226]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[227]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[228]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[229]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[230]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[231]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[232]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[233]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[234]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[235]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[236]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[237]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[238]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[239]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[240]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[241]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[242]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[243]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[244]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[245]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[246]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[247]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[248]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[249]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[250]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[251]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[252]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[253]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[254]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[255]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[256]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[257]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[258]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[259]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[260]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[261]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[262]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[263]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[264]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[265]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[266]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[267]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[268]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[269]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[270]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[271]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[272]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[273]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[274]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[275]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[276]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[277]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[278]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[279]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[280]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[281]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[282]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[283]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[284]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[285]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[286]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[287]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[288]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[289]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[290]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[291]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[292]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[293]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[294]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[295]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[296]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[297]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[298]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[299]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[300]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[301]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[302]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[303]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[304]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[305]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[306]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[307]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[308]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[309]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[310]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[311]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[312]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[313]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[314]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[315]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[316]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[317]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[318]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[319]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[320]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[321]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[322]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[323]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[324]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[325]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[326]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[327]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[328]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[329]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[330]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[331]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[332]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[333]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[334]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[335]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[336]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[337]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[338]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[339]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[340]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[341]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[342]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[343]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[344]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[345]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[346]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[347]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[348]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[349]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[350]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[351]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[352]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[353]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[354]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[355]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[356]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[357]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[358]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[359]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[360]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[361]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[362]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[363]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[364]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[365]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[366]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[367]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[368]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[369]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[370]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[371]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[372]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[373]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[374]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[375]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[376]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[377]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[378]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[379]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[380]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[381]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[382]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[383]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[384]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[385]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[386]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[387]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[388]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[389]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[390]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[391]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[392]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[393]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[394]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[395]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[396]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[397]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[398]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[399]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[400]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[401]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[402]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[403]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[404]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[405]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[406]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[407]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[408]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[409]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[410]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[411]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[412]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[413]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[414]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[415]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[416]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[417]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[418]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[419]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[420]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[421]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[422]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[423]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[424]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[425]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[426]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[427]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[428]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[429]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[430]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[431]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[432]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[433]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[434]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[435]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[436]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[437]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[438]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[439]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[440]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[441]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[442]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[443]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[444]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[445]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[446]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[447]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[448]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[449]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[450]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[451]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[452]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[453]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[454]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[455]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[456]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[457]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[458]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[459]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[460]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[461]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[462]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[463]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[464]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[465]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[466]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[467]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[468]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[469]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[470]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[471]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[472]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[473]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[474]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[475]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[476]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[477]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[478]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[479]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[480]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[481]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[482]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[483]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[484]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[485]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[486]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[487]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[488]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[489]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[490]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[491]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[492]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[493]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[494]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[495]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[496]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[497]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[498]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[499]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[500]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[501]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[502]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[503]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[504]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[505]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[506]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[507]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[508]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[509]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[510]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[511]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[512]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[513]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[514]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[515]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[516]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[517]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[518]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[519]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[520]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[521]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[522]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[523]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[524]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[525]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[526]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[527]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[528]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[529]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[530]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[531]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[532]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[533]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[534]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[535]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[536]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[537]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[538]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[539]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[540]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[541]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[542]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[543]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[544]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[545]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[546]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[547]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[548]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[549]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[550]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[551]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[552]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[553]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[554]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[555]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[556]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[557]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[558]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[559]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[560]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[561]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[562]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[563]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[564]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[565]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[566]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[567]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[568]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[569]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[570]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[571]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[572]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[573]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[574]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[575]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[576]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[577]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[578]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[579]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[580]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[581]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[582]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[583]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[584]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[585]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[586]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[587]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[588]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[589]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[590]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[591]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[592]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[593]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[594]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[595]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[596]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[597]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[598]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[599]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[600]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[601]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[602]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[603]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[604]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[605]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[606]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[607]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[608]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[609]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[610]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[611]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[612]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[613]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[614]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[615]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[616]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[617]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[618]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[619]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[620]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[621]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[622]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[623]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[624]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[625]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[626]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[627]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[628]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[629]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[630]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[631]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[632]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[633]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[634]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[635]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[636]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[637]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[638]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[639]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[640]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[641]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[642]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[643]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[644]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[645]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[646]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[647]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[648]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[649]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[650]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[651]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[652]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[653]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[654]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[655]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[656]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[657]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[658]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[659]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[660]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[661]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[662]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[663]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[664]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[665]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[666]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[667]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[668]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[669]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[670]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[671]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[672]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[673]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[674]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[675]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[676]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[677]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[678]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[679]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[680]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[681]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[682]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[683]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[684]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[685]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[686]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[687]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[688]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[689]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[690]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[691]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[692]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[693]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[694]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[695]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[696]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[697]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[698]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[699]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[700]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[701]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[702]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[703]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[704]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[705]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[706]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[707]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[708]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[709]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[710]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[711]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[712]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[713]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[714]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[715]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[716]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[717]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[718]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[719]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[720]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[721]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[722]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[723]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[724]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[725]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[726]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[727]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[728]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[729]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[730]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[731]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[732]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[733]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[734]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[735]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[736]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[737]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[738]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[739]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[740]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[741]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[742]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[743]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[744]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[745]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[746]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[747]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[748]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[749]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[750]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[751]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[752]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[753]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[754]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[755]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[756]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[757]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[758]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[759]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[760]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[761]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[762]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[763]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[764]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[765]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[766]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[767]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[768]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[769]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[770]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[771]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[772]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[773]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[774]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[775]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[776]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[777]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[778]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[779]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[780]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[781]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[782]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[783]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[784]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[785]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[786]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[787]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[788]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[789]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[790]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[791]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[792]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[793]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[794]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[795]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[796]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[797]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[798]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[799]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[800]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[801]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[802]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[803]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[804]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[805]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[806]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[807]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[808]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[809]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[810]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[811]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[812]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[813]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[814]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[815]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[816]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[817]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[818]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[819]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[820]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[821]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[822]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[823]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[824]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[825]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[826]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[827]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[828]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[829]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[830]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[831]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[832]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[833]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[834]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[835]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[836]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[837]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[838]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[839]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[840]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[841]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[842]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[843]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[844]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[845]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[846]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[847]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[848]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[849]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[850]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[851]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[852]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[853]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[854]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[855]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[856]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[857]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[858]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[859]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[860]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[861]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[862]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[863]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[864]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[865]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[866]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[867]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[868]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[869]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[870]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[871]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[872]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[873]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[874]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[875]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[876]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[877]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[878]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[879]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[880]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[881]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[882]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[883]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[884]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[885]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[886]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[887]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[888]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[889]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[890]" -type "float3" -0.0054373741 -0.23288706 -0.034863651 ;
+	setAttr ".tk[891]" -type "float3" 0.03496933 -0.23858419 -0.074564815 ;
+	setAttr ".tk[892]" -type "float3" 0.06519413 -0.34094241 0.13106158 ;
+	setAttr ".tk[893]" -type "float3" 0.016871452 -0.31992331 0.13491236 ;
+	setAttr ".tk[894]" -type "float3" -0.10236692 -0.32093731 0.026515901 ;
+	setAttr ".tk[895]" -type "float3" -0.045151234 -0.32613507 -0.038857192 ;
+	setAttr ".tk[896]" -type "float3" -0.025069237 -0.32250288 0.11070888 ;
+	setAttr ".tk[897]" -type "float3" -0.091051102 -0.33299735 0.077399284 ;
+	setAttr ".tk[898]" -type "float3" 0.098780155 -0.34212211 0.072670519 ;
+	setAttr ".tk[899]" -type "float3" 0.071277142 -0.31372359 -0.018818744 ;
+	setAttr ".tk[900]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[901]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[902]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[903]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[904]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[905]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[906]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[907]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[908]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[909]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[910]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[911]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[912]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[913]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[914]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[915]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[916]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[917]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[918]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[919]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[920]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[921]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[922]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[923]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[924]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[925]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[926]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[927]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[928]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[929]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[930]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[931]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[932]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[933]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[934]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[935]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[936]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[937]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[938]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[939]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[940]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[941]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[942]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[943]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[944]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[945]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[946]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[947]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[948]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[949]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[950]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[951]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[952]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[953]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[954]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[955]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[956]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[957]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[958]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[959]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[960]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[961]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[962]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[963]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[964]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[965]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[966]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[967]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[968]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[969]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[970]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[971]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[972]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[973]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[974]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[975]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[976]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[977]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[978]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[979]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[980]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[981]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[982]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[983]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[984]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[985]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[986]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[987]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[988]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[989]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[990]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[991]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[992]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[993]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[994]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[995]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[996]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[997]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[998]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[999]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1000]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1001]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1002]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1003]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1004]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1005]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1006]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1007]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1008]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1009]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1010]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1011]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1012]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1013]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1014]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1015]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1016]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1017]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1232]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1233]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1234]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1235]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1236]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1237]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1238]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1239]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1240]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1241]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1242]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1243]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1244]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1245]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1246]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1247]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1248]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1249]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1250]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1251]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1252]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1253]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1254]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1255]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1256]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1257]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1258]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1259]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1260]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1261]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1262]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1263]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1264]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1265]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1266]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1267]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1268]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1269]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1270]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1271]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1272]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1273]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1274]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1275]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1276]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1277]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1278]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1279]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1280]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1281]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1282]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1283]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1284]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1285]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1286]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1287]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1288]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1289]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1290]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1291]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1292]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1293]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1294]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1295]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1296]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1297]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1298]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1299]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1300]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1301]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1302]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1303]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1304]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1305]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1306]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1307]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1308]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1309]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1310]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1311]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1312]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1313]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1314]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1315]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1316]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1317]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1318]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1319]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1320]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1321]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1322]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1323]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1324]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1325]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1326]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1327]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1328]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1329]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1330]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1331]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1332]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1333]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1334]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1335]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1336]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1337]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1338]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1339]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1340]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1341]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1342]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1343]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1344]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1345]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1346]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1347]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1348]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1349]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1350]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1351]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1352]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1353]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1354]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1355]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1356]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1357]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1358]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1359]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1360]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1361]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1362]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1363]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1364]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1365]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1366]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1367]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1368]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1369]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1370]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1371]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1372]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1373]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1374]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1375]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1376]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1427]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1428]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1429]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1430]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1431]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1432]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1433]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1434]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1435]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1436]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1437]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1438]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1439]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1440]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1441]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1442]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1443]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1444]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1445]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1446]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1447]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1448]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1449]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1450]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1451]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1452]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1453]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1454]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1455]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1456]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1457]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1458]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1459]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1460]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1461]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1462]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1463]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1464]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1465]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1466]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1467]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1468]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1469]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1470]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1471]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1472]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1473]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1474]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1475]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1476]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1477]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1478]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1479]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1480]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1481]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1482]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1483]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1484]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1485]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1486]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1487]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1488]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1489]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1490]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1491]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1492]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1493]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1494]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1495]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1496]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1497]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1498]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1499]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1500]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1501]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1502]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1503]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1504]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1505]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1506]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1507]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1508]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1509]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1510]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1511]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1512]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1513]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1514]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1515]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1516]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1517]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1518]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1519]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1520]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1521]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1522]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1523]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1524]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1525]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1526]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1527]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1528]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1529]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1530]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1531]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1532]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1533]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1534]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1535]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1536]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1537]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1538]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1539]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1540]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1541]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1542]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1543]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1544]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1545]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1546]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1547]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1548]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1549]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1550]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1551]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1552]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1553]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1554]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1555]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1556]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1557]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1558]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1559]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1560]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1561]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1562]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1563]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1564]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1565]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1566]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1567]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1568]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1569]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1570]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1571]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1572]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1573]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1574]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1575]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1576]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1577]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1578]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1579]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1580]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1581]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1582]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1583]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1584]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1585]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1586]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1587]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1588]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1589]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1590]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1591]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1592]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1593]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1594]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1595]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1596]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1597]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1598]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1599]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1600]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1601]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1602]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1603]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1604]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1605]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1606]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1607]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1608]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1609]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1610]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1611]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1612]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1613]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1614]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1615]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1616]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1617]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1618]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1619]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1620]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1621]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1622]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1623]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1624]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1625]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1626]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1627]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1628]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1629]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1630]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1631]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1632]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1633]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1634]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1635]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1636]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1637]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1638]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1639]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1640]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1641]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1642]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1643]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1644]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1645]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1646]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1647]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1648]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1649]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1650]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1651]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1652]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1653]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1654]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1655]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1656]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1657]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1658]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1659]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1660]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1661]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1662]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1663]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1664]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1665]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1666]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1667]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1668]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1669]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1670]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1671]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1672]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1673]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1674]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1675]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1676]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1677]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1678]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1679]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1680]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1681]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1682]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1683]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1684]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1685]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1686]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1687]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1688]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1689]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1690]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1691]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1692]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1693]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1694]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1695]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1696]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1697]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1698]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1699]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1700]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1701]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1702]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1703]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1704]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1705]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1706]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1707]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1708]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1709]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1710]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1711]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1712]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1713]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1714]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1715]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1716]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1717]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1718]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1719]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1720]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1721]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1722]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1723]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1724]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1725]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1726]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1727]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1728]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1729]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1730]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1731]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1732]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1733]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1734]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1735]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1736]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1737]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1738]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1739]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1740]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1741]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1742]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1743]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1744]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1745]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1746]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1747]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1748]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1749]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1750]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1751]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1752]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1753]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1754]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1755]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1756]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1757]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1758]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1759]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1760]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1761]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1762]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1763]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1764]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1765]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1766]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1767]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1768]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1769]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1770]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1771]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1772]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1773]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1774]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1775]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1776]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1777]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1778]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1779]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1780]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1781]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1782]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1783]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1784]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1785]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1786]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1787]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1788]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1789]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1790]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1791]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1792]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1793]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1794]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1795]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1796]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1797]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1798]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1799]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1800]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1801]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1802]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1803]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1804]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1805]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1806]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1807]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1808]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1809]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1810]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1811]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1812]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1813]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1814]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1815]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1816]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1817]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1818]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1819]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1820]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1821]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1822]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1823]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1824]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1825]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1826]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1827]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1828]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1829]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1830]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1831]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1832]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1833]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1834]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1835]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1836]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1837]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1838]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1839]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1840]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1841]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1842]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1843]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1844]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1845]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1846]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1847]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1848]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1849]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1850]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1851]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1852]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1853]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1854]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1855]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1856]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1857]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1858]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1859]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1860]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1861]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1862]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[1863]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2078]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2079]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2080]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2081]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2082]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2083]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2084]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2085]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2086]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2087]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2088]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2089]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2090]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2091]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2092]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2093]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2094]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2095]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2096]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2097]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2098]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2099]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2100]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2101]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2102]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2103]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2104]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2105]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2106]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2107]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2108]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2109]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2110]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2111]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2112]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2113]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2114]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2115]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2116]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2117]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2118]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2119]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2120]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2121]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2122]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2123]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2124]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2125]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2126]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2127]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2128]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2129]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2130]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2131]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2132]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2133]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2134]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2135]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2136]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2137]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2138]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2139]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2140]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2141]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2142]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2143]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2144]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2145]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2146]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2147]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2148]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2149]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2150]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2151]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2152]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2153]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2154]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2155]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2156]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2157]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2158]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2159]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2160]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2161]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2162]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2163]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2164]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2165]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2166]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2167]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2168]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2169]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2170]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2171]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2172]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2173]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2174]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2175]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2176]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2177]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2178]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2179]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2180]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2181]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2182]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2183]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2184]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2185]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2186]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2187]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2188]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2189]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2190]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2191]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2192]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2193]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2194]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2195]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2196]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2197]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2198]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2199]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2200]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2201]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2202]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2203]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2204]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2205]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2206]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2207]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2208]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2259]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2260]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2261]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2262]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2263]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2264]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2265]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2266]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2267]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2268]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2269]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2270]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2271]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2272]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2273]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2274]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2275]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2276]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2277]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2278]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2279]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2280]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2281]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2282]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2283]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2284]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2285]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2286]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2287]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2288]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2289]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2290]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2291]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2292]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2293]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2294]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2295]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2296]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2297]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2298]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2299]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2300]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2301]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2302]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2303]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2304]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2305]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2306]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2307]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2308]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2309]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2310]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2311]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2312]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2313]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2314]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2315]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2316]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2317]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2318]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2319]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2320]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2321]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2322]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2323]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2324]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2325]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2326]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2327]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2328]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2329]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2330]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2331]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2332]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2333]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2334]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2335]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2336]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2337]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2338]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2339]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2340]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2341]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2342]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2343]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2344]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2345]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2346]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2347]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2348]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2349]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2350]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2351]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2352]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2353]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2354]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2355]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2356]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2357]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2358]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2359]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2360]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2361]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2362]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2363]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2364]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2365]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2366]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2367]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2368]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2369]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2370]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2371]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2372]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2373]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2374]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2375]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2376]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2377]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2378]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2379]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2380]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2381]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2382]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2383]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2384]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2385]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2386]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2387]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2388]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2389]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2390]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2391]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2392]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2393]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2394]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2395]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2396]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2397]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2398]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2399]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2400]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2401]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2402]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2403]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2404]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2405]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2406]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2407]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2408]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2409]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2410]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2411]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2412]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2413]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2414]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2415]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2416]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2417]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2418]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2419]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2420]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2421]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2422]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2423]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2424]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2425]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2426]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2427]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2428]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2429]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2430]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2431]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2432]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2433]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2434]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2435]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2436]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2437]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2438]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2439]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2440]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2441]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2442]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2443]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2444]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2445]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2446]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2447]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2448]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2449]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2450]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2451]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2452]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2453]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2454]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2455]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2456]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2457]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2458]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2459]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2460]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2461]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2462]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2463]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2464]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2465]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2466]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2467]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2468]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2469]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2470]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2471]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2472]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2473]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2474]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2475]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2476]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2477]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2478]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2479]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2480]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2481]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2482]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2483]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2484]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2485]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2486]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2487]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2488]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2489]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2490]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2491]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2492]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2493]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2494]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2495]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2496]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2497]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2498]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2499]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2500]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2501]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2502]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2503]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2504]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2505]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2506]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2507]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2508]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2509]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2510]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2511]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2512]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2513]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2514]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2515]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2516]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2517]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2518]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2519]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2520]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2521]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2522]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2523]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2524]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2525]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2526]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2527]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2528]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2529]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2530]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2531]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2532]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2533]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2534]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2535]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2536]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2537]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2538]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2539]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2540]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2541]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2542]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2543]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2544]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2545]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2546]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2547]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2548]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2549]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2550]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2551]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2552]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2553]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2554]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2555]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2556]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2557]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2558]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2559]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2560]" -type "float3" 0 -0.25301245 0 ;
+	setAttr ".tk[2561]" -type "float3" 0 -0.25301245 0 ;
 select -ne :time1;
-	setAttr ".o" 4;
-	setAttr ".unw" 4;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
-	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
-	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
-		 1 1 1 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
@@ -11844,47 +15178,47 @@ select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
 	setAttr -s 10 ".dsm";
-	setAttr ".ro" yes;
 	setAttr -s 4 ".gn";
-select -ne :initialParticleSE;
-	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
-	setAttr ".ren" -type "string" "arnold";
-	setAttr ".dss" -type "string" "standardSurface1";
-select -ne :defaultResolution;
-	setAttr ".pa" 1;
+	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
-	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
-	setAttr ".vtn" -type "string" "ACES 1.0 SDR-video (sRGB)";
-	setAttr ".vn" -type "string" "ACES 1.0 SDR-video";
-	setAttr ".dn" -type "string" "sRGB";
-	setAttr ".wsn" -type "string" "ACEScg";
-	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
-	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
-select -ne :hardwareRenderGlobals;
-	setAttr ".ctrs" 256;
-	setAttr ".btrs" 512;
+	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya-legacy/config.ocio";
+	setAttr ".vtn" -type "string" "sRGB gamma (legacy)";
+	setAttr ".vn" -type "string" "sRGB gamma";
+	setAttr ".dn" -type "string" "legacy";
+	setAttr ".wsn" -type "string" "scene-linear Rec 709/sRGB";
+	setAttr ".ovt" no;
+	setAttr ".povt" no;
+	setAttr ".otn" -type "string" "sRGB gamma (legacy)";
+	setAttr ".potn" -type "string" "sRGB gamma (legacy)";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "GenericMeshCartoon:groupId64.id" "GenericMeshCartoonRN.phl[1]";
 connectAttr "GenericMeshCartoonRN.phl[2]" "GenericMeshCartoonRN.phl[3]";
 connectAttr "GenericMeshCartoon:groupId65.id" "GenericMeshCartoonRN.phl[4]";
 connectAttr "GenericMeshCartoonRN.phl[5]" "GenericMeshCartoonRN.phl[6]";
-connectAttr "polyExtrudeFace2.out" "GenericMeshCartoonRN.phl[7]";
-connectAttr "GenericMeshCartoonRN.phl[8]" "polyExtrudeFace2.mp";
-connectAttr "GenericMeshCartoonRN.phl[9]" "polyExtrudeFace1.mp";
-connectAttr "GenericMeshCartoonRN.phl[10]" "GenericMeshCartoonRN.phl[11]";
-connectAttr "GenericMeshCartoon:groupId65.msg" "GenericMeshCartoonRN.phl[12]";
-connectAttr "GenericMeshCartoonRN.phl[13]" "GenericMeshCartoonRN.phl[14]";
-connectAttr "GenericMeshCartoon:groupId64.msg" "GenericMeshCartoonRN.phl[15]";
+connectAttr "polyMergeVert1.out" "GenericMeshCartoonRN.phl[7]";
+connectAttr "GenericMeshCartoonRN.phl[8]" "polyMergeVert1.mp";
+connectAttr "GenericMeshCartoonRN.phl[9]" "GenericMeshCartoonRN.phl[10]";
+connectAttr "GenericMeshCartoon:groupId65.msg" "GenericMeshCartoonRN.phl[11]";
+connectAttr "GenericMeshCartoonRN.phl[12]" "GenericMeshCartoonRN.phl[13]";
+connectAttr "GenericMeshCartoon:groupId64.msg" "GenericMeshCartoonRN.phl[14]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
+		;
+connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
+		 -na;
+connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
+connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "GenericMeshCartoonRNfosterParent1.msg" "GenericMeshCartoonRN.fp";
-connectAttr "GenericMeshCartoon:groupParts2.og" "polyExtrudeFace1.ip";
+connectAttr "GenericMeshCartoon:groupParts2.og" "polySplitEdge1.ip";
 connectAttr "GenericMeshCartoon:polySurfaceShape2.o" "GenericMeshCartoon:groupParts1.ig"
 		;
 connectAttr "GenericMeshCartoon:groupId64.id" "GenericMeshCartoon:groupParts1.gi"
@@ -11893,6 +15227,9 @@ connectAttr "GenericMeshCartoon:groupParts1.og" "GenericMeshCartoon:groupParts2.
 		;
 connectAttr "GenericMeshCartoon:groupId65.id" "GenericMeshCartoon:groupParts2.gi"
 		;
-connectAttr "polyExtrudeFace1.out" "polyExtrudeFace2.ip";
+connectAttr "polySplitEdge1.out" "polyTweak1.ip";
+connectAttr "polyTweak1.out" "deleteComponent1.ig";
+connectAttr "GenericMeshCartoon:polyTweak1.out" "polyMergeVert1.ip";
+connectAttr "deleteComponent1.og" "GenericMeshCartoon:polyTweak1.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of CartoonCharacter.ma
