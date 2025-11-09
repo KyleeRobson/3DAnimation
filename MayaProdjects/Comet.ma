@@ -1,28 +1,30 @@
 //Maya ASCII 2025ff03 scene
 //Name: Comet.ma
-//Last modified: Sun, Nov 09, 2025 01:20:54 PM
+//Last modified: Sun, Nov 09, 2025 03:04:45 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
+		 -nodeType "aiAreaLight" -nodeType "aiStandardSurface" -nodeType "aiPhysicalSky" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.2.1";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "3CD60A52-40E0-4DCC-968C-19AE3BA52F55";
+fileInfo "UUID" "B74A237A-4319-28D8-B838-489B57EF2882";
 createNode transform -s -n "persp";
 	rename -uid "65B06094-4C78-5296-9936-C48340E7BDC3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1358286564407409 20.080658352578066 46.648425019579832 ;
-	setAttr ".r" -type "double3" -12.338352720368166 -2884.1999999998834 -9.9659972922814143e-17 ;
+	setAttr ".t" -type "double3" -0.16939337920463496 45.329428184212468 112.25011322758317 ;
+	setAttr ".r" -type "double3" -17.738352721081601 -2520.199999999807 -3.8514763990969183e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "51261316-4D06-CE71-FCA9-62BD38FE7794";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 49.525119166147149;
+	setAttr ".coi" 120.15189056229288;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -289,6 +291,7 @@ createNode mesh -n "BallShape" -p "Ball";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Body1" -p "Refrences";
 	rename -uid "C7AA6017-44C2-7705-C7DE-758E285576BA";
+	setAttr ".t" -type "double3" 51.145726956436469 0 0 ;
 	setAttr ".rp" -type "double3" 39.215000512709075 10.418652027845383 -0.066886425018310547 ;
 	setAttr ".sp" -type "double3" 39.215000512709075 10.418652027845383 -0.066886425018310547 ;
 createNode mesh -n "Body1Shape" -p "Body1";
@@ -312,7 +315,7 @@ createNode mesh -n "Body1Shape" -p "Body1";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 13 "f[9:17]" "f[62:70]" "f[118:119]" "f[139:142]" "f[243:248]" "f[303:314]" "f[495:496]" "f[505:506]" "f[551:559]" "f[598:600]" "f[608:611]" "f[619:622]" "f[756:803]";
 	setAttr ".pv" -type "double2" 0.4994562566280365 0.18796436488628387 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 1201 ".uvst[0].uvsp";
+	setAttr -s 1215 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.375 0 0.45833334 0 0.54166669
 		 0 0.625 0 0.375 0.083333336 0.45833334 0.083333336 0.54166669 0.083333336 0.625 0.083333336
 		 0.375 0.16666667 0.45833334 0.16666667 0.54166669 0.16666667 0.625 0.16666667 0.375
@@ -520,7 +523,7 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		 0.55906302 0.75 0.41818437 0.75000006 0.43825889 0.75 0.43825889 0.8425228 0.21056138
 		 0.86898303 0.21056144 1.000000119209 0.375 0.84856319 0.375 1 0.375 0.75 0.375 0.8804251
 		 0.58180594 0.74999994 0.58180571 0.91082191;
-	setAttr ".uvst[0].uvsp[1000:1200]" 0.10564464 0.88043302 0.10564458 0.99999976
+	setAttr ".uvst[0].uvsp[1000:1214]" 0.10564464 0.88043302 0.10564458 0.99999976
 		 0.54166669 0.8260057 0.54166669 1 0.54166669 0.75 0.54166663 0.86895782 0.41818437
 		 0.75000006 0.41818464 0.84252584 0.375 0.13502635 0.43825889 0.75 0.43825889 0.8425228
 		 0.21056138 0.86898303 0.21056144 1.000000119209 0.375 0.84856319 0.375 1 0.375 0.75
@@ -568,7 +571,10 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		 0.37391251 0.16617829 0.41847092 0.18460509 0.375 0.1878455 0.37423259 0.19158435
 		 0.45759952 0.20852526 0.41666669 0.19639784 0.58333337 0.18652043 0.625 0.1911695
 		 0.54166669 0.19151188 0.58026469 0.20004812 0.54166669 0.20935866 0.625 0.20975044
-		 0.58333337 0.2049502;
+		 0.58333337 0.2049502 0.45833334 0.18652043 0.45833334 0.2049502 0.375 0.16241825
+		 0.375 0.1878455 0.45833334 0.2049502 0.625 0.18652043 0.625 0.2049502 0.54166669
+		 0.18652041 0.54166669 0.2049502 0.625 0.2049502 0.51066929 0.3835077 0.375 0.16241825
+		 0.375 0.1878455 0.54166669 0.18652041;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -2672,25 +2678,25 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		f 5 -1611 -1489 1482 -1116 -1484
 		mu 0 5 1115 1193 1114 682 683
 		f 4 1471 1490 -1492 -1490
-		mu 0 4 1118 1117 1107 1114
+		mu 0 4 1118 1117 1201 1202
 		f 4 -1473 1492 1494 -1494
-		mu 0 4 1120 1119 1108 1115
+		mu 0 4 1120 1119 1203 1204
 		f 4 -1608 1611 1608 -1493
 		mu 0 4 1121 1187 1188 1122
 		f 4 1613 1610 1493 -1610
-		mu 0 4 1191 1192 1114 1115
+		mu 0 4 1191 1192 1205 1204
 		f 4 -1495 -1609 1612 1609
-		mu 0 4 1115 1108 1189 1190
+		mu 0 4 1204 1203 1189 1190
 		f 4 1468 1498 -1500 -1498
-		mu 0 4 1126 1125 1104 1111
+		mu 0 4 1126 1125 1206 1207
 		f 4 -1470 1500 1502 -1502
-		mu 0 4 1128 1127 1105 1112
+		mu 0 4 1128 1127 1208 1209
 		f 4 -1615 1618 1615 -1501
 		mu 0 4 1129 1195 1196 1130
 		f 4 1620 1617 1501 -1617
-		mu 0 4 1198 1199 1111 1112
+		mu 0 4 1198 1199 1210 1209
 		f 4 -1503 -1616 1619 1616
-		mu 0 4 1112 1130 1197 1198
+		mu 0 4 1209 1130 1197 1198
 		f 4 1537 1539 -1542 1542
 		mu 0 4 1151 1152 1153 1154
 		f 6 -1510 -1517 -1512 -1511 1508 -1251
@@ -2742,9 +2748,9 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		f 4 1553 1560 1598 -1560
 		mu 0 4 1159 1160 1181 1178
 		f 4 -1556 1562 1597 -1561
-		mu 0 4 1160 1152 1180 1181
+		mu 0 4 1160 1211 1180 1181
 		f 4 -1558 1564 1596 -1563
-		mu 0 4 1152 1161 1179 1180
+		mu 0 4 1211 1161 1179 1180
 		f 4 -1559 1559 1595 -1565
 		mu 0 4 1161 1159 1178 1179
 		f 4 -1572 1567 -1551 -1569
@@ -2766,9 +2772,9 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		f 4 -1588 1583 1558 -1585
 		mu 0 4 1175 1174 1159 1161
 		f 4 -1589 1584 1557 -1586
-		mu 0 4 1176 1175 1161 1152
+		mu 0 4 1176 1175 1161 1211
 		f 4 -1590 1585 1555 -1587
-		mu 0 4 1177 1176 1152 1160
+		mu 0 4 1177 1176 1211 1160
 		f 4 -1591 1586 -1554 -1584
 		mu 0 4 1174 1177 1160 1159
 		f 4 -1596 1591 1566 -1593
@@ -2788,15 +2794,15 @@ createNode mesh -n "Body1Shape" -p "Body1";
 		f 4 -1607 1602 -1538 -1600
 		mu 0 4 1182 1185 1152 1151
 		f 4 -1612 -1478 1489 1495
-		mu 0 4 1188 1187 1107 1108
+		mu 0 4 1188 1187 1107 1212
 		f 4 -1613 -1496 1491 1496
-		mu 0 4 1190 1189 1114 1115
+		mu 0 4 1190 1189 1202 1213
 		f 4 1488 -1614 -1497 -1491
 		mu 0 4 1123 1192 1191 1124
 		f 4 -1619 -1475 1497 1503
-		mu 0 4 1196 1195 1104 1105
+		mu 0 4 1196 1195 1104 1214
 		f 4 -1620 -1504 1499 1504
-		mu 0 4 1198 1197 1111 1132
+		mu 0 4 1198 1197 1207 1132
 		f 4 1485 -1621 -1505 -1499
 		mu 0 4 1131 1199 1198 1132;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
@@ -2807,6 +2813,7 @@ createNode mesh -n "Body1Shape" -p "Body1";
 	setAttr ".dsm" 2;
 createNode transform -n "RefrenceBody" -p "Refrences";
 	rename -uid "20B3900E-440F-094A-C0C6-0FADFCBB2830";
+	setAttr ".t" -type "double3" 0 0 55.484461867888598 ;
 	setAttr ".rp" -type "double3" -62.522252019652427 8.8303086482374233 -9.8954667955313802 ;
 	setAttr ".sp" -type "double3" -62.522252019652427 8.8303086482374233 -9.8954667955313802 ;
 createNode mesh -n "RefrenceBodyShape" -p "RefrenceBody";
@@ -3284,7 +3291,7 @@ createNode mesh -n "RefrenceBodyShape" -p "RefrenceBody";
 	setAttr ".dsm" 2;
 createNode transform -n "imagePlane2" -p "Refrences";
 	rename -uid "7754D881-4B21-B94E-6937-15AD01A4E10A";
-	setAttr ".t" -type "double3" 19.0126284644207 13.974033959286219 -83.952414181309749 ;
+	setAttr ".t" -type "double3" 102.1698266848904 13.974033959286219 -83.952414181309749 ;
 	setAttr ".s" -type "double3" 2.6315906771682065 2.6315906771682065 2.6315906771682065 ;
 createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
 	rename -uid "51E4AE61-4480-A8D5-06CA-0EBA88D0265E";
@@ -3324,7 +3331,217 @@ createNode imagePlane -n "imagePlaneShape4" -p "imagePlane4";
 	setAttr ".w" 21.6;
 	setAttr ".h" 16.200000000000003;
 	setAttr ".cs" -type "string" "sRGB";
-createNode transform -n "Eyes";
+createNode transform -n "RenderCam";
+	rename -uid "13FCF706-4CA7-1BDA-CF89-C193171CD1BA";
+	setAttr ".t" -type "double3" 1.1027968039490545 17.029591805797221 50.274690496363156 ;
+	setAttr ".r" -type "double3" -5.3999999999999977 0.80000000000096438 6.2126264441508971e-18 ;
+	setAttr ".rp" -type "double3" 5.5511151231257827e-17 0 0 ;
+	setAttr ".rpt" -type "double3" -5.4110044609458671e-21 2.4074124304840448e-35 -7.7505670432532197e-19 ;
+	setAttr ".sp" -type "double3" 5.5511151231257827e-17 0 0 ;
+createNode camera -n "RenderCamShape" -p "RenderCam";
+	rename -uid "AFF66F97-4E57-C944-C996-9FA378B98569";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
+	setAttr ".ff" 0;
+	setAttr ".ovr" 1.3;
+	setAttr ".coi" 53.139020217728323;
+	setAttr ".ow" 30;
+	setAttr ".imn" -type "string" "camera1";
+	setAttr ".den" -type "string" "camera1_depth";
+	setAttr ".man" -type "string" "camera1_mask";
+	setAttr ".dfg" yes;
+createNode transform -n "Walls";
+	rename -uid "6C51B121-4114-C9C3-1640-1994593D9337";
+createNode transform -n "pCube1" -p "Walls";
+	rename -uid "619F1B39-4500-D705-6F37-C680A126B5E7";
+	setAttr ".rp" -type "double3" -0.93672484822285185 0.71947550773620605 -0.0015705650196196075 ;
+	setAttr ".sp" -type "double3" -0.93672484822285185 0.71947550773620605 -0.0015705650196196075 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "0C732908-4C28-1517-EB39-39B84C964DF3";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -154.88104 0.15430546 153.94275 
+		153.0076 0.15430546 153.94275 -154.88104 0.15430546 153.94275 153.0076 0.15430546 
+		153.94275 -154.88104 0.15430546 -153.94589 153.0076 0.15430546 -153.94589 -154.88104 
+		0.15430546 -153.94589 153.0076 0.15430546 -153.94589;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube3" -p "Walls";
+	rename -uid "5EC2C742-42B7-FA6B-1C8C-C28B9BA51E4E";
+	setAttr ".t" -type "double3" -81.481606840584462 0.15430545806884766 20.8805385252642 ;
+	setAttr ".r" -type "double3" 90.000000000000313 90 3.2075344328480854e-14 ;
+	setAttr ".rp" -type "double3" 0 0.5651700496673584 0 ;
+	setAttr ".rpt" -type "double3" 7.7715611723760958e-16 -2.4424906541753444e-15 -1.2490009027033011e-16 ;
+	setAttr ".sp" -type "double3" 0 0.5651700496673584 0 ;
+createNode mesh -n "pCubeShape3" -p "pCube3";
+	rename -uid "7A918A4E-4193-47E2-2A45-CD97ACFBFD62";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -153.94432 0 153.94432 153.94432 
+		0 153.94432 -153.94432 0 153.94432 153.94432 0 153.94432 -153.94432 0 -153.94432 
+		153.94432 0 -153.94432 -153.94432 0 -153.94432 153.94432 0 -153.94432;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube2" -p "Walls";
+	rename -uid "998BB2AA-4BFE-799E-A080-55A3036FF9FA";
+	setAttr ".rp" -type "double3" -0.93672484822285185 0.71947550773620361 -66.115517701250553 ;
+	setAttr ".sp" -type "double3" -0.93672484822285185 0.71947550773620361 -66.115517701250553 ;
+createNode mesh -n "pCubeShape2" -p "pCube2";
+	rename -uid "D3397980-4AF4-B1B9-A084-C79869555C6C";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  -154.88104 -153.22484 -67.680695 
+		153.0076 -153.22484 -67.680695 -154.88104 -154.22484 -66.680695 153.0076 -154.22484 
+		-66.680695 -154.88104 154.6638 -65.680687 153.0076 154.6638 -65.680687 -154.88104 
+		155.6638 -66.680687 153.0076 155.6638 -66.680687;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "aiSkyDomeLight1";
+	rename -uid "7E43679C-4EA5-7C79-2ECD-469F4D14F08E";
+createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
+	rename -uid "C5BE19D7-4D7A-FA41-0097-ED9FD8B6AC88";
+	setAttr -k off ".v";
+	setAttr ".intensity" 1.923076868057251;
+createNode transform -n "aiAreaLight1";
+	rename -uid "6DBD3162-4A0D-A9C8-47ED-73AA292EA61C";
+	setAttr ".rp" -type "double3" -14.501843302918388 16.019990247133361 3.2979621974002402 ;
+	setAttr ".sp" -type "double3" -14.501843302918388 16.019990247133361 3.2979621974002402 ;
+createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
+	rename -uid "EA71E3E0-47C6-65C0-E1F4-E095D9713489";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -k off ".v";
+	setAttr ".csh" no;
+	setAttr ".rcsh" no;
+	setAttr ".lp" -type "double3" -14.501843302918388 16.019990247133361 3.2979621974002402 ;
+	setAttr ".ai_translator" -type "string" "quad";
+	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
+createNode transform -n "Comet";
+	rename -uid "4285105F-46EE-ACD8-1202-EEBFBBF3D28D";
+createNode transform -n "Eyes" -p "Comet";
 	rename -uid "13D8E74E-4D02-C3B1-A943-45AD74248078";
 	setAttr ".rp" -type "double3" 0.097419923098917449 16.345729048404039 3.0435962677001953 ;
 	setAttr ".sp" -type "double3" 0.097419923098917449 16.345729048404039 3.0435962677001953 ;
@@ -3616,14 +3833,14 @@ createNode mesh -n "Eyes1Shape" -p "Eyes";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "Shirt";
+createNode transform -n "Shirt" -p "Comet";
 	rename -uid "A9D80340-4F50-2421-6544-71BDE6CD1581";
 	setAttr ".rp" -type "double3" 0.087808132171630859 9.2229986190795898 -0.054139256477355957 ;
 	setAttr ".sp" -type "double3" 0.087808132171630859 9.2229986190795898 -0.054139256477355957 ;
 createNode mesh -n "ShirtShape" -p "Shirt";
 	rename -uid "DE65DAA6-48F6-1611-5218-78B6A2B6FF2F";
 	setAttr -k off ".v";
-	setAttr -s 3 ".iog[0].og";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[192:275]";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[0:191]";
 	setAttr ".vir" yes;
@@ -3641,7 +3858,7 @@ createNode mesh -n "ShirtShape" -p "Shirt";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 9 "f[22:23]" "f[26:29]" "f[37:44]" "f[111:118]" "f[127:138]" "f[162:177]" "f[208:223]" "f[252:253]" "f[270:271]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 4 "f[9]" "f[78:80]" "f[225]" "f[235]";
-	setAttr ".pv" -type "double2" 0.37732118368148804 0.50000609457492828 ;
+	setAttr ".pv" -type "double2" 0.37732118321582675 0.50000609457492828 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 438 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.23160559 0.11442819 0.2357451
@@ -4488,7 +4705,7 @@ createNode mesh -n "ShirtShape" -p "Shirt";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "Pants";
+createNode transform -n "Pants" -p "Comet";
 	rename -uid "80A49E52-4882-576E-147F-34BAB93DA692";
 	setAttr ".rp" -type "double3" 0.055611550807952881 5.9886503219604492 -0.2811552882194519 ;
 	setAttr ".sp" -type "double3" 0.055611550807952881 5.9886503219604492 -0.2811552882194519 ;
@@ -4510,7 +4727,7 @@ createNode mesh -n "PantsShape" -p "Pants";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[7]" "f[35:37]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
-	setAttr ".pv" -type "double2" 0.32059188187122345 0.83995503187179565 ;
+	setAttr ".pv" -type "double2" 0.82788366079330444 0.88579952716827393 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 185 ".uvst[0].uvsp[0:184]" -type "float2" 0.21832117 0.17495024
 		 0.30062038 0.15820229 0.37369597 0.24164668 0.24971968 0.23775277 0.23916692 0.29555273
@@ -4564,6 +4781,22 @@ createNode mesh -n "PantsShape" -p "Pants";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 15 ".pt";
+	setAttr ".pt[3]" -type "float3" 5.9604645e-08 0 0 ;
+	setAttr ".pt[4]" -type "float3" 5.9604645e-08 0 0 ;
+	setAttr ".pt[14]" -type "float3" 0 0 0.22674581 ;
+	setAttr ".pt[16]" -type "float3" 0 0 0.17683488 ;
+	setAttr ".pt[17]" -type "float3" 0 0 0.40358075 ;
+	setAttr ".pt[18]" -type "float3" 0 0 0.40358075 ;
+	setAttr ".pt[19]" -type "float3" 0 0 0.17683488 ;
+	setAttr ".pt[20]" -type "float3" 0 0 0.41724113 ;
+	setAttr ".pt[21]" -type "float3" 0 0 0.44491634 ;
+	setAttr ".pt[22]" -type "float3" -0.23235519 0 0.40358075 ;
+	setAttr ".pt[56]" -type "float3" 5.9604645e-08 0 0 ;
+	setAttr ".pt[63]" -type "float3" 0 0 0.22674581 ;
+	setAttr ".pt[64]" -type "float3" 0 0 0.41724113 ;
+	setAttr ".pt[73]" -type "float3" 0 0 0.17683488 ;
+	setAttr ".pt[74]" -type "float3" 0 0 0.22674581 ;
 	setAttr -s 129 ".vt[0:128]"  -1.72462153 6.47999954 0.57994324 -1.81663346 5.68859529 0.36224353
 		 -1.18283606 5.037439346 0.63613915 -1.23901582 6.19226217 1.022752643 -0.6053831 6.35014105 1.050708294
 		 -0.078760415 4.84089613 0.80745977 0.024879681 4.84089613 0.80745977 0.15258197 6.42211533 1.26725447
@@ -4865,12 +5098,12 @@ createNode mesh -n "PantsShape" -p "Pants";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "MainBody";
+createNode transform -n "MainBody" -p "Comet";
 	rename -uid "9EAF3C46-4D77-D11F-3C30-BDB15A6968C7";
 createNode mesh -n "MainBodyShape" -p "MainBody";
 	rename -uid "2A54E8A5-4B3F-3849-EDE8-3F9E47416C24";
 	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 4 "f[0:745]" "f[757:761]" "f[763:765]" "f[767]";
 	setAttr ".iog[0].og[3].gcl" -type "componentList" 4 "f[746:756]" "f[762]" "f[766]" "f[768:809]";
 	setAttr ".vir" yes;
@@ -4888,7 +5121,7 @@ createNode mesh -n "MainBodyShape" -p "MainBody";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 166 "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[133]" "f[134]" "f[135]" "f[143]" "f[144]" "f[145]" "f[146]" "f[151]" "f[152]" "f[153]" "f[154]" "f[159]" "f[160]" "f[161]" "f[162]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[606]" "f[607]" "f[617]" "f[618]" "f[698]" "f[699]" "f[700]" "f[701]" "f[706]" "f[708]" "f[709]" "f[710]" "f[711]" "f[716]" "f[717]" "f[718]" "f[719]" "f[735]" "f[739]" "f[751]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 114 "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[118]" "f[119]" "f[139]" "f[140]" "f[141]" "f[142]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[495]" "f[496]" "f[505]" "f[506]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[598]" "f[599]" "f[600]" "f[608]" "f[609]" "f[610]" "f[611]" "f[619]" "f[620]" "f[621]" "f[622]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]" "f[766]" "f[767]" "f[768]" "f[769]" "f[770]" "f[771]" "f[772]" "f[773]" "f[774]" "f[775]" "f[776]" "f[777]" "f[778]" "f[779]" "f[780]" "f[781]" "f[782]" "f[783]" "f[784]" "f[785]" "f[786]" "f[787]" "f[788]" "f[789]" "f[790]" "f[791]" "f[792]" "f[793]" "f[794]" "f[795]" "f[796]" "f[797]" "f[798]" "f[799]" "f[800]" "f[801]" "f[802]" "f[803]";
-	setAttr ".pv" -type "double2" 0.70207549631595612 0.11746831983327866 ;
+	setAttr ".pv" -type "double2" 0.44041988253593356 0.4023906903742045 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 1019 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.21025114 0.041215759 0.20906226
@@ -7245,22 +7478,22 @@ createNode mesh -n "MainBodyShape" -p "MainBody";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "56C2C1CB-4491-F069-3D6A-FD8A189C44F1";
-	setAttr -s 6 ".lnk";
-	setAttr -s 6 ".slnk";
+	rename -uid "0AF4A4A0-4554-1271-D819-E5AA460882D5";
+	setAttr -s 14 ".lnk";
+	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "307DE96A-4315-69D5-9EFD-1AAD0E5F7DCB";
+	rename -uid "A47A85E3-4A2E-5DEF-CFF2-1780D795F1D3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "7789C8A6-4D54-18A9-B20A-A18387827EB8";
+	rename -uid "45A6E591-4EF1-99A8-36EC-56AD2D970F26";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "EAE98FEC-447A-9C9A-F76C-37ADC81BB77F";
+	rename -uid "F97BC08A-4577-FB42-EF46-D3865AEB5142";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "137E7B2E-4135-8203-B462-ADAA76C48D0C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DABE497F-465B-F080-3E78-A2B453BDED07";
+	rename -uid "8DC55B0F-4AFE-6CFC-1A0F-EEA89D9C07A1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "A871CFFA-438D-0491-D004-26B8D6E9483E";
 	setAttr ".g" yes;
@@ -7268,7 +7501,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "9E102F63-4FC5-725A-664F-5AA6ABF8DCD0";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.4.2.1";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Snapshots Folder=C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/images/snapshots/Comet;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Snapshots Folder=C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/images/snapshots/Comet;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "5CC018EC-47D5-0D32-4EC0-3B871CA20A53";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -7287,17 +7520,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -7324,8 +7557,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -7370,9 +7603,7 @@ createNode lambert -n "green";
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "457EA281-4BC8-17BC-4BDA-39B0A5548396";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
 createNode materialInfo -n "materialInfo1";
 	rename -uid "7A793F9A-4781-5EFA-6097-B99E61574560";
 createNode lambert -n "Black";
@@ -7381,9 +7612,7 @@ createNode lambert -n "Black";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "9C4974BD-4B89-AAFC-23F3-DBB79E9204E1";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
 createNode materialInfo -n "materialInfo2";
 	rename -uid "CD02985F-476E-9FBB-D110-F084CF959BA8";
 createNode groupId -n "groupId47";
@@ -7403,9 +7632,7 @@ createNode lambert -n "white";
 createNode shadingEngine -n "lambert4SG";
 	rename -uid "6F751BBA-4CA7-3EF6-CF6F-BCB41D77BCF5";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo3";
 	rename -uid "77C322E7-4F59-0A03-61C0-1F8CB7F9F988";
 createNode groupId -n "groupId51";
@@ -7429,18 +7656,556 @@ createNode shadingEngine -n "lambert5SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "490FB75F-46B0-A920-703D-FFB898DF1E28";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "180B4726-4B90-112E-043F-EEB85447E619";
+createNode file -n "file1";
+	rename -uid "6D5DEFFC-4519-EAEF-0C05-588DE936D989";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_BananaYellow_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file2";
+	rename -uid "C9C3B5DE-4207-2F0F-2A1E-E8AE361DCE44";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_BananaYellow_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file3";
+	rename -uid "2933F9A9-48D9-327A-7BD6-9B9DB2ED3BA1";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_BananaYellow_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file4";
+	rename -uid "03FCA8CD-46D0-B39E-5A02-B0B194CE1DE1";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_BananaYellow_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file5";
+	rename -uid "7AC4C58E-4668-FA00-B491-98955C7817D9";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_BananaYellow_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide1";
+	rename -uid "273EA7AF-43E0-5741-2E09-849B52957AEB";
+createNode aiStandardSurface -n "BananaYellow";
+	rename -uid "FA80CD0A-44FA-8DC8-F0D9-30830B26B6CE";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set1";
+	rename -uid "EA7D60FF-4EFC-9C5E-2621-6E862FB75FB7";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo5";
+	rename -uid "E0E3DBFD-4934-D8A1-846D-D59D91AEDCF0";
+createNode displacementShader -n "displacementShader1";
+	rename -uid "E94CD5A5-437D-4EFC-A485-18AE53827A87";
+createNode bump2d -n "bump2d1";
+	rename -uid "E9C79121-44B9-1176-418F-858835F5C2C4";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode place2dTexture -n "place2dTexture2";
+	rename -uid "9A5B8EE3-4DEF-CAB0-F656-59AB3096212B";
+createNode file -n "file6";
+	rename -uid "38407CDB-4EF3-7279-210D-E4BBE2FE1925";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_EyeWhite_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file7";
+	rename -uid "91563554-4D59-318A-F5E3-C394D2D52B04";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_EyeWhite_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file8";
+	rename -uid "EEF9F209-4214-E1C3-C333-C88911F93A04";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_EyeWhite_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file9";
+	rename -uid "F2D4EBBA-4CE0-95BA-A69F-E6B87B43D799";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_EyeWhite_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file10";
+	rename -uid "05C1DBBA-4FA3-AF6A-894E-0D81EED9F253";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_EyeWhite_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide2";
+	rename -uid "FD3B411A-4B1F-298E-2BD1-BFB485F73BD3";
+createNode aiStandardSurface -n "TierdEye";
+	rename -uid "E3016387-4D76-9380-8664-05BBF490561E";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set2";
+	rename -uid "7E4BD46E-4353-D023-CB35-FEA854335CF1";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+	rename -uid "E9F63922-450A-6E59-BE58-E1816F7E8B2B";
+createNode displacementShader -n "displacementShader2";
+	rename -uid "A0823E43-4F54-FDF3-DA6E-898D1B573445";
+createNode bump2d -n "bump2d2";
+	rename -uid "F2731341-4B6C-E145-7CE1-9284CCF825C8";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode place2dTexture -n "place2dTexture3";
+	rename -uid "6936FC16-4E49-6160-6915-978F3B2BB00A";
+createNode file -n "file11";
+	rename -uid "854114F8-4EA6-998C-8C3E-50ABC182F62A";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_HairBlack_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file12";
+	rename -uid "2EF4A905-49CD-C67D-B4B1-DC80A5D6E30F";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_HairBlack_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file13";
+	rename -uid "6965DF81-490B-3837-036B-A1B7DCCD5F00";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_HairBlack_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file14";
+	rename -uid "0977746F-4481-71DF-71A8-C98D9E5927FE";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_HairBlack_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file15";
+	rename -uid "CFCCD9A2-4550-2991-B9AD-86B12A9C6D89";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BananaBody/CometBaseBody_HairBlack_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide3";
+	rename -uid "0BE2CD69-440C-FB50-AA41-E0A491094468";
+createNode aiStandardSurface -n "BlackHair";
+	rename -uid "71551DD1-4350-5974-3E7E-82A99AE9BA22";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set3";
+	rename -uid "43C9062A-4421-9740-2279-CAA4FEB1D62E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
+	rename -uid "94377918-465B-FA87-E9F1-5D9D6E4D4AC6";
+createNode displacementShader -n "displacementShader3";
+	rename -uid "D4078499-462C-8793-FB8B-B3B9EC20847F";
+createNode bump2d -n "bump2d3";
+	rename -uid "8345A87C-493E-F1EE-7908-74A38CF62BFD";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode aiPhysicalSky -n "aiPhysicalSky1";
+	rename -uid "4669BC63-4037-237F-994F-5AAC85DA115A";
+createNode place2dTexture -n "place2dTexture4";
+	rename -uid "68C73868-4FFF-771F-CFC9-909933294B1B";
+createNode file -n "file16";
+	rename -uid "DFB3B314-429F-1468-2872-BBBFDC4695E5";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_Black_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file17";
+	rename -uid "18A6DDD2-4C9B-787E-0459-9DB3CEB439DF";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_Black_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file18";
+	rename -uid "43C3C41B-48E7-1C30-CEBE-D0AFEB29CFE5";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_Black_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file19";
+	rename -uid "4D7BC2B9-47E7-C07A-CB30-ADA85713CFC4";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_Black_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file20";
+	rename -uid "783D89DE-421E-4045-F9F1-FEA12A09CB05";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_Black_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide4";
+	rename -uid "9952FCC4-46CD-7AB9-FF33-8E9DA8B6B002";
+createNode aiStandardSurface -n "BlackShirtTrim";
+	rename -uid "7E8152C3-4FF5-FE2A-F5F5-259D4DCF1A08";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set4";
+	rename -uid "223790B0-408B-B7E7-FA70-29AF066A9DF8";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo8";
+	rename -uid "AD60E2A3-4D4F-ABA6-DFA3-CAA91A979A5C";
+createNode displacementShader -n "displacementShader4";
+	rename -uid "35AA204C-4ADC-D94C-4B00-11957DE8C5BD";
+createNode bump2d -n "bump2d4";
+	rename -uid "06BEA9FF-4E19-5740-26DB-0888C226AFBF";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode place2dTexture -n "place2dTexture5";
+	rename -uid "C13F52A9-49CD-A033-04A7-2091E0BFD68D";
+createNode file -n "file21";
+	rename -uid "EA217132-4110-8ED9-4475-0EBCC9642FC0";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_white_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file22";
+	rename -uid "F99D8829-4EDA-BF3F-B75F-2B82BB036832";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_white_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file23";
+	rename -uid "5FD4B7FE-4B61-5F09-84A9-C9AC50F58287";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_white_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file24";
+	rename -uid "CF41F6BB-48D0-4F65-104A-EBAA85673BD6";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_white_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file25";
+	rename -uid "05B911EB-4CD4-F11C-0AD4-AF837D4B215D";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/EarthShirt/CometShirt_white_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide5";
+	rename -uid "4101EECA-45F9-B03F-56D3-C691D69FC899";
+createNode aiStandardSurface -n "WhiteEarthShirt";
+	rename -uid "F2541840-4028-5906-76CF-59B48F3C9C6D";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set5";
+	rename -uid "C5AE944F-4AF9-D975-D988-F08B44F7E403";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo9";
+	rename -uid "43683160-4A6E-C34D-521D-339AD9244084";
+createNode displacementShader -n "displacementShader5";
+	rename -uid "EEB88A2B-473A-7F90-6EE2-93A16B82ECB3";
+createNode bump2d -n "bump2d5";
+	rename -uid "F7F2EDCD-4F60-CB36-52C7-EF99BB7519B1";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode place2dTexture -n "place2dTexture6";
+	rename -uid "2F9C91FD-421D-F79A-DD86-3BABEAF1DDC2";
+createNode file -n "file26";
+	rename -uid "12F4381C-4B14-A27A-0FE5-EC93CE3D5D2A";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file27";
+	rename -uid "660F09C0-4FD6-1ACA-6497-9AAC46D2C723";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file28";
+	rename -uid "9D7E4BDB-4BAF-ABA3-EEC0-D4BDACEC5AC1";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file29";
+	rename -uid "EB87F617-4D8C-0948-C7AB-63ACF6380FAE";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file30";
+	rename -uid "53C08AB0-4433-EA69-F075-6CACC7D48C8C";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide6";
+	rename -uid "30A48828-46A9-25F3-2A16-02A69971783F";
+createNode aiStandardSurface -n "BlueJeanShorts";
+	rename -uid "6A06A250-4AFE-E1B6-07B2-73971263ECB2";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set6";
+	rename -uid "0102B8A8-4C07-4829-F663-30A42EA8D07A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo10";
+	rename -uid "FC7F19DC-4EA1-3120-319C-CFA7921751E4";
+createNode displacementShader -n "displacementShader6";
+	rename -uid "ECDA6F0B-40DC-DBF2-F2C1-BC962B58633E";
+createNode bump2d -n "bump2d6";
+	rename -uid "07D45BDD-4E3C-C9F0-D9AF-EF872D0D77D9";
+	setAttr ".bi" 1;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode place2dTexture -n "place2dTexture7";
+	rename -uid "5E7ED53E-499E-7132-A81F-BEBEA2536073";
+createNode file -n "file31";
+	rename -uid "1F0D4FC3-41A5-C203-64EE-77851105B5BE";
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file32";
+	rename -uid "FD8DCBEF-4B77-00E9-C909-99B098999050";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file33";
+	rename -uid "11650E86-49AB-99D4-273A-7CB3F37F4CF4";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file34";
+	rename -uid "A10F9E79-4094-9D04-7242-75AF1163D406";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file35";
+	rename -uid "8E083FF1-4BD0-6427-5076-D1905283E266";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/kylee/Documents/SubstanceExports/Textures/Comet/BlueJeanShorts/CometPants_blue_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide7";
+	rename -uid "DAD6D6B9-43FF-AB7D-23EE-16AAA0FF6B3F";
+createNode aiStandardSurface -n "Jean";
+	rename -uid "10FCDA90-4C8E-B463-3C16-DF9E9A424E32";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set7";
+	rename -uid "D2825095-4DC4-6834-5075-48AA33013477";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo11";
+	rename -uid "0465088E-40DD-C2E4-7517-5385589CCAB5";
+createNode displacementShader -n "displacementShader7";
+	rename -uid "AA5953A4-4120-5DE2-5B69-2EB693C3EDA5";
+createNode bump2d -n "bump2d7";
+	rename -uid "56ABB76F-422A-5749-1F4F-38A40D9ADDEA";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode aiPhysicalSky -n "aiPhysicalSky2";
+	rename -uid "A9928AB0-40FD-DB50-D7E3-1291E3DFD0FA";
+createNode aiPhysicalSky -n "aiPhysicalSky3";
+	rename -uid "F9F37A00-4B38-F1C0-5D19-C4AD98135CDD";
+createNode aiPhysicalSky -n "aiPhysicalSky4";
+	rename -uid "03B0795B-4807-5FB7-0D06-CEBD02158F89";
+createNode aiPhysicalSky -n "aiPhysicalSky5";
+	rename -uid "56D489E2-499D-71C8-ADC1-E8B0955AD357";
+createNode lambert -n "DarkGreen";
+	rename -uid "9DDCB4F8-4854-F28A-DEFC-7F882C340F11";
+	setAttr ".c" -type "float3" 0.171784 0.21799999 0.17533877 ;
+createNode shadingEngine -n "lambert6SG";
+	rename -uid "EEEE8417-4A5F-BF8A-2875-40890F099856";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo12";
+	rename -uid "334DC662-41F1-57A5-EDC4-79BD930E8400";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "77D76681-448A-DF5E-2EF7-BF807CE3271C";
+	rename -uid "7B726829-4BB6-938D-9A72-D696F30B4AE8";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -735.71425647962792 ;
-	setAttr ".tgi[0].vh" -type "double2" 409.52379325079607 44.047617297323995 ;
-	setAttr -s 2 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[0].y" -205.71427917480469;
+	setAttr ".tgi[0].vl" -type "double2" -6089.3928485988317 -10946.164364291541 ;
+	setAttr ".tgi[0].vh" -type "double2" 6553.687881503276 10789.315631028354 ;
+	setAttr -s 67 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -2411.428466796875;
+	setAttr ".tgi[0].ni[0].y" 54.285713195800781;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[1].y" -205.71427917480469;
+	setAttr ".tgi[0].ni[1].x" -2734.28564453125;
+	setAttr ".tgi[0].ni[1].y" -30;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" -1715.7142333984375;
+	setAttr ".tgi[0].ni[2].y" 224.28572082519531;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 305.71429443359375;
+	setAttr ".tgi[0].ni[3].y" 290;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -2064.28564453125;
+	setAttr ".tgi[0].ni[4].y" 288.57144165039062;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -181.42857360839844;
+	setAttr ".tgi[0].ni[5].y" 1554.2857666015625;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 1144.2857666015625;
+	setAttr ".tgi[0].ni[6].y" 1708.5714111328125;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -1715.7142333984375;
+	setAttr ".tgi[0].ni[7].y" -588.5714111328125;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 3051.428466796875;
+	setAttr ".tgi[0].ni[8].y" 92.857139587402344;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 1145.7142333984375;
+	setAttr ".tgi[0].ni[9].y" -1741.4285888671875;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" 444.28570556640625;
+	setAttr ".tgi[0].ni[10].y" -3180;
+	setAttr ".tgi[0].ni[10].nvs" 1922;
+	setAttr ".tgi[0].ni[11].x" 654.28570556640625;
+	setAttr ".tgi[0].ni[11].y" 225.71427917480469;
+	setAttr ".tgi[0].ni[11].nvs" 1923;
+	setAttr ".tgi[0].ni[12].x" 304.28570556640625;
+	setAttr ".tgi[0].ni[12].y" 114.28571319580078;
+	setAttr ".tgi[0].ni[12].nvs" 2387;
+	setAttr ".tgi[0].ni[13].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[13].y" 1560;
+	setAttr ".tgi[0].ni[13].nvs" 1923;
+	setAttr ".tgi[0].ni[14].x" 2355.71435546875;
+	setAttr ".tgi[0].ni[14].y" -231.42857360839844;
+	setAttr ".tgi[0].ni[14].nvs" 1923;
+	setAttr ".tgi[0].ni[15].x" -2411.428466796875;
+	setAttr ".tgi[0].ni[15].y" -274.28570556640625;
+	setAttr ".tgi[0].ni[15].nvs" 1923;
+	setAttr ".tgi[0].ni[16].x" 795.71429443359375;
+	setAttr ".tgi[0].ni[16].y" 1774.2857666015625;
+	setAttr ".tgi[0].ni[16].nvs" 1923;
+	setAttr ".tgi[0].ni[17].x" 652.85711669921875;
+	setAttr ".tgi[0].ni[17].y" 225.71427917480469;
+	setAttr ".tgi[0].ni[17].nvs" 1923;
+	setAttr ".tgi[0].ni[18].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[18].y" -2218.571533203125;
+	setAttr ".tgi[0].ni[18].nvs" 1923;
+	setAttr ".tgi[0].ni[19].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[19].y" -120;
+	setAttr ".tgi[0].ni[19].nvs" 1923;
+	setAttr ".tgi[0].ni[20].x" -184.28572082519531;
+	setAttr ".tgi[0].ni[20].y" -1895.7142333984375;
+	setAttr ".tgi[0].ni[20].nvs" 1923;
+	setAttr ".tgi[0].ni[21].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[21].y" 1231.4285888671875;
+	setAttr ".tgi[0].ni[21].nvs" 1923;
+	setAttr ".tgi[0].ni[22].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[22].y" 238.57142639160156;
+	setAttr ".tgi[0].ni[22].nvs" 1923;
+	setAttr ".tgi[0].ni[23].x" 597.14288330078125;
+	setAttr ".tgi[0].ni[23].y" 3048.571533203125;
+	setAttr ".tgi[0].ni[23].nvs" 1923;
+	setAttr ".tgi[0].ni[24].x" 2355.71435546875;
+	setAttr ".tgi[0].ni[24].y" -384.28570556640625;
+	setAttr ".tgi[0].ni[24].nvs" 1923;
+	setAttr ".tgi[0].ni[25].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[25].y" -2065.71435546875;
+	setAttr ".tgi[0].ni[25].nvs" 1923;
+	setAttr ".tgi[0].ni[26].x" 1145.7142333984375;
+	setAttr ".tgi[0].ni[26].y" -1565.7142333984375;
+	setAttr ".tgi[0].ni[26].nvs" 1923;
+	setAttr ".tgi[0].ni[27].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[27].y" -120;
+	setAttr ".tgi[0].ni[27].nvs" 1923;
+	setAttr ".tgi[0].ni[28].x" 2702.857177734375;
+	setAttr ".tgi[0].ni[28].y" -17.142856597900391;
+	setAttr ".tgi[0].ni[28].nvs" 2387;
+	setAttr ".tgi[0].ni[29].x" -492.85714721679688;
+	setAttr ".tgi[0].ni[29].y" -28.571428298950195;
+	setAttr ".tgi[0].ni[29].nvs" 1923;
+	setAttr ".tgi[0].ni[30].x" 795.71429443359375;
+	setAttr ".tgi[0].ni[30].y" 1598.5714111328125;
+	setAttr ".tgi[0].ni[30].nvs" 2387;
+	setAttr ".tgi[0].ni[31].x" 654.28570556640625;
+	setAttr ".tgi[0].ni[31].y" -587.14288330078125;
+	setAttr ".tgi[0].ni[31].nvs" 1923;
+	setAttr ".tgi[0].ni[32].x" 314.28570556640625;
+	setAttr ".tgi[0].ni[32].y" -934.28570556640625;
+	setAttr ".tgi[0].ni[32].nvs" 1923;
+	setAttr ".tgi[0].ni[33].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[33].y" 1744.2857666015625;
+	setAttr ".tgi[0].ni[33].nvs" 1923;
+	setAttr ".tgi[0].ni[34].x" 2032.857177734375;
+	setAttr ".tgi[0].ni[34].y" -118.57142639160156;
+	setAttr ".tgi[0].ni[34].nvs" 1923;
+	setAttr ".tgi[0].ni[35].x" -2064.28564453125;
+	setAttr ".tgi[0].ni[35].y" 112.85713958740234;
+	setAttr ".tgi[0].ni[35].nvs" 2387;
+	setAttr ".tgi[0].ni[36].x" 304.28570556640625;
+	setAttr ".tgi[0].ni[36].y" 290;
+	setAttr ".tgi[0].ni[36].nvs" 1923;
+	setAttr ".tgi[0].ni[37].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[37].y" -1705.7142333984375;
+	setAttr ".tgi[0].ni[37].nvs" 1923;
+	setAttr ".tgi[0].ni[38].x" 2355.71435546875;
+	setAttr ".tgi[0].ni[38].y" 128.57142639160156;
+	setAttr ".tgi[0].ni[38].nvs" 1923;
+	setAttr ".tgi[0].ni[39].x" -800;
+	setAttr ".tgi[0].ni[39].y" -98.571426391601562;
+	setAttr ".tgi[0].ni[39].nvs" 1923;
+	setAttr ".tgi[0].ni[40].x" 3051.428466796875;
+	setAttr ".tgi[0].ni[40].y" 268.57144165039062;
+	setAttr ".tgi[0].ni[40].nvs" 1923;
+	setAttr ".tgi[0].ni[41].x" 242.85714721679688;
+	setAttr ".tgi[0].ni[41].y" -205.71427917480469;
+	setAttr ".tgi[0].ni[41].nvs" 1923;
+	setAttr ".tgi[0].ni[42].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[42].y" -272.85714721679688;
+	setAttr ".tgi[0].ni[42].nvs" 1923;
+	setAttr ".tgi[0].ni[43].x" -2411.428466796875;
+	setAttr ".tgi[0].ni[43].y" 237.14285278320312;
+	setAttr ".tgi[0].ni[43].nvs" 1923;
+	setAttr ".tgi[0].ni[44].x" 1144.2857666015625;
+	setAttr ".tgi[0].ni[44].y" 1884.2857666015625;
+	setAttr ".tgi[0].ni[44].nvs" 1923;
+	setAttr ".tgi[0].ni[45].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[45].y" 1384.2857666015625;
+	setAttr ".tgi[0].ni[45].nvs" 1923;
+	setAttr ".tgi[0].ni[46].x" -64.285713195800781;
+	setAttr ".tgi[0].ni[46].y" -205.71427917480469;
+	setAttr ".tgi[0].ni[46].nvs" 1923;
+	setAttr ".tgi[0].ni[47].x" 1725.7142333984375;
+	setAttr ".tgi[0].ni[47].y" -61.428569793701172;
+	setAttr ".tgi[0].ni[47].nvs" 1923;
+	setAttr ".tgi[0].ni[48].x" -2052.857177734375;
+	setAttr ".tgi[0].ni[48].y" 2204.28564453125;
+	setAttr ".tgi[0].ni[48].nvs" 1923;
+	setAttr ".tgi[0].ni[49].x" 122.85713958740234;
+	setAttr ".tgi[0].ni[49].y" -1952.857177734375;
+	setAttr ".tgi[0].ni[49].nvs" 1923;
+	setAttr ".tgi[0].ni[50].x" 2702.857177734375;
+	setAttr ".tgi[0].ni[50].y" 158.57142639160156;
+	setAttr ".tgi[0].ni[50].nvs" 1923;
+	setAttr ".tgi[0].ni[51].x" 305.71429443359375;
+	setAttr ".tgi[0].ni[51].y" 114.28571319580078;
+	setAttr ".tgi[0].ni[51].nvs" 2387;
+	setAttr ".tgi[0].ni[52].x" 448.57144165039062;
+	setAttr ".tgi[0].ni[52].y" -1890;
+	setAttr ".tgi[0].ni[52].nvs" 1923;
+	setAttr ".tgi[0].ni[53].x" -800;
+	setAttr ".tgi[0].ni[53].y" -98.571426391601562;
+	setAttr ".tgi[0].ni[53].nvs" 1923;
+	setAttr ".tgi[0].ni[54].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[54].y" -272.85714721679688;
+	setAttr ".tgi[0].ni[54].nvs" 1923;
+	setAttr ".tgi[0].ni[55].x" 797.14288330078125;
+	setAttr ".tgi[0].ni[55].y" -1675.7142333984375;
+	setAttr ".tgi[0].ni[55].nvs" 1923;
+	setAttr ".tgi[0].ni[56].x" 652.85711669921875;
+	setAttr ".tgi[0].ni[56].y" -587.14288330078125;
+	setAttr ".tgi[0].ni[56].nvs" 1923;
+	setAttr ".tgi[0].ni[57].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[57].y" 238.57142639160156;
+	setAttr ".tgi[0].ni[57].nvs" 1923;
+	setAttr ".tgi[0].ni[58].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[58].y" 55.714286804199219;
+	setAttr ".tgi[0].ni[58].nvs" 1923;
+	setAttr ".tgi[0].ni[59].x" -3041.428466796875;
+	setAttr ".tgi[0].ni[59].y" -100;
+	setAttr ".tgi[0].ni[59].nvs" 1923;
+	setAttr ".tgi[0].ni[60].x" -105.71428680419922;
+	setAttr ".tgi[0].ni[60].y" 55.714286804199219;
+	setAttr ".tgi[0].ni[60].nvs" 1923;
+	setAttr ".tgi[0].ni[61].x" -2411.428466796875;
+	setAttr ".tgi[0].ni[61].y" -121.42857360839844;
+	setAttr ".tgi[0].ni[61].nvs" 1923;
+	setAttr ".tgi[0].ni[62].x" 290;
+	setAttr ".tgi[0].ni[62].y" 3048.571533203125;
+	setAttr ".tgi[0].ni[62].nvs" 1923;
+	setAttr ".tgi[0].ni[63].x" 797.14288330078125;
+	setAttr ".tgi[0].ni[63].y" -1851.4285888671875;
+	setAttr ".tgi[0].ni[63].nvs" 2387;
+	setAttr ".tgi[0].ni[64].x" 125.71428680419922;
+	setAttr ".tgi[0].ni[64].y" 1497.142822265625;
+	setAttr ".tgi[0].ni[64].nvs" 1923;
+	setAttr ".tgi[0].ni[65].x" -492.85714721679688;
+	setAttr ".tgi[0].ni[65].y" -28.571428298950195;
+	setAttr ".tgi[0].ni[65].nvs" 1923;
+	setAttr ".tgi[0].ni[66].x" 2355.71435546875;
+	setAttr ".tgi[0].ni[66].y" -55.714286804199219;
+	setAttr ".tgi[0].ni[66].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 45;
 	setAttr ".unw" 45;
@@ -7452,13 +8217,19 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 6 ".st";
+	setAttr -s 14 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 9 ".s";
+	setAttr -s 24 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 14 ".u";
 select -ne :defaultRenderingList1;
+select -ne :lightList1;
+	setAttr -s 2 ".l";
+select -ne :defaultTextureList1;
+	setAttr -s 35 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -7468,13 +8239,14 @@ select -ne :initialShadingGroup;
 	setAttr -s 3 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+select -ne :defaultLightSet;
+	setAttr -s 2 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -7487,8 +8259,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId28.id" "Body1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Body1Shape.iog.og[0].gco";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape2.cme";
@@ -7508,21 +8278,22 @@ connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape4.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape4.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape4.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape4.ws";
+connectAttr "aiPhysicalSky5.out" "aiSkyDomeLightShape1.sc";
 connectAttr "groupId46.id" "Eyes1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Eyes1Shape.iog.og[0].gco";
 connectAttr "groupId50.id" "Eyes1Shape.iog.og[1].gid";
-connectAttr "lambert2SG.mwc" "Eyes1Shape.iog.og[1].gco";
+connectAttr "set1.mwc" "Eyes1Shape.iog.og[1].gco";
 connectAttr "groupId51.id" "Eyes1Shape.iog.og[2].gid";
-connectAttr "lambert4SG.mwc" "Eyes1Shape.iog.og[2].gco";
+connectAttr "set2.mwc" "Eyes1Shape.iog.og[2].gco";
 connectAttr "groupId52.id" "ShirtShape.iog.og[1].gid";
-connectAttr "lambert3SG.mwc" "ShirtShape.iog.og[1].gco";
+connectAttr "set4.mwc" "ShirtShape.iog.og[1].gco";
 connectAttr "groupId54.id" "ShirtShape.iog.og[2].gid";
-connectAttr "lambert4SG.mwc" "ShirtShape.iog.og[2].gco";
+connectAttr "set5.mwc" "ShirtShape.iog.og[2].gco";
 connectAttr "groupId53.id" "ShirtShape.ciog.cog[0].cgid";
 connectAttr "groupId47.id" "MainBodyShape.iog.og[2].gid";
-connectAttr "lambert2SG.mwc" "MainBodyShape.iog.og[2].gco";
+connectAttr "set1.mwc" "MainBodyShape.iog.og[2].gco";
 connectAttr "groupId49.id" "MainBodyShape.iog.og[3].gid";
-connectAttr "lambert3SG.mwc" "MainBodyShape.iog.og[3].gco";
+connectAttr "set3.mwc" "MainBodyShape.iog.og[3].gco";
 connectAttr "groupId48.id" "MainBodyShape.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -7530,12 +8301,28 @@ relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.messa
 relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set3.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set4.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set5.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set6.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set7.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set3.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set4.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set5.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set6.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set7.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -7546,47 +8333,1111 @@ connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "layer1.id";
 connectAttr "green.oc" "lambert2SG.ss";
-connectAttr "MainBodyShape.iog.og[2]" "lambert2SG.dsm" -na;
 connectAttr "MainBodyShape.ciog.cog[0]" "lambert2SG.dsm" -na;
-connectAttr "Eyes1Shape.iog.og[1]" "lambert2SG.dsm" -na;
-connectAttr "groupId47.msg" "lambert2SG.gn" -na;
 connectAttr "groupId48.msg" "lambert2SG.gn" -na;
-connectAttr "groupId50.msg" "lambert2SG.gn" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "green.msg" "materialInfo1.m";
 connectAttr "Black.oc" "lambert3SG.ss";
-connectAttr "groupId49.msg" "lambert3SG.gn" -na;
-connectAttr "groupId52.msg" "lambert3SG.gn" -na;
 connectAttr "groupId53.msg" "lambert3SG.gn" -na;
-connectAttr "MainBodyShape.iog.og[3]" "lambert3SG.dsm" -na;
-connectAttr "ShirtShape.iog.og[1]" "lambert3SG.dsm" -na;
 connectAttr "ShirtShape.ciog.cog[0]" "lambert3SG.dsm" -na;
 connectAttr "lambert3SG.msg" "materialInfo2.sg";
 connectAttr "Black.msg" "materialInfo2.m";
 connectAttr "white.oc" "lambert4SG.ss";
-connectAttr "groupId51.msg" "lambert4SG.gn" -na;
-connectAttr "groupId54.msg" "lambert4SG.gn" -na;
-connectAttr "Eyes1Shape.iog.og[2]" "lambert4SG.dsm" -na;
-connectAttr "ShirtShape.iog.og[2]" "lambert4SG.dsm" -na;
 connectAttr "lambert4SG.msg" "materialInfo3.sg";
 connectAttr "white.msg" "materialInfo3.m";
 connectAttr "blue.oc" "lambert5SG.ss";
-connectAttr "PantsShape.iog" "lambert5SG.dsm" -na;
 connectAttr "lambert5SG.msg" "materialInfo4.sg";
 connectAttr "blue.msg" "materialInfo4.m";
-connectAttr "blue.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
+connectAttr "place2dTexture1.o" "file2.uv";
+connectAttr "place2dTexture1.ofs" "file2.fs";
+connectAttr "place2dTexture1.c" "file2.c";
+connectAttr "place2dTexture1.tf" "file2.tf";
+connectAttr "place2dTexture1.rf" "file2.rf";
+connectAttr "place2dTexture1.mu" "file2.mu";
+connectAttr "place2dTexture1.mv" "file2.mv";
+connectAttr "place2dTexture1.s" "file2.s";
+connectAttr "place2dTexture1.wu" "file2.wu";
+connectAttr "place2dTexture1.wv" "file2.wv";
+connectAttr "place2dTexture1.re" "file2.re";
+connectAttr "place2dTexture1.of" "file2.of";
+connectAttr "place2dTexture1.r" "file2.ro";
+connectAttr "place2dTexture1.n" "file2.n";
+connectAttr "place2dTexture1.vt1" "file2.vt1";
+connectAttr "place2dTexture1.vt2" "file2.vt2";
+connectAttr "place2dTexture1.vt3" "file2.vt3";
+connectAttr "place2dTexture1.vc1" "file2.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file3.ws";
+connectAttr "place2dTexture1.o" "file3.uv";
+connectAttr "place2dTexture1.ofs" "file3.fs";
+connectAttr "place2dTexture1.c" "file3.c";
+connectAttr "place2dTexture1.tf" "file3.tf";
+connectAttr "place2dTexture1.rf" "file3.rf";
+connectAttr "place2dTexture1.mu" "file3.mu";
+connectAttr "place2dTexture1.mv" "file3.mv";
+connectAttr "place2dTexture1.s" "file3.s";
+connectAttr "place2dTexture1.wu" "file3.wu";
+connectAttr "place2dTexture1.wv" "file3.wv";
+connectAttr "place2dTexture1.re" "file3.re";
+connectAttr "place2dTexture1.of" "file3.of";
+connectAttr "place2dTexture1.r" "file3.ro";
+connectAttr "place2dTexture1.n" "file3.n";
+connectAttr "place2dTexture1.vt1" "file3.vt1";
+connectAttr "place2dTexture1.vt2" "file3.vt2";
+connectAttr "place2dTexture1.vt3" "file3.vt3";
+connectAttr "place2dTexture1.vc1" "file3.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
+connectAttr "place2dTexture1.o" "file4.uv";
+connectAttr "place2dTexture1.ofs" "file4.fs";
+connectAttr "place2dTexture1.c" "file4.c";
+connectAttr "place2dTexture1.tf" "file4.tf";
+connectAttr "place2dTexture1.rf" "file4.rf";
+connectAttr "place2dTexture1.mu" "file4.mu";
+connectAttr "place2dTexture1.mv" "file4.mv";
+connectAttr "place2dTexture1.s" "file4.s";
+connectAttr "place2dTexture1.wu" "file4.wu";
+connectAttr "place2dTexture1.wv" "file4.wv";
+connectAttr "place2dTexture1.re" "file4.re";
+connectAttr "place2dTexture1.of" "file4.of";
+connectAttr "place2dTexture1.r" "file4.ro";
+connectAttr "place2dTexture1.n" "file4.n";
+connectAttr "place2dTexture1.vt1" "file4.vt1";
+connectAttr "place2dTexture1.vt2" "file4.vt2";
+connectAttr "place2dTexture1.vt3" "file4.vt3";
+connectAttr "place2dTexture1.vc1" "file4.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file5.ws";
+connectAttr "place2dTexture1.o" "file5.uv";
+connectAttr "place2dTexture1.ofs" "file5.fs";
+connectAttr "place2dTexture1.c" "file5.c";
+connectAttr "place2dTexture1.tf" "file5.tf";
+connectAttr "place2dTexture1.rf" "file5.rf";
+connectAttr "place2dTexture1.mu" "file5.mu";
+connectAttr "place2dTexture1.mv" "file5.mv";
+connectAttr "place2dTexture1.s" "file5.s";
+connectAttr "place2dTexture1.wu" "file5.wu";
+connectAttr "place2dTexture1.wv" "file5.wv";
+connectAttr "place2dTexture1.re" "file5.re";
+connectAttr "place2dTexture1.of" "file5.of";
+connectAttr "place2dTexture1.r" "file5.ro";
+connectAttr "place2dTexture1.n" "file5.n";
+connectAttr "place2dTexture1.vt1" "file5.vt1";
+connectAttr "place2dTexture1.vt2" "file5.vt2";
+connectAttr "place2dTexture1.vt3" "file5.vt3";
+connectAttr "place2dTexture1.vc1" "file5.vc1";
+connectAttr "file1.oc" "multiplyDivide1.i1";
+connectAttr "multiplyDivide1.o" "BananaYellow.base_color";
+connectAttr "file3.oa" "BananaYellow.metalness";
+connectAttr "bump2d1.o" "BananaYellow.n";
+connectAttr "file5.oa" "BananaYellow.specular_roughness";
+connectAttr "BananaYellow.out" "set1.ss";
+connectAttr "displacementShader1.d" "set1.ds";
+connectAttr "MainBodyShape.iog.og[2]" "set1.dsm" -na;
+connectAttr "Eyes1Shape.iog.og[1]" "set1.dsm" -na;
+connectAttr "groupId47.msg" "set1.gn" -na;
+connectAttr "groupId50.msg" "set1.gn" -na;
+connectAttr "set1.msg" "materialInfo5.sg";
+connectAttr "BananaYellow.msg" "materialInfo5.m";
+connectAttr "file1.msg" "materialInfo5.t" -na;
+connectAttr "file2.oa" "displacementShader1.d";
+connectAttr "file4.oa" "bump2d1.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file6.ws";
+connectAttr "place2dTexture2.o" "file6.uv";
+connectAttr "place2dTexture2.ofs" "file6.fs";
+connectAttr "place2dTexture2.c" "file6.c";
+connectAttr "place2dTexture2.tf" "file6.tf";
+connectAttr "place2dTexture2.rf" "file6.rf";
+connectAttr "place2dTexture2.mu" "file6.mu";
+connectAttr "place2dTexture2.mv" "file6.mv";
+connectAttr "place2dTexture2.s" "file6.s";
+connectAttr "place2dTexture2.wu" "file6.wu";
+connectAttr "place2dTexture2.wv" "file6.wv";
+connectAttr "place2dTexture2.re" "file6.re";
+connectAttr "place2dTexture2.of" "file6.of";
+connectAttr "place2dTexture2.r" "file6.ro";
+connectAttr "place2dTexture2.n" "file6.n";
+connectAttr "place2dTexture2.vt1" "file6.vt1";
+connectAttr "place2dTexture2.vt2" "file6.vt2";
+connectAttr "place2dTexture2.vt3" "file6.vt3";
+connectAttr "place2dTexture2.vc1" "file6.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file7.ws";
+connectAttr "place2dTexture2.o" "file7.uv";
+connectAttr "place2dTexture2.ofs" "file7.fs";
+connectAttr "place2dTexture2.c" "file7.c";
+connectAttr "place2dTexture2.tf" "file7.tf";
+connectAttr "place2dTexture2.rf" "file7.rf";
+connectAttr "place2dTexture2.mu" "file7.mu";
+connectAttr "place2dTexture2.mv" "file7.mv";
+connectAttr "place2dTexture2.s" "file7.s";
+connectAttr "place2dTexture2.wu" "file7.wu";
+connectAttr "place2dTexture2.wv" "file7.wv";
+connectAttr "place2dTexture2.re" "file7.re";
+connectAttr "place2dTexture2.of" "file7.of";
+connectAttr "place2dTexture2.r" "file7.ro";
+connectAttr "place2dTexture2.n" "file7.n";
+connectAttr "place2dTexture2.vt1" "file7.vt1";
+connectAttr "place2dTexture2.vt2" "file7.vt2";
+connectAttr "place2dTexture2.vt3" "file7.vt3";
+connectAttr "place2dTexture2.vc1" "file7.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file8.ws";
+connectAttr "place2dTexture2.o" "file8.uv";
+connectAttr "place2dTexture2.ofs" "file8.fs";
+connectAttr "place2dTexture2.c" "file8.c";
+connectAttr "place2dTexture2.tf" "file8.tf";
+connectAttr "place2dTexture2.rf" "file8.rf";
+connectAttr "place2dTexture2.mu" "file8.mu";
+connectAttr "place2dTexture2.mv" "file8.mv";
+connectAttr "place2dTexture2.s" "file8.s";
+connectAttr "place2dTexture2.wu" "file8.wu";
+connectAttr "place2dTexture2.wv" "file8.wv";
+connectAttr "place2dTexture2.re" "file8.re";
+connectAttr "place2dTexture2.of" "file8.of";
+connectAttr "place2dTexture2.r" "file8.ro";
+connectAttr "place2dTexture2.n" "file8.n";
+connectAttr "place2dTexture2.vt1" "file8.vt1";
+connectAttr "place2dTexture2.vt2" "file8.vt2";
+connectAttr "place2dTexture2.vt3" "file8.vt3";
+connectAttr "place2dTexture2.vc1" "file8.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file9.ws";
+connectAttr "place2dTexture2.o" "file9.uv";
+connectAttr "place2dTexture2.ofs" "file9.fs";
+connectAttr "place2dTexture2.c" "file9.c";
+connectAttr "place2dTexture2.tf" "file9.tf";
+connectAttr "place2dTexture2.rf" "file9.rf";
+connectAttr "place2dTexture2.mu" "file9.mu";
+connectAttr "place2dTexture2.mv" "file9.mv";
+connectAttr "place2dTexture2.s" "file9.s";
+connectAttr "place2dTexture2.wu" "file9.wu";
+connectAttr "place2dTexture2.wv" "file9.wv";
+connectAttr "place2dTexture2.re" "file9.re";
+connectAttr "place2dTexture2.of" "file9.of";
+connectAttr "place2dTexture2.r" "file9.ro";
+connectAttr "place2dTexture2.n" "file9.n";
+connectAttr "place2dTexture2.vt1" "file9.vt1";
+connectAttr "place2dTexture2.vt2" "file9.vt2";
+connectAttr "place2dTexture2.vt3" "file9.vt3";
+connectAttr "place2dTexture2.vc1" "file9.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file10.ws";
+connectAttr "place2dTexture2.o" "file10.uv";
+connectAttr "place2dTexture2.ofs" "file10.fs";
+connectAttr "place2dTexture2.c" "file10.c";
+connectAttr "place2dTexture2.tf" "file10.tf";
+connectAttr "place2dTexture2.rf" "file10.rf";
+connectAttr "place2dTexture2.mu" "file10.mu";
+connectAttr "place2dTexture2.mv" "file10.mv";
+connectAttr "place2dTexture2.s" "file10.s";
+connectAttr "place2dTexture2.wu" "file10.wu";
+connectAttr "place2dTexture2.wv" "file10.wv";
+connectAttr "place2dTexture2.re" "file10.re";
+connectAttr "place2dTexture2.of" "file10.of";
+connectAttr "place2dTexture2.r" "file10.ro";
+connectAttr "place2dTexture2.n" "file10.n";
+connectAttr "place2dTexture2.vt1" "file10.vt1";
+connectAttr "place2dTexture2.vt2" "file10.vt2";
+connectAttr "place2dTexture2.vt3" "file10.vt3";
+connectAttr "place2dTexture2.vc1" "file10.vc1";
+connectAttr "file6.oc" "multiplyDivide2.i1";
+connectAttr "multiplyDivide2.o" "TierdEye.base_color";
+connectAttr "file8.oa" "TierdEye.metalness";
+connectAttr "bump2d2.o" "TierdEye.n";
+connectAttr "file10.oa" "TierdEye.specular_roughness";
+connectAttr "TierdEye.out" "set2.ss";
+connectAttr "displacementShader2.d" "set2.ds";
+connectAttr "Eyes1Shape.iog.og[2]" "set2.dsm" -na;
+connectAttr "groupId51.msg" "set2.gn" -na;
+connectAttr "set2.msg" "materialInfo6.sg";
+connectAttr "TierdEye.msg" "materialInfo6.m";
+connectAttr "file6.msg" "materialInfo6.t" -na;
+connectAttr "file7.oa" "displacementShader2.d";
+connectAttr "file9.oa" "bump2d2.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file11.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file11.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file11.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file11.ws";
+connectAttr "place2dTexture3.o" "file11.uv";
+connectAttr "place2dTexture3.ofs" "file11.fs";
+connectAttr "place2dTexture3.c" "file11.c";
+connectAttr "place2dTexture3.tf" "file11.tf";
+connectAttr "place2dTexture3.rf" "file11.rf";
+connectAttr "place2dTexture3.mu" "file11.mu";
+connectAttr "place2dTexture3.mv" "file11.mv";
+connectAttr "place2dTexture3.s" "file11.s";
+connectAttr "place2dTexture3.wu" "file11.wu";
+connectAttr "place2dTexture3.wv" "file11.wv";
+connectAttr "place2dTexture3.re" "file11.re";
+connectAttr "place2dTexture3.of" "file11.of";
+connectAttr "place2dTexture3.r" "file11.ro";
+connectAttr "place2dTexture3.n" "file11.n";
+connectAttr "place2dTexture3.vt1" "file11.vt1";
+connectAttr "place2dTexture3.vt2" "file11.vt2";
+connectAttr "place2dTexture3.vt3" "file11.vt3";
+connectAttr "place2dTexture3.vc1" "file11.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file12.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file12.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file12.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file12.ws";
+connectAttr "place2dTexture3.o" "file12.uv";
+connectAttr "place2dTexture3.ofs" "file12.fs";
+connectAttr "place2dTexture3.c" "file12.c";
+connectAttr "place2dTexture3.tf" "file12.tf";
+connectAttr "place2dTexture3.rf" "file12.rf";
+connectAttr "place2dTexture3.mu" "file12.mu";
+connectAttr "place2dTexture3.mv" "file12.mv";
+connectAttr "place2dTexture3.s" "file12.s";
+connectAttr "place2dTexture3.wu" "file12.wu";
+connectAttr "place2dTexture3.wv" "file12.wv";
+connectAttr "place2dTexture3.re" "file12.re";
+connectAttr "place2dTexture3.of" "file12.of";
+connectAttr "place2dTexture3.r" "file12.ro";
+connectAttr "place2dTexture3.n" "file12.n";
+connectAttr "place2dTexture3.vt1" "file12.vt1";
+connectAttr "place2dTexture3.vt2" "file12.vt2";
+connectAttr "place2dTexture3.vt3" "file12.vt3";
+connectAttr "place2dTexture3.vc1" "file12.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file13.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file13.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file13.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file13.ws";
+connectAttr "place2dTexture3.o" "file13.uv";
+connectAttr "place2dTexture3.ofs" "file13.fs";
+connectAttr "place2dTexture3.c" "file13.c";
+connectAttr "place2dTexture3.tf" "file13.tf";
+connectAttr "place2dTexture3.rf" "file13.rf";
+connectAttr "place2dTexture3.mu" "file13.mu";
+connectAttr "place2dTexture3.mv" "file13.mv";
+connectAttr "place2dTexture3.s" "file13.s";
+connectAttr "place2dTexture3.wu" "file13.wu";
+connectAttr "place2dTexture3.wv" "file13.wv";
+connectAttr "place2dTexture3.re" "file13.re";
+connectAttr "place2dTexture3.of" "file13.of";
+connectAttr "place2dTexture3.r" "file13.ro";
+connectAttr "place2dTexture3.n" "file13.n";
+connectAttr "place2dTexture3.vt1" "file13.vt1";
+connectAttr "place2dTexture3.vt2" "file13.vt2";
+connectAttr "place2dTexture3.vt3" "file13.vt3";
+connectAttr "place2dTexture3.vc1" "file13.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file14.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file14.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file14.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file14.ws";
+connectAttr "place2dTexture3.o" "file14.uv";
+connectAttr "place2dTexture3.ofs" "file14.fs";
+connectAttr "place2dTexture3.c" "file14.c";
+connectAttr "place2dTexture3.tf" "file14.tf";
+connectAttr "place2dTexture3.rf" "file14.rf";
+connectAttr "place2dTexture3.mu" "file14.mu";
+connectAttr "place2dTexture3.mv" "file14.mv";
+connectAttr "place2dTexture3.s" "file14.s";
+connectAttr "place2dTexture3.wu" "file14.wu";
+connectAttr "place2dTexture3.wv" "file14.wv";
+connectAttr "place2dTexture3.re" "file14.re";
+connectAttr "place2dTexture3.of" "file14.of";
+connectAttr "place2dTexture3.r" "file14.ro";
+connectAttr "place2dTexture3.n" "file14.n";
+connectAttr "place2dTexture3.vt1" "file14.vt1";
+connectAttr "place2dTexture3.vt2" "file14.vt2";
+connectAttr "place2dTexture3.vt3" "file14.vt3";
+connectAttr "place2dTexture3.vc1" "file14.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file15.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file15.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file15.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file15.ws";
+connectAttr "place2dTexture3.o" "file15.uv";
+connectAttr "place2dTexture3.ofs" "file15.fs";
+connectAttr "place2dTexture3.c" "file15.c";
+connectAttr "place2dTexture3.tf" "file15.tf";
+connectAttr "place2dTexture3.rf" "file15.rf";
+connectAttr "place2dTexture3.mu" "file15.mu";
+connectAttr "place2dTexture3.mv" "file15.mv";
+connectAttr "place2dTexture3.s" "file15.s";
+connectAttr "place2dTexture3.wu" "file15.wu";
+connectAttr "place2dTexture3.wv" "file15.wv";
+connectAttr "place2dTexture3.re" "file15.re";
+connectAttr "place2dTexture3.of" "file15.of";
+connectAttr "place2dTexture3.r" "file15.ro";
+connectAttr "place2dTexture3.n" "file15.n";
+connectAttr "place2dTexture3.vt1" "file15.vt1";
+connectAttr "place2dTexture3.vt2" "file15.vt2";
+connectAttr "place2dTexture3.vt3" "file15.vt3";
+connectAttr "place2dTexture3.vc1" "file15.vc1";
+connectAttr "file11.oc" "multiplyDivide3.i1";
+connectAttr "multiplyDivide3.o" "BlackHair.base_color";
+connectAttr "file13.oa" "BlackHair.metalness";
+connectAttr "bump2d3.o" "BlackHair.n";
+connectAttr "file15.oa" "BlackHair.specular_roughness";
+connectAttr "BlackHair.out" "set3.ss";
+connectAttr "displacementShader3.d" "set3.ds";
+connectAttr "MainBodyShape.iog.og[3]" "set3.dsm" -na;
+connectAttr "groupId49.msg" "set3.gn" -na;
+connectAttr "set3.msg" "materialInfo7.sg";
+connectAttr "BlackHair.msg" "materialInfo7.m";
+connectAttr "file11.msg" "materialInfo7.t" -na;
+connectAttr "file12.oa" "displacementShader3.d";
+connectAttr "file14.oa" "bump2d3.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file16.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file16.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file16.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file16.ws";
+connectAttr "place2dTexture4.o" "file16.uv";
+connectAttr "place2dTexture4.ofs" "file16.fs";
+connectAttr "place2dTexture4.c" "file16.c";
+connectAttr "place2dTexture4.tf" "file16.tf";
+connectAttr "place2dTexture4.rf" "file16.rf";
+connectAttr "place2dTexture4.mu" "file16.mu";
+connectAttr "place2dTexture4.mv" "file16.mv";
+connectAttr "place2dTexture4.s" "file16.s";
+connectAttr "place2dTexture4.wu" "file16.wu";
+connectAttr "place2dTexture4.wv" "file16.wv";
+connectAttr "place2dTexture4.re" "file16.re";
+connectAttr "place2dTexture4.of" "file16.of";
+connectAttr "place2dTexture4.r" "file16.ro";
+connectAttr "place2dTexture4.n" "file16.n";
+connectAttr "place2dTexture4.vt1" "file16.vt1";
+connectAttr "place2dTexture4.vt2" "file16.vt2";
+connectAttr "place2dTexture4.vt3" "file16.vt3";
+connectAttr "place2dTexture4.vc1" "file16.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file17.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file17.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file17.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file17.ws";
+connectAttr "place2dTexture4.o" "file17.uv";
+connectAttr "place2dTexture4.ofs" "file17.fs";
+connectAttr "place2dTexture4.c" "file17.c";
+connectAttr "place2dTexture4.tf" "file17.tf";
+connectAttr "place2dTexture4.rf" "file17.rf";
+connectAttr "place2dTexture4.mu" "file17.mu";
+connectAttr "place2dTexture4.mv" "file17.mv";
+connectAttr "place2dTexture4.s" "file17.s";
+connectAttr "place2dTexture4.wu" "file17.wu";
+connectAttr "place2dTexture4.wv" "file17.wv";
+connectAttr "place2dTexture4.re" "file17.re";
+connectAttr "place2dTexture4.of" "file17.of";
+connectAttr "place2dTexture4.r" "file17.ro";
+connectAttr "place2dTexture4.n" "file17.n";
+connectAttr "place2dTexture4.vt1" "file17.vt1";
+connectAttr "place2dTexture4.vt2" "file17.vt2";
+connectAttr "place2dTexture4.vt3" "file17.vt3";
+connectAttr "place2dTexture4.vc1" "file17.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file18.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file18.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file18.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file18.ws";
+connectAttr "place2dTexture4.o" "file18.uv";
+connectAttr "place2dTexture4.ofs" "file18.fs";
+connectAttr "place2dTexture4.c" "file18.c";
+connectAttr "place2dTexture4.tf" "file18.tf";
+connectAttr "place2dTexture4.rf" "file18.rf";
+connectAttr "place2dTexture4.mu" "file18.mu";
+connectAttr "place2dTexture4.mv" "file18.mv";
+connectAttr "place2dTexture4.s" "file18.s";
+connectAttr "place2dTexture4.wu" "file18.wu";
+connectAttr "place2dTexture4.wv" "file18.wv";
+connectAttr "place2dTexture4.re" "file18.re";
+connectAttr "place2dTexture4.of" "file18.of";
+connectAttr "place2dTexture4.r" "file18.ro";
+connectAttr "place2dTexture4.n" "file18.n";
+connectAttr "place2dTexture4.vt1" "file18.vt1";
+connectAttr "place2dTexture4.vt2" "file18.vt2";
+connectAttr "place2dTexture4.vt3" "file18.vt3";
+connectAttr "place2dTexture4.vc1" "file18.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file19.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file19.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file19.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file19.ws";
+connectAttr "place2dTexture4.o" "file19.uv";
+connectAttr "place2dTexture4.ofs" "file19.fs";
+connectAttr "place2dTexture4.c" "file19.c";
+connectAttr "place2dTexture4.tf" "file19.tf";
+connectAttr "place2dTexture4.rf" "file19.rf";
+connectAttr "place2dTexture4.mu" "file19.mu";
+connectAttr "place2dTexture4.mv" "file19.mv";
+connectAttr "place2dTexture4.s" "file19.s";
+connectAttr "place2dTexture4.wu" "file19.wu";
+connectAttr "place2dTexture4.wv" "file19.wv";
+connectAttr "place2dTexture4.re" "file19.re";
+connectAttr "place2dTexture4.of" "file19.of";
+connectAttr "place2dTexture4.r" "file19.ro";
+connectAttr "place2dTexture4.n" "file19.n";
+connectAttr "place2dTexture4.vt1" "file19.vt1";
+connectAttr "place2dTexture4.vt2" "file19.vt2";
+connectAttr "place2dTexture4.vt3" "file19.vt3";
+connectAttr "place2dTexture4.vc1" "file19.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file20.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file20.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file20.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file20.ws";
+connectAttr "place2dTexture4.o" "file20.uv";
+connectAttr "place2dTexture4.ofs" "file20.fs";
+connectAttr "place2dTexture4.c" "file20.c";
+connectAttr "place2dTexture4.tf" "file20.tf";
+connectAttr "place2dTexture4.rf" "file20.rf";
+connectAttr "place2dTexture4.mu" "file20.mu";
+connectAttr "place2dTexture4.mv" "file20.mv";
+connectAttr "place2dTexture4.s" "file20.s";
+connectAttr "place2dTexture4.wu" "file20.wu";
+connectAttr "place2dTexture4.wv" "file20.wv";
+connectAttr "place2dTexture4.re" "file20.re";
+connectAttr "place2dTexture4.of" "file20.of";
+connectAttr "place2dTexture4.r" "file20.ro";
+connectAttr "place2dTexture4.n" "file20.n";
+connectAttr "place2dTexture4.vt1" "file20.vt1";
+connectAttr "place2dTexture4.vt2" "file20.vt2";
+connectAttr "place2dTexture4.vt3" "file20.vt3";
+connectAttr "place2dTexture4.vc1" "file20.vc1";
+connectAttr "file16.oc" "multiplyDivide4.i1";
+connectAttr "multiplyDivide4.o" "BlackShirtTrim.base_color";
+connectAttr "file18.oa" "BlackShirtTrim.metalness";
+connectAttr "bump2d4.o" "BlackShirtTrim.n";
+connectAttr "file20.oa" "BlackShirtTrim.specular_roughness";
+connectAttr "BlackShirtTrim.out" "set4.ss";
+connectAttr "displacementShader4.d" "set4.ds";
+connectAttr "ShirtShape.iog.og[1]" "set4.dsm" -na;
+connectAttr "groupId52.msg" "set4.gn" -na;
+connectAttr "set4.msg" "materialInfo8.sg";
+connectAttr "BlackShirtTrim.msg" "materialInfo8.m";
+connectAttr "file16.msg" "materialInfo8.t" -na;
+connectAttr "file17.oa" "displacementShader4.d";
+connectAttr "file19.oa" "bump2d4.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file21.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file21.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file21.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file21.ws";
+connectAttr "place2dTexture5.o" "file21.uv";
+connectAttr "place2dTexture5.ofs" "file21.fs";
+connectAttr "place2dTexture5.c" "file21.c";
+connectAttr "place2dTexture5.tf" "file21.tf";
+connectAttr "place2dTexture5.rf" "file21.rf";
+connectAttr "place2dTexture5.mu" "file21.mu";
+connectAttr "place2dTexture5.mv" "file21.mv";
+connectAttr "place2dTexture5.s" "file21.s";
+connectAttr "place2dTexture5.wu" "file21.wu";
+connectAttr "place2dTexture5.wv" "file21.wv";
+connectAttr "place2dTexture5.re" "file21.re";
+connectAttr "place2dTexture5.of" "file21.of";
+connectAttr "place2dTexture5.r" "file21.ro";
+connectAttr "place2dTexture5.n" "file21.n";
+connectAttr "place2dTexture5.vt1" "file21.vt1";
+connectAttr "place2dTexture5.vt2" "file21.vt2";
+connectAttr "place2dTexture5.vt3" "file21.vt3";
+connectAttr "place2dTexture5.vc1" "file21.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file22.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file22.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file22.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file22.ws";
+connectAttr "place2dTexture5.o" "file22.uv";
+connectAttr "place2dTexture5.ofs" "file22.fs";
+connectAttr "place2dTexture5.c" "file22.c";
+connectAttr "place2dTexture5.tf" "file22.tf";
+connectAttr "place2dTexture5.rf" "file22.rf";
+connectAttr "place2dTexture5.mu" "file22.mu";
+connectAttr "place2dTexture5.mv" "file22.mv";
+connectAttr "place2dTexture5.s" "file22.s";
+connectAttr "place2dTexture5.wu" "file22.wu";
+connectAttr "place2dTexture5.wv" "file22.wv";
+connectAttr "place2dTexture5.re" "file22.re";
+connectAttr "place2dTexture5.of" "file22.of";
+connectAttr "place2dTexture5.r" "file22.ro";
+connectAttr "place2dTexture5.n" "file22.n";
+connectAttr "place2dTexture5.vt1" "file22.vt1";
+connectAttr "place2dTexture5.vt2" "file22.vt2";
+connectAttr "place2dTexture5.vt3" "file22.vt3";
+connectAttr "place2dTexture5.vc1" "file22.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file23.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file23.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file23.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file23.ws";
+connectAttr "place2dTexture5.o" "file23.uv";
+connectAttr "place2dTexture5.ofs" "file23.fs";
+connectAttr "place2dTexture5.c" "file23.c";
+connectAttr "place2dTexture5.tf" "file23.tf";
+connectAttr "place2dTexture5.rf" "file23.rf";
+connectAttr "place2dTexture5.mu" "file23.mu";
+connectAttr "place2dTexture5.mv" "file23.mv";
+connectAttr "place2dTexture5.s" "file23.s";
+connectAttr "place2dTexture5.wu" "file23.wu";
+connectAttr "place2dTexture5.wv" "file23.wv";
+connectAttr "place2dTexture5.re" "file23.re";
+connectAttr "place2dTexture5.of" "file23.of";
+connectAttr "place2dTexture5.r" "file23.ro";
+connectAttr "place2dTexture5.n" "file23.n";
+connectAttr "place2dTexture5.vt1" "file23.vt1";
+connectAttr "place2dTexture5.vt2" "file23.vt2";
+connectAttr "place2dTexture5.vt3" "file23.vt3";
+connectAttr "place2dTexture5.vc1" "file23.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file24.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file24.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file24.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file24.ws";
+connectAttr "place2dTexture5.o" "file24.uv";
+connectAttr "place2dTexture5.ofs" "file24.fs";
+connectAttr "place2dTexture5.c" "file24.c";
+connectAttr "place2dTexture5.tf" "file24.tf";
+connectAttr "place2dTexture5.rf" "file24.rf";
+connectAttr "place2dTexture5.mu" "file24.mu";
+connectAttr "place2dTexture5.mv" "file24.mv";
+connectAttr "place2dTexture5.s" "file24.s";
+connectAttr "place2dTexture5.wu" "file24.wu";
+connectAttr "place2dTexture5.wv" "file24.wv";
+connectAttr "place2dTexture5.re" "file24.re";
+connectAttr "place2dTexture5.of" "file24.of";
+connectAttr "place2dTexture5.r" "file24.ro";
+connectAttr "place2dTexture5.n" "file24.n";
+connectAttr "place2dTexture5.vt1" "file24.vt1";
+connectAttr "place2dTexture5.vt2" "file24.vt2";
+connectAttr "place2dTexture5.vt3" "file24.vt3";
+connectAttr "place2dTexture5.vc1" "file24.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file25.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file25.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file25.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file25.ws";
+connectAttr "place2dTexture5.o" "file25.uv";
+connectAttr "place2dTexture5.ofs" "file25.fs";
+connectAttr "place2dTexture5.c" "file25.c";
+connectAttr "place2dTexture5.tf" "file25.tf";
+connectAttr "place2dTexture5.rf" "file25.rf";
+connectAttr "place2dTexture5.mu" "file25.mu";
+connectAttr "place2dTexture5.mv" "file25.mv";
+connectAttr "place2dTexture5.s" "file25.s";
+connectAttr "place2dTexture5.wu" "file25.wu";
+connectAttr "place2dTexture5.wv" "file25.wv";
+connectAttr "place2dTexture5.re" "file25.re";
+connectAttr "place2dTexture5.of" "file25.of";
+connectAttr "place2dTexture5.r" "file25.ro";
+connectAttr "place2dTexture5.n" "file25.n";
+connectAttr "place2dTexture5.vt1" "file25.vt1";
+connectAttr "place2dTexture5.vt2" "file25.vt2";
+connectAttr "place2dTexture5.vt3" "file25.vt3";
+connectAttr "place2dTexture5.vc1" "file25.vc1";
+connectAttr "file21.oc" "multiplyDivide5.i1";
+connectAttr "multiplyDivide5.o" "WhiteEarthShirt.base_color";
+connectAttr "file23.oa" "WhiteEarthShirt.metalness";
+connectAttr "bump2d5.o" "WhiteEarthShirt.n";
+connectAttr "file25.oa" "WhiteEarthShirt.specular_roughness";
+connectAttr "WhiteEarthShirt.out" "set5.ss";
+connectAttr "displacementShader5.d" "set5.ds";
+connectAttr "ShirtShape.iog.og[2]" "set5.dsm" -na;
+connectAttr "groupId54.msg" "set5.gn" -na;
+connectAttr "set5.msg" "materialInfo9.sg";
+connectAttr "WhiteEarthShirt.msg" "materialInfo9.m";
+connectAttr "file21.msg" "materialInfo9.t" -na;
+connectAttr "file22.oa" "displacementShader5.d";
+connectAttr "file24.oa" "bump2d5.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file26.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file26.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file26.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file26.ws";
+connectAttr "place2dTexture6.o" "file26.uv";
+connectAttr "place2dTexture6.ofs" "file26.fs";
+connectAttr "place2dTexture6.c" "file26.c";
+connectAttr "place2dTexture6.tf" "file26.tf";
+connectAttr "place2dTexture6.rf" "file26.rf";
+connectAttr "place2dTexture6.mu" "file26.mu";
+connectAttr "place2dTexture6.mv" "file26.mv";
+connectAttr "place2dTexture6.s" "file26.s";
+connectAttr "place2dTexture6.wu" "file26.wu";
+connectAttr "place2dTexture6.wv" "file26.wv";
+connectAttr "place2dTexture6.re" "file26.re";
+connectAttr "place2dTexture6.of" "file26.of";
+connectAttr "place2dTexture6.r" "file26.ro";
+connectAttr "place2dTexture6.n" "file26.n";
+connectAttr "place2dTexture6.vt1" "file26.vt1";
+connectAttr "place2dTexture6.vt2" "file26.vt2";
+connectAttr "place2dTexture6.vt3" "file26.vt3";
+connectAttr "place2dTexture6.vc1" "file26.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file27.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file27.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file27.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file27.ws";
+connectAttr "place2dTexture6.o" "file27.uv";
+connectAttr "place2dTexture6.ofs" "file27.fs";
+connectAttr "place2dTexture6.c" "file27.c";
+connectAttr "place2dTexture6.tf" "file27.tf";
+connectAttr "place2dTexture6.rf" "file27.rf";
+connectAttr "place2dTexture6.mu" "file27.mu";
+connectAttr "place2dTexture6.mv" "file27.mv";
+connectAttr "place2dTexture6.s" "file27.s";
+connectAttr "place2dTexture6.wu" "file27.wu";
+connectAttr "place2dTexture6.wv" "file27.wv";
+connectAttr "place2dTexture6.re" "file27.re";
+connectAttr "place2dTexture6.of" "file27.of";
+connectAttr "place2dTexture6.r" "file27.ro";
+connectAttr "place2dTexture6.n" "file27.n";
+connectAttr "place2dTexture6.vt1" "file27.vt1";
+connectAttr "place2dTexture6.vt2" "file27.vt2";
+connectAttr "place2dTexture6.vt3" "file27.vt3";
+connectAttr "place2dTexture6.vc1" "file27.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file28.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file28.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file28.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file28.ws";
+connectAttr "place2dTexture6.o" "file28.uv";
+connectAttr "place2dTexture6.ofs" "file28.fs";
+connectAttr "place2dTexture6.c" "file28.c";
+connectAttr "place2dTexture6.tf" "file28.tf";
+connectAttr "place2dTexture6.rf" "file28.rf";
+connectAttr "place2dTexture6.mu" "file28.mu";
+connectAttr "place2dTexture6.mv" "file28.mv";
+connectAttr "place2dTexture6.s" "file28.s";
+connectAttr "place2dTexture6.wu" "file28.wu";
+connectAttr "place2dTexture6.wv" "file28.wv";
+connectAttr "place2dTexture6.re" "file28.re";
+connectAttr "place2dTexture6.of" "file28.of";
+connectAttr "place2dTexture6.r" "file28.ro";
+connectAttr "place2dTexture6.n" "file28.n";
+connectAttr "place2dTexture6.vt1" "file28.vt1";
+connectAttr "place2dTexture6.vt2" "file28.vt2";
+connectAttr "place2dTexture6.vt3" "file28.vt3";
+connectAttr "place2dTexture6.vc1" "file28.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file29.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file29.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file29.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file29.ws";
+connectAttr "place2dTexture6.o" "file29.uv";
+connectAttr "place2dTexture6.ofs" "file29.fs";
+connectAttr "place2dTexture6.c" "file29.c";
+connectAttr "place2dTexture6.tf" "file29.tf";
+connectAttr "place2dTexture6.rf" "file29.rf";
+connectAttr "place2dTexture6.mu" "file29.mu";
+connectAttr "place2dTexture6.mv" "file29.mv";
+connectAttr "place2dTexture6.s" "file29.s";
+connectAttr "place2dTexture6.wu" "file29.wu";
+connectAttr "place2dTexture6.wv" "file29.wv";
+connectAttr "place2dTexture6.re" "file29.re";
+connectAttr "place2dTexture6.of" "file29.of";
+connectAttr "place2dTexture6.r" "file29.ro";
+connectAttr "place2dTexture6.n" "file29.n";
+connectAttr "place2dTexture6.vt1" "file29.vt1";
+connectAttr "place2dTexture6.vt2" "file29.vt2";
+connectAttr "place2dTexture6.vt3" "file29.vt3";
+connectAttr "place2dTexture6.vc1" "file29.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file30.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file30.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file30.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file30.ws";
+connectAttr "place2dTexture6.o" "file30.uv";
+connectAttr "place2dTexture6.ofs" "file30.fs";
+connectAttr "place2dTexture6.c" "file30.c";
+connectAttr "place2dTexture6.tf" "file30.tf";
+connectAttr "place2dTexture6.rf" "file30.rf";
+connectAttr "place2dTexture6.mu" "file30.mu";
+connectAttr "place2dTexture6.mv" "file30.mv";
+connectAttr "place2dTexture6.s" "file30.s";
+connectAttr "place2dTexture6.wu" "file30.wu";
+connectAttr "place2dTexture6.wv" "file30.wv";
+connectAttr "place2dTexture6.re" "file30.re";
+connectAttr "place2dTexture6.of" "file30.of";
+connectAttr "place2dTexture6.r" "file30.ro";
+connectAttr "place2dTexture6.n" "file30.n";
+connectAttr "place2dTexture6.vt1" "file30.vt1";
+connectAttr "place2dTexture6.vt2" "file30.vt2";
+connectAttr "place2dTexture6.vt3" "file30.vt3";
+connectAttr "place2dTexture6.vc1" "file30.vc1";
+connectAttr "file26.oc" "multiplyDivide6.i1";
+connectAttr "multiplyDivide6.o" "BlueJeanShorts.base_color";
+connectAttr "file28.oa" "BlueJeanShorts.metalness";
+connectAttr "bump2d6.o" "BlueJeanShorts.n";
+connectAttr "file30.oa" "BlueJeanShorts.specular_roughness";
+connectAttr "BlueJeanShorts.out" "set6.ss";
+connectAttr "displacementShader6.d" "set6.ds";
+connectAttr "set6.msg" "materialInfo10.sg";
+connectAttr "BlueJeanShorts.msg" "materialInfo10.m";
+connectAttr "BlueJeanShorts.msg" "materialInfo10.t" -na;
+connectAttr "file27.oa" "displacementShader6.d";
+connectAttr "file29.oa" "bump2d6.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "file31.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file31.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file31.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file31.ws";
+connectAttr "place2dTexture7.o" "file31.uv";
+connectAttr "place2dTexture7.ofs" "file31.fs";
+connectAttr "place2dTexture7.c" "file31.c";
+connectAttr "place2dTexture7.tf" "file31.tf";
+connectAttr "place2dTexture7.rf" "file31.rf";
+connectAttr "place2dTexture7.mu" "file31.mu";
+connectAttr "place2dTexture7.mv" "file31.mv";
+connectAttr "place2dTexture7.s" "file31.s";
+connectAttr "place2dTexture7.wu" "file31.wu";
+connectAttr "place2dTexture7.wv" "file31.wv";
+connectAttr "place2dTexture7.re" "file31.re";
+connectAttr "place2dTexture7.of" "file31.of";
+connectAttr "place2dTexture7.r" "file31.ro";
+connectAttr "place2dTexture7.n" "file31.n";
+connectAttr "place2dTexture7.vt1" "file31.vt1";
+connectAttr "place2dTexture7.vt2" "file31.vt2";
+connectAttr "place2dTexture7.vt3" "file31.vt3";
+connectAttr "place2dTexture7.vc1" "file31.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file32.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file32.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file32.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file32.ws";
+connectAttr "place2dTexture7.o" "file32.uv";
+connectAttr "place2dTexture7.ofs" "file32.fs";
+connectAttr "place2dTexture7.c" "file32.c";
+connectAttr "place2dTexture7.tf" "file32.tf";
+connectAttr "place2dTexture7.rf" "file32.rf";
+connectAttr "place2dTexture7.mu" "file32.mu";
+connectAttr "place2dTexture7.mv" "file32.mv";
+connectAttr "place2dTexture7.s" "file32.s";
+connectAttr "place2dTexture7.wu" "file32.wu";
+connectAttr "place2dTexture7.wv" "file32.wv";
+connectAttr "place2dTexture7.re" "file32.re";
+connectAttr "place2dTexture7.of" "file32.of";
+connectAttr "place2dTexture7.r" "file32.ro";
+connectAttr "place2dTexture7.n" "file32.n";
+connectAttr "place2dTexture7.vt1" "file32.vt1";
+connectAttr "place2dTexture7.vt2" "file32.vt2";
+connectAttr "place2dTexture7.vt3" "file32.vt3";
+connectAttr "place2dTexture7.vc1" "file32.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file33.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file33.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file33.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file33.ws";
+connectAttr "place2dTexture7.o" "file33.uv";
+connectAttr "place2dTexture7.ofs" "file33.fs";
+connectAttr "place2dTexture7.c" "file33.c";
+connectAttr "place2dTexture7.tf" "file33.tf";
+connectAttr "place2dTexture7.rf" "file33.rf";
+connectAttr "place2dTexture7.mu" "file33.mu";
+connectAttr "place2dTexture7.mv" "file33.mv";
+connectAttr "place2dTexture7.s" "file33.s";
+connectAttr "place2dTexture7.wu" "file33.wu";
+connectAttr "place2dTexture7.wv" "file33.wv";
+connectAttr "place2dTexture7.re" "file33.re";
+connectAttr "place2dTexture7.of" "file33.of";
+connectAttr "place2dTexture7.r" "file33.ro";
+connectAttr "place2dTexture7.n" "file33.n";
+connectAttr "place2dTexture7.vt1" "file33.vt1";
+connectAttr "place2dTexture7.vt2" "file33.vt2";
+connectAttr "place2dTexture7.vt3" "file33.vt3";
+connectAttr "place2dTexture7.vc1" "file33.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file34.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file34.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file34.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file34.ws";
+connectAttr "place2dTexture7.o" "file34.uv";
+connectAttr "place2dTexture7.ofs" "file34.fs";
+connectAttr "place2dTexture7.c" "file34.c";
+connectAttr "place2dTexture7.tf" "file34.tf";
+connectAttr "place2dTexture7.rf" "file34.rf";
+connectAttr "place2dTexture7.mu" "file34.mu";
+connectAttr "place2dTexture7.mv" "file34.mv";
+connectAttr "place2dTexture7.s" "file34.s";
+connectAttr "place2dTexture7.wu" "file34.wu";
+connectAttr "place2dTexture7.wv" "file34.wv";
+connectAttr "place2dTexture7.re" "file34.re";
+connectAttr "place2dTexture7.of" "file34.of";
+connectAttr "place2dTexture7.r" "file34.ro";
+connectAttr "place2dTexture7.n" "file34.n";
+connectAttr "place2dTexture7.vt1" "file34.vt1";
+connectAttr "place2dTexture7.vt2" "file34.vt2";
+connectAttr "place2dTexture7.vt3" "file34.vt3";
+connectAttr "place2dTexture7.vc1" "file34.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file35.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file35.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file35.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file35.ws";
+connectAttr "place2dTexture7.o" "file35.uv";
+connectAttr "place2dTexture7.ofs" "file35.fs";
+connectAttr "place2dTexture7.c" "file35.c";
+connectAttr "place2dTexture7.tf" "file35.tf";
+connectAttr "place2dTexture7.rf" "file35.rf";
+connectAttr "place2dTexture7.mu" "file35.mu";
+connectAttr "place2dTexture7.mv" "file35.mv";
+connectAttr "place2dTexture7.s" "file35.s";
+connectAttr "place2dTexture7.wu" "file35.wu";
+connectAttr "place2dTexture7.wv" "file35.wv";
+connectAttr "place2dTexture7.re" "file35.re";
+connectAttr "place2dTexture7.of" "file35.of";
+connectAttr "place2dTexture7.r" "file35.ro";
+connectAttr "place2dTexture7.n" "file35.n";
+connectAttr "place2dTexture7.vt1" "file35.vt1";
+connectAttr "place2dTexture7.vt2" "file35.vt2";
+connectAttr "place2dTexture7.vt3" "file35.vt3";
+connectAttr "place2dTexture7.vc1" "file35.vc1";
+connectAttr "file31.oc" "multiplyDivide7.i1";
+connectAttr "multiplyDivide7.o" "Jean.base_color";
+connectAttr "file33.oa" "Jean.metalness";
+connectAttr "bump2d7.o" "Jean.n";
+connectAttr "file35.oa" "Jean.specular_roughness";
+connectAttr "Jean.out" "set7.ss";
+connectAttr "displacementShader7.d" "set7.ds";
+connectAttr "PantsShape.iog" "set7.dsm" -na;
+connectAttr "set7.msg" "materialInfo11.sg";
+connectAttr "Jean.msg" "materialInfo11.m";
+connectAttr "file31.msg" "materialInfo11.t" -na;
+connectAttr "file32.oa" "displacementShader7.d";
+connectAttr "file34.oa" "bump2d7.bv";
+connectAttr "DarkGreen.oc" "lambert6SG.ss";
+connectAttr "pCubeShape2.iog" "lambert6SG.dsm" -na;
+connectAttr "pCubeShape3.iog" "lambert6SG.dsm" -na;
+connectAttr "pCubeShape1.iog" "lambert6SG.dsm" -na;
+connectAttr "lambert6SG.msg" "materialInfo12.sg";
+connectAttr "DarkGreen.msg" "materialInfo12.m";
+connectAttr "file33.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "file34.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "set7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "displacementShader2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "displacementShader7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "place2dTexture4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "set4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "file31.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "set6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "set5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "RenderCamShape.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "set2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "BlackHair.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "file18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "bump2d6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "file35.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "displacementShader4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "set3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "file25.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "bump2d3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+		;
+connectAttr "file20.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+		;
+connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+		;
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+		;
+connectAttr "file30.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
+		;
+connectAttr "bump2d5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+		;
+connectAttr "file21.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+		;
+connectAttr "bump2d2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+		;
+connectAttr "BlueJeanShorts.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
+		;
+connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
+		;
+connectAttr "BlackShirtTrim.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
+		;
+connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
+		;
+connectAttr "aiSkyDomeLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
+		;
+connectAttr "file17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
+		;
+connectAttr "file29.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
+		;
+connectAttr "Jean.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
+		;
+connectAttr "displacementShader3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
+		;
+connectAttr "file22.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
+		;
+connectAttr "file27.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
+		;
+connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
+		;
+connectAttr "file26.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
+		;
+connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
+		;
+connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[42].dn"
+		;
+connectAttr "file32.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[43].dn"
+		;
+connectAttr "file16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[44].dn"
+		;
+connectAttr "bump2d4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[45].dn"
+		;
+connectAttr "blue.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[46].dn"
+		;
+connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
+		;
+connectAttr "aiAreaLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[48].dn"
+		;
+connectAttr "file24.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[49].dn"
+		;
+connectAttr "displacementShader6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
+		;
+connectAttr "TierdEye.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[51].dn"
+		;
+connectAttr "file23.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
+		;
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[53].dn"
+		;
+connectAttr "file15.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[54].dn"
+		;
+connectAttr "displacementShader5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[55].dn"
+		;
+connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[56].dn"
+		;
+connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[57].dn"
+		;
+connectAttr "file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[58].dn"
+		;
+connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[59].dn"
+		;
+connectAttr "file13.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[60].dn"
+		;
+connectAttr "bump2d7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[61].dn"
+		;
+connectAttr "DarkGreen.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[62].dn"
+		;
+connectAttr "WhiteEarthShirt.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[63].dn"
+		;
+connectAttr "file19.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[64].dn"
+		;
+connectAttr "file14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[65].dn"
+		;
+connectAttr "file28.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[66].dn"
 		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "set1.pa" ":renderPartition.st" -na;
+connectAttr "set2.pa" ":renderPartition.st" -na;
+connectAttr "set3.pa" ":renderPartition.st" -na;
+connectAttr "set4.pa" ":renderPartition.st" -na;
+connectAttr "set5.pa" ":renderPartition.st" -na;
+connectAttr "set6.pa" ":renderPartition.st" -na;
+connectAttr "set7.pa" ":renderPartition.st" -na;
+connectAttr "lambert6SG.pa" ":renderPartition.st" -na;
 connectAttr "green.msg" ":defaultShaderList1.s" -na;
 connectAttr "Black.msg" ":defaultShaderList1.s" -na;
 connectAttr "white.msg" ":defaultShaderList1.s" -na;
 connectAttr "blue.msg" ":defaultShaderList1.s" -na;
+connectAttr "BananaYellow.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "TierdEye.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader2.msg" ":defaultShaderList1.s" -na;
+connectAttr "BlackHair.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader3.msg" ":defaultShaderList1.s" -na;
+connectAttr "BlackShirtTrim.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader4.msg" ":defaultShaderList1.s" -na;
+connectAttr "WhiteEarthShirt.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader5.msg" ":defaultShaderList1.s" -na;
+connectAttr "BlueJeanShorts.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader6.msg" ":defaultShaderList1.s" -na;
+connectAttr "Jean.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader7.msg" ":defaultShaderList1.s" -na;
+connectAttr "DarkGreen.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d5.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file11.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file12.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file13.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file14.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file15.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file17.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file20.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file21.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file22.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file23.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file24.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file25.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file26.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file27.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file28.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file29.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file30.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file31.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file32.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file33.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file34.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file35.msg" ":defaultTextureList1.tx" -na;
 connectAttr "RefrenceBodyShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "BallShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Body1Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
@@ -7594,4 +9445,6 @@ connectAttr "Eyes1Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId32.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId46.msg" ":initialShadingGroup.gn" -na;
+connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
 // End of Comet.ma
