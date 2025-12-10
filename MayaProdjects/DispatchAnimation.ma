@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: DispatchAnimation.ma
-//Last modified: Tue, Dec 09, 2025 08:06:13 PM
+//Last modified: Tue, Dec 09, 2025 08:23:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5__2_" -rfn "Ultimate_Bony_v1_0_5__2_RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Ultimate_Bony_v1.0.5 (2).ma";
@@ -24,7 +24,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "16F24CE6-4AD0-5427-6CA7-738F99A2A80B";
+fileInfo "UUID" "37A89679-44EC-2827-690D-D2B8341E71E4";
 createNode transform -s -n "persp";
 	rename -uid "2ECC739F-45FF-210B-0C2E-FDA96BAE2847";
 	setAttr ".v" no;
@@ -36895,7 +36895,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "AAAF45FF-40A6-26BD-0571-699A3F834EF3";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 250 -ast 0 -aet 250 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 223 -ast 0 -aet 223 ";
 	setAttr ".st" 6;
 createNode groupId -n "groupId11";
 	rename -uid "2F884E65-487D-299C-7267-BD8AA750C81F";
@@ -42743,8 +42743,8 @@ createNode shadingEngine -n "lambert9SG";
 createNode materialInfo -n "materialInfo8";
 	rename -uid "75C6B8EE-4153-7190-4DF3-0CBFE22D3EFB";
 select -ne :time1;
-	setAttr ".o" 250;
-	setAttr ".unw" 250;
+	setAttr ".o" 223;
+	setAttr ".unw" 223;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
