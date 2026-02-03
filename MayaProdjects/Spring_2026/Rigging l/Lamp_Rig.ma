@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lamp_Rig.ma
-//Last modified: Tue, Jan 27, 2026 03:15:09 PM
+//Last modified: Tue, Jan 27, 2026 03:18:04 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "lamp_model" -rfn "lamp_modelRN" -op "fbx" -typ "FBX" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Spring_2026/Rigging l/lamp_model.fbx";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7078E81F-4144-BD4F-2C65-55B0207014E6";
+fileInfo "UUID" "48A6BA01-4A9F-3DCC-8BC2-FFB27440D00A";
 createNode transform -s -n "persp";
 	rename -uid "1FCCC455-469E-CE69-A234-BF912C84831C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -45.14699711143367 6.2392664506456157 23.730940490027347 ;
-	setAttr ".r" -type "double3" 5.0616472719783054 305.0000000000224 6.9314098346151966e-16 ;
+	setAttr ".t" -type "double3" -42.169541166351941 11.226841579382178 -8.4198778207019878 ;
+	setAttr ".r" -type "double3" 0.26164727197804233 258.20000000001937 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6BF57F19-47DF-AA17-AEDB-B98BA015D4E4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 56.003791373989294;
+	setAttr ".coi" 45.175646893466102;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -460,7 +460,7 @@ createNode nurbsCurve -n "lamp_model:head_ctrlShape" -p "lamp_model:head_ctrl";
 createNode transform -n "Geomatry" -p "Lamp";
 	rename -uid "8A9C4411-4070-4592-C013-2B9D1A7682D3";
 createNode fosterParent -n "lamp_modelRNfosterParent1";
-	rename -uid "05F84231-4099-6C71-DC02-9C9FB4F5927A";
+	rename -uid "2E770C9B-4D66-0B7D-72D6-4E89216EF7E1";
 createNode scaleConstraint -n "head_geo_scaleConstraint1" -p "lamp_modelRNfosterParent1";
 	rename -uid "03BDD823-478C-7B13-92F0-8DBFC7202642";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "head_geo_jntW0" -dv 1 -min 0 -at "double";
