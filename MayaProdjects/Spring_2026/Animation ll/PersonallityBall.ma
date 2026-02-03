@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: PersonallityBall.ma
-//Last modified: Sun, Feb 01, 2026 11:02:51 AM
+//Last modified: Sun, Feb 01, 2026 11:31:57 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Ball_v1_0_1" -rfn "Ultimate_Ball_v1_0_1RN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Spring_2026/References/Ultimate_Ball_v1.0.1.ma";
@@ -17,7 +17,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "D956AA77-4D4A-C362-42EC-00B3C9693EB6";
+fileInfo "UUID" "162BDE78-4E83-AD51-FE97-F88C3B636EE2";
 createNode transform -s -n "persp";
 	rename -uid "5540DD75-4C83-E707-D663-BAB403FE3A49";
 	setAttr ".v" no;
@@ -26,6 +26,7 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DB2395C5-40E8-F465-CF33-79BB088A9AA3";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".coi" 79.157076017502987;
 	setAttr ".imn" -type "string" "persp";
@@ -90,7 +91,6 @@ createNode transform -n "RenderCam";
 createNode camera -n "RenderCamShape" -p "RenderCam";
 	rename -uid "31B1FADA-4780-59B0-B9F1-3A982019C67B";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
@@ -1445,7 +1445,7 @@ createNode reference -n "Ultimate_Ball_v1_0_1RN";
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:CTRL_Root" "Ball_Type" 
 		" -cb 1 10"
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Main_Grp|Ultimate_Ball_v1_0_1:CTRL_Main" 
-		"translate" " -type \"double3\" 0 24.9119189944999917 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Main_Grp|Ultimate_Ball_v1_0_1:CTRL_Main" 
 		"rotate" " -type \"double3\" 0 0 -0.23647064150893327"
 		5 4 "Ultimate_Ball_v1_0_1RN" "|Ultimate_Ball_v1_0_1:AniM_ball_Main|Ultimate_Ball_v1_0_1:ball_Grp|Ultimate_Ball_v1_0_1:CNT_Grp|Ultimate_Ball_v1_0_1:CTRL_Top_Grp|Ultimate_Ball_v1_0_1:CTRL_Top.translateX" 
@@ -1476,7 +1476,8 @@ createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	rename -uid "4B6E946E-4924-5200-B215-2CAA45119419";
-	setAttr ".ai_translator" -type "string" "exr";
+	setAttr ".ai_translator" -type "string" "png";
+	setAttr ".color_management" 1;
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "DA5CA4C0-4CA4-58BB-5DEE-81A3A4CBAA0F";
 	setAttr ".ai_translator" -type "string" "maya";
@@ -2736,8 +2737,8 @@ createNode animCurveTU -n "pSphere13_scaleX";
 	setAttr -s 5 ".kit[0:4]"  18 16 16 16 16;
 	setAttr -s 5 ".kot[0:4]"  5 5 16 16 16;
 select -ne :time1;
-	setAttr ".o" 102;
-	setAttr ".unw" 102;
+	setAttr ".o" 142;
+	setAttr ".unw" 142;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -2768,6 +2769,11 @@ select -ne :initialParticleSE;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
+	setAttr ".outf" 51;
+	setAttr ".imfkey" -type "string" "png";
+	setAttr ".an" yes;
+	setAttr ".ef" 142;
+	setAttr ".pff" yes;
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
