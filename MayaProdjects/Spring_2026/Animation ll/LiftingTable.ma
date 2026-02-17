@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: LiftingTable.ma
-//Last modified: Sat, Feb 14, 2026 02:05:36 PM
+//Last modified: Sun, Feb 15, 2026 06:43:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5__2_" -rfn "Ultimate_Bony_v1_0_5__2_RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//References/Ultimate_Bony_v1.0.5 (2).ma";
@@ -18,7 +18,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2A75B2EB-420E-D5B7-446D-9E8873057319";
+fileInfo "UUID" "8582B773-49D5-9847-CF85-15BE7B9CBE53";
 createNode transform -s -n "persp";
 	rename -uid "CCD5776C-40CB-51FC-A54B-BC9D21E19C4E";
 	setAttr ".v" no;
@@ -738,23 +738,23 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B1167F8C-45D1-8E0C-95B0-C08CE769C5EB";
+	rename -uid "8F6FC9E4-4620-674B-9040-7BA8A07D7033";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "52321517-4ABB-838E-88CE-F5B5CFA2CE52";
+	rename -uid "591AF2A0-42C0-C1D9-0B79-548F9CC41BD7";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B06F71D6-43EB-CCC3-3EA5-41BA51B9ABE7";
+	rename -uid "C5BC5ADB-4835-8FB3-CD6A-BDAC60019425";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8A296D79-47A7-4C08-FE39-F8818B26A920";
+	rename -uid "EFB31C03-4DA9-E790-FC1E-1598A8EEF5E2";
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5B43E467-463F-666D-B386-F9BC0C80E68E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E5B71ED5-493D-80ED-B715-E89A0ADF778C";
+	rename -uid "8ABEBCE6-4CD3-2448-AF18-02BFC7F4DE63";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "67D7B8C2-4CCE-9679-2B6E-F392AE156FC5";
 	setAttr ".g" yes;
@@ -1350,7 +1350,8 @@ createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	rename -uid "492D98C1-4760-C7C5-7712-FD8DF945190F";
-	setAttr ".ai_translator" -type "string" "exr";
+	setAttr ".ai_translator" -type "string" "png";
+	setAttr ".color_management" 1;
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "21A20FC3-4DB4-A639-6469-D2BF7A55B667";
 	setAttr ".ai_translator" -type "string" "maya";
@@ -2696,7 +2697,11 @@ select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".outf" 51;
-	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".imfkey" -type "string" "png";
+	setAttr ".an" yes;
+	setAttr ".fs" 68;
+	setAttr ".ef" 255;
+	setAttr ".pff" yes;
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
@@ -2715,7 +2720,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 2 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Bony_Main_CNT_translateZ.o" "Ultimate_Bony_v1_0_5__2_RN.phl[1]";
 connectAttr "Bony_Main_CNT_translateX.o" "Ultimate_Bony_v1_0_5__2_RN.phl[2]";
 connectAttr "Bony_Main_CNT_translateY.o" "Ultimate_Bony_v1_0_5__2_RN.phl[3]";
