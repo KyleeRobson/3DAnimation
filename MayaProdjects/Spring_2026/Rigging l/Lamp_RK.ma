@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lamp_RK.ma
-//Last modified: Tue, Feb 17, 2026 11:18:12 PM
+//Last modified: Tue, Feb 17, 2026 11:28:40 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "lamp_model" -rfn "lamp_modelRN" -op "fbx" -typ "FBX" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Spring_2026/Rigging l/lamp_model.fbx";
@@ -14,17 +14,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0E45CAC8-4814-4014-1DF3-049CE35E99C3";
+fileInfo "UUID" "7E2C8F4A-4489-04F4-38FC-85886BAFE0B8";
 createNode transform -s -n "persp";
 	rename -uid "FBC4B208-4255-C228-1A21-64BE1461B6BB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -96.838691676425682 11.258697265785104 -3.7428661115635067 ;
-	setAttr ".r" -type "double3" -4.5383527295437451 -812.1999999997123 0 ;
+	setAttr ".t" -type "double3" -81.055637745215407 28.661197690183467 -2.225140754973904 ;
+	setAttr ".r" -type "double3" -12.338352728816821 -1171.7999999996248 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CFB0FD0D-47FD-30A4-0B78-FBA33799ACB2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 106.81944858975224;
+	setAttr ".coi" 86.1662678982009;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -278,6 +278,7 @@ createNode transform -n "Head_FK_Ctrl" -p "Head_FK_Ctrl_Grp";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -3.5527136788005009e-15 -1.3234889800848443e-23 3.5527136788005009e-15 ;
+	setAttr ".rpt" -type "double3" 1.9090433906348486e-28 2.2088105346188331e-29 -1.2542888393014088e-28 ;
 	setAttr ".sp" -type "double3" -3.5527136788005009e-15 -1.3234889800848443e-23 3.5527136788005009e-15 ;
 createNode nurbsCurve -n "Head_FK_CtrlShape" -p "Head_FK_Ctrl";
 	rename -uid "B1E55A19-4AE0-E9EC-285E-E4AE5F4CF50B";
@@ -404,7 +405,7 @@ createNode transform -n "Arm_PV_Crtl" -p "Arm_PV_Crtl_Offset_Grp";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 0 0 7.7069587506708541e-08 ;
+	setAttr ".t" -type "double3" 1.6837126119757955e-07 0 0 ;
 	setAttr -l on -k off ".rx";
 	setAttr -l on -k off ".ry";
 	setAttr -l on -k off ".rz";
@@ -661,7 +662,7 @@ createNode joint -n "LowerArm_IK_Jnt" -p "Cab_Jnt";
 	setAttr ".v" no;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" -5.2166197584841842e-07 3.0767959972970949e-15 6.7586851232350833e-07 ;
+	setAttr ".r" -type "double3" -8.5745218127384044e-15 -6.830783103354766e-30 1.1109203986040429e-14 ;
 	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -928,7 +929,7 @@ createNode scaleConstraint -n "Transform_Jnt_scaleConstraint1" -p "Transform_Jnt
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode fosterParent -n "lamp_modelRNfosterParent1";
-	rename -uid "4157C0A2-4D4E-CEE5-5BD1-C1A4C4622B73";
+	rename -uid "0599105B-4BAC-D923-F3CA-BC864C856B9D";
 createNode scaleConstraint -n "head_geo_scaleConstraint1" -p "lamp_modelRNfosterParent1";
 	rename -uid "703A4F31-4E58-85F4-FB18-AAAEA3E3613D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_RK_JntW0" -dv 1 -min 0 -at "double";
