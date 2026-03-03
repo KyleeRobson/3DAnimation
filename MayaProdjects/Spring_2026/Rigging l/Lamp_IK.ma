@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lamp_IK.ma
-//Last modified: Tue, Feb 10, 2026 04:04:05 PM
+//Last modified: Tue, Feb 10, 2026 04:05:26 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "lamp_model" -rfn "lamp_modelRN" -op "fbx" -typ "FBX" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Spring_2026/Rigging l/lamp_model.fbx";
@@ -16,17 +16,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "D7D84A61-42DA-605B-78EA-2F821D2775D5";
+fileInfo "UUID" "B574830A-4696-F0BD-A261-F0A287F58E3D";
 createNode transform -s -n "persp";
 	rename -uid "CB5A8168-49F0-B14C-444D-1C9A4FEF87C8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 106.70706273837833 73.215145512151082 37.219893441847482 ;
-	setAttr ".r" -type "double3" -26.138352729243238 69.799999999999045 -9.2110375631494959e-15 ;
+	setAttr ".t" -type "double3" 97.842636475797363 31.872722869695778 26.786600959726865 ;
+	setAttr ".r" -type "double3" -6.9383527292460698 73.799999999999699 1.4250251229407643e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A4345F50-4D66-3D4B-A34C-9DA0A2D9B1B8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 120.49833594183595;
+	setAttr ".coi" 97.200388441624028;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -462,7 +462,7 @@ createNode nurbsCurve -n "Base02_CtrlShape" -p "Base02_Ctrl";
 createNode transform -n "Geometry" -p "Lamp";
 	rename -uid "F579B1B3-4695-3238-F6AC-25BE96C24EA7";
 createNode fosterParent -n "lamp_modelRNfosterParent1";
-	rename -uid "48925603-44BB-D218-D364-B6899AA1818B";
+	rename -uid "365C274C-4E69-43A2-6280-74B89EE63870";
 createNode scaleConstraint -n "head_geo_scaleConstraint1" -p "lamp_modelRNfosterParent1";
 	rename -uid "CA85A2D4-4FC3-5FDB-0429-F5B2A4349964";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_JntW0" -dv 1 -min 0 -at "double";
