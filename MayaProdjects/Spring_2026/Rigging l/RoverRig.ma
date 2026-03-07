@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: RoverRig.ma
-//Last modified: Fri, Mar 06, 2026 06:36:56 PM
+//Last modified: Sat, Mar 07, 2026 03:17:40 PM
 //Codeset: 1252
 requires "fbxmaya" "2020.3.6";
 file -rdi 1 -ns "rover_model" -rfn "rover_modelRN" -op "fbx" -typ "FBX" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects//Spring_2026/Rigging l/Refences/rover_model.fbx";
@@ -16,21 +16,21 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "198D744A-4BF2-74C4-01B8-F981740F33ED";
+fileInfo "UUID" "6FFC5637-437A-181D-F304-C080C220E12E";
 createNode transform -s -n "persp";
 	rename -uid "C17DC103-419C-90ED-0C04-709FBDA9A141";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 190.68402297928864 147.54355865300639 204.41153304674998 ;
-	setAttr ".r" -type "double3" -24.599999999999255 -2468.0000000005507 -2.5830385763069005e-15 ;
+	setAttr ".t" -type "double3" 839.11508826818419 699.86939640877176 509.92800200854401 ;
+	setAttr ".r" -type "double3" -32.999999999999964 -2462.3999999995212 -2.9678943935885872e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9E2A9B63-44BB-1BB0-0EB3-3DA7748CE28A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 299.37925959708025;
+	setAttr ".coi" 1158.1227168916437;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 82.988175474552094 68.889045232262177 -33.312439325724952 ;
+	setAttr ".tp" -type "double3" -3.2259893273955083 91.596291962330099 78.634934164106411 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "EEE12FDB-48D4-D35B-BF4E-739AC0B3B94E";
@@ -52,13 +52,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "BB3687D8-4C5B-5634-FDD4-B6BE5291BBFF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 1000.1 ;
+	setAttr ".t" -type "double3" 4.0438489321379034 34.769053035388254 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "52376385-4629-E369-976B-FAB9E8076D75";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 152.30644140390086;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -82,9 +82,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "Geomatry";
+createNode transform -n "Rover";
+	rename -uid "4543D8BA-47C8-19E2-1850-1C98FCEF4F1F";
+createNode transform -n "Geomatry" -p "Rover";
 	rename -uid "A123D226-48EE-E557-E8C7-08A5048BD675";
-createNode transform -n "Skeleton";
+createNode transform -n "Skeleton" -p "Rover";
 	rename -uid "821C48AC-46C6-16BF-12ED-E9ADA4EECDAF";
 createNode joint -n "ROOT_Jnt" -p "Skeleton";
 	rename -uid "82BDE1DA-48E8-853B-0B13-1890E6E8D5A1";
@@ -130,7 +132,7 @@ createNode parentConstraint -n "L_Panel_02_Jnt_parentConstraint1" -p "L_Panel_02
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.12421988699702702 -8.0408889166157316 4.2218354706901877 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000014 89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -4.6031074589149727e-15 6.3642153733581501e-15 -3.2333568587925008e-15 ;
+	setAttr ".lr" -type "double3" -4.6093194797772066e-15 1.2725349001991678e-14 -3.2333568587925016e-15 ;
 	setAttr ".rst" -type "double3" 43.385531259081198 -5.6843418860808015e-14 2.1316282072803006e-14 ;
 	setAttr ".rsrr" -type "double3" -4.6031074589149727e-15 6.3642153733581501e-15 -3.2333568587925008e-15 ;
 	setAttr -k on ".w0";
@@ -179,99 +181,6 @@ createNode parentConstraint -n "Rear_Panel_Jnt_parentConstraint1" -p "Rear_Panel
 	setAttr ".tg[0].tor" -type "double3" 90 89.999999999999972 0 ;
 	setAttr ".rst" -type "double3" 18.125732421875043 42.341707229614286 1.5396423339843848 ;
 	setAttr -k on ".w0";
-createNode joint -n "Front_Cam_Arm_01_Jnt" -p "COG_Jnt";
-	rename -uid "CEB7A226-4F89-3DE4-0F8E-E38CA1B4F21F";
-	setAttr ".r" -type "double3" 28.685471787939456 5.4450426436282822 2.9251862072581467 ;
-	setAttr -av ".ry";
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "xzy";
-	setAttr ".jo" -type "double3" -4.3926051197684956e-15 -0.58462933251293059 -64.999498389744303 ;
-	setAttr ".radi" 2;
-createNode joint -n "Front_Cam_Arm_02_Jnt" -p "Front_Cam_Arm_01_Jnt";
-	rename -uid "B302A890-4BEF-4488-201D-3BAAC64342E0";
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90.199546814791077 -8.916226317434969 -160.26348782900732 ;
-	setAttr ".radi" 2;
-createNode joint -n "Front_Cam_Arm_03_Jnt" -p "Front_Cam_Arm_02_Jnt";
-	rename -uid "6D75A9FE-479A-DFA9-009D-02B343C1BCA2";
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jot" -type "string" "none";
-	setAttr ".radi" 2;
-createNode parentConstraint -n "Front_Cam_Arm_03_Jnt_parentConstraint1" -p "Front_Cam_Arm_03_Jnt";
-	rename -uid "A56734F4-4625-08D2-BE9C-0B8DAFA1D056";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_03_CtrlW0" -dv 1 -min 
-		0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.097789523557222147 0.72872752678294006 -0.81617181934910965 ;
-	setAttr ".tg[0].tor" -type "double3" -89.999999999999972 -8.3658885238116412 134.70703272713027 ;
-	setAttr ".lr" -type "double3" 3.1805546814635168e-14 2.2263882770244617e-14 6.1794688172702219e-30 ;
-	setAttr ".rst" -type "double3" 33.241888380527257 -0.1652616817991639 9.8329313199510349 ;
-	setAttr ".rsrr" -type "double3" 0 -9.5416640443905503e-15 0 ;
-	setAttr -k on ".w0";
-createNode parentConstraint -n "Front_Cam_Arm_02_Jnt_parentConstraint1" -p "Front_Cam_Arm_02_Jnt";
-	rename -uid "BEA63CF1-44D2-16B5-A6BF-55912D09C436";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_02_CtrlW0" -dv 1 -min 
-		0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -3.5527136788005009e-15 3.5527136788005009e-15 
-		1.1102230246251565e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -89.999999999999986 -8.3658885238116607 134.70703272713027 ;
-	setAttr ".lr" -type "double3" 28.209807476783826 6.675956110717312 -2.3109408121563555 ;
-	setAttr ".rst" -type "double3" 39.202106414333393 -2.1316282072803006e-14 8.8817841970012523e-16 ;
-	setAttr ".rsrr" -type "double3" 1.272221872585407e-14 -3.1805546814635176e-15 -3.1805546814635183e-15 ;
-	setAttr -k on ".w0";
-createNode ikEffector -n "effector1" -p "Front_Cam_Arm_02_Jnt";
-	rename -uid "6C7ADB11-4946-D8C6-5A17-35A99562A72D";
-	setAttr ".v" no;
-	setAttr ".hd" yes;
-createNode parentConstraint -n "Front_Cam_Arm_01_Jnt_parentConstraint1" -p "Front_Cam_Arm_01_Jnt";
-	rename -uid "4B4479EF-4999-64FC-FD9B-22AF34076048";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_01_CtrlW0" -dv 1 -min 
-		0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0 1.7763568394002505e-15 -1.1102230246251565e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 4.9698754084004824e-17 -0.5846293325129307 
-		-64.999498389744303 ;
-	setAttr ".lr" -type "double3" 0 -7.4544250346801174e-17 0 ;
-	setAttr ".rst" -type "double3" -4.9384613037109588 -41.797243118286147 -2.8999998569488663 ;
-	setAttr ".rsrr" -type "double3" 0 -7.4544250346801174e-17 0 ;
-	setAttr -k on ".w0";
 createNode joint -n "L_FT_Leg_Base_01_Jnt" -p "COG_Jnt";
 	rename -uid "511084C4-48EE-8B02-F483-938A624A6DCE";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -315,7 +224,7 @@ createNode parentConstraint -n "L_FT_Leg_03_Jnt_parentConstraint1" -p "L_FT_Leg_
 	setAttr ".tg[1].tot" -type "double3" 40.81362152099625 12.365535736083952 67.971923828125 ;
 	setAttr ".tg[1].tor" -type "double3" 4.6978407759631964e-17 6.1823058157394603e-11 
 		-1.9719439025073806e-13 ;
-	setAttr ".lr" -type "double3" -3.9022181556729589e-13 -6.1802727637107032e-11 0.3406228918231573 ;
+	setAttr ".lr" -type "double3" -3.8776585546835961e-13 -6.1813611894321598e-11 0.3406228918231573 ;
 	setAttr ".rst" -type "double3" 9.7552150424658564 1.4210854715202004e-14 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" 3.0066180805545943e-15 -6.1804041851187147e-11 3.1086742255354784e-11 ;
 	setAttr -k on ".w0";
@@ -354,7 +263,7 @@ createNode joint -n "L_BK_Front_Leg_01_Jnt" -p "L_BK_Leg_01_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
-	setAttr ".jo" -type "double3" 0 53.873792914972313 39.565912590028653 ;
+	setAttr ".jo" -type "double3" 0 53.87379291497232 39.565912590028653 ;
 	setAttr ".radi" 0.5;
 createNode parentConstraint -n "L_BK_Front_Leg_01_Jnt_parentConstraint1" -p "L_BK_Front_Leg_01_Jnt";
 	rename -uid "3D8D43EC-479F-ED1E-A223-A6875A76DD35";
@@ -375,7 +284,7 @@ createNode parentConstraint -n "L_BK_Front_Leg_01_Jnt_parentConstraint1" -p "L_B
 	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-15 3.9968028886505635e-15 
 		0.22070511069191667 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999999929 89.999999999999943 0 ;
-	setAttr ".lr" -type "double3" 3.1780125345961153e-30 -2.544443745170814e-14 -1.4312496066585827e-14 ;
+	setAttr ".lr" -type "double3" -7.6079973657531621 -2.7342317012420431e-14 -1.5713684479849112e-14 ;
 	setAttr ".rst" -type "double3" 30.225167478964625 -3.5527136788005009e-15 -3.5527136788005009e-15 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635195e-15 -1.6697912077683464e-14 -2.0673605429512861e-14 ;
 	setAttr -k on ".w0";
@@ -411,7 +320,7 @@ createNode parentConstraint -n "L_BK_Leg_03_Jnt_parentConstraint1" -p "L_BK_Leg_
 	setAttr ".tg[0].tot" -type "double3" -5.773159728050814e-15 -5.3290705182007514e-15 
 		-0.31133790645160708 ;
 	setAttr ".tg[0].tor" -type "double3" 90 89.999999999999673 0 ;
-	setAttr ".lr" -type "double3" -2.0934510305733393e-15 -3.1520104456015536e-13 2.449098203246932e-13 ;
+	setAttr ".lr" -type "double3" -2.0934510305733389e-15 -3.151513483932575e-13 2.4490979605898673e-13 ;
 	setAttr ".rst" -type "double3" 9.6691663512581627 -3.5527136788005009e-15 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" -2.1182991140222553e-15 -3.1520415057058648e-13 
 		2.3854871096176621e-13 ;
@@ -437,7 +346,7 @@ createNode parentConstraint -n "L_BK_Rotate_Leg_02_Jnt_parentConstraint1" -p "L_
 	setAttr ".tg[0].tor" -type "double3" -90.966738592126077 72.068945749903122 179.08020987392504 ;
 	setAttr ".lr" -type "double3" -1.9763524796565843 6.0835379382047865 -0.061418447899941372 ;
 	setAttr ".rst" -type "double3" -1.3287664588942754 -22.21098893826068 -28.40274796928874 ;
-	setAttr ".rsrr" -type "double3" 3.3395824155366928e-14 1.0336802714756429e-14 4.7708320221952783e-15 ;
+	setAttr ".rsrr" -type "double3" 3.3395824155366928e-14 1.033680271475643e-14 4.7708320221952783e-15 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "L_BK_Leg_01_Jnt_parentConstraint1" -p "L_BK_Leg_01_Jnt";
 	rename -uid "27446E65-4739-5C01-692C-BE8F736A8C64";
@@ -495,7 +404,7 @@ createNode joint -n "R_FT_Rotate_Leg_02_Jnt" -p "R_FT_Leg_Base_01_Jnt";
 	rename -uid "1B43173B-465E-F41E-AD5C-9DABE91020FE";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -81.65801375048953 72.078052567824969 -55.737696448198555 ;
+	setAttr ".jo" -type "double3" -81.65801375048953 72.078052567824983 -55.737696448198555 ;
 	setAttr ".radi" 0.95285595047237082;
 createNode joint -n "R_FT_Leg_03_Jnt" -p "R_FT_Rotate_Leg_02_Jnt";
 	rename -uid "A3CFB3F6-4DCD-0BDA-E7B2-5ABCF78E2908";
@@ -523,7 +432,7 @@ createNode parentConstraint -n "R_FT_Leg_03_Jnt_parentConstraint1" -p "R_FT_Leg_
 	setAttr ".tg[0].tot" -type "double3" -8.1925578587771497e-06 5.4626380130429197e-06 
 		-0.08374829540194284 ;
 	setAttr ".tg[0].tor" -type "double3" 90 89.999999999938183 0 ;
-	setAttr ".lr" -type "double3" 1.150000328671641e-15 -6.1817842923223682e-11 6.2004914531115532e-11 ;
+	setAttr ".lr" -type "double3" 1.150000328671641e-15 -6.1817842971755092e-11 6.2004914531162927e-11 ;
 	setAttr ".rst" -type "double3" -7.9429772599243478 -5.6632994303675179 0.0044125189460686443 ;
 	setAttr ".rsrr" -type "double3" 1.150000328671641e-15 -6.1817842923223682e-11 6.2004914531115532e-11 ;
 	setAttr -k on ".w0";
@@ -546,9 +455,9 @@ createNode parentConstraint -n "R_FT_Rotate_Leg_02_Jnt_parentConstraint1" -p "R_
 	setAttr ".tg[0].tot" -type "double3" -0.079160463477908838 0.00039140522661540444 
 		-1.7124858064614825 ;
 	setAttr ".tg[0].tor" -type "double3" 90.044768375743274 107.74428487107842 0.042638574994589375 ;
-	setAttr ".lr" -type "double3" -1.4312496066585824e-14 2.2065098102653151e-14 1.2722218725854064e-14 ;
+	setAttr ".lr" -type "double3" 1.1927080055488189e-14 2.0474820761921391e-14 6.3611093629270367e-15 ;
 	setAttr ".rst" -type "double3" 50.651493268263508 -0.079645084740143091 4.0410086730336303 ;
-	setAttr ".rsrr" -type "double3" -1.4312496066585824e-14 2.2065098102653151e-14 1.2722218725854064e-14 ;
+	setAttr ".rsrr" -type "double3" -1.4312496066585827e-14 2.2065098102653151e-14 1.2722218725854064e-14 ;
 	setAttr -k on ".w0";
 createNode joint -n "R_BK_Leg_01_Jnt" -p "R_FT_Leg_Base_01_Jnt";
 	rename -uid "B45D68D4-45F4-FA90-D489-2F8A8BC53FE1";
@@ -582,7 +491,7 @@ createNode parentConstraint -n "R_BK_Front_Leg_01_Jnt_parentConstraint1" -p "R_B
 	setAttr ".tg[0].tot" -type "double3" -8.1925578956365541e-06 -1.1392622970562982e-06 
 		-0.22070306220262914 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999999844 89.999999999999872 0 ;
-	setAttr ".lr" -type "double3" -3.8166656177562214e-14 -4.7708320221952729e-14 3.8166656177562214e-14 ;
+	setAttr ".lr" -type "double3" -3.180554681463518e-14 -5.5659706925611523e-14 4.1347210859025727e-14 ;
 	setAttr ".rst" -type "double3" 17.738389251832935 -10.317470039521739 22.191470346428805 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905598e-15 -5.4069429584879776e-14 
 		2.5444437451708134e-14 ;
@@ -642,7 +551,7 @@ createNode parentConstraint -n "R_BK_Rotate_Leg_02_Jnt_parentConstraint1" -p "R_
 	setAttr ".tg[0].tot" -type "double3" 0.07192469066620788 -0.0068815491887566083 
 		-1.3910622313113983 ;
 	setAttr ".tg[0].tor" -type "double3" -90.966738592126177 72.068945749903165 179.08020987392496 ;
-	setAttr ".lr" -type "double3" -1.9083328088781101e-14 -8.7465253740246703e-15 9.5416640443905535e-15 ;
+	setAttr ".lr" -type "double3" -1.272221872585407e-14 -1.5902773407317584e-14 1.1131941385122312e-14 ;
 	setAttr ".rst" -type "double3" -14.051450024938895 -32.723361431461129 -5.7920722710103014 ;
 	setAttr ".rsrr" -type "double3" 4.7708320221952767e-15 -3.975693351829396e-15 -1.113194138512231e-14 ;
 	setAttr -k on ".w0";
@@ -665,7 +574,7 @@ createNode parentConstraint -n "R_BK_Leg_01_Jnt_parentConstraint1" -p "R_BK_Leg_
 	setAttr ".tg[0].tot" -type "double3" 0.0074720960517025148 -0.056589892290219268 
 		-0.7600536026111504 ;
 	setAttr ".tg[0].tor" -type "double3" -24.935112513138098 27.032241135205073 -135.65042796514754 ;
-	setAttr ".lr" -type "double3" -5.5659706925611567e-15 1.3914926731402885e-14 -8.7465253740246703e-15 ;
+	setAttr ".lr" -type "double3" 1.9878466759146971e-14 2.1866313435061687e-14 -4.1347210859025715e-14 ;
 	setAttr ".rst" -type "double3" -30.748502394583326 -22.182936134325864 -3.1637706855467727 ;
 	setAttr ".rsrr" -type "double3" -5.5659706925611567e-15 1.3914926731402885e-14 -8.7465253740246703e-15 ;
 	setAttr -k on ".w0";
@@ -687,8 +596,8 @@ createNode parentConstraint -n "R_FT_Leg_Base_01_Jnt_parentConstraint1" -p "R_FT
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.041459397572406687 0.012326780607332388 
 		-0.26963837851450467 ;
-	setAttr ".tg[0].tor" -type "double3" -1.1290688455625246 2.28115683476718 -116.34228413535425 ;
-	setAttr ".lr" -type "double3" 3.975693351829396e-16 -3.975693351829396e-16 -6.2120208622334327e-18 ;
+	setAttr ".tg[0].tor" -type "double3" -1.1290688455625248 2.28115683476718 -116.34228413535425 ;
+	setAttr ".lr" -type "double3" -3.975693351829396e-16 -3.975693351829396e-16 -1.2424041724466861e-17 ;
 	setAttr ".rst" -type "double3" -10.624302758789057 -19.999986788940415 29.500000000000021 ;
 	setAttr ".rsrr" -type "double3" 3.975693351829396e-16 -3.975693351829396e-16 -6.2120208622334327e-18 ;
 	setAttr -k on ".w0";
@@ -722,7 +631,7 @@ createNode parentConstraint -n "R_Panel_02_Jnt_parentConstraint1" -p "R_Panel_02
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.12422880016421978 -8.0408890937072144 -4.221825141490827 ;
 	setAttr ".tg[0].tor" -type "double3" -89.999999999999986 89.999999999999929 0 ;
-	setAttr ".lr" -type "double3" -7.0754917620838059e-15 -7.0066208339151649e-14 -1.1666796381360606e-13 ;
+	setAttr ".lr" -type "double3" 4.4726550208085847e-16 -6.3693342241428692e-14 -9.2369644210980006e-14 ;
 	setAttr ".rst" -type "double3" -43.385568919796789 -8.8899957461308077e-05 -1.2606295854311611e-05 ;
 	setAttr ".rsrr" -type "double3" -7.0754917620838059e-15 -7.0066208339151649e-14 
 		-1.1666796381360606e-13 ;
@@ -765,10 +674,98 @@ createNode parentConstraint -n "COG_Jnt_parentConstraint1" -p "COG_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.4296450937664344 1.1657341758564144e-14 -3.9640260487355843e-29 ;
-	setAttr ".lr" -type "double3" 0 0.68124578358413557 0 ;
+	setAttr ".lr" -type "double3" 0 0.68124578358413568 0 ;
 	setAttr ".rst" -type "double3" 48.192202758789065 0 1.5777218104420236e-30 ;
 	setAttr -k on ".w0";
-createNode transform -n "Controls";
+createNode joint -n "Arm_Base_IK_Jnt" -p "COG_Jnt";
+	rename -uid "DEB1C83E-4DA0-6E8A-12B3-B58064A91476";
+	setAttr ".r" -type "double3" -2.0029481211301152 0.11053736879932226 3.4472157519430504 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -89.382515164122694 -0.87250084944944239 -65.007350122530866 ;
+	setAttr ".radi" 2;
+createNode joint -n "Arm_PV_Jnt" -p "Arm_Base_IK_Jnt";
+	rename -uid "2FD63F4B-4A93-DBB3-A70C-6CAC7B7E0368";
+	setAttr ".t" -type "double3" 39.202106414333436 3.1086244689504383e-15 -2.8421709430404007e-14 ;
+	setAttr ".r" -type "double3" 2.6841446220778512e-15 -2.5184069024772838e-14 2.3540989564454463e-15 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 4.062052197408911 145.19714307921797 7.6771137727691068 ;
+	setAttr ".radi" 2;
+createNode joint -n "Arm_IK_Jnt" -p "Arm_PV_Jnt";
+	rename -uid "96337FFE-4B61-4682-951C-E0A0ED40E25F";
+	setAttr ".t" -type "double3" 33.83486511649312 3.4481100372092977 -7.1054273576010019e-15 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".jo" -type "double3" -29.990108008877201 5.5659706925611543e-15 95.81892215872297 ;
+	setAttr ".radi" 0.71308687116404379;
+createNode joint -n "Arm_Head_Rotate_Jnt" -p "Arm_IK_Jnt";
+	rename -uid "DF369EFF-4B95-F2D8-7197-CDBB28730A90";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".radi" 0.71308687116404379;
+createNode parentConstraint -n "Arm_Head_Rotate_Jnt_parentConstraint1" -p "Arm_Head_Rotate_Jnt";
+	rename -uid "59A41131-48D1-D04E-C208-D0943F0DCE0B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Head_Rotate_CtrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 1.0658141036401503e-14 3.6813874525662875 -1.3500311979441904e-13 ;
+	setAttr ".lr" -type "double3" -0.13583213625541707 -2.2750080467572813 3.2778675918310891 ;
+	setAttr ".rst" -type "double3" -8.499999523162856 -0.93185997009277699 0.035972595214794012 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Arm_Head_Rotate_Jnt_scaleConstraint1" -p "Arm_Head_Rotate_Jnt";
+	rename -uid "69EBCB8C-4D3E-F8CA-7D65-AABC48192247";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Head_Rotate_CtrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode ikEffector -n "effector1" -p "Arm_PV_Jnt";
+	rename -uid "1F967F03-4293-F748-FB31-06B353C6FD16";
+	setAttr ".v" no;
+	setAttr ".hd" yes;
+createNode pointConstraint -n "Arm_Base_IK_Jnt_pointConstraint1" -p "Arm_Base_IK_Jnt";
+	rename -uid "9E0B689F-4D82-AB77-10BA-61A10208C9E7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Base_IK_CtrlW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 2.8999998569488499 43.553741455078139 44.266956329345696 ;
+	setAttr -k on ".w0";
+createNode transform -n "Controls" -p "Rover";
 	rename -uid "A8318DE9-46DA-593A-F17D-8DA06D3BFFE7";
 createNode transform -n "Transform_Ctrl_Grp" -p "Controls";
 	rename -uid "03A790DE-4ED2-D39C-AD4C-BC9699E27E21";
@@ -977,39 +974,6 @@ createNode nurbsCurve -n "Rear_Panel_CtrlShape" -p "Rear_Panel_Ctrl";
 		4.2680701687528178 13.89547344566693 0.35296561766809464
 		5.5586228644522979 10.818705919133365 0.35296561766561924
 		;
-createNode transform -n "Front_Cam_Arm_01_Ctrl_Grp" -p "COG_Ctrl";
-	rename -uid "5317AD2D-40D9-1744-F35A-D68F52E27AB5";
-	setAttr ".rp" -type "double3" -1.1321506338938168 -9.5820889101273199 -0.66482988818186817 ;
-	setAttr ".sp" -type "double3" -1.1321506338938168 -9.5820889101273199 -0.66482988818186817 ;
-createNode transform -n "Front_Cam_Arm_01_Ctrl" -p "Front_Cam_Arm_01_Ctrl_Grp";
-	rename -uid "802E819E-4015-523D-8CDF-278D3AEF65FA";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".rp" -type "double3" -1.1321506338938185 -9.5820889101273217 -0.66482988818186828 ;
-	setAttr ".sp" -type "double3" -1.1321506338938185 -9.5820889101273217 -0.66482988818186828 ;
-createNode nurbsCurve -n "Front_Cam_Arm_01_CtrlShape" -p "Front_Cam_Arm_01_Ctrl";
-	rename -uid "EA11953F-457D-64FC-ECBD-809339E3F819";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-2.0435036775714162 -10.866469507218529 -0.87546634898711839
-		-2.6924847889680135 -9.8396148436961148 -0.8184636249514009
-		-2.4274433141561116 -8.661904980951892 -0.67146434155414925
-		-1.4036369544891536 -8.0232263840408713 -0.52057868535034724
-		-0.22079759021621748 -8.2977083130361109 -0.45419342737661794
-		0.42818352118038105 -9.324562976558525 -0.51119615141233532
-		0.16314204636847807 -10.502272839302748 -0.65819543480958709
-		-0.86066431329847981 -11.140951436213768 -0.8090810910133891
-		-2.0435036775714162 -10.866469507218529 -0.87546634898711839
-		-2.6924847889680135 -9.8396148436961148 -0.8184636249514009
-		-2.4274433141561116 -8.661904980951892 -0.67146434155414925
-		;
-createNode transform -n "Front_Cam_Arm_02_Ctrl_Grp" -p "Front_Cam_Arm_01_Ctrl";
-	rename -uid "CD0242E7-4B4C-0547-469E-B6810794E1C3";
-	setAttr ".rp" -type "double3" 2.6658564146099195 -17.726755146144733 -0.57312924222119499 ;
-	setAttr ".sp" -type "double3" 2.6658564146099195 -17.726755146144733 -0.57312924222119499 ;
 createNode transform -n "L_FT_Leg_Base_01_Ctrl_Grp" -p "COG_Ctrl";
 	rename -uid "ADD64B1A-4F11-2D26-2D3B-B285F005E18E";
 	setAttr ".rp" -type "double3" -2.4356339940598524 -4.5850326259808103 -6.7629250582100804 ;
@@ -1146,12 +1110,14 @@ createNode transform -n "L_BK_Front_Leg_01_Ctrl" -p "L_BK_Front_Leg_01_Ctrl_Grp"
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
 	setAttr -l on -k off ".tz";
+	setAttr ".r" -type "double3" 0 0 7.6079973657531657 ;
 	setAttr -l on -k off ".rx";
 	setAttr -l on -k off ".ry";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -8.2820997178801292 -0.30264933727811172 -9.7890040604066932 ;
+	setAttr ".rpt" -type "double3" -2.4563684419831588e-15 -3.1086244689504383e-15 0 ;
 	setAttr ".sp" -type "double3" -8.2820997178801292 -0.30264933727811172 -9.7890040604066932 ;
 createNode nurbsCurve -n "L_BK_Front_Leg_01_CtrlShape" -p "L_BK_Front_Leg_01_Ctrl";
 	rename -uid "30CC1BD1-4208-1BC2-8D66-0C8CB13F3AED";
@@ -1509,80 +1475,154 @@ createNode nurbsCurve -n "R_BK_Leg_03_CtrlShape" -p "R_BK_Leg_03_Ctrl";
 		-8.2820997178802571 14.378437998754347 12.053799397153313
 		-10.903541464622386 13.292601274282537 11.111287312420878
 		;
-createNode ikHandle -n "Arm_IK_HAndle";
-	rename -uid "10BD75E2-4395-AC12-62E7-569F3BA7E4C1";
-	setAttr ".t" -type "double3" -2.5416629411761771 30.042979842048112 63.354463248746221 ;
-	setAttr ".pv" -type "double3" 0.24295716578728754 1.5837111231537875 1.1970091453247478 ;
-	setAttr ".roc" yes;
-createNode transform -n "Front_Cam_Arm_02_Ctrl";
-	rename -uid "61E9043A-491B-E022-5C9B-D58ECA7D8475";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 0.17787199817064303 48.491145298908286 2.4697132110595703 ;
-	setAttr ".r" -type "double3" -89.999999999999972 3.1805546814635168e-15 89.318754216415869 ;
-	setAttr ".s" -type "double3" 4.362017876301544 4.362017876301544 4.362017876301544 ;
-	setAttr ".rp" -type "double3" 11.628513336181607 -77.324422836303711 -2.5000000000000098 ;
-	setAttr ".rpt" -type "double3" -8.9904304928624867 88.922389956516611 79.824422836303725 ;
-	setAttr ".sp" -type "double3" 2.6658564146099195 -17.726755146144733 -0.57312924222119499 ;
-	setAttr ".spt" -type "double3" 8.9626569215716874 -59.597667690158978 -1.9268707577788149 ;
-createNode nurbsCurve -n "Front_Cam_Arm_02_CtrlShape" -p "Front_Cam_Arm_02_Ctrl";
-	rename -uid "E25AE6EA-4B58-AF8E-EE93-BFA2BCD8248A";
+createNode transform -n "Arm_Base_IK_Ctrl_Grp" -p "COG_Ctrl";
+	rename -uid "26FE0892-4C4E-DF02-76DF-599F9AA0AEFC";
+	setAttr ".t" -type "double3" -1.1244084031840806 -9.5820889101273199 -0.63746637068805667 ;
+	setAttr ".r" -type "double3" -89.38251516412268 -0.87250084944944628 -65.007350122530895 ;
+	setAttr ".s" -type "double3" 0.22925169688847713 0.22925169688847707 0.2292516968884771 ;
+createNode transform -n "Arm_Base_IK_Ctrl" -p "Arm_Base_IK_Ctrl_Grp";
+	rename -uid "0329CFA0-43F0-EBD7-FEFE-48ADBA7A61E3";
+	setAttr ".rp" -type "double3" 0 -8.8817841970012523e-16 1.4210854715202004e-14 ;
+	setAttr ".sp" -type "double3" 0 -8.8817841970012523e-16 1.4210854715202004e-14 ;
+createNode nurbsCurve -n "Arm_Base_IK_CtrlShape" -p "Arm_Base_IK_Ctrl";
+	rename -uid "97F5CDBB-4544-6F9F-EC08-D097138668C2";
 	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 14;
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		2.6773887071883151 -16.624501591978753 -0.45911842744605735
-		3.453464575256199 -16.947160544692984 -0.57312924222120287
-		3.7681702646532189 -17.726495441784799 -0.68714005699635194
-		3.4371554506865767 -18.505982470168448 -0.73436488273342349
-		2.6543241220315235 -18.829008700310709 -0.68714005699635194
-		1.8782482539636396 -18.506349747596481 -0.57312924222120287
-		1.5635425645666183 -17.727014850504666 -0.4591184274460538
-		1.8945573785332614 -16.94752782212101 -0.41189360170897871
-		2.6773887071883151 -16.624501591978753 -0.45911842744605735
-		3.453464575256199 -16.947160544692984 -0.57312924222120287
-		3.7681702646532189 -17.726495441784799 -0.68714005699635194
+		29.103629474285725 0.19513623660366738 -3.7607671145963293
+		-3.4880863749373061 -0.0028336925347566748 -0.68080747040286949
+		3.4908669142478717 0.0064237604385463856 -2.6069008143168135
+		-6.2203297996967475 -0.047734728640769615 0.62293703883576523
+		-5.8952773192529531 -0.062780800788912516 4.1784550719348994
+		3.8863170460577408 -0.033873062149858239 2.4203912229719355
+		-1.3142388939118161 -0.024983679959245025 2.7356817298755791
+		26.558829707083337 0.15080608139858473 0.64765302664409319
+		29.103629474285725 0.19513623660366738 -3.7607671145963293
+		-3.4880863749373061 -0.0028336925347566748 -0.68080747040286949
+		3.4908669142478717 0.0064237604385463856 -2.6069008143168135
 		;
-createNode transform -n "Front_Cam_Arm_03_Ctrl_Grp";
-	rename -uid "361B1F8B-425D-448A-7EF7-61ADEE443CF8";
-	setAttr ".t" -type "double3" 0.17787199817064936 48.4911452989083 2.4697132110595716 ;
-	setAttr ".r" -type "double3" -89.999999999999972 3.1805546814635168e-15 89.318754216415869 ;
-	setAttr ".s" -type "double3" 4.362017876301544 4.362017876301544 4.362017876301544 ;
-	setAttr ".rp" -type "double3" -18.479195907674235 -60.884750037686679 2.4999995231628045 ;
-	setAttr ".rpt" -type "double3" 15.759660968327408 42.436584580826477 58.384750514523873 ;
-	setAttr ".sp" -type "double3" -4.2363870189689194 -13.957932260770445 0.57312913290545642 ;
-	setAttr ".spt" -type "double3" -14.242808888705316 -46.926817776916238 1.9268703902573481 ;
-createNode transform -n "Front_Cam_Arm_03_Ctrl" -p "Front_Cam_Arm_03_Ctrl_Grp";
-	rename -uid "5C7FC802-4F08-8CA5-4582-C9B96AD628F3";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".rp" -type "double3" -4.3341765425261407 -14.68665978755338 1.3893009522545656 ;
-	setAttr ".sp" -type "double3" -4.3341765425261407 -14.68665978755338 1.3893009522545656 ;
-createNode nurbsCurve -n "Front_Cam_Arm_03_CtrlShape" -p "Front_Cam_Arm_03_Ctrl";
-	rename -uid "B5CBA205-48DC-B844-C753-DE9450F0550B";
+createNode transform -n "Arm_PV_Ctrl_Grp" -p "Arm_Base_IK_Ctrl";
+	rename -uid "48D1761E-4106-0DC2-80CF-09B03D6DA497";
+	setAttr ".t" -type "double3" 39.202106414333429 2.6645352591003757e-15 -1.0658141036401503e-14 ;
+	setAttr ".r" -type "double3" 4.062052197408911 145.19714307921794 7.6771137727691316 ;
+createNode transform -n "Arm_PV_Ctrl_Offset_Grp" -p "Arm_PV_Ctrl_Grp";
+	rename -uid "FF4B20EA-4A73-CEF1-370B-2280B8F9F1C0";
+	setAttr ".t" -type "double3" -73.326895015915156 1.7888468484272835e-14 8.1268325402561459e-14 ;
+createNode transform -n "Arm_PV_Ctrl" -p "Arm_PV_Ctrl_Offset_Grp";
+	rename -uid "F74EBAF0-419E-0D5E-E690-1C8301030FF7";
+	setAttr ".rp" -type "double3" -5.6843418860808015e-14 8.8817841970012523e-16 0 ;
+	setAttr ".sp" -type "double3" -5.6843418860808015e-14 8.8817841970012523e-16 0 ;
+createNode nurbsCurve -n "Arm_PV_CtrlShape" -p "Arm_PV_Ctrl";
+	rename -uid "17D83B27-406B-E020-E3C1-46B7A9CE3F38";
 	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 14;
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		-4.1089098772604435 -13.551884459198993 1.3958873218298886
-		-4.1333222921310666 -12.895232394046648 -0.14656697614335512
-		-4.2753924028228356 -14.686149041262434 -0.7893306716748415
-		-4.4518974653003802 -16.477364876728696 -0.15588150932354916
-		-4.5594432077918299 -15.82143511590769 1.3827145826792604
-		-4.535030792921221 -16.478087181060175 2.9251688806524605
-		-4.3929606822294378 -14.687170533844233 3.5679325761840461
-		-4.2164556197519101 -12.89595469837815 2.9344834138326394
-		-4.1089098772604435 -13.551884459198993 1.3958873218298886
-		-4.1333222921310666 -12.895232394046648 -0.14656697614335512
-		-4.2753924028228356 -14.686149041262434 -0.7893306716748415
+		0.15224661155727404 -2.0804650295420561 -7.6633425022176862
+		-0.38684883731110631 0.48489659452493494 -0.91887345881908522
+		-0.97701429269568507 7.6030443705522712 -2.0778574174961757
+		-0.10560610014968574 0.9055813936842767 0.52234279520402538
+		-0.15224661155731667 2.0804650295417608 7.6633425022168336
+		0.38684883731102104 -0.48489659452440992 0.91887345882051363
+		0.97701429269565665 -7.6030443705528166 2.0778574174954012
+		0.10560610014957206 -0.90558139368373136 -0.52234279520249038
+		0.15224661155727404 -2.0804650295420561 -7.6633425022176862
+		-0.38684883731110631 0.48489659452493494 -0.91887345881908522
+		-0.97701429269568507 7.6030443705522712 -2.0778574174961757
+		;
+createNode transform -n "Arm_IK_Ctrl_Grp" -p "Arm_PV_Ctrl_Grp";
+	rename -uid "24C9D133-49A7-914E-466E-54AE46A2A608";
+	setAttr ".t" -type "double3" 33.834865116493177 3.4481100372092892 -3.5527136788005009e-14 ;
+	setAttr ".r" -type "double3" -29.990108008877201 0 95.818923205663125 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 1.0000000000000007 1.0000000000000007 ;
+createNode transform -n "Arm_IK_Ctrl" -p "Arm_IK_Ctrl_Grp";
+	rename -uid "041E5B7F-4164-4CF2-ED44-339C58B5C569";
+	setAttr ".rp" -type "double3" -8.8817841970012523e-15 0.73953821148338506 0.17666226170770472 ;
+	setAttr ".sp" -type "double3" -8.8817841970012523e-15 0.73953821148338506 0.17666226170770472 ;
+createNode nurbsCurve -n "Arm_IK_CtrlShape" -p "Arm_IK_Ctrl";
+	rename -uid "DB38F21C-4839-8F53-27C5-BDA7037FFB6D";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 14;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		5.8321527496409753e-14 1.6171525840020662 2.4672165114051801
+		5.070103237859386e-14 2.5395896487263299 -0.28223247034506826
+		4.3925685260288811e-14 2.4075809944826583 -2.7628671417607258
+		4.089226640028852e-14 1.2984555005764955 -3.5215653556194493
+		4.3821800636273112e-14 -0.13807616103580056 -2.1138919879910318
+		5.1442295754089068e-14 -1.0605132257599674 0.63555699375925734
+		5.8217642872394067e-14 -0.92850457151638111 3.1161916651748705
+		6.1251061732394263e-14 0.180620922389787 3.8748898790336206
+		5.8321527496409753e-14 1.6171525840020662 2.4672165114051801
+		5.070103237859386e-14 2.5395896487263299 -0.28223247034506826
+		4.3925685260288811e-14 2.4075809944826583 -2.7628671417607258
+		;
+createNode ikHandle -n "Arm_IK_HAndle" -p "Arm_IK_Ctrl";
+	rename -uid "74741448-4C48-BE38-9FBB-59AC2C432F8C";
+	setAttr ".t" -type "double3" 1.2434497875801753e-14 1.0658141036401503e-14 1.4210854715202004e-14 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 1 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "Arm_IK_HAndle_poleVectorConstraint1" -p "Arm_IK_HAndle";
+	rename -uid "981149AF-4D60-07FE-D079-BFA18F1A95C7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_PV_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 7.0342389672057664 79.749011825083073 71.990802919488999 ;
+	setAttr -k on ".w0";
+createNode transform -n "Arm_Head_Rotate_Ctrl_Grp" -p "Arm_IK_Ctrl";
+	rename -uid "95A1C055-4F7A-504D-E8CB-0A8AF5D60F47";
+	setAttr ".t" -type "double3" -8.4999995375819761 -0.93185983557112451 0.035972672850007825 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999956 0.99999999999999956 ;
+createNode transform -n "Arm_Head_Rotate_Ctrl" -p "Arm_Head_Rotate_Ctrl_Grp";
+	rename -uid "9400F809-4237-5E86-165D-3CBEE137DE7E";
+	setAttr ".rp" -type "double3" 3.5527136788005009e-15 -3.6813874525663053 7.1054273576010019e-14 ;
+	setAttr ".sp" -type "double3" 3.5527136788005009e-15 -3.6813874525663053 7.1054273576010019e-14 ;
+createNode nurbsCurve -n "Arm_Head_Rotate_CtrlShape" -p "Arm_Head_Rotate_Ctrl";
+	rename -uid "487FCBC4-412D-8424-EBAE-7E9987AA66CE";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		8.6065890187176421 -3.6813874525663044 -8.6065890187175498
+		4.2980064672293434e-15 -3.681387452566304 -12.17155491604173
+		-8.606589018717635 -3.6813874525663044 -8.606589018717548
+		-12.171554916041831 -3.6813874525663048 7.0304160965948298e-14
+		-8.606589018717635 -3.6813874525663053 8.6065890187176919
+		2.3334806983530179e-15 -3.6813874525663057 12.171554916041881
+		8.6065890187176421 -3.6813874525663053 8.6065890187176901
+		12.171554916041838 -3.6813874525663048 7.2594967168525887e-14
+		8.6065890187176421 -3.6813874525663044 -8.6065890187175498
+		4.2980064672293434e-15 -3.681387452566304 -12.17155491604173
+		-8.606589018717635 -3.6813874525663044 -8.606589018717548
 		;
 createNode fosterParent -n "rover_modelRNfosterParent1";
-	rename -uid "9B7BF45B-4B37-E8CA-4E16-BCBB43AF325C";
+	rename -uid "BF5D5FFE-4CB1-C7B4-871E-8085121F15AB";
 createNode scaleConstraint -n "Camera_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "788101DF-4178-C27D-920A-A6A92A2CCD1E";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_03_JntW0" -dv 1 -min 
+	rename -uid "A84E3F41-4C51-4FFD-50A5-8B80BEA9432F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Head_Rotate_JntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1598,8 +1638,8 @@ createNode scaleConstraint -n "Camera_Geo_scaleConstraint1" -p "rover_modelRNfos
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "Camera_Geo_parentConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "6440E62F-42FE-4509-08C5-EAA57E6B88B0";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_03_JntW0" -dv 1 -min 
+	rename -uid "41E2C1DC-4C4A-254E-1BDB-D5BC4E9E4B98";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Head_Rotate_JntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1613,19 +1653,38 @@ createNode parentConstraint -n "Camera_Geo_parentConstraint1" -p "rover_modelRNf
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 2.2301711385322065 -3.2602160915419436 3.4922071214442489 ;
-	setAttr ".tg[0].tor" -type "double3" -45.292967272869724 2.7968284881134167e-15 
-		98.365888523811677 ;
-	setAttr ".lr" -type "double3" -1.9120807374487593e-14 6.2475474082971522e-15 -0.68124578358411803 ;
-	setAttr ".rst" -type "double3" 8.8817841970012523e-16 -3.5527136788005009e-15 4.2632564145606011e-14 ;
-	setAttr ".rsrr" -type "double3" 0 0 1.4312496066585827e-14 ;
+	setAttr ".tg[0].tot" -type "double3" -0.050001430699941452 -3.4197522045650679 1.7500036341944778 ;
+	setAttr ".tg[0].tor" -type "double3" -1.3590600500820963e-16 -6.3514675591184976e-07 
+		-3.6655594905022428e-07 ;
+	setAttr ".lr" -type "double3" -1.3007324180164123e-16 6.3514675265946856e-07 3.6655594554509146e-07 ;
+	setAttr ".rst" -type "double3" 8.8817841970012523e-16 -3.5527136788005009e-15 2.8421709430404007e-14 ;
+	setAttr ".rsrr" -type "double3" 4.2183413899989315e-15 6.3514675611606994e-07 3.6655594864469577e-07 ;
 	setAttr -k on ".w0";
+createNode mesh -n "Camera_GeoShapeTag" -p "rover_modelRNfosterParent1";
+	rename -uid "31C91CD7-41D4-0904-3616-F491955FA911";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".gtag[0].gtagnm" -type "string" "cluster3";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[359:362]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "Camera_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
+	rename -uid "79A029CC-4272-3542-069E-D49B1A3C17D2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode scaleConstraint -n "Camera_Attachment_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
 	rename -uid "F2295FEA-4768-36FD-8CCE-26A3018E1E7F";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_03_JntW0" -dv 1 -min 
-		0 -at "double";
-	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Front_Cam_Arm_02_JntW1" -dv 1 -min 
-		0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w2" -ln "Camera_GeoW2" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1639,16 +1698,9 @@ createNode scaleConstraint -n "Camera_Attachment_Geo_scaleConstraint1" -p "rover
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 3 ".tg";
-	setAttr -k on ".w0";
-	setAttr -k on ".w1";
 	setAttr -k on ".w2";
 createNode parentConstraint -n "Camera_Attachment_Geo_parentConstraint1" -p "rover_modelRNfosterParent1";
 	rename -uid "80F5C5A2-4570-F59C-CF8D-6DB04E4F722E";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_03_JntW0" -dv 1 -min 
-		0 -at "double";
-	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Front_Cam_Arm_02_JntW1" -dv 1 -min 
-		0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w2" -ln "Camera_GeoW2" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1662,18 +1714,11 @@ createNode parentConstraint -n "Camera_Attachment_Geo_parentConstraint1" -p "rov
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 3 ".tg";
-	setAttr ".tg[0].tot" -type "double3" 0.55556659460410174 -3.8759970973199742 -0.8108911238096681 ;
-	setAttr ".tg[0].tor" -type "double3" -45.290942330298982 0.48416467793360807 98.845144039591318 ;
-	setAttr ".tg[1].tot" -type "double3" 33.797454975131345 -4.0412587791191417 9.022040196141365 ;
-	setAttr ".tg[1].tor" -type "double3" -45.290942330298982 0.48416467793360479 98.845144039591304 ;
 	setAttr ".tg[2].tot" -type "double3" -0.36558359270840768 4.2868136442987392 -1.7859783172607422 ;
 	setAttr ".tg[2].tor" -type "double3" 0 0 0.68124578358412924 ;
-	setAttr ".lr" -type "double3" -1.3782403619675239e-14 1.8346168279796085e-15 1.3409682367941233e-14 ;
+	setAttr ".lr" -type "double3" 0 0 0.68124578358412935 ;
 	setAttr ".rst" -type "double3" 7.1054273576010019e-15 3.5527136788005009e-15 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" 3.7106471283741026e-15 3.0480315697358697e-15 8.5146099285012887e-15 ;
-	setAttr -k on ".w0";
-	setAttr -k on ".w1";
 	setAttr -k on ".w2";
 createNode mesh -n "Camera_Attachment_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "77A55E6A-4785-16D6-CCCB-8EB55F083F4B";
@@ -1681,8 +1726,11 @@ createNode mesh -n "Camera_Attachment_GeoShapeTag" -p "rover_modelRNfosterParent
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "cluster8";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[50:73]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster4";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[74:83]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -1693,14 +1741,17 @@ createNode mesh -n "Camera_Attachment_GeoShapeDeformed" -p "rover_modelRNfosterP
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.066051002097083256 0.50000049496884458 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode scaleConstraint -n "Camera_Upper_Arm_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "260908A7-4C67-6D43-2B12-F29B771D4B77";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_02_JntW0" -dv 1 -min 
+	rename -uid "4CDFFC67-4F52-95F4-68C2-8E9DD7AC5FBF";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_PV_JntW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Arm_IK_JntW1" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w2" -ln "Camera_Attachment_GeoW2" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1714,10 +1765,15 @@ createNode scaleConstraint -n "Camera_Upper_Arm_Geo_scaleConstraint1" -p "rover_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr -s 3 ".tg";
 	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+	setAttr -k on ".w2";
 createNode parentConstraint -n "Camera_Upper_Arm_Geo_parentConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "EC27E754-4B64-4155-2514-DEA33C8FBC4B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_02_JntW0" -dv 1 -min 
+	rename -uid "2D8FBC1D-488C-E640-B4FB-CABE624B0F46";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_PV_JntW0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Arm_IK_JntW1" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w2" -ln "Camera_Attachment_GeoW2" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1731,21 +1787,30 @@ createNode parentConstraint -n "Camera_Upper_Arm_Geo_parentConstraint1" -p "rove
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 15.748777492803626 1.3052420473425599 4.566199070311546 ;
-	setAttr ".tg[0].tor" -type "double3" -45.292967272869731 6.7123883714721995e-15 
-		98.365888523811677 ;
-	setAttr ".lr" -type "double3" -3.1796970914565269e-14 -1.5370672806957166e-15 -0.68124578358411669 ;
-	setAttr ".rst" -type "double3" -2.2204460492503131e-15 0 0 ;
-	setAttr ".rsrr" -type "double3" -1.5902773407317584e-15 1.5902773407317584e-15 6.3611093629270335e-15 ;
+	setAttr -s 3 ".tg";
+	setAttr ".tg[0].tot" -type "double3" 16.668215291685641 -0.53136775870700603 0.21087281317905138 ;
+	setAttr ".tg[0].tor" -type "double3" -30.072416672795107 -0.33363666538191372 99.794257987240144 ;
+	setAttr ".tg[1].tot" -type "double3" -2.2185343595791105 15.035660161360042 8.9208523071816899 ;
+	setAttr ".tg[1].tor" -type "double3" -0.13583212175303028 -2.2750086827712344 3.2778672264939615 ;
+	setAttr ".tg[2].tot" -type "double3" 8.0955271839728056 15.086222893133414 9.0034809112548544 ;
+	setAttr ".tg[2].tor" -type "double3" 0 0 -0.68124578358412946 ;
+	setAttr ".lr" -type "double3" -7.4212942567482053e-15 1.3252311172764651e-14 -2.683593012484843e-15 ;
+	setAttr ".rst" -type "double3" -6.6613381477509392e-16 0 -2.8421709430404007e-14 ;
+	setAttr ".rsrr" -type "double3" 1.0601848938211721e-15 -1.5902773407317584e-15 2.6173314566210188e-15 ;
 	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+	setAttr -k on ".w2";
 createNode mesh -n "Camera_Upper_Arm_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "955AE9C7-4328-9DE8-CCB2-1691528653B0";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "cluster7";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[30:53]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster2";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[30:53]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -1756,15 +1821,15 @@ createNode mesh -n "Camera_Upper_Arm_GeoShapeDeformed" -p "rover_modelRNfosterPa
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999999496503733 0.94162100553512573 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode scaleConstraint -n "Camera_Lower_Arm_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "98AD7E93-4998-A1C3-47CA-6D9A41C8A7E8";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_01_JntW0" -dv 1 -min 
-		0 -at "double";
+	rename -uid "F33A1666-4FD1-0941-5BDC-91B7000A4385";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Base_IK_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -1779,9 +1844,8 @@ createNode scaleConstraint -n "Camera_Lower_Arm_Geo_scaleConstraint1" -p "rover_
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "Camera_Lower_Arm_Geo_parentConstraint1" -p "rover_modelRNfosterParent1";
-	rename -uid "E3D13845-46FB-ACD8-B410-40BCF5214C50";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Front_Cam_Arm_01_JntW0" -dv 1 -min 
-		0 -at "double";
+	rename -uid "07672999-4C55-87C3-DEE2-48BFC197F504";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_Base_IK_JntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -1794,11 +1858,11 @@ createNode parentConstraint -n "Camera_Lower_Arm_Geo_parentConstraint1" -p "rove
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 18.846729460556055 -0.21474318118661628 -2.4424308466790663 ;
-	setAttr ".tg[0].tor" -type "double3" 25.000501610256759 90.584629332512904 1.0432219355200335e-12 ;
-	setAttr ".lr" -type "double3" 1.8572627419079917 17.411687648612993 23.056720858410753 ;
-	setAttr ".rst" -type "double3" -1.7763568394002505e-15 -1.4210854715202004e-14 -1.4210854715202004e-14 ;
-	setAttr ".rsrr" -type "double3" 1.0623052636088146e-12 6.3611093629268568e-15 1.9083328088781161e-14 ;
+	setAttr ".tg[0].tot" -type "double3" 18.959868392302724 1.3102065036483155 -0.13245338208202284 ;
+	setAttr ".tg[0].tor" -type "double3" 114.9901718156612 -2.0059681072012898 87.135660865502871 ;
+	setAttr ".lr" -type "double3" 0 0 6.3611093629270335e-15 ;
+	setAttr ".rst" -type "double3" -1.7763568394002505e-15 -2.1316282072803006e-14 -1.4210854715202004e-14 ;
+	setAttr ".rsrr" -type "double3" 6.3611093629270304e-15 -1.2722218725854064e-14 6.3611093629270304e-15 ;
 	setAttr -k on ".w0";
 createNode mesh -n "Camera_Lower_Arm_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "3D6DE49E-4B42-60DE-B5CD-ABA675593642";
@@ -1806,8 +1870,11 @@ createNode mesh -n "Camera_Lower_Arm_GeoShapeTag" -p "rover_modelRNfosterParent1
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr -s 2 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "cluster6";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[46:69]";
+	setAttr ".gtag[1].gtagnm" -type "string" "cluster1";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[46:69]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -1818,6 +1885,7 @@ createNode mesh -n "Camera_Lower_Arm_GeoShapeDeformed" -p "rover_modelRNfosterPa
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998832936399 0.45921098440885544 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -1857,7 +1925,7 @@ createNode parentConstraint -n "R_Wheel_03_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".tg[0].tot" -type "double3" 51.196099999999731 -12.365500000000043 44.078100000000312 ;
 	setAttr ".tg[0].tor" -type "double3" 3.6526682669938228e-15 -3.5150098846861646e-13 
 		-8.9076860098373133e-14 ;
-	setAttr ".lr" -type "double3" -3.6121115971382713e-15 3.5157580176578756e-13 -0.68124578358404086 ;
+	setAttr ".lr" -type "double3" -4.1304101341507171e-15 3.55163331958892e-13 -0.68124578358404408 ;
 	setAttr ".rst" -type "double3" 7.1054273576010019e-15 0 0 ;
 	setAttr ".rsrr" -type "double3" -3.6402442252685174e-15 3.5152428354684988e-13 8.9065601349173107e-14 ;
 	setAttr -k on ".w0";
@@ -1920,7 +1988,7 @@ createNode parentConstraint -n "R_Wheel_02_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".tg[0].tot" -type "double3" 41.737100000000048 -12.365499999999983 -3.7898799999999513 ;
 	setAttr ".tg[0].tor" -type "double3" 2.0486090780658417e-13 -9.8597195125368941e-14 
 		-2.275034977734644e-14 ;
-	setAttr ".lr" -type "double3" -2.0408133371106643e-13 8.7843828865756302e-14 -0.68124578358411036 ;
+	setAttr ".lr" -type "double3" -2.04123877290396e-13 9.4999950438079296e-14 -0.68124578358411192 ;
 	setAttr ".rst" -type "double3" -7.1054273576010019e-15 1.7763568394002505e-15 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -2.0355549961366507e-13 9.3031224432807933e-14 2.3854160110976216e-14 ;
 	setAttr -k on ".w0";
@@ -1980,7 +2048,7 @@ createNode parentConstraint -n "R_Rear_Hub_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 42.224128775616215 -6.1261317225663818 -13.754816529417816 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5105272469122634e-13 53.873792914972199 39.565912590028702 ;
-	setAttr ".lr" -type "double3" -1.605442671021446e-13 -1.2881736289935257e-14 -0.68124578358412791 ;
+	setAttr ".lr" -type "double3" -1.6372712911091756e-13 -1.2503082237841567e-14 -0.68124578358412946 ;
 	setAttr ".rsrr" -type "double3" -1.526666247102488e-13 -1.9083328088781097e-14 1.5902773407317838e-15 ;
 	setAttr -k on ".w0";
 createNode mesh -n "R_Rear_Hub_GeoShapeTag" -p "rover_modelRNfosterParent1";
@@ -2044,8 +2112,8 @@ createNode parentConstraint -n "R_Rear_Leg_Geo_parentConstraint1" -p "rover_mode
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.1563685987793031 -43.314240345365008 -30.468704046449933 ;
-	setAttr ".tg[0].tor" -type "double3" 5.3135568212281772e-12 87.454847882486959 26.319804235988158 ;
-	setAttr ".lr" -type "double3" -5.3339228443278274e-12 6.4568339254189401e-15 -0.68124578358413235 ;
+	setAttr ".tg[0].tor" -type "double3" 5.3135568212281772e-12 87.454847882486973 26.319804235988158 ;
+	setAttr ".lr" -type "double3" -5.3339606608427881e-12 1.2817830878594932e-14 -0.68124578358413257 ;
 	setAttr ".rst" -type "double3" 0 -7.1054273576010019e-15 -3.5527136788005009e-15 ;
 	setAttr ".rsrr" -type "double3" -5.3306096461328537e-12 0 0 ;
 	setAttr -k on ".w0";
@@ -2083,7 +2151,7 @@ createNode parentConstraint -n "R_Wheel_01_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".tg[0].tot" -type "double3" 40.813600000073329 -12.365500000000033 -67.971899999955966 ;
 	setAttr ".tg[0].tor" -type "double3" -6.693180703165013e-14 -6.1844147968221873e-11 
 		2.0672012735422542e-13 ;
-	setAttr ".lr" -type "double3" 6.6930329258440358e-14 6.1844146543795687e-11 -0.68124578358433663 ;
+	setAttr ".lr" -type "double3" 4.7826207099528382e-14 6.184608544688074e-11 -0.68124578358432708 ;
 	setAttr ".rst" -type "double3" 0 0 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" 6.6931807031328135e-14 6.1844148502067412e-11 -2.0354753321062368e-13 ;
 	setAttr -k on ".w0";
@@ -2172,8 +2240,8 @@ createNode parentConstraint -n "R_Front_Leg_Geo_parentConstraint1" -p "rover_mod
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -2.1563685987793031 -43.314240345365008 -30.468704046449933 ;
-	setAttr ".tg[0].tor" -type "double3" 5.3135568212281772e-12 87.454847882486959 26.319804235988158 ;
-	setAttr ".lr" -type "double3" -2.6669614221639137e-12 3.22841696270947e-15 -0.68124578358413235 ;
+	setAttr ".tg[0].tor" -type "double3" 5.3135568212281772e-12 87.454847882486973 26.319804235988158 ;
+	setAttr ".lr" -type "double3" -2.666980330421394e-12 6.4089154392974658e-15 -0.68124578358413257 ;
 	setAttr ".rst" -type "double3" 0 -3.5527136788005009e-15 -1.7763568394002505e-15 ;
 	setAttr ".rsrr" -type "double3" -2.6653048230664269e-12 0 0 ;
 	setAttr -k on ".w0";
@@ -2211,8 +2279,8 @@ createNode parentConstraint -n "L_Wheel_03_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -51.196113586425994 -12.365535736083853 44.078075408935341 ;
 	setAttr ".tg[0].tor" -type "double3" 1.3591901646567338e-14 -3.4305264009597897e-13 
-		-9.5489727016369795e-14 ;
-	setAttr ".lr" -type "double3" 3.3542440884680221e-14 6.3953663963821654 -0.63761956753912485 ;
+		-9.5489727016369808e-14 ;
+	setAttr ".lr" -type "double3" 3.3536189963904097e-14 6.3953663963821654 -0.63761956753912485 ;
 	setAttr ".rst" -type "double3" 0 3.5527136788005009e-15 0 ;
 	setAttr ".rsrr" -type "double3" -1.3573265583979762e-14 3.4311165429417025e-13 9.545255368951526e-14 ;
 	setAttr -k on ".w0";
@@ -2275,7 +2343,7 @@ createNode parentConstraint -n "L_Wheel_02_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".tg[0].tot" -type "double3" -41.737091064453139 -12.365535736083954 -3.7898750305175404 ;
 	setAttr ".tg[0].tor" -type "double3" 8.9055531080978507e-14 -6.9972202992197363e-14 
 		-9.7848975479414065e-15 ;
-	setAttr ".lr" -type "double3" -9.2560623262578594e-14 5.4315259254228562e-14 -0.68124578358412624 ;
+	setAttr ".lr" -type "double3" -7.607997365753258 5.3286714956238406e-14 -0.68124578358412691 ;
 	setAttr ".rst" -type "double3" 0 1.7763568394002505e-15 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -8.9055531080978482e-14 5.4864568255245674e-14 3.1805546814634746e-15 ;
 	setAttr -k on ".w0";
@@ -2407,8 +2475,7 @@ createNode parentConstraint -n "L_Rear_Leg_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".tg[0].tot" -type "double3" -4.5047524026402215 -44.475920557065457 28.473094302397175 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9089258669094193e-13 87.454847882487059 26.319804235983437 ;
 	setAttr ".lr" -type "double3" -3.021337863144851e-13 -7.2592595290063299e-15 -0.34062289179206001 ;
-	setAttr ".rsrr" -type "double3" -2.9897214005757057e-13 -9.5416640443905424e-15 
-		3.1805546814635416e-15 ;
+	setAttr ".rsrr" -type "double3" -2.9897214005757057e-13 -9.541664044390544e-15 3.1805546814635416e-15 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode scaleConstraint -n "L_Wheel_01_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
@@ -2446,8 +2513,8 @@ createNode parentConstraint -n "L_Wheel_01_Geo_parentConstraint1" -p "rover_mode
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -24.984532845783324 -24.097164079577841 -67.962297764498189 ;
 	setAttr ".tg[0].tor" -type "double3" 0.00016222339376964557 0.013643060765441984 
-		18.425525597147178 ;
-	setAttr ".lr" -type "double3" 1.268998060689421e-30 -1.8288189418415221e-14 -7.9513867036587919e-15 ;
+		18.425525597147182 ;
+	setAttr ".lr" -type "double3" 1.5902773407317594e-15 -1.9083328088781101e-14 -4.7708320221952752e-15 ;
 	setAttr ".rst" -type "double3" 3.5527136788005009e-15 -7.1054273576010019e-15 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" 1.268998060689421e-30 -1.8288189418415221e-14 -7.9513867036587919e-15 ;
 	setAttr -k on ".w0";
@@ -2571,7 +2638,7 @@ createNode parentConstraint -n "Rear_Solar_Panel_Geo_parentConstraint1" -p "rove
 	setAttr ".tg[0].tor" -type "double3" 0 -2.5444437451708134e-14 -2.5444437451708134e-14 ;
 	setAttr ".lr" -type "double3" -3.3317645364264501e-15 2.5425079555224174e-14 -0.68124578358410393 ;
 	setAttr ".rst" -type "double3" -2.3899786941066699e-16 0 0 ;
-	setAttr ".rsrr" -type "double3" 5.649800061504203e-30 2.5444437451708134e-14 2.5444437451708134e-14 ;
+	setAttr ".rsrr" -type "double3" 5.6498000615042044e-30 2.5444437451708134e-14 2.5444437451708134e-14 ;
 	setAttr -k on ".w0";
 createNode mesh -n "Rear_Solar_Panel_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "A14A4F22-49FF-237F-D5DA-19B9C2A04F92";
@@ -2635,7 +2702,7 @@ createNode parentConstraint -n "R_Solar_Panel_02_Geo_parentConstraint1" -p "rove
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 62.834800000000044 66.667999999999992 1.7787500000000624 ;
 	setAttr ".tg[0].tor" -type "double3" 180 -3.1805546814635174e-14 -3.2628428298062789e-14 ;
-	setAttr ".lr" -type "double3" 1.7110007911341373e-15 -3.1795936869234352e-14 -0.68124578358416799 ;
+	setAttr ".lr" -type "double3" 1.7855437241791681e-15 -3.1795493706949676e-14 -0.68124578358416821 ;
 	setAttr ".rst" -type "double3" -7.1054273576010019e-15 0 0 ;
 	setAttr ".rsrr" -type "double3" 1.7890620083232375e-15 -3.1805546814635168e-14 -3.262553356844998e-14 ;
 	setAttr -k on ".w0";
@@ -2698,7 +2765,7 @@ createNode parentConstraint -n "R_Solar_Panel_01_Geo_parentConstraint1" -p "rove
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 7.2736552099718441 66.826675273764579 36.929986950190937 ;
-	setAttr ".tg[0].tor" -type "double3" -179.99999999999997 -34.358020853901827 0.17919354608096733 ;
+	setAttr ".tg[0].tor" -type "double3" -179.99999999999997 -34.358020853901827 0.17919354608096735 ;
 	setAttr ".lr" -type "double3" -6.3988134681356114e-15 6.3231804382163818e-15 -0.68124578358412957 ;
 	setAttr ".rst" -type "double3" 0 0 3.5527136788005009e-15 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635176e-15 3.1805546814635176e-15 -3.1805546814635176e-15 ;
@@ -2764,7 +2831,7 @@ createNode parentConstraint -n "L_Solar_Panel_02_Geo_parentConstraint1" -p "rove
 	setAttr ".tg[0].tot" -type "double3" -62.834754943847777 -66.667961120605369 -1.778749227523877 ;
 	setAttr ".tg[0].tor" -type "double3" 3.2886438444663793e-14 -1.2722218725854043e-14 
 		-4.2738635678595274e-14 ;
-	setAttr ".lr" -type "double3" -3.3138635385388489e-14 2.3514885570275484e-14 -0.68124578358409305 ;
+	setAttr ".lr" -type "double3" -3.3150513582091341e-14 1.7153496114465633e-14 -0.68124578358409305 ;
 	setAttr ".rsrr" -type "double3" -3.2874014402939314e-14 1.2802392620107278e-14 4.2720067469579299e-14 ;
 	setAttr -k on ".w0";
 createNode mesh -n "L_Solar_Panel_02_GeoShapeTag" -p "rover_modelRNfosterParent1";
@@ -2863,7 +2930,7 @@ createNode mesh -n "L_Solar_Panel_01_GeoShapeDeformed" -p "rover_modelRNfosterPa
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 6 ".pt";
+	setAttr -s 3 ".pt";
 	setAttr ".pt[97]" -type "float3" 5.9604645e-08 7.4503106e-09 2.9802322e-08 ;
 	setAttr ".pt[98]" -type "float3" 5.9604645e-08 7.4503106e-09 2.9802322e-08 ;
 	setAttr ".pt[111]" -type "float3" 5.9604645e-08 7.4503106e-09 2.9802322e-08 ;
@@ -2899,6 +2966,7 @@ createNode parentConstraint -n "Dish_Geo_parentConstraint1" -p "rover_modelRNfos
 	addAttr -dcb 0 -ci true -k true -sn "w2" -ln "Head_GeoW2" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w3" -ln "Head_Gauges_GeoW3" -dv 1 -min 0 -at "double";
 	addAttr -dcb 0 -ci true -k true -sn "w4" -ln "Dish_Base_GeoW4" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w5" -ln "Body_GeoW5" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -2911,20 +2979,25 @@ createNode parentConstraint -n "Dish_Geo_parentConstraint1" -p "rover_modelRNfos
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 5 ".tg";
+	setAttr -s 6 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -48.489832547196144 2.4697132110595703 -0.3986858317594848 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999999999997868 89.318754216415869 -2.1400400028234609e-12 ;
-	setAttr ".tg[2].tot" -type "double3" -0.20484781265258237 -130.26788711547852 -45.151325225830078 ;
-	setAttr ".tg[3].tot" -type "double3" 1.5578556060791073 -134.11324691772464 -45.132041931152351 ;
-	setAttr ".tg[4].tot" -type "double3" -42.076126098632812 -81.921428680419908 24.999483108520501 ;
-	setAttr ".lr" -type "double3" -4.2746654918869669e-13 5.0888874903416275e-15 -1.8983328206654123e-29 ;
-	setAttr ".rst" -type "double3" 7.2164496600635178e-17 -1.4210854715202005e-15 -2.0428103653102883e-15 ;
-	setAttr ".rsrr" -type "double3" -4.2746654918869669e-13 5.0888874903416275e-15 -1.8983328206654123e-29 ;
+	setAttr ".tg[1].tot" -type "double3" 1.4765966227514583e-15 -3.8369307731045413e-14 
+		-1.3411494137471892e-14 ;
+	setAttr ".tg[2].tot" -type "double3" -0.2048478126525809 -130.26788711547854 -45.151325225830092 ;
+	setAttr ".tg[3].tot" -type "double3" 1.5578556060791089 -134.11324691772467 -45.132041931152365 ;
+	setAttr ".tg[4].tot" -type "double3" -42.076126098632812 -81.921428680419766 24.999483108520547 ;
+	setAttr ".tg[5].tot" -type "double3" 0.46323623153972604 -78.045700695999912 -10.294698715209977 ;
+	setAttr ".tg[5].tor" -type "double3" 0 0 0.68124578358411036 ;
+	setAttr ".lr" -type "double3" -3.5622212432391388e-13 4.2407395752846885e-15 -1.3182866810176473e-29 ;
+	setAttr ".rst" -type "double3" 2.2306230936427102e-15 -3.1263880373444404e-14 -1.3115434664238515e-14 ;
+	setAttr ".rsrr" -type "double3" -3.5622212432391388e-13 4.2407395752846885e-15 -1.3182866810176473e-29 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 	setAttr -k on ".w2";
 	setAttr -k on ".w3";
 	setAttr -k on ".w4";
+	setAttr -k on ".w5";
 createNode scaleConstraint -n "Dish_Base_Geo_scaleConstraint1" -p "rover_modelRNfosterParent1";
 	rename -uid "6953C1A2-4122-50C0-6F84-95A64635D5A2";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "COG_JntW0" -dv 1 -min 0 -at "double";
@@ -3013,7 +3086,7 @@ createNode parentConstraint -n "Body_Geo_parentConstraint1" -p "rover_modelRNfos
 	setAttr ".tg[0].tot" -type "double3" 29.555868148803704 -7.8249855041503906 0.06455039978027817 ;
 	setAttr ".tg[0].tor" -type "double3" 90 89.999999999999972 0 ;
 	setAttr ".lr" -type "double3" -1.5126605983845439e-16 2.5443987812703982e-14 -0.68124578358411036 ;
-	setAttr ".rsrr" -type "double3" 5.649800061504203e-30 2.5444437451708134e-14 2.5444437451708134e-14 ;
+	setAttr ".rsrr" -type "double3" 5.6498000615042044e-30 2.5444437451708134e-14 2.5444437451708134e-14 ;
 	setAttr -k on ".w0";
 createNode mesh -n "Body_GeoShapeTag" -p "rover_modelRNfosterParent1";
 	rename -uid "72BC913C-4A64-CC41-AF50-07A1DA3DACF1";
@@ -3049,28 +3122,29 @@ createNode mesh -n "Body_GeoShapeDeformed" -p "rover_modelRNfosterParent1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CA474F85-49B5-FE82-A4B2-F4895D46CDE8";
+	rename -uid "E5680A43-4790-7491-0D63-588CB617EDC3";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "84787B75-4D1F-A0BA-6F3F-E7B117C34251";
+	rename -uid "92200C98-40CE-4754-7DBF-E9A3E9711B35";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3AAEE7B6-4C4C-CB94-1622-06AA621CEFD0";
+	rename -uid "312EF4D1-4CEA-F883-6A14-BD8152D1AC77";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9D9743E9-4A5D-08B0-5E44-D3B7786C49FA";
-	setAttr -s 5 ".dli[1:4]"  3 4 5 6;
-	setAttr -s 5 ".dli";
+	rename -uid "1B6F6495-453C-F9AC-5F3F-CD97C10B060A";
+	setAttr ".cdl" 1;
+	setAttr -s 8 ".dli[1:7]"  3 4 5 6 1 2 7;
+	setAttr -s 8 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1E55AF9C-46D7-08AB-1B88-F381A66E2C6F";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5F826598-4475-7C76-26F4-0F9C584B83DA";
+	rename -uid "1D33B1AC-4B52-3DC0-5D01-18A2F800982A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "594904D3-43F2-53D8-B501-4EA0603609E3";
 	setAttr ".g" yes;
 createNode reference -n "rover_modelRN";
 	rename -uid "054E4886-48E4-168D-6710-51B3DA34583C";
-	setAttr -s 471 ".phl";
+	setAttr -s 489 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -3542,1198 +3616,1260 @@ createNode reference -n "rover_modelRN";
 	setAttr ".phl[469]" 0;
 	setAttr ".phl[470]" 0;
 	setAttr ".phl[471]" 0;
+	setAttr ".phl[472]" 0;
+	setAttr ".phl[473]" 0;
+	setAttr ".phl[474]" 0;
+	setAttr ".phl[475]" 0;
+	setAttr ".phl[476]" 0;
+	setAttr ".phl[477]" 0;
+	setAttr ".phl[478]" 0;
+	setAttr ".phl[479]" 0;
+	setAttr ".phl[480]" 0;
+	setAttr ".phl[481]" 0;
+	setAttr ".phl[482]" 0;
+	setAttr ".phl[483]" 0;
+	setAttr ".phl[484]" 0;
+	setAttr ".phl[485]" 0;
+	setAttr ".phl[486]" 0;
+	setAttr ".phl[487]" 0;
+	setAttr ".phl[488]" 0;
+	setAttr ".phl[489]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"rover_modelRN"
 		"rover_modelRN" 0
-		"rover_modelRN" 595
-		0 "|rover_model:Geometry" "|Geomatry" "-s -r "
-		0 "|rover_modelRNfosterParent1|Body_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
+		"rover_modelRN" 617
+		0 "|rover_model:Geometry" "|Rover|Geomatry" "-s -r "
+		0 "|rover_modelRNfosterParent1|Body_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Body_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
+		0 "|rover_modelRNfosterParent1|Body_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Body_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
+		0 "|rover_modelRNfosterParent1|Body_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Body_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
+		0 "|rover_modelRNfosterParent1|Body_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Dish_Base_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo" 
+		0 "|rover_modelRNfosterParent1|Dish_Base_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Dish_Base_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo" 
+		0 "|rover_modelRNfosterParent1|Dish_Base_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Dish_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo" 
+		0 "|rover_modelRNfosterParent1|Dish_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Dish_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo" 
+		0 "|rover_modelRNfosterParent1|Dish_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_01_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Solar_Panel_02_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_01_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Solar_Panel_02_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
+		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
+		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
+		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
+		0 "|rover_modelRNfosterParent1|Rear_Solar_Panel_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Front_Leg_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Front_Leg_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Front_Leg_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Front_Leg_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Front_Hub_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_01_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_01_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_01_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Leg_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Leg_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Leg_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Leg_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Hub_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Hub_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Hub_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Rear_Hub_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Rear_Hub_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_02_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_02_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_02_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_03_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|L_Wheel_03_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|L_Wheel_03_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Front_Leg_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Front_Leg_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Front_Leg_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Front_Leg_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Front_Hub_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Front_Hub_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Front_Hub_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Front_Hub_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_01_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_01_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_01_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_01_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_01_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_01_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_01_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_01_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Leg_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Leg_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Leg_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Leg_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Hub_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Hub_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Hub_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Hub_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Hub_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Hub_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Rear_Hub_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Rear_Hub_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_02_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_02_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_02_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_02_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_02_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_02_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_02_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_02_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_03_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_03_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_03_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_03_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_03_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_03_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|R_Wheel_03_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
+		0 "|rover_modelRNfosterParent1|R_Wheel_03_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Lower_Arm_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Upper_Arm_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Attachment_GeoShapeDeformed" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Attachment_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Attachment_GeoShapeTag" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Attachment_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Attachment_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Attachment_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Attachment_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_Attachment_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Geo_parentConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_GeoShapeDeformed" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
 		"-s -r "
-		0 "|rover_modelRNfosterParent1|Camera_Geo_scaleConstraint1" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
+		0 "|rover_modelRNfosterParent1|Camera_GeoShapeTag" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
 		"-s -r "
-		2 "|Geomatry|rover_model:Geometry|rover_model:Body_Geo" "rotatePivotTranslate" 
+		0 "|rover_modelRNfosterParent1|Camera_Geo_parentConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
+		"-s -r "
+		0 "|rover_modelRNfosterParent1|Camera_Geo_scaleConstraint1" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo" 
+		"-s -r "
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo" "rotatePivotTranslate" 
 		" -type \"double3\" 0 0 0"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5000000074505806"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5000000074505806"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5000000074505806"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5000000074505806"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" "rotatePivotTranslate" 
-		" -type \"double3\" 0 0 0"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.5000000074505806"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.20379500414128415"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.20379500414128415"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.4863375024870038 0.53498151898384094"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.49999998832936399 0.45921098440885544"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.49999999496503733 0.94162100553512573"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape" 
 		"intermediateObject" " 1"
-		2 "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape" 
 		"uvPivot" " -type \"double2\" 0.5 0.93394899368286133"
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateX" 
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape" 
+		"intermediateObject" " 1"
+		2 "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape" 
+		"uvPivot" " -type \"double2\" 0.66264697909355164 0.50292101502418518"
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[1]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[2]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translate" 
 		"rover_modelRN.placeHolderList[3]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateX" 
 		"rover_modelRN.placeHolderList[4]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateY" 
 		"rover_modelRN.placeHolderList[5]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[6]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotate" 
 		"rover_modelRN.placeHolderList[7]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[8]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[9]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[10]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[11]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[12]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[13]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[14]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[15]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[16]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scale" 
 		"rover_modelRN.placeHolderList[17]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[18]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[19]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[20]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[21]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Body_Geo|rover_model:Body_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[22]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.translate" 
 		"rover_modelRN.placeHolderList[23]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.translate" 
 		"rover_modelRN.placeHolderList[24]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[25]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[26]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[27]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[28]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotate" 
 		"rover_modelRN.placeHolderList[29]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotate" 
 		"rover_modelRN.placeHolderList[30]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[31]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[32]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
 		"rover_modelRN.placeHolderList[33]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
 		"rover_modelRN.placeHolderList[34]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
 		"rover_modelRN.placeHolderList[35]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.scale" 
 		"rover_modelRN.placeHolderList[36]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[37]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[38]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[39]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Neck_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[40]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.translate" 
 		"rover_modelRN.placeHolderList[41]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.translate" 
 		"rover_modelRN.placeHolderList[42]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[43]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[44]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[45]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[46]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotate" 
 		"rover_modelRN.placeHolderList[47]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotate" 
 		"rover_modelRN.placeHolderList[48]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[49]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[50]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
 		"rover_modelRN.placeHolderList[51]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
 		"rover_modelRN.placeHolderList[52]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
 		"rover_modelRN.placeHolderList[53]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.scale" 
 		"rover_modelRN.placeHolderList[54]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[55]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[56]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[57]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[58]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.translate" 
 		"rover_modelRN.placeHolderList[59]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.translate" 
 		"rover_modelRN.placeHolderList[60]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[61]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[62]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[63]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[64]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotate" 
 		"rover_modelRN.placeHolderList[65]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotate" 
 		"rover_modelRN.placeHolderList[66]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[67]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[68]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
 		"rover_modelRN.placeHolderList[69]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
 		"rover_modelRN.placeHolderList[70]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
 		"rover_modelRN.placeHolderList[71]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.scale" 
 		"rover_modelRN.placeHolderList[72]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[73]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[74]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[75]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Head_Gauges_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[76]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translate" 
 		"rover_modelRN.placeHolderList[77]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateX" 
 		"rover_modelRN.placeHolderList[78]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateY" 
 		"rover_modelRN.placeHolderList[79]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[80]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[81]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[82]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[83]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[84]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotate" 
 		"rover_modelRN.placeHolderList[85]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[86]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[87]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[88]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[89]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[90]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scale" 
 		"rover_modelRN.placeHolderList[91]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scale" 
 		"rover_modelRN.placeHolderList[92]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[93]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[94]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[95]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[96]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[97]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[98]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Base_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[99]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateX" 
 		"rover_modelRN.placeHolderList[100]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateY" 
 		"rover_modelRN.placeHolderList[101]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[102]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[103]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[104]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[105]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[106]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[107]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[108]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[109]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[110]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[111]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[112]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateOrder" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Dish_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[113]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateX" 
 		"rover_modelRN.placeHolderList[114]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateY" 
 		"rover_modelRN.placeHolderList[115]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[116]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[117]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[118]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[119]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[120]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[121]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[122]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[123]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[124]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[125]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[126]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[127]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_01_Geo|rover_model:L_Solar_Panel_01_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[128]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateX" 
 		"rover_modelRN.placeHolderList[129]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateY" 
 		"rover_modelRN.placeHolderList[130]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[131]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[132]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[133]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[134]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[135]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[136]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[137]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[138]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[139]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[140]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[141]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[142]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Solar_Panel_02_Geo|rover_model:L_Solar_Panel_02_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[143]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateX" 
 		"rover_modelRN.placeHolderList[144]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateY" 
 		"rover_modelRN.placeHolderList[145]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[146]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[147]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[148]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[149]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[150]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[151]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[152]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[153]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[154]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[155]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[156]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[157]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_01_Geo|rover_model:R_Solar_Panel_01_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[158]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateX" 
 		"rover_modelRN.placeHolderList[159]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateY" 
 		"rover_modelRN.placeHolderList[160]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[161]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[162]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[163]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[164]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[165]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[166]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[167]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[168]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[169]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[170]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[171]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[172]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Solar_Panel_02_Geo|rover_model:R_Solar_Panel_02_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[173]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[174]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateX" 
 		"rover_modelRN.placeHolderList[175]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateY" 
 		"rover_modelRN.placeHolderList[176]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[177]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[178]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[179]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[180]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[181]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[182]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[183]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[184]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[185]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[186]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[187]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Rear_Solar_Panel_Geo|rover_model:Rear_Solar_Panel_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[188]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translate" 
 		"rover_modelRN.placeHolderList[189]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateX" 
 		"rover_modelRN.placeHolderList[190]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateY" 
 		"rover_modelRN.placeHolderList[191]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[192]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[193]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[194]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[195]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[196]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotate" 
 		"rover_modelRN.placeHolderList[197]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[198]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[199]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[200]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[201]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[202]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scale" 
 		"rover_modelRN.placeHolderList[203]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scale" 
 		"rover_modelRN.placeHolderList[204]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape.worldMesh" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[205]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[206]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[207]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[208]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[209]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[210]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[211]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Front_Hub_Geo|rover_model:L_Front_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[212]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translate" 
 		"rover_modelRN.placeHolderList[213]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateX" 
 		"rover_modelRN.placeHolderList[214]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateY" 
 		"rover_modelRN.placeHolderList[215]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[216]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[217]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[218]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[219]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[220]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotate" 
 		"rover_modelRN.placeHolderList[221]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[222]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[223]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[224]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[225]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[226]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scale" 
 		"rover_modelRN.placeHolderList[227]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[228]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[229]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[230]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[231]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[232]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[233]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_01_Geo|rover_model:L_Wheel_01_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[234]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateX" 
 		"rover_modelRN.placeHolderList[235]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateY" 
 		"rover_modelRN.placeHolderList[236]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[237]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[238]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[239]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[240]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[241]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[242]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[243]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[244]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[245]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[246]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[247]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateOrder" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Leg_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[248]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateX" 
 		"rover_modelRN.placeHolderList[249]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateY" 
 		"rover_modelRN.placeHolderList[250]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[251]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[252]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[253]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[254]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[255]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[256]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[257]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[258]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[259]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[260]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[261]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[262]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Rear_Hub_Geo|rover_model:L_Rear_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[263]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateX" 
 		"rover_modelRN.placeHolderList[264]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateY" 
 		"rover_modelRN.placeHolderList[265]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[266]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[267]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[268]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[269]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[270]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[271]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[272]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[273]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[274]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[275]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[276]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[277]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_02_Geo|rover_model:L_Wheel_02_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[278]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateX" 
 		"rover_modelRN.placeHolderList[279]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateY" 
 		"rover_modelRN.placeHolderList[280]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[281]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[282]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[283]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[284]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[285]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[286]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[287]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[288]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[289]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[290]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[291]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[292]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:L_Wheel_03_Geo|rover_model:L_Wheel_03_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[293]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateX" 
 		"rover_modelRN.placeHolderList[294]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateY" 
 		"rover_modelRN.placeHolderList[295]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[296]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[297]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[298]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[299]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[300]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[301]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[302]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[303]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[304]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[305]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[306]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Leg_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[307]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Front_Hub_Geo|rover_model:R_Front_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[308]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateX" 
 		"rover_modelRN.placeHolderList[309]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateY" 
 		"rover_modelRN.placeHolderList[310]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[311]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[312]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[313]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[314]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[315]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[316]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[317]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[318]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[319]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[320]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[321]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[322]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_01_Geo|rover_model:R_Wheel_01_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[323]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translate" 
 		"rover_modelRN.placeHolderList[324]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateX" 
 		"rover_modelRN.placeHolderList[325]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateY" 
 		"rover_modelRN.placeHolderList[326]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[327]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[328]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[329]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[330]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[331]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotate" 
 		"rover_modelRN.placeHolderList[332]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[333]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[334]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[335]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[336]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[337]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scale" 
 		"rover_modelRN.placeHolderList[338]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scale" 
 		"rover_modelRN.placeHolderList[339]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[340]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[341]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[342]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[343]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[344]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[345]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Leg_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[346]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateX" 
 		"rover_modelRN.placeHolderList[347]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateY" 
 		"rover_modelRN.placeHolderList[348]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[349]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[350]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[351]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[352]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[353]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[354]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[355]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[356]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[357]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[358]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[359]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[360]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Rear_Hub_Geo|rover_model:R_Rear_Hub_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[361]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateX" 
 		"rover_modelRN.placeHolderList[362]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateY" 
 		"rover_modelRN.placeHolderList[363]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[364]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[365]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[366]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[367]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[368]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[369]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[370]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[371]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[372]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[373]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[374]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[375]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_02_Geo|rover_model:R_Wheel_02_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[376]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateX" 
 		"rover_modelRN.placeHolderList[377]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateY" 
 		"rover_modelRN.placeHolderList[378]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[379]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[380]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[381]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[382]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[383]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[384]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[385]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[386]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[387]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[388]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[389]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[390]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:R_Wheel_03_Geo|rover_model:R_Wheel_03_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[391]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateX" 
 		"rover_modelRN.placeHolderList[392]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateY" 
 		"rover_modelRN.placeHolderList[393]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[394]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[395]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[396]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[397]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[398]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[399]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[400]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[401]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[402]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[403]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[404]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[405]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Lower_Arm_Geo|rover_model:Camera_Lower_Arm_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[406]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateX" 
 		"rover_modelRN.placeHolderList[407]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateY" 
 		"rover_modelRN.placeHolderList[408]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[409]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[410]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[411]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[412]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[413]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.worldMesh" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[414]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[415]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[416]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[417]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[418]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[419]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[420]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Upper_Arm_Geo|rover_model:Camera_Upper_Arm_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[421]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentInverseMatrix" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translate" 
 		"rover_modelRN.placeHolderList[422]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateX" 
 		"rover_modelRN.placeHolderList[423]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateY" 
 		"rover_modelRN.placeHolderList[424]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivotTranslate" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[425]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotate" 
 		"rover_modelRN.placeHolderList[426]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[427]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleZ" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[428]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.worldMesh" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateZ" 
 		"rover_modelRN.placeHolderList[429]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[430]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotateOrder" 
 		"rover_modelRN.placeHolderList[431]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[432]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentInverseMatrix" 
 		"rover_modelRN.placeHolderList[433]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[434]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateX" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivot" 
 		"rover_modelRN.placeHolderList[435]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateY" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[436]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.rotatePivotTranslate" 
 		"rover_modelRN.placeHolderList[437]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scale" 
 		"rover_modelRN.placeHolderList[438]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateOrder" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scale" 
 		"rover_modelRN.placeHolderList[439]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleX" 
 		"rover_modelRN.placeHolderList[440]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentInverseMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleY" 
 		"rover_modelRN.placeHolderList[441]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivot" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.scaleZ" 
 		"rover_modelRN.placeHolderList[442]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivot" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[443]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo.parentMatrix" 
 		"rover_modelRN.placeHolderList[444]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivotTranslate" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Attachment_Geo|rover_model:Camera_Attachment_GeoShape.worldMesh" 
 		"rover_modelRN.placeHolderList[445]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scale" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translate" 
 		"rover_modelRN.placeHolderList[446]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scale" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateX" 
 		"rover_modelRN.placeHolderList[447]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleX" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateY" 
 		"rover_modelRN.placeHolderList[448]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleY" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.translateZ" 
 		"rover_modelRN.placeHolderList[449]" ""
-		5 4 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleZ" 
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotate" 
 		"rover_modelRN.placeHolderList[450]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateX" 
 		"rover_modelRN.placeHolderList[451]" ""
-		5 3 "rover_modelRN" "|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentMatrix" 
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateY" 
 		"rover_modelRN.placeHolderList[452]" ""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[453]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[454]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[455]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[456]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[457]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[458]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[459]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[460]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[461]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[462]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[463]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[464]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[465]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[466]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[467]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[468]" 
-		""
-		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[469]" 
-		""
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateZ" 
+		"rover_modelRN.placeHolderList[453]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateOrder" 
+		"rover_modelRN.placeHolderList[454]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotateOrder" 
+		"rover_modelRN.placeHolderList[455]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentInverseMatrix" 
+		"rover_modelRN.placeHolderList[456]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentInverseMatrix" 
+		"rover_modelRN.placeHolderList[457]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivot" 
+		"rover_modelRN.placeHolderList[458]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivot" 
+		"rover_modelRN.placeHolderList[459]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivotTranslate" 
+		"rover_modelRN.placeHolderList[460]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.rotatePivotTranslate" 
+		"rover_modelRN.placeHolderList[461]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scale" 
+		"rover_modelRN.placeHolderList[462]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scale" 
+		"rover_modelRN.placeHolderList[463]" ""
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleX" 
+		"rover_modelRN.placeHolderList[464]" ""
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleY" 
+		"rover_modelRN.placeHolderList[465]" ""
+		5 4 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.scaleZ" 
+		"rover_modelRN.placeHolderList[466]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentMatrix" 
+		"rover_modelRN.placeHolderList[467]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo.parentMatrix" 
+		"rover_modelRN.placeHolderList[468]" ""
+		5 3 "rover_modelRN" "|Rover|Geomatry|rover_model:Geometry|rover_model:Camera_Geo|rover_model:Camera_GeoShape.worldMesh" 
+		"rover_modelRN.placeHolderList[469]" ""
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[470]" 
 		""
 		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[471]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[472]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[473]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[474]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[475]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[476]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[477]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[478]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[479]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[480]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[481]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[482]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[483]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[484]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[485]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[486]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[487]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[488]" 
+		""
+		5 4 "rover_modelRN" "rover_model:Body_GeoSG.dagSetMembers" "rover_modelRN.placeHolderList[489]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -4764,7 +4900,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
 		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
-		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 0\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
@@ -4790,7 +4926,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|:persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
 		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
@@ -4830,6 +4966,20 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -783.33330220646451 -73.809520876596963 ;
 	setAttr ".tgi[0].vh" -type "double2" 754.7618747703624 73.809520876596963 ;
+createNode displayLayer -n "GeomatryLayer";
+	rename -uid "04E570BB-4F90-DEB2-552F-0096C0F34966";
+	setAttr ".dt" 2;
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 5;
+createNode displayLayer -n "JointLayer";
+	rename -uid "C63F9B62-4ABA-1A05-A78E-638FADF20FE4";
+	setAttr ".v" no;
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 6;
+createNode displayLayer -n "ControlsLayer";
+	rename -uid "88D792EC-4BDD-A899-BFB8-31B04D050577";
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 7;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4875,623 +5025,652 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 6 ".sol";
-connectAttr "Body_Geo_parentConstraint1.ctx" "rover_modelRN.phl[1]";
-connectAttr "Body_Geo_parentConstraint1.cty" "rover_modelRN.phl[2]";
-connectAttr "Body_Geo_parentConstraint1.ctz" "rover_modelRN.phl[3]";
-connectAttr "Body_Geo_parentConstraint1.crx" "rover_modelRN.phl[4]";
-connectAttr "Body_Geo_parentConstraint1.cry" "rover_modelRN.phl[5]";
-connectAttr "Body_Geo_parentConstraint1.crz" "rover_modelRN.phl[6]";
-connectAttr "rover_modelRN.phl[7]" "Body_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[8]" "Body_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[9]" "Body_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[10]" "Body_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[11]" "Body_Geo_parentConstraint1.crt";
-connectAttr "Body_Geo_scaleConstraint1.csx" "rover_modelRN.phl[12]";
-connectAttr "Body_Geo_scaleConstraint1.csy" "rover_modelRN.phl[13]";
-connectAttr "Body_Geo_scaleConstraint1.csz" "rover_modelRN.phl[14]";
-connectAttr "rover_modelRN.phl[15]" "Body_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[16]" "Dish_Base_Geo_parentConstraint1.tg[1].tt";
-connectAttr "rover_modelRN.phl[17]" "Dish_Geo_parentConstraint1.tg[1].tt";
-connectAttr "rover_modelRN.phl[18]" "Dish_Base_Geo_parentConstraint1.tg[1].trp";
-connectAttr "rover_modelRN.phl[19]" "Dish_Geo_parentConstraint1.tg[1].trp";
-connectAttr "rover_modelRN.phl[20]" "Dish_Base_Geo_parentConstraint1.tg[1].trt";
-connectAttr "rover_modelRN.phl[21]" "Dish_Geo_parentConstraint1.tg[1].trt";
-connectAttr "rover_modelRN.phl[22]" "Dish_Base_Geo_parentConstraint1.tg[1].tr";
-connectAttr "rover_modelRN.phl[23]" "Dish_Geo_parentConstraint1.tg[1].tr";
-connectAttr "rover_modelRN.phl[24]" "Dish_Base_Geo_parentConstraint1.tg[1].tro";
-connectAttr "rover_modelRN.phl[25]" "Dish_Geo_parentConstraint1.tg[1].tro";
-connectAttr "rover_modelRN.phl[26]" "Dish_Geo_scaleConstraint1.tg[1].ts";
-connectAttr "rover_modelRN.phl[27]" "Dish_Geo_parentConstraint1.tg[1].ts";
-connectAttr "rover_modelRN.phl[28]" "Dish_Base_Geo_parentConstraint1.tg[1].ts";
-connectAttr "rover_modelRN.phl[29]" "Dish_Base_Geo_scaleConstraint1.tg[1].ts";
-connectAttr "rover_modelRN.phl[30]" "Dish_Geo_scaleConstraint1.tg[1].tpm";
-connectAttr "rover_modelRN.phl[31]" "Dish_Geo_parentConstraint1.tg[1].tpm";
-connectAttr "rover_modelRN.phl[32]" "Dish_Base_Geo_parentConstraint1.tg[1].tpm";
-connectAttr "rover_modelRN.phl[33]" "Dish_Base_Geo_scaleConstraint1.tg[1].tpm";
-connectAttr "rover_modelRN.phl[34]" "Dish_Base_Geo_parentConstraint1.tg[2].tt";
-connectAttr "rover_modelRN.phl[35]" "Dish_Geo_parentConstraint1.tg[2].tt";
-connectAttr "rover_modelRN.phl[36]" "Dish_Base_Geo_parentConstraint1.tg[2].trp";
-connectAttr "rover_modelRN.phl[37]" "Dish_Geo_parentConstraint1.tg[2].trp";
-connectAttr "rover_modelRN.phl[38]" "Dish_Base_Geo_parentConstraint1.tg[2].trt";
-connectAttr "rover_modelRN.phl[39]" "Dish_Geo_parentConstraint1.tg[2].trt";
-connectAttr "rover_modelRN.phl[40]" "Dish_Base_Geo_parentConstraint1.tg[2].tr";
-connectAttr "rover_modelRN.phl[41]" "Dish_Geo_parentConstraint1.tg[2].tr";
-connectAttr "rover_modelRN.phl[42]" "Dish_Base_Geo_parentConstraint1.tg[2].tro";
-connectAttr "rover_modelRN.phl[43]" "Dish_Geo_parentConstraint1.tg[2].tro";
-connectAttr "rover_modelRN.phl[44]" "Dish_Geo_scaleConstraint1.tg[2].ts";
-connectAttr "rover_modelRN.phl[45]" "Dish_Geo_parentConstraint1.tg[2].ts";
-connectAttr "rover_modelRN.phl[46]" "Dish_Base_Geo_parentConstraint1.tg[2].ts";
-connectAttr "rover_modelRN.phl[47]" "Dish_Base_Geo_scaleConstraint1.tg[2].ts";
-connectAttr "rover_modelRN.phl[48]" "Dish_Geo_scaleConstraint1.tg[2].tpm";
-connectAttr "rover_modelRN.phl[49]" "Dish_Geo_parentConstraint1.tg[2].tpm";
-connectAttr "rover_modelRN.phl[50]" "Dish_Base_Geo_parentConstraint1.tg[2].tpm";
-connectAttr "rover_modelRN.phl[51]" "Dish_Base_Geo_scaleConstraint1.tg[2].tpm";
-connectAttr "rover_modelRN.phl[52]" "Dish_Base_Geo_parentConstraint1.tg[3].tt";
-connectAttr "rover_modelRN.phl[53]" "Dish_Geo_parentConstraint1.tg[3].tt";
-connectAttr "rover_modelRN.phl[54]" "Dish_Base_Geo_parentConstraint1.tg[3].trp";
-connectAttr "rover_modelRN.phl[55]" "Dish_Geo_parentConstraint1.tg[3].trp";
-connectAttr "rover_modelRN.phl[56]" "Dish_Base_Geo_parentConstraint1.tg[3].trt";
-connectAttr "rover_modelRN.phl[57]" "Dish_Geo_parentConstraint1.tg[3].trt";
-connectAttr "rover_modelRN.phl[58]" "Dish_Base_Geo_parentConstraint1.tg[3].tr";
-connectAttr "rover_modelRN.phl[59]" "Dish_Geo_parentConstraint1.tg[3].tr";
-connectAttr "rover_modelRN.phl[60]" "Dish_Base_Geo_parentConstraint1.tg[3].tro";
-connectAttr "rover_modelRN.phl[61]" "Dish_Geo_parentConstraint1.tg[3].tro";
-connectAttr "rover_modelRN.phl[62]" "Dish_Geo_scaleConstraint1.tg[3].ts";
-connectAttr "rover_modelRN.phl[63]" "Dish_Geo_parentConstraint1.tg[3].ts";
-connectAttr "rover_modelRN.phl[64]" "Dish_Base_Geo_parentConstraint1.tg[3].ts";
-connectAttr "rover_modelRN.phl[65]" "Dish_Base_Geo_scaleConstraint1.tg[3].ts";
-connectAttr "rover_modelRN.phl[66]" "Dish_Geo_scaleConstraint1.tg[3].tpm";
-connectAttr "rover_modelRN.phl[67]" "Dish_Geo_parentConstraint1.tg[3].tpm";
-connectAttr "rover_modelRN.phl[68]" "Dish_Base_Geo_parentConstraint1.tg[3].tpm";
-connectAttr "rover_modelRN.phl[69]" "Dish_Base_Geo_scaleConstraint1.tg[3].tpm";
-connectAttr "rover_modelRN.phl[70]" "Dish_Geo_parentConstraint1.tg[4].tt";
-connectAttr "Dish_Base_Geo_parentConstraint1.ctx" "rover_modelRN.phl[71]";
-connectAttr "Dish_Base_Geo_parentConstraint1.cty" "rover_modelRN.phl[72]";
-connectAttr "Dish_Base_Geo_parentConstraint1.ctz" "rover_modelRN.phl[73]";
-connectAttr "rover_modelRN.phl[74]" "Dish_Base_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[75]" "Dish_Geo_parentConstraint1.tg[4].trp";
-connectAttr "rover_modelRN.phl[76]" "Dish_Base_Geo_parentConstraint1.crt";
-connectAttr "rover_modelRN.phl[77]" "Dish_Geo_parentConstraint1.tg[4].trt";
-connectAttr "rover_modelRN.phl[78]" "Dish_Geo_parentConstraint1.tg[4].tr";
-connectAttr "Dish_Base_Geo_parentConstraint1.crx" "rover_modelRN.phl[79]";
-connectAttr "Dish_Base_Geo_parentConstraint1.cry" "rover_modelRN.phl[80]";
-connectAttr "Dish_Base_Geo_parentConstraint1.crz" "rover_modelRN.phl[81]";
-connectAttr "rover_modelRN.phl[82]" "Dish_Base_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[83]" "Dish_Geo_parentConstraint1.tg[4].tro";
-connectAttr "rover_modelRN.phl[84]" "Dish_Geo_scaleConstraint1.tg[4].ts";
-connectAttr "rover_modelRN.phl[85]" "Dish_Geo_parentConstraint1.tg[4].ts";
-connectAttr "Dish_Base_Geo_scaleConstraint1.csx" "rover_modelRN.phl[86]";
-connectAttr "Dish_Base_Geo_scaleConstraint1.csy" "rover_modelRN.phl[87]";
-connectAttr "Dish_Base_Geo_scaleConstraint1.csz" "rover_modelRN.phl[88]";
-connectAttr "rover_modelRN.phl[89]" "Dish_Geo_scaleConstraint1.tg[4].tpm";
-connectAttr "rover_modelRN.phl[90]" "Dish_Geo_parentConstraint1.tg[4].tpm";
-connectAttr "rover_modelRN.phl[91]" "Dish_Base_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[92]" "Dish_Base_Geo_parentConstraint1.cpim";
-connectAttr "Dish_Geo_parentConstraint1.ctx" "rover_modelRN.phl[93]";
-connectAttr "Dish_Geo_parentConstraint1.cty" "rover_modelRN.phl[94]";
-connectAttr "Dish_Geo_parentConstraint1.ctz" "rover_modelRN.phl[95]";
-connectAttr "Dish_Geo_parentConstraint1.crx" "rover_modelRN.phl[96]";
-connectAttr "Dish_Geo_parentConstraint1.cry" "rover_modelRN.phl[97]";
-connectAttr "Dish_Geo_parentConstraint1.crz" "rover_modelRN.phl[98]";
-connectAttr "rover_modelRN.phl[99]" "Dish_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[100]" "Dish_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[101]" "Dish_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[102]" "Dish_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[103]" "Dish_Geo_parentConstraint1.crt";
-connectAttr "Dish_Geo_scaleConstraint1.csx" "rover_modelRN.phl[104]";
-connectAttr "Dish_Geo_scaleConstraint1.csy" "rover_modelRN.phl[105]";
-connectAttr "Dish_Geo_scaleConstraint1.csz" "rover_modelRN.phl[106]";
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[107]"
+	setAttr -s 4 ".sol";
+connectAttr "rover_modelRN.phl[1]" "Dish_Geo_parentConstraint1.tg[5].trt";
+connectAttr "rover_modelRN.phl[2]" "Body_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[3]" "Dish_Geo_parentConstraint1.tg[5].tt";
+connectAttr "Body_Geo_parentConstraint1.ctx" "rover_modelRN.phl[4]";
+connectAttr "Body_Geo_parentConstraint1.cty" "rover_modelRN.phl[5]";
+connectAttr "Body_Geo_parentConstraint1.ctz" "rover_modelRN.phl[6]";
+connectAttr "rover_modelRN.phl[7]" "Dish_Geo_parentConstraint1.tg[5].tr";
+connectAttr "Body_Geo_parentConstraint1.crx" "rover_modelRN.phl[8]";
+connectAttr "Body_Geo_parentConstraint1.cry" "rover_modelRN.phl[9]";
+connectAttr "Body_Geo_parentConstraint1.crz" "rover_modelRN.phl[10]";
+connectAttr "rover_modelRN.phl[11]" "Dish_Geo_parentConstraint1.tg[5].tro";
+connectAttr "rover_modelRN.phl[12]" "Body_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[13]" "Body_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[14]" "Body_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[15]" "Dish_Geo_parentConstraint1.tg[5].trp";
+connectAttr "rover_modelRN.phl[16]" "Body_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[17]" "Dish_Geo_parentConstraint1.tg[5].ts";
+connectAttr "Body_Geo_scaleConstraint1.csx" "rover_modelRN.phl[18]";
+connectAttr "Body_Geo_scaleConstraint1.csy" "rover_modelRN.phl[19]";
+connectAttr "Body_Geo_scaleConstraint1.csz" "rover_modelRN.phl[20]";
+connectAttr "rover_modelRN.phl[21]" "Dish_Geo_parentConstraint1.tg[5].tpm";
+connectAttr "rover_modelRN.phl[22]" "Body_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[23]" "Dish_Geo_parentConstraint1.tg[1].tt";
+connectAttr "rover_modelRN.phl[24]" "Dish_Base_Geo_parentConstraint1.tg[1].tt";
+connectAttr "rover_modelRN.phl[25]" "Dish_Geo_parentConstraint1.tg[1].trp";
+connectAttr "rover_modelRN.phl[26]" "Dish_Base_Geo_parentConstraint1.tg[1].trp";
+connectAttr "rover_modelRN.phl[27]" "Dish_Geo_parentConstraint1.tg[1].trt";
+connectAttr "rover_modelRN.phl[28]" "Dish_Base_Geo_parentConstraint1.tg[1].trt";
+connectAttr "rover_modelRN.phl[29]" "Dish_Geo_parentConstraint1.tg[1].tr";
+connectAttr "rover_modelRN.phl[30]" "Dish_Base_Geo_parentConstraint1.tg[1].tr";
+connectAttr "rover_modelRN.phl[31]" "Dish_Geo_parentConstraint1.tg[1].tro";
+connectAttr "rover_modelRN.phl[32]" "Dish_Base_Geo_parentConstraint1.tg[1].tro";
+connectAttr "rover_modelRN.phl[33]" "Dish_Geo_parentConstraint1.tg[1].ts";
+connectAttr "rover_modelRN.phl[34]" "Dish_Geo_scaleConstraint1.tg[1].ts";
+connectAttr "rover_modelRN.phl[35]" "Dish_Base_Geo_parentConstraint1.tg[1].ts";
+connectAttr "rover_modelRN.phl[36]" "Dish_Base_Geo_scaleConstraint1.tg[1].ts";
+connectAttr "rover_modelRN.phl[37]" "Dish_Geo_parentConstraint1.tg[1].tpm";
+connectAttr "rover_modelRN.phl[38]" "Dish_Geo_scaleConstraint1.tg[1].tpm";
+connectAttr "rover_modelRN.phl[39]" "Dish_Base_Geo_parentConstraint1.tg[1].tpm";
+connectAttr "rover_modelRN.phl[40]" "Dish_Base_Geo_scaleConstraint1.tg[1].tpm";
+connectAttr "rover_modelRN.phl[41]" "Dish_Geo_parentConstraint1.tg[2].tt";
+connectAttr "rover_modelRN.phl[42]" "Dish_Base_Geo_parentConstraint1.tg[2].tt";
+connectAttr "rover_modelRN.phl[43]" "Dish_Geo_parentConstraint1.tg[2].trp";
+connectAttr "rover_modelRN.phl[44]" "Dish_Base_Geo_parentConstraint1.tg[2].trp";
+connectAttr "rover_modelRN.phl[45]" "Dish_Geo_parentConstraint1.tg[2].trt";
+connectAttr "rover_modelRN.phl[46]" "Dish_Base_Geo_parentConstraint1.tg[2].trt";
+connectAttr "rover_modelRN.phl[47]" "Dish_Geo_parentConstraint1.tg[2].tr";
+connectAttr "rover_modelRN.phl[48]" "Dish_Base_Geo_parentConstraint1.tg[2].tr";
+connectAttr "rover_modelRN.phl[49]" "Dish_Geo_parentConstraint1.tg[2].tro";
+connectAttr "rover_modelRN.phl[50]" "Dish_Base_Geo_parentConstraint1.tg[2].tro";
+connectAttr "rover_modelRN.phl[51]" "Dish_Geo_parentConstraint1.tg[2].ts";
+connectAttr "rover_modelRN.phl[52]" "Dish_Geo_scaleConstraint1.tg[2].ts";
+connectAttr "rover_modelRN.phl[53]" "Dish_Base_Geo_parentConstraint1.tg[2].ts";
+connectAttr "rover_modelRN.phl[54]" "Dish_Base_Geo_scaleConstraint1.tg[2].ts";
+connectAttr "rover_modelRN.phl[55]" "Dish_Geo_parentConstraint1.tg[2].tpm";
+connectAttr "rover_modelRN.phl[56]" "Dish_Geo_scaleConstraint1.tg[2].tpm";
+connectAttr "rover_modelRN.phl[57]" "Dish_Base_Geo_parentConstraint1.tg[2].tpm";
+connectAttr "rover_modelRN.phl[58]" "Dish_Base_Geo_scaleConstraint1.tg[2].tpm";
+connectAttr "rover_modelRN.phl[59]" "Dish_Geo_parentConstraint1.tg[3].tt";
+connectAttr "rover_modelRN.phl[60]" "Dish_Base_Geo_parentConstraint1.tg[3].tt";
+connectAttr "rover_modelRN.phl[61]" "Dish_Geo_parentConstraint1.tg[3].trp";
+connectAttr "rover_modelRN.phl[62]" "Dish_Base_Geo_parentConstraint1.tg[3].trp";
+connectAttr "rover_modelRN.phl[63]" "Dish_Geo_parentConstraint1.tg[3].trt";
+connectAttr "rover_modelRN.phl[64]" "Dish_Base_Geo_parentConstraint1.tg[3].trt";
+connectAttr "rover_modelRN.phl[65]" "Dish_Geo_parentConstraint1.tg[3].tr";
+connectAttr "rover_modelRN.phl[66]" "Dish_Base_Geo_parentConstraint1.tg[3].tr";
+connectAttr "rover_modelRN.phl[67]" "Dish_Geo_parentConstraint1.tg[3].tro";
+connectAttr "rover_modelRN.phl[68]" "Dish_Base_Geo_parentConstraint1.tg[3].tro";
+connectAttr "rover_modelRN.phl[69]" "Dish_Geo_parentConstraint1.tg[3].ts";
+connectAttr "rover_modelRN.phl[70]" "Dish_Geo_scaleConstraint1.tg[3].ts";
+connectAttr "rover_modelRN.phl[71]" "Dish_Base_Geo_parentConstraint1.tg[3].ts";
+connectAttr "rover_modelRN.phl[72]" "Dish_Base_Geo_scaleConstraint1.tg[3].ts";
+connectAttr "rover_modelRN.phl[73]" "Dish_Geo_parentConstraint1.tg[3].tpm";
+connectAttr "rover_modelRN.phl[74]" "Dish_Geo_scaleConstraint1.tg[3].tpm";
+connectAttr "rover_modelRN.phl[75]" "Dish_Base_Geo_parentConstraint1.tg[3].tpm";
+connectAttr "rover_modelRN.phl[76]" "Dish_Base_Geo_scaleConstraint1.tg[3].tpm";
+connectAttr "rover_modelRN.phl[77]" "Dish_Geo_parentConstraint1.tg[4].tt";
+connectAttr "Dish_Base_Geo_parentConstraint1.ctx" "rover_modelRN.phl[78]";
+connectAttr "Dish_Base_Geo_parentConstraint1.cty" "rover_modelRN.phl[79]";
+connectAttr "Dish_Base_Geo_parentConstraint1.ctz" "rover_modelRN.phl[80]";
+connectAttr "rover_modelRN.phl[81]" "Dish_Geo_parentConstraint1.tg[4].trp";
+connectAttr "rover_modelRN.phl[82]" "Dish_Base_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[83]" "Dish_Geo_parentConstraint1.tg[4].trt";
+connectAttr "rover_modelRN.phl[84]" "Dish_Base_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[85]" "Dish_Geo_parentConstraint1.tg[4].tr";
+connectAttr "Dish_Base_Geo_parentConstraint1.crx" "rover_modelRN.phl[86]";
+connectAttr "Dish_Base_Geo_parentConstraint1.cry" "rover_modelRN.phl[87]";
+connectAttr "Dish_Base_Geo_parentConstraint1.crz" "rover_modelRN.phl[88]";
+connectAttr "rover_modelRN.phl[89]" "Dish_Geo_parentConstraint1.tg[4].tro";
+connectAttr "rover_modelRN.phl[90]" "Dish_Base_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[91]" "Dish_Geo_parentConstraint1.tg[4].ts";
+connectAttr "rover_modelRN.phl[92]" "Dish_Geo_scaleConstraint1.tg[4].ts";
+connectAttr "Dish_Base_Geo_scaleConstraint1.csx" "rover_modelRN.phl[93]";
+connectAttr "Dish_Base_Geo_scaleConstraint1.csy" "rover_modelRN.phl[94]";
+connectAttr "Dish_Base_Geo_scaleConstraint1.csz" "rover_modelRN.phl[95]";
+connectAttr "rover_modelRN.phl[96]" "Dish_Geo_parentConstraint1.tg[4].tpm";
+connectAttr "rover_modelRN.phl[97]" "Dish_Geo_scaleConstraint1.tg[4].tpm";
+connectAttr "rover_modelRN.phl[98]" "Dish_Base_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[99]" "Dish_Base_Geo_scaleConstraint1.cpim";
+connectAttr "Dish_Geo_parentConstraint1.ctx" "rover_modelRN.phl[100]";
+connectAttr "Dish_Geo_parentConstraint1.cty" "rover_modelRN.phl[101]";
+connectAttr "Dish_Geo_parentConstraint1.ctz" "rover_modelRN.phl[102]";
+connectAttr "Dish_Geo_parentConstraint1.crx" "rover_modelRN.phl[103]";
+connectAttr "Dish_Geo_parentConstraint1.cry" "rover_modelRN.phl[104]";
+connectAttr "Dish_Geo_parentConstraint1.crz" "rover_modelRN.phl[105]";
+connectAttr "rover_modelRN.phl[106]" "Dish_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[107]" "Dish_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[108]" "Dish_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[109]" "Dish_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[110]" "Dish_Geo_parentConstraint1.crt";
+connectAttr "Dish_Geo_scaleConstraint1.csx" "rover_modelRN.phl[111]";
+connectAttr "Dish_Geo_scaleConstraint1.csy" "rover_modelRN.phl[112]";
+connectAttr "Dish_Geo_scaleConstraint1.csz" "rover_modelRN.phl[113]";
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[114]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[108]"
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[115]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[109]"
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[116]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[110]"
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[117]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[111]"
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[118]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[112]"
+connectAttr "L_Solar_Panel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[119]"
 		;
-connectAttr "rover_modelRN.phl[113]" "L_Solar_Panel_01_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[120]" "L_Solar_Panel_01_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[114]" "L_Solar_Panel_01_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[121]" "L_Solar_Panel_01_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[115]" "L_Solar_Panel_01_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[122]" "L_Solar_Panel_01_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[116]" "L_Solar_Panel_01_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[123]" "L_Solar_Panel_01_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[117]" "L_Solar_Panel_01_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[124]" "L_Solar_Panel_01_Geo_parentConstraint1.crt"
 		;
-connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[118]"
+connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[125]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[119]"
+connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[126]"
 		;
-connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[120]"
+connectAttr "L_Solar_Panel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[127]"
 		;
-connectAttr "rover_modelRN.phl[121]" "L_Solar_Panel_01_GeoShapeTag.i";
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[122]"
+connectAttr "rover_modelRN.phl[128]" "L_Solar_Panel_01_GeoShapeTag.i";
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[129]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[123]"
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[130]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[124]"
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[131]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[125]"
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[132]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[126]"
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[133]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[127]"
+connectAttr "L_Solar_Panel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[134]"
 		;
-connectAttr "rover_modelRN.phl[128]" "L_Solar_Panel_02_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[135]" "L_Solar_Panel_02_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[129]" "L_Solar_Panel_02_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[136]" "L_Solar_Panel_02_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[130]" "L_Solar_Panel_02_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[137]" "L_Solar_Panel_02_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[131]" "L_Solar_Panel_02_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[138]" "L_Solar_Panel_02_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[132]" "L_Solar_Panel_02_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[139]" "L_Solar_Panel_02_Geo_parentConstraint1.crt"
 		;
-connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[133]"
+connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[140]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[134]"
+connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[141]"
 		;
-connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[135]"
+connectAttr "L_Solar_Panel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[142]"
 		;
-connectAttr "rover_modelRN.phl[136]" "L_Solar_Panel_02_GeoShapeTag.i";
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[137]"
+connectAttr "rover_modelRN.phl[143]" "L_Solar_Panel_02_GeoShapeTag.i";
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[144]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[138]"
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[145]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[139]"
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[146]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[140]"
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[147]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[141]"
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[148]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[142]"
+connectAttr "R_Solar_Panel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[149]"
 		;
-connectAttr "rover_modelRN.phl[143]" "R_Solar_Panel_01_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[150]" "R_Solar_Panel_01_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[144]" "R_Solar_Panel_01_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[151]" "R_Solar_Panel_01_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[145]" "R_Solar_Panel_01_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[152]" "R_Solar_Panel_01_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[146]" "R_Solar_Panel_01_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[153]" "R_Solar_Panel_01_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[147]" "R_Solar_Panel_01_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[154]" "R_Solar_Panel_01_Geo_parentConstraint1.crt"
 		;
-connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[148]"
+connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[155]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[149]"
+connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[156]"
 		;
-connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[150]"
+connectAttr "R_Solar_Panel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[157]"
 		;
-connectAttr "rover_modelRN.phl[151]" "R_Solar_Panel_01_GeoShapeTag.i";
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[152]"
+connectAttr "rover_modelRN.phl[158]" "R_Solar_Panel_01_GeoShapeTag.i";
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[159]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[153]"
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[160]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[154]"
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[161]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[155]"
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[162]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[156]"
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[163]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[157]"
+connectAttr "R_Solar_Panel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[164]"
 		;
-connectAttr "rover_modelRN.phl[158]" "R_Solar_Panel_02_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[165]" "R_Solar_Panel_02_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[159]" "R_Solar_Panel_02_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[166]" "R_Solar_Panel_02_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[160]" "R_Solar_Panel_02_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[167]" "R_Solar_Panel_02_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[161]" "R_Solar_Panel_02_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[168]" "R_Solar_Panel_02_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[162]" "R_Solar_Panel_02_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[169]" "R_Solar_Panel_02_Geo_parentConstraint1.crt"
 		;
-connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[163]"
+connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[170]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[164]"
+connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[171]"
 		;
-connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[165]"
+connectAttr "R_Solar_Panel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[172]"
 		;
-connectAttr "rover_modelRN.phl[166]" "R_Solar_Panel_02_GeoShapeTag.i";
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.ctx" "rover_modelRN.phl[167]"
+connectAttr "rover_modelRN.phl[173]" "R_Solar_Panel_02_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[174]" "Rear_Solar_Panel_Geo_parentConstraint1.crt"
 		;
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.cty" "rover_modelRN.phl[168]"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.ctx" "rover_modelRN.phl[175]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.ctz" "rover_modelRN.phl[169]"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.cty" "rover_modelRN.phl[176]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.crx" "rover_modelRN.phl[170]"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.ctz" "rover_modelRN.phl[177]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.cry" "rover_modelRN.phl[171]"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.crx" "rover_modelRN.phl[178]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.crz" "rover_modelRN.phl[172]"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.cry" "rover_modelRN.phl[179]"
 		;
-connectAttr "rover_modelRN.phl[173]" "Rear_Solar_Panel_Geo_parentConstraint1.cro"
+connectAttr "Rear_Solar_Panel_Geo_parentConstraint1.crz" "rover_modelRN.phl[180]"
 		;
-connectAttr "rover_modelRN.phl[174]" "Rear_Solar_Panel_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[181]" "Rear_Solar_Panel_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[175]" "Rear_Solar_Panel_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[182]" "Rear_Solar_Panel_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[176]" "Rear_Solar_Panel_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[183]" "Rear_Solar_Panel_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[177]" "Rear_Solar_Panel_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[184]" "Rear_Solar_Panel_Geo_parentConstraint1.crp"
 		;
-connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csx" "rover_modelRN.phl[178]"
+connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csx" "rover_modelRN.phl[185]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csy" "rover_modelRN.phl[179]"
+connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csy" "rover_modelRN.phl[186]"
 		;
-connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csz" "rover_modelRN.phl[180]"
+connectAttr "Rear_Solar_Panel_Geo_scaleConstraint1.csz" "rover_modelRN.phl[187]"
 		;
-connectAttr "rover_modelRN.phl[181]" "Rear_Solar_Panel_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[182]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tt"
+connectAttr "rover_modelRN.phl[188]" "Rear_Solar_Panel_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[189]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tt"
 		;
-connectAttr "L_Front_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[183]";
-connectAttr "L_Front_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[184]";
-connectAttr "L_Front_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[185]";
-connectAttr "rover_modelRN.phl[186]" "L_Front_Leg_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[187]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].trp"
+connectAttr "L_Front_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[190]";
+connectAttr "L_Front_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[191]";
+connectAttr "L_Front_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[192]";
+connectAttr "rover_modelRN.phl[193]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].trp"
 		;
-connectAttr "rover_modelRN.phl[188]" "L_Front_Leg_Geo_parentConstraint1.crt";
-connectAttr "rover_modelRN.phl[189]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].trt"
+connectAttr "rover_modelRN.phl[194]" "L_Front_Leg_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[195]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].trt"
 		;
-connectAttr "rover_modelRN.phl[190]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tr"
+connectAttr "rover_modelRN.phl[196]" "L_Front_Leg_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[197]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tr"
 		;
-connectAttr "L_Front_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[191]";
-connectAttr "L_Front_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[192]";
-connectAttr "L_Front_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[193]";
-connectAttr "rover_modelRN.phl[194]" "L_Front_Leg_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[195]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tro"
+connectAttr "L_Front_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[198]";
+connectAttr "L_Front_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[199]";
+connectAttr "L_Front_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[200]";
+connectAttr "rover_modelRN.phl[201]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tro"
 		;
-connectAttr "rover_modelRN.phl[196]" "L_Rear_Leg_Geo_scaleConstraint1.tg[1].ts";
-connectAttr "rover_modelRN.phl[197]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].ts"
+connectAttr "rover_modelRN.phl[202]" "L_Front_Leg_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[203]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].ts"
 		;
-connectAttr "L_Front_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[198]";
-connectAttr "L_Front_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[199]";
-connectAttr "L_Front_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[200]";
-connectAttr "rover_modelRN.phl[201]" "L_Rear_Leg_Geo_scaleConstraint1.tg[1].tpm"
+connectAttr "rover_modelRN.phl[204]" "L_Rear_Leg_Geo_scaleConstraint1.tg[1].ts";
+connectAttr "L_Front_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[205]";
+connectAttr "L_Front_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[206]";
+connectAttr "L_Front_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[207]";
+connectAttr "rover_modelRN.phl[208]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tpm"
 		;
-connectAttr "rover_modelRN.phl[202]" "L_Rear_Leg_Geo_parentConstraint1.tg[1].tpm"
+connectAttr "rover_modelRN.phl[209]" "L_Rear_Leg_Geo_scaleConstraint1.tg[1].tpm"
 		;
-connectAttr "rover_modelRN.phl[203]" "L_Front_Leg_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[204]" "L_Front_Leg_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[205]" "L_Front_Hub_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[206]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tt"
+connectAttr "rover_modelRN.phl[210]" "L_Front_Leg_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[211]" "L_Front_Leg_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[212]" "L_Front_Hub_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[213]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tt"
 		;
-connectAttr "L_Wheel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[207]";
-connectAttr "L_Wheel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[208]";
-connectAttr "L_Wheel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[209]";
-connectAttr "rover_modelRN.phl[210]" "L_Wheel_01_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[211]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].trp"
+connectAttr "L_Wheel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[214]";
+connectAttr "L_Wheel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[215]";
+connectAttr "L_Wheel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[216]";
+connectAttr "rover_modelRN.phl[217]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].trp"
 		;
-connectAttr "rover_modelRN.phl[212]" "L_Wheel_01_Geo_parentConstraint1.crt";
-connectAttr "rover_modelRN.phl[213]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].trt"
+connectAttr "rover_modelRN.phl[218]" "L_Wheel_01_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[219]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].trt"
 		;
-connectAttr "rover_modelRN.phl[214]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tr"
+connectAttr "rover_modelRN.phl[220]" "L_Wheel_01_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[221]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tr"
 		;
-connectAttr "L_Wheel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[215]";
-connectAttr "L_Wheel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[216]";
-connectAttr "L_Wheel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[217]";
-connectAttr "rover_modelRN.phl[218]" "L_Wheel_01_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[219]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tro"
+connectAttr "L_Wheel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[222]";
+connectAttr "L_Wheel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[223]";
+connectAttr "L_Wheel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[224]";
+connectAttr "rover_modelRN.phl[225]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tro"
 		;
-connectAttr "rover_modelRN.phl[220]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].ts"
+connectAttr "rover_modelRN.phl[226]" "L_Wheel_01_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[227]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].ts"
 		;
-connectAttr "L_Wheel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[221]";
-connectAttr "L_Wheel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[222]";
-connectAttr "L_Wheel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[223]";
-connectAttr "rover_modelRN.phl[224]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tpm"
+connectAttr "L_Wheel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[228]";
+connectAttr "L_Wheel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[229]";
+connectAttr "L_Wheel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[230]";
+connectAttr "rover_modelRN.phl[231]" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tpm"
 		;
-connectAttr "rover_modelRN.phl[225]" "L_Wheel_01_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[226]" "L_Wheel_01_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[227]" "L_Wheel_01_GeoShapeTag.i";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[228]";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[229]";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[230]";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[231]";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[232]";
-connectAttr "L_Rear_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[233]";
-connectAttr "rover_modelRN.phl[234]" "L_Rear_Leg_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[235]" "L_Rear_Leg_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[236]" "L_Rear_Leg_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[237]" "L_Rear_Leg_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[238]" "L_Rear_Leg_Geo_parentConstraint1.crt";
-connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[239]";
-connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[240]";
-connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[241]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.ctx" "rover_modelRN.phl[242]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.cty" "rover_modelRN.phl[243]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.ctz" "rover_modelRN.phl[244]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.crx" "rover_modelRN.phl[245]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.cry" "rover_modelRN.phl[246]";
-connectAttr "L_Rear_Hub_Geo_parentConstraint1.crz" "rover_modelRN.phl[247]";
-connectAttr "rover_modelRN.phl[248]" "L_Rear_Hub_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[249]" "L_Rear_Hub_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[250]" "L_Rear_Hub_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[251]" "L_Rear_Hub_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[252]" "L_Rear_Hub_Geo_parentConstraint1.crt";
-connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csx" "rover_modelRN.phl[253]";
-connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csy" "rover_modelRN.phl[254]";
-connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csz" "rover_modelRN.phl[255]";
-connectAttr "rover_modelRN.phl[256]" "L_Rear_Hub_GeoShapeTag.i";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[257]";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[258]";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[259]";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[260]";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[261]";
-connectAttr "L_Wheel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[262]";
-connectAttr "rover_modelRN.phl[263]" "L_Wheel_02_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[264]" "L_Wheel_02_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[265]" "L_Wheel_02_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[266]" "L_Wheel_02_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[267]" "L_Wheel_02_Geo_parentConstraint1.crt";
-connectAttr "L_Wheel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[268]";
-connectAttr "L_Wheel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[269]";
-connectAttr "L_Wheel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[270]";
-connectAttr "rover_modelRN.phl[271]" "L_Wheel_02_GeoShapeTag.i";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.ctx" "rover_modelRN.phl[272]";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.cty" "rover_modelRN.phl[273]";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.ctz" "rover_modelRN.phl[274]";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.crx" "rover_modelRN.phl[275]";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.cry" "rover_modelRN.phl[276]";
-connectAttr "L_Wheel_03_Geo_parentConstraint1.crz" "rover_modelRN.phl[277]";
-connectAttr "rover_modelRN.phl[278]" "L_Wheel_03_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[279]" "L_Wheel_03_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[280]" "L_Wheel_03_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[281]" "L_Wheel_03_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[282]" "L_Wheel_03_Geo_parentConstraint1.crt";
-connectAttr "L_Wheel_03_Geo_scaleConstraint1.csx" "rover_modelRN.phl[283]";
-connectAttr "L_Wheel_03_Geo_scaleConstraint1.csy" "rover_modelRN.phl[284]";
-connectAttr "L_Wheel_03_Geo_scaleConstraint1.csz" "rover_modelRN.phl[285]";
-connectAttr "rover_modelRN.phl[286]" "L_Wheel_03_GeoShapeTag.i";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[287]";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[288]";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[289]";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[290]";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[291]";
-connectAttr "R_Front_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[292]";
-connectAttr "rover_modelRN.phl[293]" "R_Front_Leg_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[294]" "R_Front_Leg_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[295]" "R_Front_Leg_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[296]" "R_Front_Leg_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[297]" "R_Front_Leg_Geo_parentConstraint1.crt";
-connectAttr "R_Front_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[298]";
-connectAttr "R_Front_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[299]";
-connectAttr "R_Front_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[300]";
-connectAttr "rover_modelRN.phl[301]" "R_Front_Hub_GeoShapeTag.i";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[302]";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[303]";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[304]";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[305]";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[306]";
-connectAttr "R_Wheel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[307]";
-connectAttr "rover_modelRN.phl[308]" "R_Wheel_01_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[309]" "R_Wheel_01_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[310]" "R_Wheel_01_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[311]" "R_Wheel_01_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[312]" "R_Wheel_01_Geo_parentConstraint1.crt";
-connectAttr "R_Wheel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[313]";
-connectAttr "R_Wheel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[314]";
-connectAttr "R_Wheel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[315]";
-connectAttr "rover_modelRN.phl[316]" "R_Wheel_01_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[317]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tt"
+connectAttr "rover_modelRN.phl[232]" "L_Wheel_01_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[233]" "L_Wheel_01_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[234]" "L_Wheel_01_GeoShapeTag.i";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[235]";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[236]";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[237]";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[238]";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[239]";
+connectAttr "L_Rear_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[240]";
+connectAttr "rover_modelRN.phl[241]" "L_Rear_Leg_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[242]" "L_Rear_Leg_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[243]" "L_Rear_Leg_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[244]" "L_Rear_Leg_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[245]" "L_Rear_Leg_Geo_parentConstraint1.crt";
+connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[246]";
+connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[247]";
+connectAttr "L_Rear_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[248]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.ctx" "rover_modelRN.phl[249]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.cty" "rover_modelRN.phl[250]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.ctz" "rover_modelRN.phl[251]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.crx" "rover_modelRN.phl[252]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.cry" "rover_modelRN.phl[253]";
+connectAttr "L_Rear_Hub_Geo_parentConstraint1.crz" "rover_modelRN.phl[254]";
+connectAttr "rover_modelRN.phl[255]" "L_Rear_Hub_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[256]" "L_Rear_Hub_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[257]" "L_Rear_Hub_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[258]" "L_Rear_Hub_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[259]" "L_Rear_Hub_Geo_parentConstraint1.crt";
+connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csx" "rover_modelRN.phl[260]";
+connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csy" "rover_modelRN.phl[261]";
+connectAttr "L_Rear_Hub_Geo_scaleConstraint1.csz" "rover_modelRN.phl[262]";
+connectAttr "rover_modelRN.phl[263]" "L_Rear_Hub_GeoShapeTag.i";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[264]";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[265]";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[266]";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[267]";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[268]";
+connectAttr "L_Wheel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[269]";
+connectAttr "rover_modelRN.phl[270]" "L_Wheel_02_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[271]" "L_Wheel_02_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[272]" "L_Wheel_02_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[273]" "L_Wheel_02_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[274]" "L_Wheel_02_Geo_parentConstraint1.crt";
+connectAttr "L_Wheel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[275]";
+connectAttr "L_Wheel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[276]";
+connectAttr "L_Wheel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[277]";
+connectAttr "rover_modelRN.phl[278]" "L_Wheel_02_GeoShapeTag.i";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.ctx" "rover_modelRN.phl[279]";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.cty" "rover_modelRN.phl[280]";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.ctz" "rover_modelRN.phl[281]";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.crx" "rover_modelRN.phl[282]";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.cry" "rover_modelRN.phl[283]";
+connectAttr "L_Wheel_03_Geo_parentConstraint1.crz" "rover_modelRN.phl[284]";
+connectAttr "rover_modelRN.phl[285]" "L_Wheel_03_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[286]" "L_Wheel_03_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[287]" "L_Wheel_03_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[288]" "L_Wheel_03_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[289]" "L_Wheel_03_Geo_parentConstraint1.crt";
+connectAttr "L_Wheel_03_Geo_scaleConstraint1.csx" "rover_modelRN.phl[290]";
+connectAttr "L_Wheel_03_Geo_scaleConstraint1.csy" "rover_modelRN.phl[291]";
+connectAttr "L_Wheel_03_Geo_scaleConstraint1.csz" "rover_modelRN.phl[292]";
+connectAttr "rover_modelRN.phl[293]" "L_Wheel_03_GeoShapeTag.i";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[294]";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[295]";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[296]";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[297]";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[298]";
+connectAttr "R_Front_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[299]";
+connectAttr "rover_modelRN.phl[300]" "R_Front_Leg_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[301]" "R_Front_Leg_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[302]" "R_Front_Leg_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[303]" "R_Front_Leg_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[304]" "R_Front_Leg_Geo_parentConstraint1.crt";
+connectAttr "R_Front_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[305]";
+connectAttr "R_Front_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[306]";
+connectAttr "R_Front_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[307]";
+connectAttr "rover_modelRN.phl[308]" "R_Front_Hub_GeoShapeTag.i";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.ctx" "rover_modelRN.phl[309]";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.cty" "rover_modelRN.phl[310]";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.ctz" "rover_modelRN.phl[311]";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.crx" "rover_modelRN.phl[312]";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.cry" "rover_modelRN.phl[313]";
+connectAttr "R_Wheel_01_Geo_parentConstraint1.crz" "rover_modelRN.phl[314]";
+connectAttr "rover_modelRN.phl[315]" "R_Wheel_01_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[316]" "R_Wheel_01_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[317]" "R_Wheel_01_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[318]" "R_Wheel_01_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[319]" "R_Wheel_01_Geo_parentConstraint1.crt";
+connectAttr "R_Wheel_01_Geo_scaleConstraint1.csx" "rover_modelRN.phl[320]";
+connectAttr "R_Wheel_01_Geo_scaleConstraint1.csy" "rover_modelRN.phl[321]";
+connectAttr "R_Wheel_01_Geo_scaleConstraint1.csz" "rover_modelRN.phl[322]";
+connectAttr "rover_modelRN.phl[323]" "R_Wheel_01_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[324]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tt"
 		;
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[318]";
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[319]";
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[320]";
-connectAttr "rover_modelRN.phl[321]" "R_Rear_Leg_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[322]" "R_Front_Leg_Geo_parentConstraint1.tg[1].trp"
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.ctx" "rover_modelRN.phl[325]";
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.cty" "rover_modelRN.phl[326]";
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.ctz" "rover_modelRN.phl[327]";
+connectAttr "rover_modelRN.phl[328]" "R_Front_Leg_Geo_parentConstraint1.tg[1].trp"
 		;
-connectAttr "rover_modelRN.phl[323]" "R_Rear_Leg_Geo_parentConstraint1.crt";
-connectAttr "rover_modelRN.phl[324]" "R_Front_Leg_Geo_parentConstraint1.tg[1].trt"
+connectAttr "rover_modelRN.phl[329]" "R_Rear_Leg_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[330]" "R_Front_Leg_Geo_parentConstraint1.tg[1].trt"
 		;
-connectAttr "rover_modelRN.phl[325]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tr"
+connectAttr "rover_modelRN.phl[331]" "R_Rear_Leg_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[332]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tr"
 		;
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[326]";
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[327]";
-connectAttr "R_Rear_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[328]";
-connectAttr "rover_modelRN.phl[329]" "R_Rear_Leg_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[330]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tro"
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.crx" "rover_modelRN.phl[333]";
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.cry" "rover_modelRN.phl[334]";
+connectAttr "R_Rear_Leg_Geo_parentConstraint1.crz" "rover_modelRN.phl[335]";
+connectAttr "rover_modelRN.phl[336]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tro"
 		;
-connectAttr "rover_modelRN.phl[331]" "R_Front_Leg_Geo_scaleConstraint1.tg[1].ts"
+connectAttr "rover_modelRN.phl[337]" "R_Rear_Leg_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[338]" "R_Front_Leg_Geo_parentConstraint1.tg[1].ts"
 		;
-connectAttr "rover_modelRN.phl[332]" "R_Front_Leg_Geo_parentConstraint1.tg[1].ts"
+connectAttr "rover_modelRN.phl[339]" "R_Front_Leg_Geo_scaleConstraint1.tg[1].ts"
 		;
-connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[333]";
-connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[334]";
-connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[335]";
-connectAttr "rover_modelRN.phl[336]" "R_Front_Leg_Geo_scaleConstraint1.tg[1].tpm"
+connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csx" "rover_modelRN.phl[340]";
+connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csy" "rover_modelRN.phl[341]";
+connectAttr "R_Rear_Leg_Geo_scaleConstraint1.csz" "rover_modelRN.phl[342]";
+connectAttr "rover_modelRN.phl[343]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tpm"
 		;
-connectAttr "rover_modelRN.phl[337]" "R_Front_Leg_Geo_parentConstraint1.tg[1].tpm"
+connectAttr "rover_modelRN.phl[344]" "R_Front_Leg_Geo_scaleConstraint1.tg[1].tpm"
 		;
-connectAttr "rover_modelRN.phl[338]" "R_Rear_Leg_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[339]" "R_Rear_Leg_Geo_parentConstraint1.cpim";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.ctx" "rover_modelRN.phl[340]";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.cty" "rover_modelRN.phl[341]";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.ctz" "rover_modelRN.phl[342]";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.crx" "rover_modelRN.phl[343]";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.cry" "rover_modelRN.phl[344]";
-connectAttr "R_Rear_Hub_Geo_parentConstraint1.crz" "rover_modelRN.phl[345]";
-connectAttr "rover_modelRN.phl[346]" "R_Rear_Hub_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[347]" "R_Rear_Hub_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[348]" "R_Rear_Hub_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[349]" "R_Rear_Hub_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[350]" "R_Rear_Hub_Geo_parentConstraint1.crt";
-connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csx" "rover_modelRN.phl[351]";
-connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csy" "rover_modelRN.phl[352]";
-connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csz" "rover_modelRN.phl[353]";
-connectAttr "rover_modelRN.phl[354]" "R_Rear_Hub_GeoShapeTag.i";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[355]";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[356]";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[357]";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[358]";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[359]";
-connectAttr "R_Wheel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[360]";
-connectAttr "rover_modelRN.phl[361]" "R_Wheel_02_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[362]" "R_Wheel_02_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[363]" "R_Wheel_02_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[364]" "R_Wheel_02_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[365]" "R_Wheel_02_Geo_parentConstraint1.crt";
-connectAttr "R_Wheel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[366]";
-connectAttr "R_Wheel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[367]";
-connectAttr "R_Wheel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[368]";
-connectAttr "rover_modelRN.phl[369]" "R_Wheel_02_GeoShapeTag.i";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.ctx" "rover_modelRN.phl[370]";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.cty" "rover_modelRN.phl[371]";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.ctz" "rover_modelRN.phl[372]";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.crx" "rover_modelRN.phl[373]";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.cry" "rover_modelRN.phl[374]";
-connectAttr "R_Wheel_03_Geo_parentConstraint1.crz" "rover_modelRN.phl[375]";
-connectAttr "rover_modelRN.phl[376]" "R_Wheel_03_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[377]" "R_Wheel_03_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[378]" "R_Wheel_03_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[379]" "R_Wheel_03_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[380]" "R_Wheel_03_Geo_parentConstraint1.crt";
-connectAttr "R_Wheel_03_Geo_scaleConstraint1.csx" "rover_modelRN.phl[381]";
-connectAttr "R_Wheel_03_Geo_scaleConstraint1.csy" "rover_modelRN.phl[382]";
-connectAttr "R_Wheel_03_Geo_scaleConstraint1.csz" "rover_modelRN.phl[383]";
-connectAttr "rover_modelRN.phl[384]" "R_Wheel_03_GeoShapeTag.i";
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.ctx" "rover_modelRN.phl[385]"
+connectAttr "rover_modelRN.phl[345]" "R_Rear_Leg_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[346]" "R_Rear_Leg_Geo_scaleConstraint1.cpim";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.ctx" "rover_modelRN.phl[347]";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.cty" "rover_modelRN.phl[348]";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.ctz" "rover_modelRN.phl[349]";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.crx" "rover_modelRN.phl[350]";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.cry" "rover_modelRN.phl[351]";
+connectAttr "R_Rear_Hub_Geo_parentConstraint1.crz" "rover_modelRN.phl[352]";
+connectAttr "rover_modelRN.phl[353]" "R_Rear_Hub_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[354]" "R_Rear_Hub_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[355]" "R_Rear_Hub_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[356]" "R_Rear_Hub_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[357]" "R_Rear_Hub_Geo_parentConstraint1.crt";
+connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csx" "rover_modelRN.phl[358]";
+connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csy" "rover_modelRN.phl[359]";
+connectAttr "R_Rear_Hub_Geo_scaleConstraint1.csz" "rover_modelRN.phl[360]";
+connectAttr "rover_modelRN.phl[361]" "R_Rear_Hub_GeoShapeTag.i";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.ctx" "rover_modelRN.phl[362]";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.cty" "rover_modelRN.phl[363]";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.ctz" "rover_modelRN.phl[364]";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.crx" "rover_modelRN.phl[365]";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.cry" "rover_modelRN.phl[366]";
+connectAttr "R_Wheel_02_Geo_parentConstraint1.crz" "rover_modelRN.phl[367]";
+connectAttr "rover_modelRN.phl[368]" "R_Wheel_02_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[369]" "R_Wheel_02_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[370]" "R_Wheel_02_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[371]" "R_Wheel_02_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[372]" "R_Wheel_02_Geo_parentConstraint1.crt";
+connectAttr "R_Wheel_02_Geo_scaleConstraint1.csx" "rover_modelRN.phl[373]";
+connectAttr "R_Wheel_02_Geo_scaleConstraint1.csy" "rover_modelRN.phl[374]";
+connectAttr "R_Wheel_02_Geo_scaleConstraint1.csz" "rover_modelRN.phl[375]";
+connectAttr "rover_modelRN.phl[376]" "R_Wheel_02_GeoShapeTag.i";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.ctx" "rover_modelRN.phl[377]";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.cty" "rover_modelRN.phl[378]";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.ctz" "rover_modelRN.phl[379]";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.crx" "rover_modelRN.phl[380]";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.cry" "rover_modelRN.phl[381]";
+connectAttr "R_Wheel_03_Geo_parentConstraint1.crz" "rover_modelRN.phl[382]";
+connectAttr "rover_modelRN.phl[383]" "R_Wheel_03_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[384]" "R_Wheel_03_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[385]" "R_Wheel_03_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[386]" "R_Wheel_03_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[387]" "R_Wheel_03_Geo_parentConstraint1.crt";
+connectAttr "R_Wheel_03_Geo_scaleConstraint1.csx" "rover_modelRN.phl[388]";
+connectAttr "R_Wheel_03_Geo_scaleConstraint1.csy" "rover_modelRN.phl[389]";
+connectAttr "R_Wheel_03_Geo_scaleConstraint1.csz" "rover_modelRN.phl[390]";
+connectAttr "rover_modelRN.phl[391]" "R_Wheel_03_GeoShapeTag.i";
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.ctx" "rover_modelRN.phl[392]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.cty" "rover_modelRN.phl[386]"
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.cty" "rover_modelRN.phl[393]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.ctz" "rover_modelRN.phl[387]"
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.ctz" "rover_modelRN.phl[394]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.crx" "rover_modelRN.phl[388]"
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.crx" "rover_modelRN.phl[395]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.cry" "rover_modelRN.phl[389]"
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.cry" "rover_modelRN.phl[396]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.crz" "rover_modelRN.phl[390]"
+connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.crz" "rover_modelRN.phl[397]"
 		;
-connectAttr "rover_modelRN.phl[391]" "Camera_Lower_Arm_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[398]" "Camera_Lower_Arm_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[392]" "Camera_Lower_Arm_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[399]" "Camera_Lower_Arm_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[393]" "Camera_Lower_Arm_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[400]" "Camera_Lower_Arm_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[394]" "Camera_Lower_Arm_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[401]" "Camera_Lower_Arm_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[395]" "Camera_Lower_Arm_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[402]" "Camera_Lower_Arm_Geo_parentConstraint1.crt"
 		;
-connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csx" "rover_modelRN.phl[396]"
+connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csx" "rover_modelRN.phl[403]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csy" "rover_modelRN.phl[397]"
+connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csy" "rover_modelRN.phl[404]"
 		;
-connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csz" "rover_modelRN.phl[398]"
+connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.csz" "rover_modelRN.phl[405]"
 		;
-connectAttr "rover_modelRN.phl[399]" "Camera_Lower_Arm_GeoShapeTag.i";
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.ctx" "rover_modelRN.phl[400]"
+connectAttr "rover_modelRN.phl[406]" "Camera_Lower_Arm_GeoShapeTag.i";
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.ctx" "rover_modelRN.phl[407]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.cty" "rover_modelRN.phl[401]"
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.cty" "rover_modelRN.phl[408]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.ctz" "rover_modelRN.phl[402]"
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.ctz" "rover_modelRN.phl[409]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.crx" "rover_modelRN.phl[403]"
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.crx" "rover_modelRN.phl[410]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.cry" "rover_modelRN.phl[404]"
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.cry" "rover_modelRN.phl[411]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.crz" "rover_modelRN.phl[405]"
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.crz" "rover_modelRN.phl[412]"
 		;
-connectAttr "rover_modelRN.phl[406]" "Camera_Upper_Arm_Geo_parentConstraint1.cro"
+connectAttr "rover_modelRN.phl[413]" "Camera_Upper_Arm_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[407]" "Camera_Upper_Arm_Geo_scaleConstraint1.cpim"
+connectAttr "rover_modelRN.phl[414]" "Camera_Upper_Arm_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[408]" "Camera_Upper_Arm_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[415]" "Camera_Upper_Arm_Geo_parentConstraint1.cpim"
 		;
-connectAttr "rover_modelRN.phl[409]" "Camera_Upper_Arm_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[416]" "Camera_Upper_Arm_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[410]" "Camera_Upper_Arm_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[417]" "Camera_Upper_Arm_Geo_parentConstraint1.crt"
 		;
-connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csx" "rover_modelRN.phl[411]"
+connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csx" "rover_modelRN.phl[418]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csy" "rover_modelRN.phl[412]"
+connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csy" "rover_modelRN.phl[419]"
 		;
-connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csz" "rover_modelRN.phl[413]"
+connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.csz" "rover_modelRN.phl[420]"
 		;
-connectAttr "rover_modelRN.phl[414]" "Camera_Upper_Arm_GeoShapeTag.i";
-connectAttr "Camera_Attachment_Geo_parentConstraint1.ctx" "rover_modelRN.phl[415]"
+connectAttr "rover_modelRN.phl[421]" "Camera_Upper_Arm_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[422]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].tt"
 		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.cty" "rover_modelRN.phl[416]"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.ctx" "rover_modelRN.phl[423]"
 		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.ctz" "rover_modelRN.phl[417]"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.cty" "rover_modelRN.phl[424]"
 		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.crx" "rover_modelRN.phl[418]"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.ctz" "rover_modelRN.phl[425]"
 		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.cry" "rover_modelRN.phl[419]"
+connectAttr "rover_modelRN.phl[426]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].tr"
 		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.crz" "rover_modelRN.phl[420]"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.crx" "rover_modelRN.phl[427]"
 		;
-connectAttr "rover_modelRN.phl[421]" "Camera_Attachment_Geo_parentConstraint1.cro"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.cry" "rover_modelRN.phl[428]"
 		;
-connectAttr "rover_modelRN.phl[422]" "Camera_Attachment_Geo_scaleConstraint1.cpim"
+connectAttr "Camera_Attachment_Geo_parentConstraint1.crz" "rover_modelRN.phl[429]"
 		;
-connectAttr "rover_modelRN.phl[423]" "Camera_Attachment_Geo_parentConstraint1.cpim"
+connectAttr "rover_modelRN.phl[430]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].tro"
 		;
-connectAttr "rover_modelRN.phl[424]" "Camera_Attachment_Geo_parentConstraint1.crp"
+connectAttr "rover_modelRN.phl[431]" "Camera_Attachment_Geo_parentConstraint1.cro"
 		;
-connectAttr "rover_modelRN.phl[425]" "Camera_Attachment_Geo_parentConstraint1.crt"
+connectAttr "rover_modelRN.phl[432]" "Camera_Attachment_Geo_parentConstraint1.cpim"
 		;
-connectAttr "Camera_Attachment_Geo_scaleConstraint1.csx" "rover_modelRN.phl[426]"
+connectAttr "rover_modelRN.phl[433]" "Camera_Attachment_Geo_scaleConstraint1.cpim"
 		;
-connectAttr "Camera_Attachment_Geo_scaleConstraint1.csy" "rover_modelRN.phl[427]"
+connectAttr "rover_modelRN.phl[434]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].trp"
 		;
-connectAttr "Camera_Attachment_Geo_scaleConstraint1.csz" "rover_modelRN.phl[428]"
+connectAttr "rover_modelRN.phl[435]" "Camera_Attachment_Geo_parentConstraint1.crp"
 		;
-connectAttr "rover_modelRN.phl[429]" "Camera_Attachment_GeoShapeTag.i";
-connectAttr "rover_modelRN.phl[430]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tt"
+connectAttr "rover_modelRN.phl[436]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].trt"
 		;
-connectAttr "Camera_Geo_parentConstraint1.ctx" "rover_modelRN.phl[431]";
-connectAttr "Camera_Geo_parentConstraint1.cty" "rover_modelRN.phl[432]";
-connectAttr "Camera_Geo_parentConstraint1.ctz" "rover_modelRN.phl[433]";
-connectAttr "rover_modelRN.phl[434]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tr"
+connectAttr "rover_modelRN.phl[437]" "Camera_Attachment_Geo_parentConstraint1.crt"
 		;
-connectAttr "Camera_Geo_parentConstraint1.crx" "rover_modelRN.phl[435]";
-connectAttr "Camera_Geo_parentConstraint1.cry" "rover_modelRN.phl[436]";
-connectAttr "Camera_Geo_parentConstraint1.crz" "rover_modelRN.phl[437]";
-connectAttr "rover_modelRN.phl[438]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tro"
+connectAttr "rover_modelRN.phl[438]" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[2].ts"
 		;
-connectAttr "rover_modelRN.phl[439]" "Camera_Geo_parentConstraint1.cro";
-connectAttr "rover_modelRN.phl[440]" "Camera_Geo_scaleConstraint1.cpim";
-connectAttr "rover_modelRN.phl[441]" "Camera_Geo_parentConstraint1.cpim";
-connectAttr "rover_modelRN.phl[442]" "Camera_Attachment_Geo_parentConstraint1.tg[2].trp"
+connectAttr "rover_modelRN.phl[439]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].ts"
 		;
-connectAttr "rover_modelRN.phl[443]" "Camera_Geo_parentConstraint1.crp";
-connectAttr "rover_modelRN.phl[444]" "Camera_Attachment_Geo_parentConstraint1.tg[2].trt"
+connectAttr "Camera_Attachment_Geo_scaleConstraint1.csx" "rover_modelRN.phl[440]"
 		;
-connectAttr "rover_modelRN.phl[445]" "Camera_Geo_parentConstraint1.crt";
-connectAttr "rover_modelRN.phl[446]" "Camera_Attachment_Geo_scaleConstraint1.tg[2].ts"
+connectAttr "Camera_Attachment_Geo_scaleConstraint1.csy" "rover_modelRN.phl[441]"
 		;
-connectAttr "rover_modelRN.phl[447]" "Camera_Attachment_Geo_parentConstraint1.tg[2].ts"
+connectAttr "Camera_Attachment_Geo_scaleConstraint1.csz" "rover_modelRN.phl[442]"
 		;
-connectAttr "Camera_Geo_scaleConstraint1.csx" "rover_modelRN.phl[448]";
-connectAttr "Camera_Geo_scaleConstraint1.csy" "rover_modelRN.phl[449]";
-connectAttr "Camera_Geo_scaleConstraint1.csz" "rover_modelRN.phl[450]";
-connectAttr "rover_modelRN.phl[451]" "Camera_Attachment_Geo_scaleConstraint1.tg[2].tpm"
+connectAttr "rover_modelRN.phl[443]" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[2].tpm"
 		;
-connectAttr "rover_modelRN.phl[452]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tpm"
+connectAttr "rover_modelRN.phl[444]" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].tpm"
 		;
-connectAttr "Body_GeoShapeDeformed.iog" "rover_modelRN.phl[453]";
-connectAttr "R_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[454]";
-connectAttr "L_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[455]";
-connectAttr "Camera_Lower_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[456]";
-connectAttr "Camera_Upper_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[457]";
-connectAttr "Camera_Attachment_GeoShapeDeformed.iog" "rover_modelRN.phl[458]";
-connectAttr "L_Wheel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[459]";
-connectAttr "L_Wheel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[460]";
-connectAttr "L_Wheel_03_GeoShapeDeformed.iog" "rover_modelRN.phl[461]";
-connectAttr "R_Wheel_03_GeoShapeDeformed.iog" "rover_modelRN.phl[462]";
-connectAttr "R_Wheel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[463]";
-connectAttr "R_Wheel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[464]";
-connectAttr "R_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[465]";
-connectAttr "R_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[466]";
-connectAttr "L_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[467]";
-connectAttr "L_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[468]";
-connectAttr "Rear_Solar_Panel_GeoShapeDeformed.iog" "rover_modelRN.phl[469]";
-connectAttr "L_Front_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[470]";
-connectAttr "R_Front_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[471]";
+connectAttr "rover_modelRN.phl[445]" "Camera_Attachment_GeoShapeTag.i";
+connectAttr "rover_modelRN.phl[446]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tt"
+		;
+connectAttr "Camera_Geo_parentConstraint1.ctx" "rover_modelRN.phl[447]";
+connectAttr "Camera_Geo_parentConstraint1.cty" "rover_modelRN.phl[448]";
+connectAttr "Camera_Geo_parentConstraint1.ctz" "rover_modelRN.phl[449]";
+connectAttr "rover_modelRN.phl[450]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tr"
+		;
+connectAttr "Camera_Geo_parentConstraint1.crx" "rover_modelRN.phl[451]";
+connectAttr "Camera_Geo_parentConstraint1.cry" "rover_modelRN.phl[452]";
+connectAttr "Camera_Geo_parentConstraint1.crz" "rover_modelRN.phl[453]";
+connectAttr "rover_modelRN.phl[454]" "Camera_Geo_parentConstraint1.cro";
+connectAttr "rover_modelRN.phl[455]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tro"
+		;
+connectAttr "rover_modelRN.phl[456]" "Camera_Geo_scaleConstraint1.cpim";
+connectAttr "rover_modelRN.phl[457]" "Camera_Geo_parentConstraint1.cpim";
+connectAttr "rover_modelRN.phl[458]" "Camera_Geo_parentConstraint1.crp";
+connectAttr "rover_modelRN.phl[459]" "Camera_Attachment_Geo_parentConstraint1.tg[2].trp"
+		;
+connectAttr "rover_modelRN.phl[460]" "Camera_Geo_parentConstraint1.crt";
+connectAttr "rover_modelRN.phl[461]" "Camera_Attachment_Geo_parentConstraint1.tg[2].trt"
+		;
+connectAttr "rover_modelRN.phl[462]" "Camera_Attachment_Geo_parentConstraint1.tg[2].ts"
+		;
+connectAttr "rover_modelRN.phl[463]" "Camera_Attachment_Geo_scaleConstraint1.tg[2].ts"
+		;
+connectAttr "Camera_Geo_scaleConstraint1.csx" "rover_modelRN.phl[464]";
+connectAttr "Camera_Geo_scaleConstraint1.csy" "rover_modelRN.phl[465]";
+connectAttr "Camera_Geo_scaleConstraint1.csz" "rover_modelRN.phl[466]";
+connectAttr "rover_modelRN.phl[467]" "Camera_Attachment_Geo_parentConstraint1.tg[2].tpm"
+		;
+connectAttr "rover_modelRN.phl[468]" "Camera_Attachment_Geo_scaleConstraint1.tg[2].tpm"
+		;
+connectAttr "rover_modelRN.phl[469]" "Camera_GeoShapeTag.i";
+connectAttr "Body_GeoShapeDeformed.iog" "rover_modelRN.phl[470]";
+connectAttr "R_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[471]";
+connectAttr "L_Rear_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[472]";
+connectAttr "Camera_Lower_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[473]";
+connectAttr "Camera_Upper_Arm_GeoShapeDeformed.iog" "rover_modelRN.phl[474]";
+connectAttr "Camera_Attachment_GeoShapeDeformed.iog" "rover_modelRN.phl[475]";
+connectAttr "L_Wheel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[476]";
+connectAttr "L_Wheel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[477]";
+connectAttr "L_Wheel_03_GeoShapeDeformed.iog" "rover_modelRN.phl[478]";
+connectAttr "R_Wheel_03_GeoShapeDeformed.iog" "rover_modelRN.phl[479]";
+connectAttr "R_Wheel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[480]";
+connectAttr "R_Wheel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[481]";
+connectAttr "R_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[482]";
+connectAttr "R_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[483]";
+connectAttr "L_Solar_Panel_01_GeoShapeDeformed.iog" "rover_modelRN.phl[484]";
+connectAttr "L_Solar_Panel_02_GeoShapeDeformed.iog" "rover_modelRN.phl[485]";
+connectAttr "Rear_Solar_Panel_GeoShapeDeformed.iog" "rover_modelRN.phl[486]";
+connectAttr "L_Front_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[487]";
+connectAttr "R_Front_Hub_GeoShapeDeformed.iog" "rover_modelRN.phl[488]";
+connectAttr "Camera_GeoShapeDeformed.iog" "rover_modelRN.phl[489]";
+connectAttr "GeomatryLayer.di" "Geomatry.do";
+connectAttr "JointLayer.di" "Skeleton.do";
 connectAttr "ROOT_Jnt.s" "COG_Jnt.is";
 connectAttr "COG_Jnt_parentConstraint1.ctx" "COG_Jnt.tx";
 connectAttr "COG_Jnt_parentConstraint1.cty" "COG_Jnt.ty";
@@ -5562,127 +5741,6 @@ connectAttr "Rear_Panel_Ctrl.s" "Rear_Panel_Jnt_parentConstraint1.tg[0].ts";
 connectAttr "Rear_Panel_Ctrl.pm" "Rear_Panel_Jnt_parentConstraint1.tg[0].tpm";
 connectAttr "Rear_Panel_Jnt_parentConstraint1.w0" "Rear_Panel_Jnt_parentConstraint1.tg[0].tw"
 		;
-connectAttr "COG_Jnt.s" "Front_Cam_Arm_01_Jnt.is";
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.ctx" "Front_Cam_Arm_01_Jnt.tx"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.cty" "Front_Cam_Arm_01_Jnt.ty"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.ctz" "Front_Cam_Arm_01_Jnt.tz"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.crx" "Front_Cam_Arm_01_Jnt.rx"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.cry" "Front_Cam_Arm_01_Jnt.ry"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.crz" "Front_Cam_Arm_01_Jnt.rz"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt.s" "Front_Cam_Arm_02_Jnt.is";
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.ctx" "Front_Cam_Arm_02_Jnt.tx"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.cty" "Front_Cam_Arm_02_Jnt.ty"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.ctz" "Front_Cam_Arm_02_Jnt.tz"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.crx" "Front_Cam_Arm_02_Jnt.rx"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.cry" "Front_Cam_Arm_02_Jnt.ry"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.crz" "Front_Cam_Arm_02_Jnt.rz"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.s" "Front_Cam_Arm_03_Jnt.is";
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.ctx" "Front_Cam_Arm_03_Jnt.tx"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.cty" "Front_Cam_Arm_03_Jnt.ty"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.ctz" "Front_Cam_Arm_03_Jnt.tz"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.crx" "Front_Cam_Arm_03_Jnt.rx"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.cry" "Front_Cam_Arm_03_Jnt.ry"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.crz" "Front_Cam_Arm_03_Jnt.rz"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.ro" "Front_Cam_Arm_03_Jnt_parentConstraint1.cro"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.pim" "Front_Cam_Arm_03_Jnt_parentConstraint1.cpim"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.rp" "Front_Cam_Arm_03_Jnt_parentConstraint1.crp"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.rpt" "Front_Cam_Arm_03_Jnt_parentConstraint1.crt"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.jo" "Front_Cam_Arm_03_Jnt_parentConstraint1.cjo"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.t" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.rp" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.rpt" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.r" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.ro" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.s" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_03_Ctrl.pm" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt_parentConstraint1.w0" "Front_Cam_Arm_03_Jnt_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.ro" "Front_Cam_Arm_02_Jnt_parentConstraint1.cro"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.pim" "Front_Cam_Arm_02_Jnt_parentConstraint1.cpim"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.rp" "Front_Cam_Arm_02_Jnt_parentConstraint1.crp"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.rpt" "Front_Cam_Arm_02_Jnt_parentConstraint1.crt"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.jo" "Front_Cam_Arm_02_Jnt_parentConstraint1.cjo"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.t" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.rp" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.rpt" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.r" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.ro" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.s" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_02_Ctrl.pm" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt_parentConstraint1.w0" "Front_Cam_Arm_02_Jnt_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.tx" "effector1.tx";
-connectAttr "Front_Cam_Arm_03_Jnt.ty" "effector1.ty";
-connectAttr "Front_Cam_Arm_03_Jnt.tz" "effector1.tz";
-connectAttr "Front_Cam_Arm_03_Jnt.opm" "effector1.opm";
-connectAttr "Front_Cam_Arm_01_Jnt.ro" "Front_Cam_Arm_01_Jnt_parentConstraint1.cro"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt.pim" "Front_Cam_Arm_01_Jnt_parentConstraint1.cpim"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt.rp" "Front_Cam_Arm_01_Jnt_parentConstraint1.crp"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt.rpt" "Front_Cam_Arm_01_Jnt_parentConstraint1.crt"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt.jo" "Front_Cam_Arm_01_Jnt_parentConstraint1.cjo"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.t" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.rp" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.rpt" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.r" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.ro" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.s" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_01_Ctrl.pm" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Front_Cam_Arm_01_Jnt_parentConstraint1.w0" "Front_Cam_Arm_01_Jnt_parentConstraint1.tg[0].tw"
-		;
 connectAttr "COG_Jnt.s" "L_FT_Leg_Base_01_Jnt.is";
 connectAttr "L_FT_Leg_Base_01_Jnt_parentConstraint1.ctx" "L_FT_Leg_Base_01_Jnt.tx"
 		;
@@ -5716,11 +5774,6 @@ connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.ctz" "L_FT_Leg_03_Jnt.tz";
 connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.crx" "L_FT_Leg_03_Jnt.rx";
 connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.cry" "L_FT_Leg_03_Jnt.ry";
 connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.crz" "L_FT_Leg_03_Jnt.rz";
-connectAttr "L_FT_Leg_03_Jnt.ro" "L_FT_Leg_03_Jnt_parentConstraint1.cro";
-connectAttr "L_FT_Leg_03_Jnt.pim" "L_FT_Leg_03_Jnt_parentConstraint1.cpim";
-connectAttr "L_FT_Leg_03_Jnt.rp" "L_FT_Leg_03_Jnt_parentConstraint1.crp";
-connectAttr "L_FT_Leg_03_Jnt.rpt" "L_FT_Leg_03_Jnt_parentConstraint1.crt";
-connectAttr "L_FT_Leg_03_Jnt.jo" "L_FT_Leg_03_Jnt_parentConstraint1.cjo";
 connectAttr "L_FT_Leg_03_Ctrl.t" "L_FT_Leg_03_Jnt_parentConstraint1.tg[0].tt";
 connectAttr "L_FT_Leg_03_Ctrl.rp" "L_FT_Leg_03_Jnt_parentConstraint1.tg[0].trp";
 connectAttr "L_FT_Leg_03_Ctrl.rpt" "L_FT_Leg_03_Jnt_parentConstraint1.tg[0].trt"
@@ -5733,6 +5786,11 @@ connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.w0" "L_FT_Leg_03_Jnt_parentConstr
 		;
 connectAttr "L_FT_Leg_03_Jnt_parentConstraint1.w1" "L_FT_Leg_03_Jnt_parentConstraint1.tg[1].tw"
 		;
+connectAttr "L_FT_Leg_03_Jnt.ro" "L_FT_Leg_03_Jnt_parentConstraint1.cro";
+connectAttr "L_FT_Leg_03_Jnt.pim" "L_FT_Leg_03_Jnt_parentConstraint1.cpim";
+connectAttr "L_FT_Leg_03_Jnt.rp" "L_FT_Leg_03_Jnt_parentConstraint1.crp";
+connectAttr "L_FT_Leg_03_Jnt.rpt" "L_FT_Leg_03_Jnt_parentConstraint1.crt";
+connectAttr "L_FT_Leg_03_Jnt.jo" "L_FT_Leg_03_Jnt_parentConstraint1.cjo";
 connectAttr "L_FT_Rotate_Leg_02_Jnt.ro" "L_FT_Rotate_Leg_02_Jnt_parentConstraint1.cro"
 		;
 connectAttr "L_FT_Rotate_Leg_02_Jnt.pim" "L_FT_Rotate_Leg_02_Jnt_parentConstraint1.cpim"
@@ -6184,142 +6242,179 @@ connectAttr "COG_Ctrl.ro" "COG_Jnt_parentConstraint1.tg[0].tro";
 connectAttr "COG_Ctrl.s" "COG_Jnt_parentConstraint1.tg[0].ts";
 connectAttr "COG_Ctrl.pm" "COG_Jnt_parentConstraint1.tg[0].tpm";
 connectAttr "COG_Jnt_parentConstraint1.w0" "COG_Jnt_parentConstraint1.tg[0].tw";
-connectAttr "Front_Cam_Arm_01_Jnt.msg" "Arm_IK_HAndle.hsj";
+connectAttr "Arm_Base_IK_Jnt_pointConstraint1.ctx" "Arm_Base_IK_Jnt.tx";
+connectAttr "Arm_Base_IK_Jnt_pointConstraint1.cty" "Arm_Base_IK_Jnt.ty";
+connectAttr "Arm_Base_IK_Jnt_pointConstraint1.ctz" "Arm_Base_IK_Jnt.tz";
+connectAttr "COG_Jnt.s" "Arm_Base_IK_Jnt.is";
+connectAttr "Arm_Base_IK_Jnt.s" "Arm_PV_Jnt.is";
+connectAttr "Arm_PV_Jnt.s" "Arm_IK_Jnt.is";
+connectAttr "Arm_IK_Jnt.s" "Arm_Head_Rotate_Jnt.is";
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.ctx" "Arm_Head_Rotate_Jnt.tx"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.cty" "Arm_Head_Rotate_Jnt.ty"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.ctz" "Arm_Head_Rotate_Jnt.tz"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.crx" "Arm_Head_Rotate_Jnt.rx"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.cry" "Arm_Head_Rotate_Jnt.ry"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.crz" "Arm_Head_Rotate_Jnt.rz"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_scaleConstraint1.csx" "Arm_Head_Rotate_Jnt.sx";
+connectAttr "Arm_Head_Rotate_Jnt_scaleConstraint1.csy" "Arm_Head_Rotate_Jnt.sy";
+connectAttr "Arm_Head_Rotate_Jnt_scaleConstraint1.csz" "Arm_Head_Rotate_Jnt.sz";
+connectAttr "Arm_Head_Rotate_Jnt.ro" "Arm_Head_Rotate_Jnt_parentConstraint1.cro"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.pim" "Arm_Head_Rotate_Jnt_parentConstraint1.cpim"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.rp" "Arm_Head_Rotate_Jnt_parentConstraint1.crp"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.rpt" "Arm_Head_Rotate_Jnt_parentConstraint1.crt"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.jo" "Arm_Head_Rotate_Jnt_parentConstraint1.cjo"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.t" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.rp" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.rpt" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.r" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.ro" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.s" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.pm" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_parentConstraint1.w0" "Arm_Head_Rotate_Jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.ssc" "Arm_Head_Rotate_Jnt_scaleConstraint1.tsc"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.pim" "Arm_Head_Rotate_Jnt_scaleConstraint1.cpim"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.s" "Arm_Head_Rotate_Jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Arm_Head_Rotate_Ctrl.pm" "Arm_Head_Rotate_Jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Arm_Head_Rotate_Jnt_scaleConstraint1.w0" "Arm_Head_Rotate_Jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Arm_IK_Jnt.tx" "effector1.tx";
+connectAttr "Arm_IK_Jnt.ty" "effector1.ty";
+connectAttr "Arm_IK_Jnt.tz" "effector1.tz";
+connectAttr "Arm_IK_Jnt.opm" "effector1.opm";
+connectAttr "Arm_Base_IK_Jnt.pim" "Arm_Base_IK_Jnt_pointConstraint1.cpim";
+connectAttr "Arm_Base_IK_Jnt.rp" "Arm_Base_IK_Jnt_pointConstraint1.crp";
+connectAttr "Arm_Base_IK_Jnt.rpt" "Arm_Base_IK_Jnt_pointConstraint1.crt";
+connectAttr "Arm_Base_IK_Ctrl.t" "Arm_Base_IK_Jnt_pointConstraint1.tg[0].tt";
+connectAttr "Arm_Base_IK_Ctrl.rp" "Arm_Base_IK_Jnt_pointConstraint1.tg[0].trp";
+connectAttr "Arm_Base_IK_Ctrl.rpt" "Arm_Base_IK_Jnt_pointConstraint1.tg[0].trt";
+connectAttr "Arm_Base_IK_Ctrl.pm" "Arm_Base_IK_Jnt_pointConstraint1.tg[0].tpm";
+connectAttr "Arm_Base_IK_Jnt_pointConstraint1.w0" "Arm_Base_IK_Jnt_pointConstraint1.tg[0].tw"
+		;
+connectAttr "ControlsLayer.di" "Controls.do";
+connectAttr "Arm_Base_IK_Jnt.msg" "Arm_IK_HAndle.hsj";
 connectAttr "effector1.hp" "Arm_IK_HAndle.hee";
 connectAttr "ikRPsolver.msg" "Arm_IK_HAndle.hsv";
-connectAttr "Front_Cam_Arm_03_Jnt.s" "Camera_Geo_scaleConstraint1.tg[0].ts";
-connectAttr "Front_Cam_Arm_03_Jnt.pm" "Camera_Geo_scaleConstraint1.tg[0].tpm";
+connectAttr "Arm_IK_HAndle_poleVectorConstraint1.ctx" "Arm_IK_HAndle.pvx";
+connectAttr "Arm_IK_HAndle_poleVectorConstraint1.cty" "Arm_IK_HAndle.pvy";
+connectAttr "Arm_IK_HAndle_poleVectorConstraint1.ctz" "Arm_IK_HAndle.pvz";
+connectAttr "Arm_IK_HAndle.pim" "Arm_IK_HAndle_poleVectorConstraint1.cpim";
+connectAttr "Arm_Base_IK_Jnt.pm" "Arm_IK_HAndle_poleVectorConstraint1.ps";
+connectAttr "Arm_Base_IK_Jnt.t" "Arm_IK_HAndle_poleVectorConstraint1.crp";
+connectAttr "Arm_PV_Ctrl.t" "Arm_IK_HAndle_poleVectorConstraint1.tg[0].tt";
+connectAttr "Arm_PV_Ctrl.rp" "Arm_IK_HAndle_poleVectorConstraint1.tg[0].trp";
+connectAttr "Arm_PV_Ctrl.rpt" "Arm_IK_HAndle_poleVectorConstraint1.tg[0].trt";
+connectAttr "Arm_PV_Ctrl.pm" "Arm_IK_HAndle_poleVectorConstraint1.tg[0].tpm";
+connectAttr "Arm_IK_HAndle_poleVectorConstraint1.w0" "Arm_IK_HAndle_poleVectorConstraint1.tg[0].tw"
+		;
+connectAttr "Arm_Head_Rotate_Jnt.s" "Camera_Geo_scaleConstraint1.tg[0].ts";
+connectAttr "Arm_Head_Rotate_Jnt.pm" "Camera_Geo_scaleConstraint1.tg[0].tpm";
 connectAttr "Camera_Geo_scaleConstraint1.w0" "Camera_Geo_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Front_Cam_Arm_03_Jnt.t" "Camera_Geo_parentConstraint1.tg[0].tt";
-connectAttr "Front_Cam_Arm_03_Jnt.rp" "Camera_Geo_parentConstraint1.tg[0].trp";
-connectAttr "Front_Cam_Arm_03_Jnt.rpt" "Camera_Geo_parentConstraint1.tg[0].trt";
-connectAttr "Front_Cam_Arm_03_Jnt.r" "Camera_Geo_parentConstraint1.tg[0].tr";
-connectAttr "Front_Cam_Arm_03_Jnt.ro" "Camera_Geo_parentConstraint1.tg[0].tro";
-connectAttr "Front_Cam_Arm_03_Jnt.s" "Camera_Geo_parentConstraint1.tg[0].ts";
-connectAttr "Front_Cam_Arm_03_Jnt.pm" "Camera_Geo_parentConstraint1.tg[0].tpm";
-connectAttr "Front_Cam_Arm_03_Jnt.jo" "Camera_Geo_parentConstraint1.tg[0].tjo";
-connectAttr "Front_Cam_Arm_03_Jnt.ssc" "Camera_Geo_parentConstraint1.tg[0].tsc";
-connectAttr "Front_Cam_Arm_03_Jnt.is" "Camera_Geo_parentConstraint1.tg[0].tis";
+connectAttr "Arm_Head_Rotate_Jnt.t" "Camera_Geo_parentConstraint1.tg[0].tt";
+connectAttr "Arm_Head_Rotate_Jnt.rp" "Camera_Geo_parentConstraint1.tg[0].trp";
+connectAttr "Arm_Head_Rotate_Jnt.rpt" "Camera_Geo_parentConstraint1.tg[0].trt";
+connectAttr "Arm_Head_Rotate_Jnt.r" "Camera_Geo_parentConstraint1.tg[0].tr";
+connectAttr "Arm_Head_Rotate_Jnt.ro" "Camera_Geo_parentConstraint1.tg[0].tro";
+connectAttr "Arm_Head_Rotate_Jnt.s" "Camera_Geo_parentConstraint1.tg[0].ts";
+connectAttr "Arm_Head_Rotate_Jnt.pm" "Camera_Geo_parentConstraint1.tg[0].tpm";
+connectAttr "Arm_Head_Rotate_Jnt.jo" "Camera_Geo_parentConstraint1.tg[0].tjo";
+connectAttr "Arm_Head_Rotate_Jnt.ssc" "Camera_Geo_parentConstraint1.tg[0].tsc";
+connectAttr "Arm_Head_Rotate_Jnt.is" "Camera_Geo_parentConstraint1.tg[0].tis";
 connectAttr "Camera_Geo_parentConstraint1.w0" "Camera_Geo_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Front_Cam_Arm_03_Jnt.s" "Camera_Attachment_Geo_scaleConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.pm" "Camera_Attachment_Geo_scaleConstraint1.tg[0].tpm"
-		;
-connectAttr "Camera_Attachment_Geo_scaleConstraint1.w0" "Camera_Attachment_Geo_scaleConstraint1.tg[0].tw"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.s" "Camera_Attachment_Geo_scaleConstraint1.tg[1].ts"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.pm" "Camera_Attachment_Geo_scaleConstraint1.tg[1].tpm"
-		;
-connectAttr "Camera_Attachment_Geo_scaleConstraint1.w1" "Camera_Attachment_Geo_scaleConstraint1.tg[1].tw"
-		;
+connectAttr "Camera_GeoShapeTag.w" "Camera_GeoShapeDeformed.i";
 connectAttr "Camera_Attachment_Geo_scaleConstraint1.w2" "Camera_Attachment_Geo_scaleConstraint1.tg[2].tw"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.t" "Camera_Attachment_Geo_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.rp" "Camera_Attachment_Geo_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.rpt" "Camera_Attachment_Geo_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.r" "Camera_Attachment_Geo_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.ro" "Camera_Attachment_Geo_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.s" "Camera_Attachment_Geo_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.pm" "Camera_Attachment_Geo_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.jo" "Camera_Attachment_Geo_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.ssc" "Camera_Attachment_Geo_parentConstraint1.tg[0].tsc"
-		;
-connectAttr "Front_Cam_Arm_03_Jnt.is" "Camera_Attachment_Geo_parentConstraint1.tg[0].tis"
-		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.w0" "Camera_Attachment_Geo_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.t" "Camera_Attachment_Geo_parentConstraint1.tg[1].tt"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.rp" "Camera_Attachment_Geo_parentConstraint1.tg[1].trp"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.rpt" "Camera_Attachment_Geo_parentConstraint1.tg[1].trt"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.r" "Camera_Attachment_Geo_parentConstraint1.tg[1].tr"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.ro" "Camera_Attachment_Geo_parentConstraint1.tg[1].tro"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.s" "Camera_Attachment_Geo_parentConstraint1.tg[1].ts"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.pm" "Camera_Attachment_Geo_parentConstraint1.tg[1].tpm"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.jo" "Camera_Attachment_Geo_parentConstraint1.tg[1].tjo"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.ssc" "Camera_Attachment_Geo_parentConstraint1.tg[1].tsc"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.is" "Camera_Attachment_Geo_parentConstraint1.tg[1].tis"
-		;
-connectAttr "Camera_Attachment_Geo_parentConstraint1.w1" "Camera_Attachment_Geo_parentConstraint1.tg[1].tw"
 		;
 connectAttr "Camera_Attachment_Geo_parentConstraint1.w2" "Camera_Attachment_Geo_parentConstraint1.tg[2].tw"
 		;
 connectAttr "Camera_Attachment_GeoShapeTag.w" "Camera_Attachment_GeoShapeDeformed.i"
 		;
-connectAttr "Front_Cam_Arm_02_Jnt.s" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.pm" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[0].tpm"
-		;
+connectAttr "Arm_PV_Jnt.s" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[0].ts";
+connectAttr "Arm_PV_Jnt.pm" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[0].tpm";
 connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.w0" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Front_Cam_Arm_02_Jnt.t" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tt"
+connectAttr "Arm_IK_Jnt.s" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[1].ts";
+connectAttr "Arm_IK_Jnt.pm" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[1].tpm";
+connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.w1" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[1].tw"
 		;
-connectAttr "Front_Cam_Arm_02_Jnt.rp" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].trp"
+connectAttr "Camera_Upper_Arm_Geo_scaleConstraint1.w2" "Camera_Upper_Arm_Geo_scaleConstraint1.tg[2].tw"
 		;
-connectAttr "Front_Cam_Arm_02_Jnt.rpt" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.r" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.ro" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.s" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.pm" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.jo" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.ssc" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tsc"
-		;
-connectAttr "Front_Cam_Arm_02_Jnt.is" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tis"
-		;
+connectAttr "Arm_PV_Jnt.t" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tt";
+connectAttr "Arm_PV_Jnt.rp" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].trp";
+connectAttr "Arm_PV_Jnt.rpt" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].trt";
+connectAttr "Arm_PV_Jnt.r" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tr";
+connectAttr "Arm_PV_Jnt.ro" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tro";
+connectAttr "Arm_PV_Jnt.s" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].ts";
+connectAttr "Arm_PV_Jnt.pm" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tpm";
+connectAttr "Arm_PV_Jnt.jo" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tjo";
+connectAttr "Arm_PV_Jnt.ssc" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tsc";
+connectAttr "Arm_PV_Jnt.is" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tis";
 connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.w0" "Camera_Upper_Arm_Geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Arm_IK_Jnt.t" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tt";
+connectAttr "Arm_IK_Jnt.rp" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].trp";
+connectAttr "Arm_IK_Jnt.rpt" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].trt";
+connectAttr "Arm_IK_Jnt.r" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tr";
+connectAttr "Arm_IK_Jnt.ro" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tro";
+connectAttr "Arm_IK_Jnt.s" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].ts";
+connectAttr "Arm_IK_Jnt.pm" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tpm";
+connectAttr "Arm_IK_Jnt.jo" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tjo";
+connectAttr "Arm_IK_Jnt.ssc" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tsc";
+connectAttr "Arm_IK_Jnt.is" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tis";
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.w1" "Camera_Upper_Arm_Geo_parentConstraint1.tg[1].tw"
+		;
+connectAttr "Camera_Upper_Arm_Geo_parentConstraint1.w2" "Camera_Upper_Arm_Geo_parentConstraint1.tg[2].tw"
 		;
 connectAttr "Camera_Upper_Arm_GeoShapeTag.w" "Camera_Upper_Arm_GeoShapeDeformed.i"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.s" "Camera_Lower_Arm_Geo_scaleConstraint1.tg[0].ts"
+connectAttr "Arm_Base_IK_Jnt.s" "Camera_Lower_Arm_Geo_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.pm" "Camera_Lower_Arm_Geo_scaleConstraint1.tg[0].tpm"
+connectAttr "Arm_Base_IK_Jnt.pm" "Camera_Lower_Arm_Geo_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "Camera_Lower_Arm_Geo_scaleConstraint1.w0" "Camera_Lower_Arm_Geo_scaleConstraint1.tg[0].tw"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.t" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tt"
+connectAttr "Arm_Base_IK_Jnt.t" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tt"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.rp" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].trp"
+connectAttr "Arm_Base_IK_Jnt.rp" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].trp"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.rpt" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].trt"
+connectAttr "Arm_Base_IK_Jnt.rpt" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].trt"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.r" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tr"
+connectAttr "Arm_Base_IK_Jnt.r" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tr"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.ro" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tro"
+connectAttr "Arm_Base_IK_Jnt.ro" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tro"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.s" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].ts"
+connectAttr "Arm_Base_IK_Jnt.s" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].ts"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.pm" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tpm"
+connectAttr "Arm_Base_IK_Jnt.pm" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.jo" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tjo"
+connectAttr "Arm_Base_IK_Jnt.jo" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tjo"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.ssc" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tsc"
+connectAttr "Arm_Base_IK_Jnt.ssc" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tsc"
 		;
-connectAttr "Front_Cam_Arm_01_Jnt.is" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tis"
+connectAttr "Arm_Base_IK_Jnt.is" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tis"
 		;
 connectAttr "Camera_Lower_Arm_Geo_parentConstraint1.w0" "Camera_Lower_Arm_Geo_parentConstraint1.tg[0].tw"
 		;
@@ -6789,6 +6884,8 @@ connectAttr "Dish_Geo_parentConstraint1.w3" "Dish_Geo_parentConstraint1.tg[3].tw
 		;
 connectAttr "Dish_Geo_parentConstraint1.w4" "Dish_Geo_parentConstraint1.tg[4].tw"
 		;
+connectAttr "Dish_Geo_parentConstraint1.w5" "Dish_Geo_parentConstraint1.tg[5].tw"
+		;
 connectAttr "COG_Jnt.s" "Dish_Base_Geo_scaleConstraint1.tg[0].ts";
 connectAttr "COG_Jnt.pm" "Dish_Base_Geo_scaleConstraint1.tg[0].tpm";
 connectAttr "Dish_Base_Geo_scaleConstraint1.w0" "Dish_Base_Geo_scaleConstraint1.tg[0].tw"
@@ -6850,6 +6947,9 @@ connectAttr "layerManager.dli[2]" "pasted__Control_Layer.id";
 connectAttr "layerManager.dli[1]" "pasted__Joint_Layer.id";
 connectAttr "layerManager.dli[4]" "pasted__Control_Layer1.id";
 connectAttr "layerManager.dli[3]" "pasted__Joint_Layer1.id";
+connectAttr "layerManager.dli[5]" "GeomatryLayer.id";
+connectAttr "layerManager.dli[6]" "JointLayer.id";
+connectAttr "layerManager.dli[7]" "ControlsLayer.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
 // End of RoverRig.ma
