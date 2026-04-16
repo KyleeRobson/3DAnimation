@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Shot47Reference.ma
-//Last modified: Wed, Apr 15, 2026 10:14:19 PM
+//Last modified: Thu, Apr 16, 2026 10:41:06 AM
 //Codeset: 1252
 file -rdi 1 -ns "Shot_47" -rfn "Shot_47RN" -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/WorkDayShortFilmOfficialRepo/Maya//scenes/Shot#47.ma";
 file -rdi 2 -ns "Skeleton" -rfn "Shot_47:SkeletonRN" -op "v=0;" -typ "mayaAscii"
@@ -51,21 +51,26 @@ file -rdi 2 -ns "wand" -dr 1 -rfn "Shot_47:wandRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/props/HandheldProps/wand/wand.ma";
 file -rdi 1 -ns "SparksRef" -rfn "SparksRefRN" -op "VERS|2026|UVER|undef|MADE|undef|CHNG|Wed, Apr 15, 2026 10:12:03 PM|ICON|undef|INFO|undef|OBJN|107|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/3000R/Animations/SparksRef.mb";
+file -rdi 1 -ns "ExtraRenderPasses" -rfn "ExtraRenderPassesRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/ExtraRenderPasses.ma";
 file -r -ns "Shot_47" -dr 1 -rfn "Shot_47RN" -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/WorkDayShortFilmOfficialRepo/Maya//scenes/Shot#47.ma";
 file -r -ns "SparksRef" -dr 1 -rfn "SparksRefRN" -op "VERS|2026|UVER|undef|MADE|undef|CHNG|Wed, Apr 15, 2026 10:12:03 PM|ICON|undef|INFO|undef|OBJN|107|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/3000R/Animations/SparksRef.mb";
+file -r -ns "ExtraRenderPasses" -dr 1 -rfn "ExtraRenderPassesRN" -op "v=0;" -typ
+		 "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/ExtraRenderPasses.ma";
 requires maya "2026";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
 		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "04B71BEA-443C-248F-3E3F-83A9CAAF4E49";
+fileInfo "UUID" "8FC6CFBF-479F-F828-3291-E98951E37E56";
 createNode transform -s -n "persp";
 	rename -uid "9029A9CA-4CC8-2A91-7DCF-6EA1E52E27C0";
 	setAttr ".v" no;
@@ -74,6 +79,7 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44F35EB1-4B50-20B2-9672-458D20364CD2";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".coi" 244.68400243055748;
 	setAttr ".imn" -type "string" "persp";
@@ -133,21 +139,22 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Shot47";
 	rename -uid "406D53F9-468F-6BB2-236F-6F809BE12D59";
+	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "85FC5BCB-47C4-80D6-584D-ACBB7744AFA4";
-	setAttr -s 93 ".lnk";
-	setAttr -s 93 ".slnk";
+	rename -uid "42145593-492E-F08C-698A-C9A230F0CD9D";
+	setAttr -s 100 ".lnk";
+	setAttr -s 100 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6B55B5EB-4865-6EB3-6D6A-EE84EC433206";
+	rename -uid "8CE2781C-4C93-7454-D659-4790A255F967";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9C8947B0-49AC-FEA5-A78C-0AA64606476D";
+	rename -uid "995F8B0A-43D5-F217-05E4-72BF5807791F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F249D691-4466-6B35-114D-FE821ED1E225";
+	rename -uid "92485B0D-4A02-72B8-E486-4FBFA7D179A9";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9A2F47F1-453E-D9DA-C6EA-BE84448A333A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "86FB1BE7-4233-B42C-FE30-51A1C43C6E4D";
+	rename -uid "F8F29FB0-415E-F4B4-34C0-F69C29F58B56";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "27E8CBE9-48FF-86C7-18C8-FFA2519986D7";
 	setAttr ".g" yes;
@@ -158,8 +165,8 @@ createNode reference -n "Shot_47RN";
 		"Shot_47:Knight_RetopoRN" 0
 		"Shot_47:DragonGateCaveSet:Stalagmite_1RN" 0
 		"Shot_47:DragonGateCaveSet:DragonGateRN" 0
-		"Shot_47:MagicBookRN" 0
 		"Shot_47:DragonGateCaveSet:DragonGateTorchRN" 0
+		"Shot_47:MagicBookRN" 0
 		"Shot_47:DragonGateCaveSet:roundedRocksRN" 0
 		"Shot_47:DragonGateCaveSet:BonesRN" 0
 		"Shot_47:SkeletonRN" 0
@@ -199,7 +206,7 @@ createNode reference -n "Shot_47RN";
 		0 "|Shot_47:Knight_Retopo:Knight" "|Shot47" "-s -r "
 		"Shot_47:DragonGateCaveSet:roundedRocksRN" 1
 		0 "|Shot_47:DragonGateCaveSet:roundedRocks:back" "|Shot47" "-s -r "
-		"Shot_47RN" 10
+		"Shot_47RN" 11
 		0 "|Shot_47:Magic_Book_grp" "|Shot47" "-s -r "
 		0 "|Shot_47:Set_Pieces" "|Shot47" "-s -r "
 		2 "|Shot_47:RenderCam" "scale" " -type \"double3\" 1 1 1"
@@ -209,11 +216,20 @@ createNode reference -n "Shot_47RN";
 		2 "|Shot_47:RenderCam" "scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Shot_47:RenderCam" "scalePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Shot_47:RenderCam" "rotateAxis" " -type \"double3\" 0 0 0"
+		2 "|Shot_47:RenderCam|Shot_47:RenderCamShape" "renderable" " 1"
 		2 "|Shot_47:RenderCam|Shot_47:RenderCamShape" "centerOfInterest" " 2089.1074598459954359"
 		
-		"Shot_47:SkeletonRN" 2
+		"Shot_47:SkeletonRN" 6
 		0 "|Shot_47:Skeleton:Skeleton_Asset" "|Shot47" "-s -r "
 		0 "|Shot_47:Skeleton:WORLD_Obj" "|Shot47" "-s -r "
+		2 "|Shot47|Shot_47:Skeleton:Skeleton_Asset|Shot_47:Skeleton:Geometry|Shot_47:Skeleton:NightCap|Shot_47:Skeleton:NightCapShape" 
+		"instObjGroups.objectGroups" " -s 6"
+		2 "Shot_47:Skeleton:groupParts4" "inputComponents" " -type \"componentList\" 30 \"f[0:100]\" \"f[176:275]\" \"f[349:350]\" \"f[352:417]\" \"f[493:497]\" \"f[500]\" \"f[572:573]\" \"f[575:651]\" \"f[654]\" \"f[725:726]\" \"f[728:807]\" \"f[883:932]\" \"f[935]\" \"f[1006:1007]\" \"f[1009:1200]\" \"f[1276:1317]\" \"f[1320]\" \"f[1391:1392]\" \"f[1394:1440]\" \"f[1516:1552]\" \"f[1555]\" \"f[1628:1629]\" \"f[1631:1715]\" \"f[1815:1827]\" \"f[1829:1839]\" \"f[1848:1853]\" \"f[1856]\" \"f[1929:1930]\" \"f[1932:1948]\" \"f[1999:2095]\""
+		
+		2 "Shot_47:Skeleton:groupParts5" "inputComponents" " -type \"componentList\" 29 \"f[101:175]\" \"f[276:348]\" \"f[351]\" \"f[418:492]\" \"f[498:499]\" \"f[501:571]\" \"f[574]\" \"f[652:653]\" \"f[655:724]\" \"f[727]\" \"f[808:882]\" \"f[933:934]\" \"f[936:1005]\" \"f[1008]\" \"f[1201:1275]\" \"f[1318:1319]\" \"f[1321:1390]\" \"f[1393]\" \"f[1441:1515]\" \"f[1553:1554]\" \"f[1556:1627]\" \"f[1630]\" \"f[1716:1814]\" \"f[1828]\" \"f[1840:1847]\" \"f[1854:1855]\" \"f[1857:1928]\" \"f[1931]\" \"f[1949:1998]\""
+		
+		2 "Shot_47:Skeleton:groupParts6" "inputComponents" " -type \"componentList\" 1 \"f[2096:2495]\""
+		
 		"Shot_47:DragonGateCaveSetRN" 1
 		0 "|Shot_47:DragonGateCaveSet:CaveSet" "|Shot47" "-s -r ";
 	setAttr ".ptag" -type "string" "";
@@ -221,6 +237,7 @@ lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "83AECF28-4CFB-67B4-7415-E2A94DA458A3";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr ".GI_sss_samples" 0;
 	setAttr ".version" -type "string" "5.2.1.1";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "617B79D3-423C-197C-3DAB-46A2ACE575E8";
@@ -309,6 +326,22 @@ createNode reference -n "SparksRefRN";
 		"SparksRefRN" 0
 		"SparksRefRN" 47
 		3 "SparksRef:groupId20.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId18.groupId" "|SparksRef:Sparks|SparksRef:Long2|SparksRef:Long2Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|SparksRef:Sparks|SparksRef:Long2|SparksRef:Long2Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "SparksRef:groupId13.groupId" "|SparksRef:Sparks|SparksRef:pCube14|SparksRef:pCube14Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|SparksRef:Sparks|SparksRef:pCube14|SparksRef:pCube14Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "SparksRef:groupId14.groupId" "|SparksRef:Sparks|SparksRef:BigSpark1|SparksRef:BigSpark1Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|SparksRef:Sparks|SparksRef:BigSpark1|SparksRef:BigSpark1Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "SparksRef:groupId15.groupId" "|SparksRef:Sparks|SparksRef:Long1|SparksRef:Long1Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "|SparksRef:Sparks|SparksRef:Long1|SparksRef:Long1Shape.instObjGroups.objectGroups[0]" 
@@ -317,57 +350,41 @@ createNode reference -n "SparksRefRN";
 		""
 		3 "|SparksRef:Sparks|SparksRef:Long1|SparksRef:Long1Shape.compInstObjGroups.compObjectGroups[2]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId11.groupId" "|SparksRef:Sparks|SparksRef:pCube12|SparksRef:pCube12Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "SparksRef:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId10.groupId" "|SparksRef:Sparks|SparksRef:BigSpark|SparksRef:BigSparkShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|SparksRef:Sparks|SparksRef:pCube12|SparksRef:pCube12Shape.instObjGroups.objectGroups[0]" 
+		3 "|SparksRef:Sparks|SparksRef:BigSpark|SparksRef:BigSparkShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "SparksRef:groupId17.groupId" "|SparksRef:Sparks|SparksRef:Long|SparksRef:LongShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "|SparksRef:Sparks|SparksRef:Long|SparksRef:LongShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId14.groupId" "|SparksRef:Sparks|SparksRef:BigSpark1|SparksRef:BigSpark1Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "SparksRef:groupId20.groupId" "|SparksRef:Sparks|SparksRef:Long4|SparksRef:Long4Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|SparksRef:Sparks|SparksRef:BigSpark1|SparksRef:BigSpark1Shape.instObjGroups.objectGroups[0]" 
+		3 "|SparksRef:Sparks|SparksRef:Long4|SparksRef:Long4Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
 		3 "SparksRef:groupId10.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId18.groupId" "|SparksRef:Sparks|SparksRef:Long2|SparksRef:Long2Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "SparksRef:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId19.groupId" "|SparksRef:Sparks|SparksRef:Long3|SparksRef:Long3Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|SparksRef:Sparks|SparksRef:Long2|SparksRef:Long2Shape.instObjGroups.objectGroups[0]" 
+		3 "|SparksRef:Sparks|SparksRef:Long3|SparksRef:Long3Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId9.groupId" "|SparksRef:Sparks|SparksRef:RegSpark|SparksRef:RegSparkShape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "SparksRef:groupId11.groupId" "|SparksRef:Sparks|SparksRef:pCube12|SparksRef:pCube12Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|SparksRef:Sparks|SparksRef:RegSpark|SparksRef:RegSparkShape.instObjGroups.objectGroups[0]" 
+		3 "|SparksRef:Sparks|SparksRef:pCube12|SparksRef:pCube12Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "SparksRef:groupId12.groupId" "|SparksRef:Sparks|SparksRef:pCube13|SparksRef:pCube13Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "|SparksRef:Sparks|SparksRef:pCube13|SparksRef:pCube13Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId13.groupId" "|SparksRef:Sparks|SparksRef:pCube14|SparksRef:pCube14Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "SparksRef:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "SparksRef:groupId9.groupId" "|SparksRef:Sparks|SparksRef:RegSpark|SparksRef:RegSparkShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|SparksRef:Sparks|SparksRef:pCube14|SparksRef:pCube14Shape.instObjGroups.objectGroups[0]" 
+		3 "|SparksRef:Sparks|SparksRef:RegSpark|SparksRef:RegSparkShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId19.groupId" "|SparksRef:Sparks|SparksRef:Long3|SparksRef:Long3Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|SparksRef:Sparks|SparksRef:Long3|SparksRef:Long3Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId20.groupId" "|SparksRef:Sparks|SparksRef:Long4|SparksRef:Long4Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|SparksRef:Sparks|SparksRef:Long4|SparksRef:Long4Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId10.groupId" "|SparksRef:Sparks|SparksRef:BigSpark|SparksRef:BigSparkShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|SparksRef:Sparks|SparksRef:BigSpark|SparksRef:BigSparkShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "SparksRef:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "SparksRef:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
 		5 3 "SparksRefRN" "|SparksRef:Sparks|SparksRef:RegSpark|SparksRef:RegSparkShape.instObjGroups" 
 		"SparksRefRN.placeHolderList[1]" ""
 		5 3 "SparksRefRN" "|SparksRef:Sparks|SparksRef:Long|SparksRef:LongShape.instObjGroups" 
@@ -391,10 +408,10 @@ createNode reference -n "SparksRefRN";
 		5 3 "SparksRefRN" "|SparksRef:Sparks|SparksRef:Long4|SparksRef:Long4Shape.instObjGroups" 
 		"SparksRefRN.placeHolderList[11]" "";
 lockNode -l 1 ;
-createNode aiStandardSurface -n "aiStandardSurface1";
+createNode aiStandardSurface -n "GlowingGreen";
 	rename -uid "AD2A02FA-47BB-BC32-92C3-9B94FC3B851C";
 	setAttr ".base_color" -type "float3" 0.044235885 1 0.0059999824 ;
-	setAttr ".emission" 0.89017343521118164;
+	setAttr ".emission" 10;
 	setAttr ".emission_color" -type "float3" 0.076916575 1 0 ;
 createNode shadingEngine -n "aiStandardSurface1SG";
 	rename -uid "B1F74D5D-42BD-2E9B-F642-9EA2A0F6A2C6";
@@ -403,9 +420,20 @@ createNode shadingEngine -n "aiStandardSurface1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "D7F66280-42FC-8689-ABD0-478F1E1F8547";
+createNode reference -n "ExtraRenderPassesRN";
+	rename -uid "59371305-4D67-502F-0AF6-109DB8377957";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"ExtraRenderPassesRN"
+		"ExtraRenderPassesRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "CD50F432-4207-F406-1E0F-82A31DF6A5F8";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -67.638932236588047 -241.86691117130658 ;
+	setAttr ".tgi[0].vh" -type "double2" 1122.8151139293532 135.59412785691876 ;
 select -ne :time1;
-	setAttr ".o" 24;
-	setAttr ".unw" 24;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -414,20 +442,20 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 93 ".st";
+	setAttr -s 100 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 58 ".s";
+	setAttr -s 65 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 147 ".u";
+	setAttr -s 155 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 14 ".r";
+	setAttr -s 15 ".r";
 select -ne :lightList1;
 	setAttr -s 5 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 61 ".tx";
+	setAttr -s 68 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -443,9 +471,20 @@ select -ne :initialParticleSE;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
+	setAttr ".outf" 51;
+	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".an" yes;
+	setAttr ".fs" 0;
+	setAttr ".ef" 63;
+	setAttr ".pff" yes;
+	setAttr ".ifp" -type "string" "<Scene>/<Version>/<Scene>_<Version>";
+	setAttr ".rv" -type "string" "WandEffects";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.7769999504089355;
 select -ne :defaultLightSet;
 	setAttr -s 5 ".dsm";
 select -ne :defaultColorMgtGlobals;
@@ -481,11 +520,11 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "aiStandardSurface1.out" "aiStandardSurface1SG.ss";
+connectAttr "GlowingGreen.out" "aiStandardSurface1SG.ss";
 connectAttr "aiStandardSurface1SG.msg" "materialInfo1.sg";
-connectAttr "aiStandardSurface1.msg" "materialInfo1.m";
-connectAttr "aiStandardSurface1.msg" "materialInfo1.t" -na;
+connectAttr "GlowingGreen.msg" "materialInfo1.m";
+connectAttr "GlowingGreen.msg" "materialInfo1.t" -na;
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "aiStandardSurface1.msg" ":defaultShaderList1.s" -na;
+connectAttr "GlowingGreen.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of Shot47Reference.ma
