@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: RoundEggChair.ma
-//Last modified: Wed, Apr 15, 2026 11:13:55 AM
+//Last modified: Wed, Apr 15, 2026 11:14:34 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "43C43F37-4A13-7152-3A15-48ABBF8BA6FA";
+fileInfo "UUID" "C88F6BDF-44A2-3C6C-C58E-4ABBC66A1ADF";
 createNode transform -s -n "persp";
 	rename -uid "F5BA4409-41FC-B08F-A706-F2B54D4566AC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0765456925998751 4.3552290489648984 8.1435740070717326 ;
+	setAttr ".t" -type "double3" 1.8814721701524142 7.9370655302858584 14.699174089247665 ;
 	setAttr ".r" -type "double3" -28.471220636007764 -352.99999999993526 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "908326A9-4DDF-5E8E-1548-C4980BDB5058";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.5244596816253875;
+	setAttr ".coi" 17.038004228017058;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
