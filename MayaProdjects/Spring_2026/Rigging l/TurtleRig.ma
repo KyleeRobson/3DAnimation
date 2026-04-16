@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: TurtleRig.ma
-//Last modified: Wed, Apr 15, 2026 10:05:21 PM
+//Last modified: Wed, Apr 15, 2026 10:06:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "turtle_rig_start" -rfn "turtle_rig_startRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/References/turtle_rig_start.ma";
@@ -16,19 +16,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "77605B40-45C8-51DB-7C42-C1AB85C23848";
+fileInfo "UUID" "53E116AC-4334-47B6-D2B5-59ADC9398BA3";
 createNode transform -s -n "persp";
 	rename -uid "73D8C440-4D28-C3FF-56CB-4B9101947755";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.485189361367263 14.872389474986043 8.5271949695740865 ;
-	setAttr ".r" -type "double3" -41.399999999999523 56.799999999996999 -5.8085615413989442e-15 ;
+	setAttr ".t" -type "double3" 39.029638193333625 10.402688632519553 11.7404626395461 ;
+	setAttr ".r" -type "double3" -13.799999999999972 72.399999999998229 -2.6296886518441578e-15 ;
 	setAttr ".rp" -type "double3" -4.8849813083506888e-15 -1.1102230246251565e-14 0 ;
 	setAttr ".rpt" -type "double3" 3.4763072316405354e-14 1.0972880116865482e-13 2.3712985886985104e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "67F03A42-4620-6D1D-4C73-449C0AEC5649";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 21.607432565439254;
+	setAttr ".coi" 41.166345350124985;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,7 +82,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode fosterParent -n "turtle_rig_startRNfosterParent1";
-	rename -uid "D4EA1C91-45A2-82C8-CC21-198EBE8DEE8E";
+	rename -uid "D014E284-4FA6-5BAA-8DA8-889566B9570C";
 createNode mesh -n "r_eye_geoShapeDeformed" -p "turtle_rig_startRNfosterParent1";
 	rename -uid "49C1473C-44B1-8891-DAF2-85951FA5B586";
 	setAttr -k off ".v";
