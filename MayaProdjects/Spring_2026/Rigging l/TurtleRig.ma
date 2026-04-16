@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: TurtleRig.ma
-//Last modified: Tue, Apr 14, 2026 11:22:33 PM
+//Last modified: Wed, Apr 15, 2026 08:53:35 PM
 //Codeset: 1252
 file -rdi 1 -ns "turtle_rig_start" -rfn "turtle_rig_startRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/References/turtle_rig_start.ma";
@@ -16,23 +16,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "254D906F-43C6-2194-0963-22A1C301067D";
+fileInfo "UUID" "C700D083-41A4-7E68-732C-B09D8C360D52";
 createNode transform -s -n "persp";
 	rename -uid "73D8C440-4D28-C3FF-56CB-4B9101947755";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.9855716558896397 3.2251734479856049 7.8319826885797497 ;
-	setAttr ".r" -type "double3" -380.99999999996299 49.200000000000635 2.4337728731245518e-15 ;
-	setAttr ".rp" -type "double3" 0 -8.8817841970012523e-16 -4.4408920985006262e-16 ;
-	setAttr ".rpt" -type "double3" 3.986779770471547e-14 1.0737347877253761e-13 2.7290820704057506e-14 ;
+	setAttr ".t" -type "double3" -4.8850021638316257 10.004685925690204 16.580306161604572 ;
+	setAttr ".r" -type "double3" 683.39999999999918 -376.79999999982704 -8.3058860956555399e-16 ;
+	setAttr ".rp" -type "double3" 8.8817841970012523e-16 9.1038288019262836e-15 0 ;
+	setAttr ".rpt" -type "double3" 4.126481250329499e-14 1.0381058349450222e-13 3.3029563394467399e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "67F03A42-4620-6D1D-4C73-449C0AEC5649";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 10.207536583459262;
+	setAttr ".coi" 17.331701026749421;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 6.0887305707217898 -1.6355911340201641 1.2840850483315163 ;
+	setAttr ".tp" -type "double3" 4.34888023900481 -1.0347800427374463 0.87842945616027523 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D28DB234-484B-28A3-E17C-688BB915AD08";
@@ -82,7 +82,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode fosterParent -n "turtle_rig_startRNfosterParent1";
-	rename -uid "4D38E53A-40E3-3472-F38A-FE925F26F926";
+	rename -uid "4A8FC5BA-4CB7-4A01-FB84-D0ACFCAB51CE";
 createNode mesh -n "r_eye_geoShapeDeformed" -p "turtle_rig_startRNfosterParent1";
 	rename -uid "49C1473C-44B1-8891-DAF2-85951FA5B586";
 	setAttr -k off ".v";
@@ -136,7 +136,7 @@ createNode mesh -n "shell_geo_ShapeDeformed" -p "turtle_rig_startRNfosterParent1
 	setAttr ".clst[0].clsn" -type "string" "shell_ColorSet";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 37 ".pt";
+	setAttr -s 11 ".pt";
 	setAttr ".pt[4]" -type "float3" 5.9604645e-08 0 0 ;
 	setAttr ".pt[59]" -type "float3" 0 0 2.9802322e-08 ;
 	setAttr ".pt[85]" -type "float3" 0 0 2.9802322e-08 ;
@@ -154,7 +154,7 @@ createNode mesh -n "f_legs_geo_ShapeDeformed" -p "turtle_rig_startRNfosterParent
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.73449009656906128 0.67658448219299316 ;
+	setAttr ".pv" -type "double2" 0.50206798315048218 0.5052822083234787 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -162,21 +162,21 @@ createNode mesh -n "f_legs_geo_ShapeDeformed" -p "turtle_rig_startRNfosterParent
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DC6FC108-408F-6C26-4C44-C9B3A4F27276";
+	rename -uid "D82D73C2-4CB7-F994-FA03-2DBF3027E4F4";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "582EB01E-488F-38A5-5395-6794CDEFB9FD";
+	rename -uid "A5EC28F8-4308-FFDA-B9F3-8F91DBEAF3AA";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "004B870D-44B1-A7B5-777F-08A2CEFE5287";
+	rename -uid "8EBE2468-4E46-F1DE-A2B0-95AE1B3E7C45";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E79CE85E-419D-6225-D006-E7A4A4E05C2C";
+	rename -uid "9ECF56A3-4531-D5C3-9D55-CDB01BDE5167";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B6D11795-4709-C33D-00F9-0D8698F2FA88";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "927C869A-432E-A2F8-9E7A-0DBA7AC4D982";
+	rename -uid "6C892FE9-4776-9578-1BDC-EEAA73A390AF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "981C8B32-4250-762B-21C8-A2911D19B472";
 	setAttr ".g" yes;
@@ -599,7 +599,7 @@ createNode reference -n "turtle_rig_startRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"turtle_rig_startRN"
 		"turtle_rig_startRN" 0
-		"turtle_rig_startRN" 580
+		"turtle_rig_startRN" 597
 		0 "|turtle_rig_startRNfosterParent1|f_legs_geo_ShapeDeformed" "|turtle_rig_start:sea_turtle|turtle_rig_start:geometry|turtle_rig_start:turtle_geo_grp|turtle_rig_start:f_legs_geo" 
 		"-s -r "
 		0 "|turtle_rig_startRNfosterParent1|shell_geo_ShapeDeformed" "|turtle_rig_start:sea_turtle|turtle_rig_start:geometry|turtle_rig_start:turtle_geo_grp|turtle_rig_start:shell_geo" 
@@ -683,8 +683,40 @@ createNode reference -n "turtle_rig_startRN";
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_02_ctrl_grp|turtle_rig_start:l_arm_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_03_ctrl_grp|turtle_rig_start:l_arm_03_ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_03_ctrl_grp|turtle_rig_start:l_arm_03_ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_03_ctrl_grp|turtle_rig_start:l_arm_03_ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_03_ctrl_grp|turtle_rig_start:l_arm_03_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_04_ctrl_grp|turtle_rig_start:l_arm_04_ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_04_ctrl_grp|turtle_rig_start:l_arm_04_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0.80549348491221451"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_04_ctrl_grp|turtle_rig_start:l_arm_04_ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:l_arm_ctrl_grp|turtle_rig_start:l_arm_04_ctrl_grp|turtle_rig_start:l_arm_04_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_clav_ctrl_grp|turtle_rig_start:r_clav_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_clav_ctrl_grp|turtle_rig_start:r_clav_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_01_ctrl_grp|turtle_rig_start:r_arm_01_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_01_ctrl_grp|turtle_rig_start:r_arm_01_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_02_ctrl_grp|turtle_rig_start:r_arm_02_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_02_ctrl_grp|turtle_rig_start:r_arm_02_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_03_ctrl_grp|turtle_rig_start:r_arm_03_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_03_ctrl_grp|turtle_rig_start:r_arm_03_ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_04_ctrl_grp|turtle_rig_start:r_arm_04_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:r_arm_ctrl_grp|turtle_rig_start:r_arm_04_ctrl_grp|turtle_rig_start:r_arm_04_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:controls|turtle_rig_start:offset_grp|turtle_rig_start:transform_ctrl_grp|turtle_rig_start:transform_ctrl|turtle_rig_start:cog_ctrl_grp|turtle_rig_start:cog_ctrl|turtle_rig_start:upper_body_ctrl_grp|turtle_rig_start:neck_ctrl_grp|turtle_rig_start:neck_01_ctrl_grp|turtle_rig_start:neck_01_ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -732,7 +764,7 @@ createNode reference -n "turtle_rig_startRN";
 		"bindPose" " -type \"matrix\" 0 0 1.00000000000000111 0 0 1 0 0 -1.00000000000000111 0 0 0 0 -0.029192715883255227 3.42588102817535667 1"
 		
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt" 
 		"bindPose" " -type \"matrix\" 0 0 1.00000000000000133 0 0 1 0 0 -1.00000000000000133 0 0 0 0 0.11082875728607167 4.33285379409790483 1"
 		
@@ -798,20 +830,22 @@ createNode reference -n "turtle_rig_startRN";
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt" 
 		"lockInfluenceWeights" " 1"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt" 
+		"preferredAngle" " -type \"double3\" 0 0 -9.07122140431567914"
+		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt" 
 		"bindPose" " -type \"matrix\" 0.99058553051275444 0 0.13689524001500636 0 0 1 0 0 -0.13689524001500636 0 0.99058553051275444 0 0.32130694389343295 -0.55037277936935436 1.81826370954513727 1"
 		
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt" 
-		"lockInfluenceWeights" " 1"
+		"lockInfluenceWeights" " 0"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt" 
 		"bindPose" " -type \"matrix\" 0.9710314757280748 -0.074875969913977394 -0.22691730272238023 0 0.079426505681765222 0.99678029062809492 0.010976447993572343 0 0.22536482276642847 -0.028681724927420982 0.97385217323505824 0 2.65034341812134056 -0.55037277936935425 2.14012789726257235 1"
 		
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt" 
 		"bindPose" " -type \"matrix\" 0.66610060597379173 0.010127045030947137 -0.74579315207387809 0 0.014108557043104139 0.99955784107924017 0.02617386015035382 0 0.74572845683902289 -0.027956489335214683 0.66566320565623915 0 3.64349269866943715 -0.62695424712728742 1.90804195404052535 1"
 		
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt" 
-		"lockInfluenceWeights" " 0"
+		"lockInfluenceWeights" " 1"
 		2 "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_03_jnt" 
 		"bindPose" " -type \"matrix\" 0.21286825053111713 0.064756964010074636 -0.97493263537950237 0 -0.018207199011142174 0.99789097402423454 0.062306515430829296 0 0.97691125790421329 0.004487713578361213 0.21359834879242029 0 4.68442313111770847 -0.61112848556972899 0.74257418334198022 1"
 		
@@ -1012,7 +1046,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[79]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[80]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[81]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[82]" ""
@@ -1020,7 +1054,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[83]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[84]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[85]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[86]" ""
@@ -1028,9 +1062,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[87]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[88]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[89]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[90]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[91]" ""
@@ -1038,9 +1072,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[92]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[93]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[94]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[95]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[96]" ""
@@ -1048,7 +1082,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[97]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[98]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[99]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[100]" ""
@@ -1056,9 +1090,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[101]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[102]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:neck_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[103]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[104]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[105]" ""
@@ -1070,9 +1104,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[108]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[109]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[110]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[111]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[112]" ""
@@ -1084,7 +1118,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[115]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[116]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[117]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[118]" ""
@@ -1096,11 +1130,11 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[121]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[122]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:neck_jnt_grp|turtle_rig_start:head_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[123]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp.message" 
 		"turtle_rig_startRN.placeHolderList[124]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[125]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[126]" ""
@@ -1108,9 +1142,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[127]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[128]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[129]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[130]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[131]" ""
@@ -1118,7 +1152,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[132]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[133]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[134]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[135]" ""
@@ -1126,9 +1160,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[136]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[137]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[138]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[139]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[140]" ""
@@ -1136,9 +1170,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[141]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[142]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[143]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[144]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[145]" ""
@@ -1146,7 +1180,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[146]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[147]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[148]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[149]" ""
@@ -1154,9 +1188,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[150]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[151]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[152]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[153]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[154]" ""
@@ -1164,9 +1198,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[155]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[156]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[157]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[158]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[159]" ""
@@ -1174,7 +1208,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[160]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[161]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[162]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[163]" ""
@@ -1182,9 +1216,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[164]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[165]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[166]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[167]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[168]" ""
@@ -1192,9 +1226,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[169]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[170]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[171]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[172]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[173]" ""
@@ -1202,7 +1236,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[174]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[175]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[176]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[177]" ""
@@ -1210,9 +1244,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[178]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[179]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[180]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[181]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[182]" ""
@@ -1220,9 +1254,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[183]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[184]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[185]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[186]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[187]" ""
@@ -1230,7 +1264,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[188]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[189]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[190]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[191]" ""
@@ -1238,11 +1272,11 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[192]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[193]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_leg_jnt_grp|turtle_rig_start:l_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[194]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp.message" 
 		"turtle_rig_startRN.placeHolderList[195]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[196]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[197]" ""
@@ -1250,9 +1284,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[198]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[199]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[200]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[201]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[202]" ""
@@ -1260,7 +1294,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[203]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[204]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[205]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[206]" ""
@@ -1268,9 +1302,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[207]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[208]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[209]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[210]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[211]" ""
@@ -1278,9 +1312,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[212]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[213]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[214]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[215]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[216]" ""
@@ -1288,7 +1322,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[217]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[218]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[219]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[220]" ""
@@ -1296,9 +1330,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[221]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[222]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_02_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[223]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[224]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[225]" ""
@@ -1306,9 +1340,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[226]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[227]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[228]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[229]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[230]" ""
@@ -1316,7 +1350,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[231]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[232]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[233]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[234]" ""
@@ -1324,9 +1358,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[235]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[236]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_03_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[237]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[238]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[239]" ""
@@ -1334,9 +1368,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[240]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[241]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[242]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[243]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[244]" ""
@@ -1344,7 +1378,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[245]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[246]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[247]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[248]" ""
@@ -1352,9 +1386,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[249]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[250]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_04_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[251]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[252]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[253]" ""
@@ -1362,9 +1396,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[254]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[255]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[256]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[257]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[258]" ""
@@ -1372,7 +1406,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[259]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[260]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[261]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[262]" ""
@@ -1380,11 +1414,11 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[263]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[264]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:r_leg_jnt_grp|turtle_rig_start:r_leg_05_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[265]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp.message" 
 		"turtle_rig_startRN.placeHolderList[266]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[267]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[268]" ""
@@ -1392,9 +1426,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[269]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[270]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[271]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[272]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[273]" ""
@@ -1402,7 +1436,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[274]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[275]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[276]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[277]" ""
@@ -1410,9 +1444,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[278]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[279]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_clav_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[280]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[281]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[282]" ""
@@ -1420,9 +1454,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[283]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[284]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[285]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.worldMatrix" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[286]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[287]" ""
@@ -1430,7 +1464,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[288]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[289]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.objectColorRGB" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.worldMatrix" 
 		"turtle_rig_startRN.placeHolderList[290]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[291]" ""
@@ -1438,9 +1472,9 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[292]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[293]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.bindPose" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_01_jnt.objectColorRGB" 
 		"turtle_rig_startRN.placeHolderList[294]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.lockInfluenceWeights" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.bindPose" 
 		"turtle_rig_startRN.placeHolderList[295]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[296]" ""
@@ -1448,7 +1482,7 @@ createNode reference -n "turtle_rig_startRN";
 		"turtle_rig_startRN.placeHolderList[297]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[298]" ""
-		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.message" 
+		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.lockInfluenceWeights" 
 		"turtle_rig_startRN.placeHolderList[299]" ""
 		5 3 "turtle_rig_startRN" "|turtle_rig_start:sea_turtle|turtle_rig_start:skeleton|turtle_rig_start:l_arm_jnt_grp|turtle_rig_start:l_arm_02_jnt.message" 
 		"turtle_rig_startRN.placeHolderList[300]" ""
@@ -1809,14 +1843,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
 		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 318\n            -sceneRenderFilter 0\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n"
 		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n"
 		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
 		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
-		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 318\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n"
+		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n"
 		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
 		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
 		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
@@ -2540,7 +2574,7 @@ createNode dagPose -n "bindPose1";
 createNode skinCluster -n "skinCluster2";
 	rename -uid "812D46F2-4A2D-85DC-893C-0FB99E9B0FD6";
 	setAttr -s 1881 ".wl";
-	setAttr ".wl[0:492].w"
+	setAttr ".wl[0:491].w"
 		1 3 1
 		1 3 1
 		1 3 1
@@ -2615,7 +2649,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		2 3 0.96920283883810043 17 0.030797161161899567
-		2 3 0.91332579404115677 17 0.086674205958843231
+		2 3 0.91332579404115677 17 0.086674205958843217
 		2 3 0.92106026411056519 17 0.078939735889434814
 		1 3 1
 		1 3 1
@@ -2763,7 +2797,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		2 3 0.9952243366278708 17 0.0047756633721292019
+		2 3 0.9952243366278708 4 0.0047756633721292019
 		1 3 1
 		1 3 1
 		1 3 1
@@ -2999,14 +3033,13 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		2 3 0.96067100763320923 17 0.039328992366790771
-		2 3 0.98145920038223267 17 0.018540799617767334
+		2 3 0.96067100763320923 4 0.039328992366790771
+		3 3 0.98145920038223267 4 0.0030814642086625099 17 0.015459335409104824
 		1 3 1
 		1 3 1
 		1 3 1
 		1 3 1
-		2 3 0.98792038112878799 17 0.012079618871212006
-		1 3 1
+		2 3 0.98792038112878799 4 0.012079618871212006
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3034,7 +3067,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1;
-	setAttr ".wl[493:809].w"
+	setAttr ".wl[492:716].w"
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3062,50 +3095,51 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
+		1 3 1
+		2 20 0.66627100110054016 21 0.33372899889945984
+		2 20 0.63718542456626892 21 0.36281457543373108
+		3 19 0.043915044516324997 20 0.63973677158355713 21 0.31634818390011787
+		2 20 0.76106387376785278 21 0.23893612623214722
+		2 20 0.76447713375091553 21 0.23552286624908447
+		2 20 0.74322178959846497 21 0.25677821040153503
+		2 20 0.70758864283561707 21 0.29241135716438293
+		2 20 0.63298553228378296 21 0.36701446771621704
+		3 19 0.070086635649204254 20 0.52901159971952438 21 0.40090176463127136
+		2 20 0.49040448665618896 21 0.50959551334381104
+		2 20 0.50967442989349365 21 0.49032557010650635
+		2 20 0.44329231977462769 21 0.55670768022537231
+		2 20 0.38583672046661377 21 0.61416327953338623
+		2 20 0.38349056243896484 21 0.61650943756103516
+		2 20 0.41692036390304565 21 0.58307963609695435
+		2 20 0.45829027891159058 21 0.54170972108840942
+		2 20 0.50317659974098206 21 0.49682340025901794
+		2 20 0.51578220725059509 21 0.48421779274940491
+		2 20 0.24447154998779297 21 0.75552845001220703
+		2 20 0.22576378285884857 21 0.77423621714115143
+		2 20 0.30732771754264832 21 0.69267228245735168
+		2 20 0.18847459554672241 21 0.81152540445327759
+		2 20 0.13487184047698975 21 0.86512815952301025
+		2 20 0.12921375036239624 21 0.87078624963760376
+		2 20 0.20308029651641846 21 0.79691970348358154
+		2 20 0.26316773891448975 21 0.73683226108551025
+		2 20 0.22521805763244629 21 0.77478194236755371
+		1 21 1
+		1 21 1
+		2 20 0.025318052619695663 21 0.97468194738030434
+		2 20 0.036379337310791016 21 0.96362066268920898
+		1 21 1
+		1 21 1
+		2 20 0.0088490284979343414 21 0.99115097150206566
+		1 21 1
+		1 21 1
+		3 19 0.11366903781890869 20 0.57464855909347534 21 0.31168240308761597
+		2 20 0.42324662208557129 21 0.57675337791442871
+		2 20 0.2933928370475769 21 0.7066071629524231
+		2 20 0.089227698743343353 21 0.91077230125665665
+		3 19 0.042251598089933395 20 0.53309567645192146 21 0.42465272545814514
+		2 20 0.50444206595420837 21 0.49555793404579163
+		2 20 0.26661252975463867 21 0.73338747024536133
+		1 21 1
 		3 3 0.38992491315232503 17 0.58207898263705982 18 0.027996104210615158
 		3 3 0.27294311705941882 17 0.66069433804636268 18 0.066362544894218445
 		2 3 0.56478309631347656 17 0.43521690368652344
@@ -3135,19 +3169,19 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
+		2 20 0.054077386856079102 21 0.9459226131439209
+		2 20 0.017698109149932861 21 0.98230189085006714
+		2 20 0.03367546945810318 21 0.96632453054189682
+		2 20 0.014256766997277737 21 0.98574323300272226
+		1 21 1
+		1 21 1
+		1 21 1
+		1 21 1
+		1 21 1
+		1 21 1
+		2 20 0.0066367709077894688 21 0.99336322909221053
+		2 20 0.022368375211954117 21 0.97763162478804588
+		1 21 1
 		3 3 0.11370309517114754 17 0.52897868230611689 18 0.3573182225227356
 		3 3 0.077814939604153727 17 0.58790108264888274 18 0.3342839777469635
 		3 3 0.02876393064281349 17 0.67826622724533081 18 0.29296984211185567
@@ -3195,50 +3229,57 @@ createNode skinCluster -n "skinCluster2";
 		3 17 0.023384982720017433 18 0.5365146454423666 19 0.44010037183761597
 		3 17 0.088050492107868195 18 0.40874728560447693 19 0.50320222228765488
 		3 17 0.052236065268516541 18 0.14187262952327728 19 0.80589130520820618
-		3 17 0.051445409655570984 18 0.20041374862194061 19 0.7481408417224884
+		4 17 0.051445409655570984 18 0.20041374862194061 19 0.66565561294555664 
+		20 0.082485228776931763
 		3 17 0.055356614291667938 18 0.16167731583118439 19 0.78296606987714767
-		3 17 0.051705121994018555 18 0.2014591246843338 19 0.74683575332164764
+		4 17 0.051705121994018555 18 0.2014591246843338 19 0.71789174526929855 
+		20 0.028944008052349091
 		3 17 0.051863539963960648 18 0.15826675295829773 19 0.78986970707774162
-		3 17 0.026851663365960121 18 0.26716858148574829 19 0.70597975514829159
-		3 17 0.035461731255054474 18 0.21146489679813385 19 0.75307337194681168
-		3 17 0.027186134830117226 18 0.16987670958042145 19 0.80293715558946133
-		3 17 0.026788428425788879 18 0.18518112599849701 19 0.78803044557571411
-		2 18 0.34328016638755798 19 0.65671983361244202
-		3 17 0.027447160333395004 18 0.20565240085124969 19 0.7669004388153553
-		2 18 0.1402166336774826 19 0.8597833663225174
-		2 18 0.11080998927354813 19 0.88919001072645187
-		2 18 0.085422255098819733 19 0.91457774490118027
-		4 3 3.7780420938966972e-05 17 4.0718896230222488e-05 18 0.086467631161212921 
-		19 0.91345386952161789
-		2 18 0.070936314761638641 19 0.92906368523836136
-		2 18 0.14650216698646545 19 0.85349783301353455
-		2 18 0.051074143499135971 19 0.94892585650086403
-		2 18 0.070469111204147339 19 0.92953088879585266
-		2 18 0.063319995999336243 19 0.93668000400066376
-		2 18 0.13390156626701355 19 0.86609843373298645
-		2 18 0.034646790474653244 19 0.96535320952534676
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
+		4 17 0.026851663365960121 18 0.26716858148574829 19 0.68025174736976624 
+		20 0.025728007778525352
+		4 17 0.035461731255054474 18 0.21146489679813385 19 0.62954580783843994 
+		20 0.12352756410837173
+		4 17 0.027186134830117226 18 0.16987670958042145 19 0.74536824226379395 
+		20 0.057568913325667381
+		4 17 0.026788428425788879 18 0.18518112599849701 19 0.68056392669677734 
+		20 0.10746651887893677
+		3 18 0.34328016638755798 19 0.62711044773459435 20 0.029609385877847672
+		4 17 0.027447160333395004 18 0.20565240085124969 19 0.65626901388168335 
+		20 0.11063142493367195
+		3 18 0.1402166336774826 19 0.7614942193031311 20 0.098289147019386292
+		3 18 0.11080998927354813 19 0.76491248607635498 20 0.12427752465009689
+		3 18 0.085422255098819733 19 0.72839292138814926 20 0.18618482351303101
+		5 3 3.7780420938966972e-05 17 4.0718896230222488e-05 18 0.086467631161212921 
+		19 0.65391689538955688 20 0.259536974132061
+		3 18 0.070936314761638641 19 0.62990128993988037 20 0.29916239529848099
+		3 18 0.14650216698646545 19 0.71435290575027466 20 0.13914492726325989
+		3 18 0.051074143499135971 19 0.65036821737885475 20 0.29855763912200928
+		3 18 0.070469111204147339 19 0.67253980040550232 20 0.25699108839035034
+		3 18 0.063319995999336243 19 0.64952681958675385 20 0.28715318441390991
+		3 18 0.13390156626701355 19 0.70374584197998047 20 0.16235259175300598
+		3 18 0.034646790474653244 19 0.66140638664364815 20 0.30394682288169861
+		2 19 0.26803708076477051 20 0.73196291923522949
+		2 19 0.29399025440216064 20 0.70600974559783936
+		2 19 0.55055266618728638 20 0.44944733381271362
+		2 19 0.44314271211624146 20 0.55685728788375854
+		2 19 0.57534331083297729 20 0.42465668916702271
+		2 19 0.30293405055999756 20 0.69706594944000244
+		2 19 0.28656390309333801 20 0.71343609690666199
+		2 19 0.24264217913150787 20 0.75735782086849213
+		2 19 0.35025852918624878 20 0.64974147081375122
+		2 19 0.59977442026138306 20 0.40022557973861694
+		2 19 0.32411471009254456 20 0.67588528990745544
+		3 19 0.11965629458427429 20 0.805303655564785 21 0.075040049850940704
+		3 19 0.073857121169567108 20 0.85233135521411896 21 0.073811523616313934
+		3 19 0.13427151739597321 20 0.7661433219909668 21 0.099585160613059998
+		3 19 0.084835857152938843 20 0.85081310570240021 21 0.06435103714466095
+		3 19 0.071888387203216553 20 0.85514163225889206 21 0.072969980537891388
+		3 19 0.058557715266942978 20 0.86603258177638054 21 0.075409702956676483
+		3 19 0.025173524394631386 20 0.89010143280029297 21 0.084725042805075645
+		3 19 0.067203342914581299 20 0.84770198166370392 21 0.085094675421714783
+		3 19 0.12893658876419067 20 0.75728344917297363 21 0.11377996206283569
+		3 19 0.027449190616607666 20 0.85559180378913879 21 0.11695900559425354
+		3 19 0.0081393793225288391 20 0.90395653247833252 21 0.087904088199138641
 		2 3 0.44490447640419006 17 0.55509552359580994
 		3 3 0.203573995751862 17 0.70985360302257117 18 0.086572401225566864
 		4 3 0.01886352171810662 17 0.6875872015953064 18 0.25949984396187276 
@@ -3248,16 +3289,16 @@ createNode skinCluster -n "skinCluster2";
 		4 3 8.2095767618874449e-05 17 0.12089353799819946 18 0.56550831565701798 
 		19 0.3135160505771637
 		3 17 0.047318905591964722 18 0.47313112020492554 19 0.47954997420310974
-		2 18 0.25616493821144104 19 0.74383506178855896
-		2 18 0.095428012311458588 19 0.90457198768854141
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
-		1 19 1
+		3 18 0.25616493821144104 19 0.70502125844359398 20 0.038813803344964981
+		3 18 0.095428012311458588 19 0.71028115600347519 20 0.19429083168506622
+		2 19 0.39155161380767822 20 0.60844838619232178
+		3 19 0.10606199502944946 20 0.80699504166841507 21 0.086942963302135468
+		3 19 0.067203402519226074 20 0.68133670091629028 21 0.25145989656448364
+		2 20 0.40950793027877808 21 0.59049206972122192
+		2 20 0.27641355991363525 21 0.72358644008636475
+		2 20 0.088981896638870239 21 0.91101810336112976
+		1 21 1
+		1 21 1
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3265,7 +3306,8 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 3 1
+		1 3 1;
+	setAttr ".wl[717:1194].w"
 		2 3 0.83903205394744873 17 0.16096794605255127
 		2 3 0.8641076534986496 17 0.1358923465013504
 		2 3 0.926820307970047 17 0.073179692029953003
@@ -3358,8 +3400,6 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 3 1;
-	setAttr ".wl[810:1309].w"
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3528,6 +3568,9 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
+		2 3 0.96875135423556069 22 0.031248645764439319
+		3 3 0.91423690496467236 4 1.1102230246251565e-16 22 0.08576309503532753
+		2 3 0.92251293371297105 22 0.077487066287028922
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3674,124 +3717,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
+		2 3 0.99523993326485072 22 0.004760066735149282
 		1 3 1
 		1 3 1
 		1 3 1
@@ -3860,7 +3786,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1;
-	setAttr ".wl[1310:1809].w"
+	setAttr ".wl[1195:1529].w"
 		1 3 1
 		1 3 1
 		1 3 1
@@ -4028,10 +3954,13 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
+		2 3 0.9611709907116649 22 0.038829009288335228
+		2 3 0.98154212348353975 22 0.018457876516460213
 		1 3 1
 		1 3 1
 		1 3 1
 		1 3 1
+		2 3 0.98801205113581414 22 0.011987948864185931
 		1 3 1
 		1 3 1
 		1 3 1
@@ -4087,14 +4016,243 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
+		3 24 0.0099822176486981107 25 0.67786967396568443 26 0.31214810838561746
+		3 24 0.0038484198793833587 25 0.64969009084628682 26 0.34646148927432974
+		3 24 0.04927213286155889 25 0.6520123698004614 26 0.2987154973379797
+		3 24 0.044946021400688881 25 0.61825644763493548 26 0.3367975309643757
+		3 24 0.0065447006514832307 25 0.63354580653184578 26 0.35990949281667106
+		2 25 0.6146928365486648 26 0.38530716345133514
+		3 24 0.029804434685271029 25 0.55981275671568398 26 0.41038280859904491
+		3 24 0.05243719152522841 25 0.52568013115905332 26 0.42188267731571827
+		3 24 0.046576642610594819 25 0.56166364417152637 26 0.39175971321787884
+		2 25 0.51059082409908463 26 0.48940917590091537
+		2 25 0.51961639949122385 26 0.48038360050877615
+		3 24 0.0046030890054761875 25 0.47106975578734611 26 0.52432715520717776
+		3 24 4.3673954533340268e-05 25 0.44724848712665061 26 0.55270783891881614
+		2 25 0.48131660641224983 26 0.51868339358775017
+		2 25 0.4808157771169228 26 0.51918422288307731
+		2 25 0.46616990439913208 26 0.53383009560086792
+		2 25 0.45735430029557389 26 0.54264569970442622
+		2 25 0.50442675787926383 26 0.49557324212073617
+		2 25 0.27502956628610065 26 0.72497043371389935
+		2 25 0.26147296922489788 26 0.73852703077510207
+		2 25 0.31457226985835107 26 0.68542773014164893
+		2 25 0.30895800134695539 26 0.69104199865304461
+		2 25 0.2815497029145746 26 0.7184502970854254
+		2 25 0.26119940178418855 26 0.73880059821581157
+		2 25 0.20657974334287346 26 0.79342025665712657
+		2 25 0.18463273858344134 26 0.81536726141655869
+		2 25 0.21162027414072199 26 0.78837972585927796
+		2 25 0.037285649873069815 26 0.96271435012693019
+		2 25 0.023996739341491786 26 0.97600326065850829
+		2 25 0.056827239862343788 26 0.94317276013765627
+		2 25 0.066956111417206338 26 0.93304388858279363
+		2 25 0.067048865510173528 26 0.93295113448982647
+		2 25 0.046162081419579323 26 0.95383791858042066
+		2 25 0.0074911110849456009 26 0.9925088889150544
+		2 25 0.0028423757944371648 26 0.99715762420556286
+		2 25 0.00089419924504952064 26 0.99910580075495048
+		3 24 0.059987404561349371 25 0.63819798428231045 26 0.30181461115634012
+		3 24 0.0047695228636224218 25 0.46462774854747479 26 0.53060272858890278
+		2 25 0.32324809466767768 26 0.67675190533232232
+		2 25 0.051030760040620349 26 0.94896923995937965
+		3 24 0.058002743178711125 25 0.52673067191404899 26 0.41526658490723989
+		2 25 0.47357256231474842 26 0.52642743768525158
+		2 25 0.18933970471960573 26 0.81066029528039429
+		2 25 0.001947710905460845 26 0.99805228909453914
+		4 3 0.40957412439362206 22 0.56256793781979464 23 0.025957651661543846 
+		24 0.001900286125039452
+		3 3 0.26570051058444566 22 0.64703276235233564 23 0.087266727063218641
+		4 3 0.55353577366353013 22 0.44356191725795557 23 0.0028350908311659904 
+		24 6.7218247348301962e-05
+		3 3 0.4291623547769452 22 0.56326219111552966 23 0.0075754541075250979
+		2 3 0.88635622188025254 22 0.11364377811974731
+		2 3 0.79404531042713788 22 0.20595468957286223
+		5 3 0.19558114949492611 4 1.1102230246251565e-16 22 0.70504598425642928 
+		23 0.098323756010171529 24 0.0010491102384730092
+		3 3 0.39532742270033544 22 0.60092098758005197 23 0.0037515897196125757
+		2 3 0.78501872542628381 22 0.2149812745737161
+		4 3 0.19223280038502127 22 0.71642547616186913 23 0.090582154146195207 
+		24 0.00075956930691436228
+		3 3 0.39936756160055131 22 0.59753862810369285 23 0.0030938102957559386
+		3 3 0.38212551085567636 22 0.54814989716195084 23 0.069724591982372824
+		2 3 0.62712628126484959 22 0.37287371873515035
+		3 3 0.55095929958245859 22 0.38351855786440014 23 0.065522142553141344
+		2 3 0.75316617813101483 22 0.24683382186898523
+		3 3 0.69528467812979589 22 0.24251240717166861 23 0.062202914698535623
+		2 3 0.95189013469513439 22 0.048109865304865593
 		1 3 1
+		4 3 0.62938985788951407 22 0.34929454594348036 23 0.010590001117995129 
+		24 0.010725595049010384
+		4 3 0.70927739192286077 22 0.28806291023192288 23 0.0013213894152287098 
+		24 0.001338308429987674
 		1 3 1
 		1 3 1
 		1 3 1
+		2 3 0.99989021877122386 22 0.00010978122877610807
 		1 3 1
 		1 3 1
 		1 3 1
 		1 3 1
+		2 25 0.041551462825452745 26 0.95844853717454725
+		2 25 0.022939200201740114 26 0.97706079979825988
+		2 25 0.032509032444443933 26 0.96749096755555608
+		2 25 0.041028495628451997 26 0.9589715043715481
+		2 25 0.039593500112455673 26 0.96040649988754445
+		2 25 0.02554920405563621 26 0.97445079594436379
+		2 25 0.027479502279982818 26 0.97252049772001714
+		2 25 0.013797509073739059 26 0.986202490926261
+		2 25 0.017698109149932861 26 0.98230189085006714
+		2 25 0.017698109149932861 26 0.98230189085006714
+		2 25 0.018371940020578847 26 0.98162805997942115
+		2 25 0.054077386856079102 26 0.9459226131439209
+		2 25 0.049985697785476901 26 0.9500143022145231
+		4 3 0.10531868201031798 22 0.51807998411794154 23 0.36991187158004418 
+		24 0.0066894622916962914
+		4 3 0.038611458236293021 22 0.60808606628165851 23 0.31190840687301674 
+		24 0.041394068609031665
+		3 3 0.13328530537645655 22 0.64477403157109503 23 0.22194066305244844
+		3 3 0.27012987418316492 22 0.54405612709856543 23 0.1858139987182697
+		4 3 0.032740609052881543 22 0.68680634386742967 23 0.25457292440030166 
+		24 0.025880122679387222
+		4 3 0.13118916059369787 22 0.48668263594266697 23 0.35292535313809281 
+		24 0.029202850325542398
+		3 3 0.40878479826567554 22 0.43633052534121458 23 0.15488467639310982
+		4 3 0.10029020691725231 22 0.55029555106097505 23 0.29815697740752789 
+		24 0.051257264614244846
+		3 3 0.61178183345896542 22 0.27248320846945712 23 0.11573495807157741
+		3 3 0.6440866039280555 22 0.22744189094113437 23 0.12847150513081013
+		4 3 0.50350250704291122 22 0.30347987956381134 23 0.16399303693666101 
+		24 0.029024576456616453
+		4 3 0.0041441547043096277 22 0.24801847243282613 23 0.62327344862814416 
+		24 0.12456392423472015
+		3 22 0.27034622202234082 23 0.38479440023477118 24 0.34485937774288794
+		4 3 0.015802772962556728 22 0.21823308851808113 23 0.61440182117591324 
+		24 0.15156231734344891
+		4 3 0.0049880751880017051 22 0.30198657973838283 23 0.58735910921962187 
+		24 0.10566623585399362
+		3 3 0.062065524734816822 22 0.4019879741984137 23 0.53594650106676944
+		3 3 0.084461974065902709 22 0.47937327229315485 23 0.43616475364094248
+		3 3 0.38433806174918134 22 0.39678920129095296 23 0.2188727369598657
+		5 3 0.010798254723049218 4 1.1102230246251563e-16 22 0.41369738192177563 
+		23 0.53091412927640447 24 0.044590234078770642
+		4 3 0.017140903303396238 22 0.45202311521709471 23 0.51153153157700748 
+		24 0.019304449902501523
+		1 3 0.018224580751875531;
+	setAttr ".wl[1529:1811].w"
+		3 22 0.26546606527151895 23 0.58050510496056307 24 0.13580424901604252
+		3 3 0.029324275595496007 22 0.46990646423852678 23 0.50076926016597723
+		3 22 0.20323249392436274 23 0.36684071758648984 24 0.42992678848914745
+		3 22 0.2779674965365686 23 0.43448123400560945 24 0.28755126945782195
+		3 22 0.22688375698965121 23 0.35198000965096676 24 0.42113623335938205
+		3 22 0.29048804588848043 23 0.50017965687655419 24 0.20933229723496538
+		3 22 0.22400996188516814 23 0.41687938494662469 24 0.35911065316820723
+		4 3 0.00084021138548431634 22 0.14096396234038805 23 0.59171158385533529 
+		24 0.26648424241879243
+		3 22 0.29150470625481517 23 0.34718166912201631 24 0.36131362462316852
+		3 22 0.2003408661524419 23 0.62624540086230951 24 0.17341373298524854
+		3 22 0.23467634309159985 23 0.61035493017329767 24 0.15496872673510237
+		4 3 0.0042979411309043243 22 0.14906539414165326 23 0.58773654144102949 
+		24 0.25890012328641299
+		3 22 0.2679997789228965 23 0.56182161316087686 24 0.17017860791622663
+		3 22 0.06276298153108445 23 0.25734899170699971 24 0.67988802676191584
+		3 22 0.083357757861863696 23 0.18517759000151063 24 0.7314646521366257
+		4 3 1.5909389471993683e-06 22 0.060395508364061018 23 0.48865173156243968 
+		24 0.45095116913455213
+		4 22 0.077613949157540496 23 0.27542832805028361 24 0.58733276532592171 
+		25 0.05962495746625418
+		4 22 0.090302124214126089 23 0.24572598584432531 24 0.6211615843656525 
+		25 0.042810305575896129
+		4 22 0.11275577455478389 23 0.24061087975355272 24 0.628769564329546 
+		25 0.017863781362117418
+		3 22 0.1338792952076639 23 0.23753310613698014 24 0.62858759865535585
+		4 22 0.074864878785941433 23 0.444674442610484 24 0.46980668762184175 
+		25 0.010653990981732819
+		4 22 0.071547680757585788 23 0.37509941179342698 24 0.52183940780658666 
+		25 0.03151349964240055
+		4 3 7.5933603016784013e-06 22 0.063092889176768335 23 0.49271305501542678 
+		24 0.44418646244750321
+		4 22 0.063793645326894244 23 0.32745733561169343 24 0.56446812656809087 
+		25 0.044280892493321455
+		4 22 0.047023463172143405 23 0.14263761936246816 24 0.79385460163978538 
+		25 0.016484315825603089
+		4 22 0.026892201638299511 23 0.14388368809515104 24 0.64722759326662094 
+		25 0.18199651699992853
+		5 3 1.1645330372264444e-06 22 0.049173034881572354 23 0.1954139498895619 
+		24 0.69720294782807246 25 0.058208902867756152
+		5 3 2.2731607810411938e-06 22 0.039672194574956882 23 0.17179080157386917 
+		24 0.66947796963513573 25 0.11905676105525716
+		4 22 0.047696295884442755 23 0.15428142889960689 24 0.78972073784803432 
+		25 0.0083015373679160356
+		4 22 0.01203492597740757 23 0.24334123925106071 24 0.70236035875873637 
+		25 0.042263476012795329
+		4 22 0.018205163611367148 23 0.13341473439012619 24 0.63967851444981028 
+		25 0.20870158754869639
+		4 22 0.021461684333163908 23 0.15393373703602431 24 0.70669275712959068 
+		25 0.11791182150122101
+		4 22 0.017823794711602628 23 0.14478477366312151 24 0.66748154880858479 
+		25 0.16990988281669098
+		5 4 1.1102230246251565e-16 22 0.0088473115963844801 23 0.25835844676665126 
+		24 0.6937084100807811 25 0.039085831556183087
+		4 22 0.015382818747104121 23 0.13048724454015082 24 0.65852713527215156 
+		25 0.1956028014405935
+		3 23 0.12898697588147803 24 0.74739922051062591 25 0.12361380360789613
+		3 23 0.096134412084037807 24 0.72818998581982763 25 0.17567560209613464
+		5 3 2.1176629103039948e-05 22 2.2823699194500574e-05 23 0.07832633334283079 
+		24 0.65119471704267129 25 0.27043494928620038
+		5 3 1.6800886792403139e-05 22 1.8107621590049036e-05 23 0.064626877313695125 
+		24 0.58106330382426308 25 0.35427491035365938
+		3 23 0.045931967819958966 24 0.52262172212566171 25 0.43144631005437928
+		3 23 0.12789255580147518 24 0.69837096031900936 25 0.17373648387951535
+		3 23 0.032357764252992638 24 0.51026103084132046 25 0.4573812049056869
+		3 23 0.054357159088059326 24 0.58981293585944417 25 0.35582990505249651
+		3 23 0.041729657262919877 24 0.53868800483939383 25 0.41958233789768629
+		3 23 0.093576398303483743 24 0.70438052127735218 25 0.202043080419164
+		3 23 0.022287330252872772 24 0.51202171077192093 25 0.46569095897520629
+		3 24 0.1943348364831165 25 0.78015660562296651 26 0.025508557893916976
+		3 24 0.22522105629482633 25 0.75090097924177224 26 0.02387796446340136
+		3 23 0.0020293374486358398 24 0.55300209581056725 25 0.44496856674079682
+		3 24 0.43457050400695313 25 0.56397369441363021 26 0.0014558015794167499
+		3 23 0.0013611671702014421 24 0.57772665151486757 25 0.42091218131493091
+		3 24 0.26505548899881909 25 0.72278136950108496 26 0.012163141500095995
+		3 24 0.23035050239495983 25 0.75042166087975914 26 0.019227836725281101
+		3 24 0.18798243512095295 25 0.78906345108537579 26 0.022954113793671273
+		3 24 0.32677198288635623 25 0.66616727372825935 26 0.007060743385384427
+		3 24 0.55982128200132408 25 0.43751344432710593 26 0.0026652736715699361
+		3 24 0.27509522325616154 25 0.70500163357938528 26 0.019903143164453119
+		3 24 0.14042868928929053 25 0.78814874672624047 26 0.071422563984469001
+		3 24 0.083053113962905586 25 0.84462634162254235 26 0.072320544414552074
+		3 24 0.15301169129674647 25 0.75208642182128538 26 0.094901886881968142
+		3 24 0.087082763215760473 25 0.80590717970373382 26 0.10701005708050582
+		3 24 0.05648958018279604 25 0.83187273444390808 26 0.11163768537329588
+		3 24 0.043005779094650184 25 0.83079545976974856 26 0.12619876113560122
+		3 24 0.015451483864312304 25 0.84225264000939637 26 0.14229587612629133
+		3 24 0.067780410615657372 25 0.8314406297026542 26 0.10077895968168843
+		3 24 0.13796446281849711 25 0.75670345120193838 26 0.1053320859795645
+		3 24 0.061283452061582838 25 0.783983850411203 26 0.15473269752721422
+		3 24 0.044884519568320222 25 0.76595208549734373 26 0.18916339493433598
+		3 3 0.49448414761126946 4 1.1102230246251565e-16 22 0.50551585238873042
+		4 3 0.26032345446875621 4 2.2204460492503131e-16 22 0.6606733103812491 
+		23 0.079003235149994563
+		4 3 0.076389736063098859 22 0.67599151074822472 23 0.24644570620899442 
+		24 0.0011730469796820237
+		4 3 0.0040660122028430062 22 0.32505241762984305 23 0.59496984443797152 
+		24 0.075911725729342461
+		4 3 0.00039733172265423892 22 0.17567531023557223 23 0.62203283685024546 
+		24 0.20189452119152815
+		4 3 2.9228860395464475e-06 22 0.087319983467616477 23 0.52381816617736721 
+		24 0.38885892746897677
+		4 22 0.020411855969623138 23 0.19137813031482587 24 0.73531452476088921 
+		25 0.052895488954661785
+		3 23 0.076572865244827454 24 0.6654675076179023 25 0.25795962713727028
+		3 24 0.36275824853951794 25 0.62921608538900053 26 0.0080256660714815419
+		3 24 0.12801934081881683 25 0.7463110621621567 26 0.12566959701902647
+		3 24 0.08003487443637658 25 0.60603296405036389 26 0.31393216151325953
+		3 24 0.0022617173907080179 25 0.4534096232604341 26 0.54432865934885788
+		2 25 0.31777681563350058 26 0.68222318436649942
+		2 25 0.05156175946896667 26 0.94843824053103332
+		2 25 0.044286118726559298 26 0.9557138812734407
+		2 25 0.054077386856079102 26 0.9459226131439209
 		1 3 1
 		1 3 1
 		1 3 1
@@ -4103,95 +4261,28 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1
+		2 3 0.85658764550102373 22 0.14341235449897624
+		2 3 0.86131554114467135 22 0.13868445885532862
+		2 3 0.92267608577017257 22 0.077323914229827539
+		2 3 0.99190189483880831 22 0.0080981051611916793
 		1 3 1
 		1 3 1
+		2 3 0.95506058583720688 22 0.044939414162793054
+		2 3 0.97883455707089484 22 0.021165442929105126
 		1 3 1
 		1 3 1
 		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
+		2 3 0.94879747983445217 22 0.051202520165547875
+		2 3 0.88585190819360182 22 0.11414809180639825
+		2 3 0.83767412681996223 22 0.16232587318003772
+		2 3 0.65093761553276153 22 0.34906238446723847
+		3 3 0.77009655031416013 4 1.1102230246251565e-16 22 0.22990344968583978
+		3 3 0.95762602751860904 4 1.1102230246251565e-16 22 0.042373972481390888
+		2 3 0.97398696225139048 22 0.026013037748609569
+		2 3 0.58570486254613363 22 0.41429513745386631
+		2 3 0.58435470894381603 22 0.41564529105618392
+		2 3 0.63322828091556338 22 0.36677171908443662
+		2 3 0.75863519065053653 22 0.24136480934946331
 		1 3 1
 		1 3 1
 		1 3 1
@@ -4361,9 +4452,7 @@ createNode skinCluster -n "skinCluster2";
 		1 3 1
 		1 3 1
 		1 3 1;
-	setAttr ".wl[1810:1880].w"
-		1 3 1
-		1 3 1
+	setAttr ".wl[1812:1880].w"
 		1 3 1
 		1 3 1
 		1 3 1
@@ -6187,7 +6276,8 @@ createNode skinCluster -n "skinCluster6";
 	setAttr ".mi" 5;
 	setAttr ".ucm" yes;
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -6253,395 +6343,395 @@ connectAttr "turtle_rig_startRN.phl[13]" "skinCluster5.orggeom[0]";
 connectAttr "turtle_rig_startRN.phl[14]" "bindPose1.m[1]";
 connectAttr "turtle_rig_startRN.phl[15]" "bindPose1.m[34]";
 connectAttr "turtle_rig_startRN.phl[16]" "bindPose1.wm[35]";
-connectAttr "turtle_rig_startRN.phl[17]" "skinCluster2.lw[0]";
-connectAttr "turtle_rig_startRN.phl[18]" "skinCluster1.lw[26]";
+connectAttr "turtle_rig_startRN.phl[17]" "skinCluster1.lw[26]";
+connectAttr "turtle_rig_startRN.phl[18]" "skinCluster2.lw[0]";
 connectAttr "turtle_rig_startRN.phl[19]" "skinCluster3.lw[26]";
 connectAttr "turtle_rig_startRN.phl[20]" "skinCluster4.lw[0]";
 connectAttr "turtle_rig_startRN.phl[21]" "bindPose1.m[35]";
-connectAttr "turtle_rig_startRN.phl[22]" "skinCluster2.ma[0]";
-connectAttr "turtle_rig_startRN.phl[23]" "skinCluster1.ma[26]";
+connectAttr "turtle_rig_startRN.phl[22]" "skinCluster1.ma[26]";
+connectAttr "turtle_rig_startRN.phl[23]" "skinCluster2.ma[0]";
 connectAttr "turtle_rig_startRN.phl[24]" "skinCluster3.ma[26]";
 connectAttr "turtle_rig_startRN.phl[25]" "skinCluster4.ma[0]";
-connectAttr "turtle_rig_startRN.phl[26]" "skinCluster2.ifcl[0]";
-connectAttr "turtle_rig_startRN.phl[27]" "skinCluster1.ifcl[26]";
+connectAttr "turtle_rig_startRN.phl[26]" "skinCluster1.ifcl[26]";
+connectAttr "turtle_rig_startRN.phl[27]" "skinCluster2.ifcl[0]";
 connectAttr "turtle_rig_startRN.phl[28]" "skinCluster3.ifcl[26]";
 connectAttr "turtle_rig_startRN.phl[29]" "skinCluster4.ifcl[0]";
 connectAttr "turtle_rig_startRN.phl[30]" "bindPose1.m[30]";
 connectAttr "turtle_rig_startRN.phl[31]" "bindPose1.wm[33]";
-connectAttr "turtle_rig_startRN.phl[32]" "skinCluster2.lw[1]";
-connectAttr "turtle_rig_startRN.phl[33]" "skinCluster1.lw[25]";
+connectAttr "turtle_rig_startRN.phl[32]" "skinCluster1.lw[25]";
+connectAttr "turtle_rig_startRN.phl[33]" "skinCluster2.lw[1]";
 connectAttr "turtle_rig_startRN.phl[34]" "skinCluster3.lw[25]";
 connectAttr "turtle_rig_startRN.phl[35]" "skinCluster4.lw[1]";
 connectAttr "turtle_rig_startRN.phl[36]" "bindPose1.m[33]";
-connectAttr "turtle_rig_startRN.phl[37]" "skinCluster2.ma[1]";
-connectAttr "turtle_rig_startRN.phl[38]" "skinCluster1.ma[25]";
+connectAttr "turtle_rig_startRN.phl[37]" "skinCluster1.ma[25]";
+connectAttr "turtle_rig_startRN.phl[38]" "skinCluster2.ma[1]";
 connectAttr "turtle_rig_startRN.phl[39]" "skinCluster3.ma[25]";
 connectAttr "turtle_rig_startRN.phl[40]" "skinCluster4.ma[1]";
-connectAttr "turtle_rig_startRN.phl[41]" "skinCluster2.ifcl[1]";
-connectAttr "turtle_rig_startRN.phl[42]" "skinCluster1.ifcl[25]";
+connectAttr "turtle_rig_startRN.phl[41]" "skinCluster1.ifcl[25]";
+connectAttr "turtle_rig_startRN.phl[42]" "skinCluster2.ifcl[1]";
 connectAttr "turtle_rig_startRN.phl[43]" "skinCluster3.ifcl[25]";
 connectAttr "turtle_rig_startRN.phl[44]" "skinCluster4.ifcl[1]";
 connectAttr "turtle_rig_startRN.phl[45]" "bindPose1.wm[32]";
-connectAttr "turtle_rig_startRN.phl[46]" "skinCluster2.lw[2]";
-connectAttr "turtle_rig_startRN.phl[47]" "skinCluster1.lw[24]";
+connectAttr "turtle_rig_startRN.phl[46]" "skinCluster1.lw[24]";
+connectAttr "turtle_rig_startRN.phl[47]" "skinCluster2.lw[2]";
 connectAttr "turtle_rig_startRN.phl[48]" "skinCluster3.lw[24]";
 connectAttr "turtle_rig_startRN.phl[49]" "skinCluster4.lw[2]";
 connectAttr "turtle_rig_startRN.phl[50]" "bindPose1.m[32]";
-connectAttr "turtle_rig_startRN.phl[51]" "skinCluster2.ma[2]";
-connectAttr "turtle_rig_startRN.phl[52]" "skinCluster1.ma[24]";
+connectAttr "turtle_rig_startRN.phl[51]" "skinCluster1.ma[24]";
+connectAttr "turtle_rig_startRN.phl[52]" "skinCluster2.ma[2]";
 connectAttr "turtle_rig_startRN.phl[53]" "skinCluster3.ma[24]";
 connectAttr "turtle_rig_startRN.phl[54]" "skinCluster4.ma[2]";
-connectAttr "turtle_rig_startRN.phl[55]" "skinCluster2.ifcl[2]";
-connectAttr "turtle_rig_startRN.phl[56]" "skinCluster1.ifcl[24]";
+connectAttr "turtle_rig_startRN.phl[55]" "skinCluster1.ifcl[24]";
+connectAttr "turtle_rig_startRN.phl[56]" "skinCluster2.ifcl[2]";
 connectAttr "turtle_rig_startRN.phl[57]" "skinCluster3.ifcl[24]";
 connectAttr "turtle_rig_startRN.phl[58]" "skinCluster4.ifcl[2]";
 connectAttr "turtle_rig_startRN.phl[59]" "bindPose1.wm[31]";
-connectAttr "turtle_rig_startRN.phl[60]" "skinCluster2.lw[3]";
-connectAttr "turtle_rig_startRN.phl[61]" "skinCluster1.lw[23]";
+connectAttr "turtle_rig_startRN.phl[60]" "skinCluster1.lw[23]";
+connectAttr "turtle_rig_startRN.phl[61]" "skinCluster2.lw[3]";
 connectAttr "turtle_rig_startRN.phl[62]" "skinCluster3.lw[23]";
 connectAttr "turtle_rig_startRN.phl[63]" "skinCluster4.lw[3]";
-connectAttr "turtle_rig_startRN.phl[64]" "skinCluster1.ptt";
-connectAttr "turtle_rig_startRN.phl[65]" "bindPose1.m[31]";
-connectAttr "turtle_rig_startRN.phl[66]" "skinCluster2.ma[3]";
-connectAttr "turtle_rig_startRN.phl[67]" "skinCluster1.ma[23]";
+connectAttr "turtle_rig_startRN.phl[64]" "bindPose1.m[31]";
+connectAttr "turtle_rig_startRN.phl[65]" "skinCluster1.ptt";
+connectAttr "turtle_rig_startRN.phl[66]" "skinCluster1.ma[23]";
+connectAttr "turtle_rig_startRN.phl[67]" "skinCluster2.ma[3]";
 connectAttr "turtle_rig_startRN.phl[68]" "skinCluster3.ma[23]";
 connectAttr "turtle_rig_startRN.phl[69]" "skinCluster4.ma[3]";
-connectAttr "turtle_rig_startRN.phl[70]" "skinCluster2.ifcl[3]";
-connectAttr "turtle_rig_startRN.phl[71]" "skinCluster1.ifcl[23]";
+connectAttr "turtle_rig_startRN.phl[70]" "skinCluster1.ifcl[23]";
+connectAttr "turtle_rig_startRN.phl[71]" "skinCluster2.ifcl[3]";
 connectAttr "turtle_rig_startRN.phl[72]" "skinCluster3.ifcl[23]";
 connectAttr "turtle_rig_startRN.phl[73]" "skinCluster4.ifcl[3]";
 connectAttr "turtle_rig_startRN.phl[74]" "bindPose1.m[26]";
 connectAttr "turtle_rig_startRN.phl[75]" "bindPose1.wm[29]";
-connectAttr "turtle_rig_startRN.phl[76]" "skinCluster2.lw[4]";
-connectAttr "turtle_rig_startRN.phl[77]" "skinCluster1.lw[22]";
+connectAttr "turtle_rig_startRN.phl[76]" "skinCluster1.lw[22]";
+connectAttr "turtle_rig_startRN.phl[77]" "skinCluster2.lw[4]";
 connectAttr "turtle_rig_startRN.phl[78]" "skinCluster3.lw[22]";
 connectAttr "turtle_rig_startRN.phl[79]" "skinCluster4.lw[4]";
-connectAttr "turtle_rig_startRN.phl[80]" "bindPose1.m[29]";
-connectAttr "turtle_rig_startRN.phl[81]" "skinCluster2.ma[4]";
+connectAttr "turtle_rig_startRN.phl[80]" "skinCluster2.ptt";
+connectAttr "turtle_rig_startRN.phl[81]" "bindPose1.m[29]";
 connectAttr "turtle_rig_startRN.phl[82]" "skinCluster1.ma[22]";
-connectAttr "turtle_rig_startRN.phl[83]" "skinCluster3.ma[22]";
-connectAttr "turtle_rig_startRN.phl[84]" "skinCluster4.ma[4]";
-connectAttr "turtle_rig_startRN.phl[85]" "skinCluster2.ifcl[4]";
+connectAttr "turtle_rig_startRN.phl[83]" "skinCluster2.ma[4]";
+connectAttr "turtle_rig_startRN.phl[84]" "skinCluster3.ma[22]";
+connectAttr "turtle_rig_startRN.phl[85]" "skinCluster4.ma[4]";
 connectAttr "turtle_rig_startRN.phl[86]" "skinCluster1.ifcl[22]";
-connectAttr "turtle_rig_startRN.phl[87]" "skinCluster3.ifcl[22]";
-connectAttr "turtle_rig_startRN.phl[88]" "skinCluster4.ifcl[4]";
-connectAttr "turtle_rig_startRN.phl[89]" "bindPose1.wm[28]";
-connectAttr "turtle_rig_startRN.phl[90]" "skinCluster2.lw[5]";
+connectAttr "turtle_rig_startRN.phl[87]" "skinCluster2.ifcl[4]";
+connectAttr "turtle_rig_startRN.phl[88]" "skinCluster3.ifcl[22]";
+connectAttr "turtle_rig_startRN.phl[89]" "skinCluster4.ifcl[4]";
+connectAttr "turtle_rig_startRN.phl[90]" "bindPose1.wm[28]";
 connectAttr "turtle_rig_startRN.phl[91]" "skinCluster1.lw[21]";
-connectAttr "turtle_rig_startRN.phl[92]" "skinCluster3.lw[21]";
-connectAttr "turtle_rig_startRN.phl[93]" "skinCluster4.lw[5]";
-connectAttr "turtle_rig_startRN.phl[94]" "bindPose1.m[28]";
-connectAttr "turtle_rig_startRN.phl[95]" "skinCluster2.ma[5]";
+connectAttr "turtle_rig_startRN.phl[92]" "skinCluster2.lw[5]";
+connectAttr "turtle_rig_startRN.phl[93]" "skinCluster3.lw[21]";
+connectAttr "turtle_rig_startRN.phl[94]" "skinCluster4.lw[5]";
+connectAttr "turtle_rig_startRN.phl[95]" "bindPose1.m[28]";
 connectAttr "turtle_rig_startRN.phl[96]" "skinCluster1.ma[21]";
-connectAttr "turtle_rig_startRN.phl[97]" "skinCluster3.ma[21]";
-connectAttr "turtle_rig_startRN.phl[98]" "skinCluster4.ma[5]";
-connectAttr "turtle_rig_startRN.phl[99]" "skinCluster2.ifcl[5]";
+connectAttr "turtle_rig_startRN.phl[97]" "skinCluster2.ma[5]";
+connectAttr "turtle_rig_startRN.phl[98]" "skinCluster3.ma[21]";
+connectAttr "turtle_rig_startRN.phl[99]" "skinCluster4.ma[5]";
 connectAttr "turtle_rig_startRN.phl[100]" "skinCluster1.ifcl[21]";
-connectAttr "turtle_rig_startRN.phl[101]" "skinCluster3.ifcl[21]";
-connectAttr "turtle_rig_startRN.phl[102]" "skinCluster4.ifcl[5]";
-connectAttr "turtle_rig_startRN.phl[103]" "bindPose1.wm[27]";
-connectAttr "turtle_rig_startRN.phl[104]" "skinCluster2.lw[6]";
+connectAttr "turtle_rig_startRN.phl[101]" "skinCluster2.ifcl[5]";
+connectAttr "turtle_rig_startRN.phl[102]" "skinCluster3.ifcl[21]";
+connectAttr "turtle_rig_startRN.phl[103]" "skinCluster4.ifcl[5]";
+connectAttr "turtle_rig_startRN.phl[104]" "bindPose1.wm[27]";
 connectAttr "turtle_rig_startRN.phl[105]" "skinCluster1.lw[20]";
-connectAttr "turtle_rig_startRN.phl[106]" "skinCluster3.lw[20]";
-connectAttr "turtle_rig_startRN.phl[107]" "skinCluster4.lw[6]";
-connectAttr "turtle_rig_startRN.phl[108]" "skinCluster5.lw[0]";
-connectAttr "turtle_rig_startRN.phl[109]" "skinCluster6.lw[0]";
-connectAttr "turtle_rig_startRN.phl[110]" "bindPose1.m[27]";
-connectAttr "turtle_rig_startRN.phl[111]" "skinCluster2.ma[6]";
+connectAttr "turtle_rig_startRN.phl[106]" "skinCluster2.lw[6]";
+connectAttr "turtle_rig_startRN.phl[107]" "skinCluster3.lw[20]";
+connectAttr "turtle_rig_startRN.phl[108]" "skinCluster4.lw[6]";
+connectAttr "turtle_rig_startRN.phl[109]" "skinCluster5.lw[0]";
+connectAttr "turtle_rig_startRN.phl[110]" "skinCluster6.lw[0]";
+connectAttr "turtle_rig_startRN.phl[111]" "bindPose1.m[27]";
 connectAttr "turtle_rig_startRN.phl[112]" "skinCluster1.ma[20]";
-connectAttr "turtle_rig_startRN.phl[113]" "skinCluster3.ma[20]";
-connectAttr "turtle_rig_startRN.phl[114]" "skinCluster4.ma[6]";
-connectAttr "turtle_rig_startRN.phl[115]" "skinCluster5.ma[0]";
-connectAttr "turtle_rig_startRN.phl[116]" "skinCluster6.ma[0]";
-connectAttr "turtle_rig_startRN.phl[117]" "skinCluster2.ifcl[6]";
+connectAttr "turtle_rig_startRN.phl[113]" "skinCluster2.ma[6]";
+connectAttr "turtle_rig_startRN.phl[114]" "skinCluster3.ma[20]";
+connectAttr "turtle_rig_startRN.phl[115]" "skinCluster4.ma[6]";
+connectAttr "turtle_rig_startRN.phl[116]" "skinCluster5.ma[0]";
+connectAttr "turtle_rig_startRN.phl[117]" "skinCluster6.ma[0]";
 connectAttr "turtle_rig_startRN.phl[118]" "skinCluster1.ifcl[20]";
-connectAttr "turtle_rig_startRN.phl[119]" "skinCluster3.ifcl[20]";
-connectAttr "turtle_rig_startRN.phl[120]" "skinCluster4.ifcl[6]";
-connectAttr "turtle_rig_startRN.phl[121]" "skinCluster5.ifcl[0]";
-connectAttr "turtle_rig_startRN.phl[122]" "skinCluster6.ifcl[0]";
-connectAttr "turtle_rig_startRN.phl[123]" "bindPose1.m[20]";
-connectAttr "turtle_rig_startRN.phl[124]" "bindPose1.wm[25]";
-connectAttr "turtle_rig_startRN.phl[125]" "skinCluster2.lw[7]";
+connectAttr "turtle_rig_startRN.phl[119]" "skinCluster2.ifcl[6]";
+connectAttr "turtle_rig_startRN.phl[120]" "skinCluster3.ifcl[20]";
+connectAttr "turtle_rig_startRN.phl[121]" "skinCluster4.ifcl[6]";
+connectAttr "turtle_rig_startRN.phl[122]" "skinCluster5.ifcl[0]";
+connectAttr "turtle_rig_startRN.phl[123]" "skinCluster6.ifcl[0]";
+connectAttr "turtle_rig_startRN.phl[124]" "bindPose1.m[20]";
+connectAttr "turtle_rig_startRN.phl[125]" "bindPose1.wm[25]";
 connectAttr "turtle_rig_startRN.phl[126]" "skinCluster1.lw[19]";
-connectAttr "turtle_rig_startRN.phl[127]" "skinCluster3.lw[19]";
-connectAttr "turtle_rig_startRN.phl[128]" "skinCluster4.lw[7]";
-connectAttr "turtle_rig_startRN.phl[129]" "bindPose1.m[25]";
-connectAttr "turtle_rig_startRN.phl[130]" "skinCluster2.ma[7]";
+connectAttr "turtle_rig_startRN.phl[127]" "skinCluster2.lw[7]";
+connectAttr "turtle_rig_startRN.phl[128]" "skinCluster3.lw[19]";
+connectAttr "turtle_rig_startRN.phl[129]" "skinCluster4.lw[7]";
+connectAttr "turtle_rig_startRN.phl[130]" "bindPose1.m[25]";
 connectAttr "turtle_rig_startRN.phl[131]" "skinCluster1.ma[19]";
-connectAttr "turtle_rig_startRN.phl[132]" "skinCluster3.ma[19]";
-connectAttr "turtle_rig_startRN.phl[133]" "skinCluster4.ma[7]";
-connectAttr "turtle_rig_startRN.phl[134]" "skinCluster2.ifcl[7]";
+connectAttr "turtle_rig_startRN.phl[132]" "skinCluster2.ma[7]";
+connectAttr "turtle_rig_startRN.phl[133]" "skinCluster3.ma[19]";
+connectAttr "turtle_rig_startRN.phl[134]" "skinCluster4.ma[7]";
 connectAttr "turtle_rig_startRN.phl[135]" "skinCluster1.ifcl[19]";
-connectAttr "turtle_rig_startRN.phl[136]" "skinCluster3.ifcl[19]";
-connectAttr "turtle_rig_startRN.phl[137]" "skinCluster4.ifcl[7]";
-connectAttr "turtle_rig_startRN.phl[138]" "bindPose1.wm[24]";
-connectAttr "turtle_rig_startRN.phl[139]" "skinCluster2.lw[8]";
+connectAttr "turtle_rig_startRN.phl[136]" "skinCluster2.ifcl[7]";
+connectAttr "turtle_rig_startRN.phl[137]" "skinCluster3.ifcl[19]";
+connectAttr "turtle_rig_startRN.phl[138]" "skinCluster4.ifcl[7]";
+connectAttr "turtle_rig_startRN.phl[139]" "bindPose1.wm[24]";
 connectAttr "turtle_rig_startRN.phl[140]" "skinCluster1.lw[18]";
-connectAttr "turtle_rig_startRN.phl[141]" "skinCluster3.lw[18]";
-connectAttr "turtle_rig_startRN.phl[142]" "skinCluster4.lw[8]";
-connectAttr "turtle_rig_startRN.phl[143]" "bindPose1.m[24]";
-connectAttr "turtle_rig_startRN.phl[144]" "skinCluster2.ma[8]";
+connectAttr "turtle_rig_startRN.phl[141]" "skinCluster2.lw[8]";
+connectAttr "turtle_rig_startRN.phl[142]" "skinCluster3.lw[18]";
+connectAttr "turtle_rig_startRN.phl[143]" "skinCluster4.lw[8]";
+connectAttr "turtle_rig_startRN.phl[144]" "bindPose1.m[24]";
 connectAttr "turtle_rig_startRN.phl[145]" "skinCluster1.ma[18]";
-connectAttr "turtle_rig_startRN.phl[146]" "skinCluster3.ma[18]";
-connectAttr "turtle_rig_startRN.phl[147]" "skinCluster4.ma[8]";
-connectAttr "turtle_rig_startRN.phl[148]" "skinCluster2.ifcl[8]";
+connectAttr "turtle_rig_startRN.phl[146]" "skinCluster2.ma[8]";
+connectAttr "turtle_rig_startRN.phl[147]" "skinCluster3.ma[18]";
+connectAttr "turtle_rig_startRN.phl[148]" "skinCluster4.ma[8]";
 connectAttr "turtle_rig_startRN.phl[149]" "skinCluster1.ifcl[18]";
-connectAttr "turtle_rig_startRN.phl[150]" "skinCluster3.ifcl[18]";
-connectAttr "turtle_rig_startRN.phl[151]" "skinCluster4.ifcl[8]";
-connectAttr "turtle_rig_startRN.phl[152]" "bindPose1.wm[23]";
-connectAttr "turtle_rig_startRN.phl[153]" "skinCluster2.lw[9]";
+connectAttr "turtle_rig_startRN.phl[150]" "skinCluster2.ifcl[8]";
+connectAttr "turtle_rig_startRN.phl[151]" "skinCluster3.ifcl[18]";
+connectAttr "turtle_rig_startRN.phl[152]" "skinCluster4.ifcl[8]";
+connectAttr "turtle_rig_startRN.phl[153]" "bindPose1.wm[23]";
 connectAttr "turtle_rig_startRN.phl[154]" "skinCluster1.lw[17]";
-connectAttr "turtle_rig_startRN.phl[155]" "skinCluster3.lw[17]";
-connectAttr "turtle_rig_startRN.phl[156]" "skinCluster4.lw[9]";
-connectAttr "turtle_rig_startRN.phl[157]" "bindPose1.m[23]";
-connectAttr "turtle_rig_startRN.phl[158]" "skinCluster2.ma[9]";
+connectAttr "turtle_rig_startRN.phl[155]" "skinCluster2.lw[9]";
+connectAttr "turtle_rig_startRN.phl[156]" "skinCluster3.lw[17]";
+connectAttr "turtle_rig_startRN.phl[157]" "skinCluster4.lw[9]";
+connectAttr "turtle_rig_startRN.phl[158]" "bindPose1.m[23]";
 connectAttr "turtle_rig_startRN.phl[159]" "skinCluster1.ma[17]";
-connectAttr "turtle_rig_startRN.phl[160]" "skinCluster3.ma[17]";
-connectAttr "turtle_rig_startRN.phl[161]" "skinCluster4.ma[9]";
-connectAttr "turtle_rig_startRN.phl[162]" "skinCluster2.ifcl[9]";
+connectAttr "turtle_rig_startRN.phl[160]" "skinCluster2.ma[9]";
+connectAttr "turtle_rig_startRN.phl[161]" "skinCluster3.ma[17]";
+connectAttr "turtle_rig_startRN.phl[162]" "skinCluster4.ma[9]";
 connectAttr "turtle_rig_startRN.phl[163]" "skinCluster1.ifcl[17]";
-connectAttr "turtle_rig_startRN.phl[164]" "skinCluster3.ifcl[17]";
-connectAttr "turtle_rig_startRN.phl[165]" "skinCluster4.ifcl[9]";
-connectAttr "turtle_rig_startRN.phl[166]" "bindPose1.wm[22]";
-connectAttr "turtle_rig_startRN.phl[167]" "skinCluster2.lw[10]";
+connectAttr "turtle_rig_startRN.phl[164]" "skinCluster2.ifcl[9]";
+connectAttr "turtle_rig_startRN.phl[165]" "skinCluster3.ifcl[17]";
+connectAttr "turtle_rig_startRN.phl[166]" "skinCluster4.ifcl[9]";
+connectAttr "turtle_rig_startRN.phl[167]" "bindPose1.wm[22]";
 connectAttr "turtle_rig_startRN.phl[168]" "skinCluster1.lw[16]";
-connectAttr "turtle_rig_startRN.phl[169]" "skinCluster3.lw[16]";
-connectAttr "turtle_rig_startRN.phl[170]" "skinCluster4.lw[10]";
-connectAttr "turtle_rig_startRN.phl[171]" "bindPose1.m[22]";
-connectAttr "turtle_rig_startRN.phl[172]" "skinCluster2.ma[10]";
+connectAttr "turtle_rig_startRN.phl[169]" "skinCluster2.lw[10]";
+connectAttr "turtle_rig_startRN.phl[170]" "skinCluster3.lw[16]";
+connectAttr "turtle_rig_startRN.phl[171]" "skinCluster4.lw[10]";
+connectAttr "turtle_rig_startRN.phl[172]" "bindPose1.m[22]";
 connectAttr "turtle_rig_startRN.phl[173]" "skinCluster1.ma[16]";
-connectAttr "turtle_rig_startRN.phl[174]" "skinCluster3.ma[16]";
-connectAttr "turtle_rig_startRN.phl[175]" "skinCluster4.ma[10]";
-connectAttr "turtle_rig_startRN.phl[176]" "skinCluster2.ifcl[10]";
+connectAttr "turtle_rig_startRN.phl[174]" "skinCluster2.ma[10]";
+connectAttr "turtle_rig_startRN.phl[175]" "skinCluster3.ma[16]";
+connectAttr "turtle_rig_startRN.phl[176]" "skinCluster4.ma[10]";
 connectAttr "turtle_rig_startRN.phl[177]" "skinCluster1.ifcl[16]";
-connectAttr "turtle_rig_startRN.phl[178]" "skinCluster3.ifcl[16]";
-connectAttr "turtle_rig_startRN.phl[179]" "skinCluster4.ifcl[10]";
-connectAttr "turtle_rig_startRN.phl[180]" "bindPose1.wm[21]";
-connectAttr "turtle_rig_startRN.phl[181]" "skinCluster2.lw[11]";
+connectAttr "turtle_rig_startRN.phl[178]" "skinCluster2.ifcl[10]";
+connectAttr "turtle_rig_startRN.phl[179]" "skinCluster3.ifcl[16]";
+connectAttr "turtle_rig_startRN.phl[180]" "skinCluster4.ifcl[10]";
+connectAttr "turtle_rig_startRN.phl[181]" "bindPose1.wm[21]";
 connectAttr "turtle_rig_startRN.phl[182]" "skinCluster1.lw[15]";
-connectAttr "turtle_rig_startRN.phl[183]" "skinCluster3.lw[15]";
-connectAttr "turtle_rig_startRN.phl[184]" "skinCluster4.lw[11]";
-connectAttr "turtle_rig_startRN.phl[185]" "bindPose1.m[21]";
-connectAttr "turtle_rig_startRN.phl[186]" "skinCluster2.ma[11]";
+connectAttr "turtle_rig_startRN.phl[183]" "skinCluster2.lw[11]";
+connectAttr "turtle_rig_startRN.phl[184]" "skinCluster3.lw[15]";
+connectAttr "turtle_rig_startRN.phl[185]" "skinCluster4.lw[11]";
+connectAttr "turtle_rig_startRN.phl[186]" "bindPose1.m[21]";
 connectAttr "turtle_rig_startRN.phl[187]" "skinCluster1.ma[15]";
-connectAttr "turtle_rig_startRN.phl[188]" "skinCluster3.ma[15]";
-connectAttr "turtle_rig_startRN.phl[189]" "skinCluster4.ma[11]";
-connectAttr "turtle_rig_startRN.phl[190]" "skinCluster2.ifcl[11]";
+connectAttr "turtle_rig_startRN.phl[188]" "skinCluster2.ma[11]";
+connectAttr "turtle_rig_startRN.phl[189]" "skinCluster3.ma[15]";
+connectAttr "turtle_rig_startRN.phl[190]" "skinCluster4.ma[11]";
 connectAttr "turtle_rig_startRN.phl[191]" "skinCluster1.ifcl[15]";
-connectAttr "turtle_rig_startRN.phl[192]" "skinCluster3.ifcl[15]";
-connectAttr "turtle_rig_startRN.phl[193]" "skinCluster4.ifcl[11]";
-connectAttr "turtle_rig_startRN.phl[194]" "bindPose1.m[14]";
-connectAttr "turtle_rig_startRN.phl[195]" "bindPose1.wm[19]";
-connectAttr "turtle_rig_startRN.phl[196]" "skinCluster2.lw[12]";
+connectAttr "turtle_rig_startRN.phl[192]" "skinCluster2.ifcl[11]";
+connectAttr "turtle_rig_startRN.phl[193]" "skinCluster3.ifcl[15]";
+connectAttr "turtle_rig_startRN.phl[194]" "skinCluster4.ifcl[11]";
+connectAttr "turtle_rig_startRN.phl[195]" "bindPose1.m[14]";
+connectAttr "turtle_rig_startRN.phl[196]" "bindPose1.wm[19]";
 connectAttr "turtle_rig_startRN.phl[197]" "skinCluster1.lw[14]";
-connectAttr "turtle_rig_startRN.phl[198]" "skinCluster3.lw[14]";
-connectAttr "turtle_rig_startRN.phl[199]" "skinCluster4.lw[12]";
-connectAttr "turtle_rig_startRN.phl[200]" "bindPose1.m[19]";
-connectAttr "turtle_rig_startRN.phl[201]" "skinCluster2.ma[12]";
+connectAttr "turtle_rig_startRN.phl[198]" "skinCluster2.lw[12]";
+connectAttr "turtle_rig_startRN.phl[199]" "skinCluster3.lw[14]";
+connectAttr "turtle_rig_startRN.phl[200]" "skinCluster4.lw[12]";
+connectAttr "turtle_rig_startRN.phl[201]" "bindPose1.m[19]";
 connectAttr "turtle_rig_startRN.phl[202]" "skinCluster1.ma[14]";
-connectAttr "turtle_rig_startRN.phl[203]" "skinCluster3.ma[14]";
-connectAttr "turtle_rig_startRN.phl[204]" "skinCluster4.ma[12]";
-connectAttr "turtle_rig_startRN.phl[205]" "skinCluster2.ifcl[12]";
+connectAttr "turtle_rig_startRN.phl[203]" "skinCluster2.ma[12]";
+connectAttr "turtle_rig_startRN.phl[204]" "skinCluster3.ma[14]";
+connectAttr "turtle_rig_startRN.phl[205]" "skinCluster4.ma[12]";
 connectAttr "turtle_rig_startRN.phl[206]" "skinCluster1.ifcl[14]";
-connectAttr "turtle_rig_startRN.phl[207]" "skinCluster3.ifcl[14]";
-connectAttr "turtle_rig_startRN.phl[208]" "skinCluster4.ifcl[12]";
-connectAttr "turtle_rig_startRN.phl[209]" "bindPose1.wm[18]";
-connectAttr "turtle_rig_startRN.phl[210]" "skinCluster2.lw[13]";
+connectAttr "turtle_rig_startRN.phl[207]" "skinCluster2.ifcl[12]";
+connectAttr "turtle_rig_startRN.phl[208]" "skinCluster3.ifcl[14]";
+connectAttr "turtle_rig_startRN.phl[209]" "skinCluster4.ifcl[12]";
+connectAttr "turtle_rig_startRN.phl[210]" "bindPose1.wm[18]";
 connectAttr "turtle_rig_startRN.phl[211]" "skinCluster1.lw[13]";
-connectAttr "turtle_rig_startRN.phl[212]" "skinCluster3.lw[13]";
-connectAttr "turtle_rig_startRN.phl[213]" "skinCluster4.lw[13]";
-connectAttr "turtle_rig_startRN.phl[214]" "bindPose1.m[18]";
-connectAttr "turtle_rig_startRN.phl[215]" "skinCluster2.ma[13]";
+connectAttr "turtle_rig_startRN.phl[212]" "skinCluster2.lw[13]";
+connectAttr "turtle_rig_startRN.phl[213]" "skinCluster3.lw[13]";
+connectAttr "turtle_rig_startRN.phl[214]" "skinCluster4.lw[13]";
+connectAttr "turtle_rig_startRN.phl[215]" "bindPose1.m[18]";
 connectAttr "turtle_rig_startRN.phl[216]" "skinCluster1.ma[13]";
-connectAttr "turtle_rig_startRN.phl[217]" "skinCluster3.ma[13]";
-connectAttr "turtle_rig_startRN.phl[218]" "skinCluster4.ma[13]";
-connectAttr "turtle_rig_startRN.phl[219]" "skinCluster2.ifcl[13]";
+connectAttr "turtle_rig_startRN.phl[217]" "skinCluster2.ma[13]";
+connectAttr "turtle_rig_startRN.phl[218]" "skinCluster3.ma[13]";
+connectAttr "turtle_rig_startRN.phl[219]" "skinCluster4.ma[13]";
 connectAttr "turtle_rig_startRN.phl[220]" "skinCluster1.ifcl[13]";
-connectAttr "turtle_rig_startRN.phl[221]" "skinCluster3.ifcl[13]";
-connectAttr "turtle_rig_startRN.phl[222]" "skinCluster4.ifcl[13]";
-connectAttr "turtle_rig_startRN.phl[223]" "bindPose1.wm[17]";
-connectAttr "turtle_rig_startRN.phl[224]" "skinCluster2.lw[14]";
+connectAttr "turtle_rig_startRN.phl[221]" "skinCluster2.ifcl[13]";
+connectAttr "turtle_rig_startRN.phl[222]" "skinCluster3.ifcl[13]";
+connectAttr "turtle_rig_startRN.phl[223]" "skinCluster4.ifcl[13]";
+connectAttr "turtle_rig_startRN.phl[224]" "bindPose1.wm[17]";
 connectAttr "turtle_rig_startRN.phl[225]" "skinCluster1.lw[12]";
-connectAttr "turtle_rig_startRN.phl[226]" "skinCluster3.lw[12]";
-connectAttr "turtle_rig_startRN.phl[227]" "skinCluster4.lw[14]";
-connectAttr "turtle_rig_startRN.phl[228]" "bindPose1.m[17]";
-connectAttr "turtle_rig_startRN.phl[229]" "skinCluster2.ma[14]";
+connectAttr "turtle_rig_startRN.phl[226]" "skinCluster2.lw[14]";
+connectAttr "turtle_rig_startRN.phl[227]" "skinCluster3.lw[12]";
+connectAttr "turtle_rig_startRN.phl[228]" "skinCluster4.lw[14]";
+connectAttr "turtle_rig_startRN.phl[229]" "bindPose1.m[17]";
 connectAttr "turtle_rig_startRN.phl[230]" "skinCluster1.ma[12]";
-connectAttr "turtle_rig_startRN.phl[231]" "skinCluster3.ma[12]";
-connectAttr "turtle_rig_startRN.phl[232]" "skinCluster4.ma[14]";
-connectAttr "turtle_rig_startRN.phl[233]" "skinCluster2.ifcl[14]";
+connectAttr "turtle_rig_startRN.phl[231]" "skinCluster2.ma[14]";
+connectAttr "turtle_rig_startRN.phl[232]" "skinCluster3.ma[12]";
+connectAttr "turtle_rig_startRN.phl[233]" "skinCluster4.ma[14]";
 connectAttr "turtle_rig_startRN.phl[234]" "skinCluster1.ifcl[12]";
-connectAttr "turtle_rig_startRN.phl[235]" "skinCluster3.ifcl[12]";
-connectAttr "turtle_rig_startRN.phl[236]" "skinCluster4.ifcl[14]";
-connectAttr "turtle_rig_startRN.phl[237]" "bindPose1.wm[16]";
-connectAttr "turtle_rig_startRN.phl[238]" "skinCluster2.lw[15]";
+connectAttr "turtle_rig_startRN.phl[235]" "skinCluster2.ifcl[14]";
+connectAttr "turtle_rig_startRN.phl[236]" "skinCluster3.ifcl[12]";
+connectAttr "turtle_rig_startRN.phl[237]" "skinCluster4.ifcl[14]";
+connectAttr "turtle_rig_startRN.phl[238]" "bindPose1.wm[16]";
 connectAttr "turtle_rig_startRN.phl[239]" "skinCluster1.lw[11]";
-connectAttr "turtle_rig_startRN.phl[240]" "skinCluster3.lw[11]";
-connectAttr "turtle_rig_startRN.phl[241]" "skinCluster4.lw[25]";
-connectAttr "turtle_rig_startRN.phl[242]" "bindPose1.m[16]";
-connectAttr "turtle_rig_startRN.phl[243]" "skinCluster2.ma[15]";
+connectAttr "turtle_rig_startRN.phl[240]" "skinCluster2.lw[15]";
+connectAttr "turtle_rig_startRN.phl[241]" "skinCluster3.lw[11]";
+connectAttr "turtle_rig_startRN.phl[242]" "skinCluster4.lw[25]";
+connectAttr "turtle_rig_startRN.phl[243]" "bindPose1.m[16]";
 connectAttr "turtle_rig_startRN.phl[244]" "skinCluster1.ma[11]";
-connectAttr "turtle_rig_startRN.phl[245]" "skinCluster3.ma[11]";
-connectAttr "turtle_rig_startRN.phl[246]" "skinCluster4.ma[25]";
-connectAttr "turtle_rig_startRN.phl[247]" "skinCluster2.ifcl[15]";
+connectAttr "turtle_rig_startRN.phl[245]" "skinCluster2.ma[15]";
+connectAttr "turtle_rig_startRN.phl[246]" "skinCluster3.ma[11]";
+connectAttr "turtle_rig_startRN.phl[247]" "skinCluster4.ma[25]";
 connectAttr "turtle_rig_startRN.phl[248]" "skinCluster1.ifcl[11]";
-connectAttr "turtle_rig_startRN.phl[249]" "skinCluster3.ifcl[11]";
-connectAttr "turtle_rig_startRN.phl[250]" "skinCluster4.ifcl[25]";
-connectAttr "turtle_rig_startRN.phl[251]" "bindPose1.wm[15]";
-connectAttr "turtle_rig_startRN.phl[252]" "skinCluster2.lw[16]";
+connectAttr "turtle_rig_startRN.phl[249]" "skinCluster2.ifcl[15]";
+connectAttr "turtle_rig_startRN.phl[250]" "skinCluster3.ifcl[11]";
+connectAttr "turtle_rig_startRN.phl[251]" "skinCluster4.ifcl[25]";
+connectAttr "turtle_rig_startRN.phl[252]" "bindPose1.wm[15]";
 connectAttr "turtle_rig_startRN.phl[253]" "skinCluster1.lw[10]";
-connectAttr "turtle_rig_startRN.phl[254]" "skinCluster3.lw[10]";
-connectAttr "turtle_rig_startRN.phl[255]" "skinCluster4.lw[26]";
-connectAttr "turtle_rig_startRN.phl[256]" "bindPose1.m[15]";
-connectAttr "turtle_rig_startRN.phl[257]" "skinCluster2.ma[16]";
+connectAttr "turtle_rig_startRN.phl[254]" "skinCluster2.lw[16]";
+connectAttr "turtle_rig_startRN.phl[255]" "skinCluster3.lw[10]";
+connectAttr "turtle_rig_startRN.phl[256]" "skinCluster4.lw[26]";
+connectAttr "turtle_rig_startRN.phl[257]" "bindPose1.m[15]";
 connectAttr "turtle_rig_startRN.phl[258]" "skinCluster1.ma[10]";
-connectAttr "turtle_rig_startRN.phl[259]" "skinCluster3.ma[10]";
-connectAttr "turtle_rig_startRN.phl[260]" "skinCluster4.ma[26]";
-connectAttr "turtle_rig_startRN.phl[261]" "skinCluster2.ifcl[16]";
+connectAttr "turtle_rig_startRN.phl[259]" "skinCluster2.ma[16]";
+connectAttr "turtle_rig_startRN.phl[260]" "skinCluster3.ma[10]";
+connectAttr "turtle_rig_startRN.phl[261]" "skinCluster4.ma[26]";
 connectAttr "turtle_rig_startRN.phl[262]" "skinCluster1.ifcl[10]";
-connectAttr "turtle_rig_startRN.phl[263]" "skinCluster3.ifcl[10]";
-connectAttr "turtle_rig_startRN.phl[264]" "skinCluster4.ifcl[26]";
-connectAttr "turtle_rig_startRN.phl[265]" "bindPose1.m[8]";
-connectAttr "turtle_rig_startRN.phl[266]" "bindPose1.wm[13]";
-connectAttr "turtle_rig_startRN.phl[267]" "skinCluster2.lw[17]";
+connectAttr "turtle_rig_startRN.phl[263]" "skinCluster2.ifcl[16]";
+connectAttr "turtle_rig_startRN.phl[264]" "skinCluster3.ifcl[10]";
+connectAttr "turtle_rig_startRN.phl[265]" "skinCluster4.ifcl[26]";
+connectAttr "turtle_rig_startRN.phl[266]" "bindPose1.m[8]";
+connectAttr "turtle_rig_startRN.phl[267]" "bindPose1.wm[13]";
 connectAttr "turtle_rig_startRN.phl[268]" "skinCluster1.lw[9]";
-connectAttr "turtle_rig_startRN.phl[269]" "skinCluster3.lw[9]";
-connectAttr "turtle_rig_startRN.phl[270]" "skinCluster4.lw[15]";
-connectAttr "turtle_rig_startRN.phl[271]" "bindPose1.m[13]";
-connectAttr "turtle_rig_startRN.phl[272]" "skinCluster2.ma[17]";
+connectAttr "turtle_rig_startRN.phl[269]" "skinCluster2.lw[17]";
+connectAttr "turtle_rig_startRN.phl[270]" "skinCluster3.lw[9]";
+connectAttr "turtle_rig_startRN.phl[271]" "skinCluster4.lw[15]";
+connectAttr "turtle_rig_startRN.phl[272]" "bindPose1.m[13]";
 connectAttr "turtle_rig_startRN.phl[273]" "skinCluster1.ma[9]";
-connectAttr "turtle_rig_startRN.phl[274]" "skinCluster3.ma[9]";
-connectAttr "turtle_rig_startRN.phl[275]" "skinCluster4.ma[15]";
-connectAttr "turtle_rig_startRN.phl[276]" "skinCluster2.ifcl[17]";
+connectAttr "turtle_rig_startRN.phl[274]" "skinCluster2.ma[17]";
+connectAttr "turtle_rig_startRN.phl[275]" "skinCluster3.ma[9]";
+connectAttr "turtle_rig_startRN.phl[276]" "skinCluster4.ma[15]";
 connectAttr "turtle_rig_startRN.phl[277]" "skinCluster1.ifcl[9]";
-connectAttr "turtle_rig_startRN.phl[278]" "skinCluster3.ifcl[9]";
-connectAttr "turtle_rig_startRN.phl[279]" "skinCluster4.ifcl[15]";
-connectAttr "turtle_rig_startRN.phl[280]" "bindPose1.wm[12]";
-connectAttr "turtle_rig_startRN.phl[281]" "skinCluster2.lw[18]";
+connectAttr "turtle_rig_startRN.phl[278]" "skinCluster2.ifcl[17]";
+connectAttr "turtle_rig_startRN.phl[279]" "skinCluster3.ifcl[9]";
+connectAttr "turtle_rig_startRN.phl[280]" "skinCluster4.ifcl[15]";
+connectAttr "turtle_rig_startRN.phl[281]" "bindPose1.wm[12]";
 connectAttr "turtle_rig_startRN.phl[282]" "skinCluster1.lw[8]";
-connectAttr "turtle_rig_startRN.phl[283]" "skinCluster3.lw[8]";
-connectAttr "turtle_rig_startRN.phl[284]" "skinCluster4.lw[16]";
-connectAttr "turtle_rig_startRN.phl[285]" "bindPose1.m[12]";
-connectAttr "turtle_rig_startRN.phl[286]" "skinCluster2.ma[18]";
+connectAttr "turtle_rig_startRN.phl[283]" "skinCluster2.lw[18]";
+connectAttr "turtle_rig_startRN.phl[284]" "skinCluster3.lw[8]";
+connectAttr "turtle_rig_startRN.phl[285]" "skinCluster4.lw[16]";
+connectAttr "turtle_rig_startRN.phl[286]" "bindPose1.m[12]";
 connectAttr "turtle_rig_startRN.phl[287]" "skinCluster1.ma[8]";
-connectAttr "turtle_rig_startRN.phl[288]" "skinCluster3.ma[8]";
-connectAttr "turtle_rig_startRN.phl[289]" "skinCluster4.ma[16]";
-connectAttr "turtle_rig_startRN.phl[290]" "skinCluster2.ifcl[18]";
+connectAttr "turtle_rig_startRN.phl[288]" "skinCluster2.ma[18]";
+connectAttr "turtle_rig_startRN.phl[289]" "skinCluster3.ma[8]";
+connectAttr "turtle_rig_startRN.phl[290]" "skinCluster4.ma[16]";
 connectAttr "turtle_rig_startRN.phl[291]" "skinCluster1.ifcl[8]";
-connectAttr "turtle_rig_startRN.phl[292]" "skinCluster3.ifcl[8]";
-connectAttr "turtle_rig_startRN.phl[293]" "skinCluster4.ifcl[16]";
-connectAttr "turtle_rig_startRN.phl[294]" "bindPose1.wm[11]";
-connectAttr "turtle_rig_startRN.phl[295]" "skinCluster2.lw[19]";
+connectAttr "turtle_rig_startRN.phl[292]" "skinCluster2.ifcl[18]";
+connectAttr "turtle_rig_startRN.phl[293]" "skinCluster3.ifcl[8]";
+connectAttr "turtle_rig_startRN.phl[294]" "skinCluster4.ifcl[16]";
+connectAttr "turtle_rig_startRN.phl[295]" "bindPose1.wm[11]";
 connectAttr "turtle_rig_startRN.phl[296]" "skinCluster1.lw[7]";
-connectAttr "turtle_rig_startRN.phl[297]" "skinCluster3.lw[7]";
-connectAttr "turtle_rig_startRN.phl[298]" "skinCluster4.lw[17]";
-connectAttr "turtle_rig_startRN.phl[299]" "skinCluster2.ptt";
+connectAttr "turtle_rig_startRN.phl[297]" "skinCluster2.lw[19]";
+connectAttr "turtle_rig_startRN.phl[298]" "skinCluster3.lw[7]";
+connectAttr "turtle_rig_startRN.phl[299]" "skinCluster4.lw[17]";
 connectAttr "turtle_rig_startRN.phl[300]" "bindPose1.m[11]";
-connectAttr "turtle_rig_startRN.phl[301]" "skinCluster2.ma[19]";
-connectAttr "turtle_rig_startRN.phl[302]" "skinCluster1.ma[7]";
+connectAttr "turtle_rig_startRN.phl[301]" "skinCluster1.ma[7]";
+connectAttr "turtle_rig_startRN.phl[302]" "skinCluster2.ma[19]";
 connectAttr "turtle_rig_startRN.phl[303]" "skinCluster3.ma[7]";
 connectAttr "turtle_rig_startRN.phl[304]" "skinCluster4.ma[17]";
-connectAttr "turtle_rig_startRN.phl[305]" "skinCluster2.ifcl[19]";
-connectAttr "turtle_rig_startRN.phl[306]" "skinCluster1.ifcl[7]";
+connectAttr "turtle_rig_startRN.phl[305]" "skinCluster1.ifcl[7]";
+connectAttr "turtle_rig_startRN.phl[306]" "skinCluster2.ifcl[19]";
 connectAttr "turtle_rig_startRN.phl[307]" "skinCluster3.ifcl[7]";
 connectAttr "turtle_rig_startRN.phl[308]" "skinCluster4.ifcl[17]";
 connectAttr "turtle_rig_startRN.phl[309]" "bindPose1.wm[10]";
-connectAttr "turtle_rig_startRN.phl[310]" "skinCluster2.lw[20]";
-connectAttr "turtle_rig_startRN.phl[311]" "skinCluster1.lw[6]";
+connectAttr "turtle_rig_startRN.phl[310]" "skinCluster1.lw[6]";
+connectAttr "turtle_rig_startRN.phl[311]" "skinCluster2.lw[20]";
 connectAttr "turtle_rig_startRN.phl[312]" "skinCluster3.lw[6]";
 connectAttr "turtle_rig_startRN.phl[313]" "skinCluster4.lw[18]";
 connectAttr "turtle_rig_startRN.phl[314]" "bindPose1.m[10]";
-connectAttr "turtle_rig_startRN.phl[315]" "skinCluster2.ma[20]";
-connectAttr "turtle_rig_startRN.phl[316]" "skinCluster1.ma[6]";
+connectAttr "turtle_rig_startRN.phl[315]" "skinCluster1.ma[6]";
+connectAttr "turtle_rig_startRN.phl[316]" "skinCluster2.ma[20]";
 connectAttr "turtle_rig_startRN.phl[317]" "skinCluster3.ma[6]";
 connectAttr "turtle_rig_startRN.phl[318]" "skinCluster4.ma[18]";
-connectAttr "turtle_rig_startRN.phl[319]" "skinCluster2.ifcl[20]";
-connectAttr "turtle_rig_startRN.phl[320]" "skinCluster1.ifcl[6]";
+connectAttr "turtle_rig_startRN.phl[319]" "skinCluster1.ifcl[6]";
+connectAttr "turtle_rig_startRN.phl[320]" "skinCluster2.ifcl[20]";
 connectAttr "turtle_rig_startRN.phl[321]" "skinCluster3.ifcl[6]";
 connectAttr "turtle_rig_startRN.phl[322]" "skinCluster4.ifcl[18]";
 connectAttr "turtle_rig_startRN.phl[323]" "bindPose1.wm[9]";
-connectAttr "turtle_rig_startRN.phl[324]" "skinCluster2.lw[21]";
-connectAttr "turtle_rig_startRN.phl[325]" "skinCluster1.lw[5]";
+connectAttr "turtle_rig_startRN.phl[324]" "skinCluster1.lw[5]";
+connectAttr "turtle_rig_startRN.phl[325]" "skinCluster2.lw[21]";
 connectAttr "turtle_rig_startRN.phl[326]" "skinCluster3.lw[5]";
 connectAttr "turtle_rig_startRN.phl[327]" "skinCluster4.lw[19]";
 connectAttr "turtle_rig_startRN.phl[328]" "bindPose1.m[9]";
-connectAttr "turtle_rig_startRN.phl[329]" "skinCluster2.ma[21]";
-connectAttr "turtle_rig_startRN.phl[330]" "skinCluster1.ma[5]";
+connectAttr "turtle_rig_startRN.phl[329]" "skinCluster1.ma[5]";
+connectAttr "turtle_rig_startRN.phl[330]" "skinCluster2.ma[21]";
 connectAttr "turtle_rig_startRN.phl[331]" "skinCluster3.ma[5]";
 connectAttr "turtle_rig_startRN.phl[332]" "skinCluster4.ma[19]";
-connectAttr "turtle_rig_startRN.phl[333]" "skinCluster2.ifcl[21]";
-connectAttr "turtle_rig_startRN.phl[334]" "skinCluster1.ifcl[5]";
+connectAttr "turtle_rig_startRN.phl[333]" "skinCluster1.ifcl[5]";
+connectAttr "turtle_rig_startRN.phl[334]" "skinCluster2.ifcl[21]";
 connectAttr "turtle_rig_startRN.phl[335]" "skinCluster3.ifcl[5]";
 connectAttr "turtle_rig_startRN.phl[336]" "skinCluster4.ifcl[19]";
 connectAttr "turtle_rig_startRN.phl[337]" "bindPose1.m[2]";
 connectAttr "turtle_rig_startRN.phl[338]" "bindPose1.wm[7]";
-connectAttr "turtle_rig_startRN.phl[339]" "skinCluster2.lw[22]";
-connectAttr "turtle_rig_startRN.phl[340]" "skinCluster1.lw[4]";
+connectAttr "turtle_rig_startRN.phl[339]" "skinCluster1.lw[4]";
+connectAttr "turtle_rig_startRN.phl[340]" "skinCluster2.lw[22]";
 connectAttr "turtle_rig_startRN.phl[341]" "skinCluster3.lw[4]";
 connectAttr "turtle_rig_startRN.phl[342]" "skinCluster4.lw[20]";
 connectAttr "turtle_rig_startRN.phl[343]" "bindPose1.m[7]";
-connectAttr "turtle_rig_startRN.phl[344]" "skinCluster2.ma[22]";
-connectAttr "turtle_rig_startRN.phl[345]" "skinCluster1.ma[4]";
+connectAttr "turtle_rig_startRN.phl[344]" "skinCluster1.ma[4]";
+connectAttr "turtle_rig_startRN.phl[345]" "skinCluster2.ma[22]";
 connectAttr "turtle_rig_startRN.phl[346]" "skinCluster3.ma[4]";
 connectAttr "turtle_rig_startRN.phl[347]" "skinCluster4.ma[20]";
-connectAttr "turtle_rig_startRN.phl[348]" "skinCluster2.ifcl[22]";
-connectAttr "turtle_rig_startRN.phl[349]" "skinCluster1.ifcl[4]";
+connectAttr "turtle_rig_startRN.phl[348]" "skinCluster1.ifcl[4]";
+connectAttr "turtle_rig_startRN.phl[349]" "skinCluster2.ifcl[22]";
 connectAttr "turtle_rig_startRN.phl[350]" "skinCluster3.ifcl[4]";
 connectAttr "turtle_rig_startRN.phl[351]" "skinCluster4.ifcl[20]";
 connectAttr "turtle_rig_startRN.phl[352]" "bindPose1.wm[6]";
-connectAttr "turtle_rig_startRN.phl[353]" "skinCluster2.lw[23]";
-connectAttr "turtle_rig_startRN.phl[354]" "skinCluster1.lw[3]";
+connectAttr "turtle_rig_startRN.phl[353]" "skinCluster1.lw[3]";
+connectAttr "turtle_rig_startRN.phl[354]" "skinCluster2.lw[23]";
 connectAttr "turtle_rig_startRN.phl[355]" "skinCluster3.lw[3]";
 connectAttr "turtle_rig_startRN.phl[356]" "skinCluster4.lw[21]";
 connectAttr "turtle_rig_startRN.phl[357]" "bindPose1.m[6]";
-connectAttr "turtle_rig_startRN.phl[358]" "skinCluster2.ma[23]";
-connectAttr "turtle_rig_startRN.phl[359]" "skinCluster1.ma[3]";
+connectAttr "turtle_rig_startRN.phl[358]" "skinCluster1.ma[3]";
+connectAttr "turtle_rig_startRN.phl[359]" "skinCluster2.ma[23]";
 connectAttr "turtle_rig_startRN.phl[360]" "skinCluster3.ma[3]";
 connectAttr "turtle_rig_startRN.phl[361]" "skinCluster4.ma[21]";
-connectAttr "turtle_rig_startRN.phl[362]" "skinCluster2.ifcl[23]";
-connectAttr "turtle_rig_startRN.phl[363]" "skinCluster1.ifcl[3]";
+connectAttr "turtle_rig_startRN.phl[362]" "skinCluster1.ifcl[3]";
+connectAttr "turtle_rig_startRN.phl[363]" "skinCluster2.ifcl[23]";
 connectAttr "turtle_rig_startRN.phl[364]" "skinCluster3.ifcl[3]";
 connectAttr "turtle_rig_startRN.phl[365]" "skinCluster4.ifcl[21]";
 connectAttr "turtle_rig_startRN.phl[366]" "bindPose1.wm[5]";
-connectAttr "turtle_rig_startRN.phl[367]" "skinCluster2.lw[24]";
-connectAttr "turtle_rig_startRN.phl[368]" "skinCluster1.lw[2]";
+connectAttr "turtle_rig_startRN.phl[367]" "skinCluster1.lw[2]";
+connectAttr "turtle_rig_startRN.phl[368]" "skinCluster2.lw[24]";
 connectAttr "turtle_rig_startRN.phl[369]" "skinCluster3.lw[2]";
 connectAttr "turtle_rig_startRN.phl[370]" "skinCluster4.lw[22]";
 connectAttr "turtle_rig_startRN.phl[371]" "bindPose1.m[5]";
-connectAttr "turtle_rig_startRN.phl[372]" "skinCluster2.ma[24]";
-connectAttr "turtle_rig_startRN.phl[373]" "skinCluster1.ma[2]";
+connectAttr "turtle_rig_startRN.phl[372]" "skinCluster1.ma[2]";
+connectAttr "turtle_rig_startRN.phl[373]" "skinCluster2.ma[24]";
 connectAttr "turtle_rig_startRN.phl[374]" "skinCluster3.ma[2]";
 connectAttr "turtle_rig_startRN.phl[375]" "skinCluster4.ma[22]";
-connectAttr "turtle_rig_startRN.phl[376]" "skinCluster2.ifcl[24]";
-connectAttr "turtle_rig_startRN.phl[377]" "skinCluster1.ifcl[2]";
+connectAttr "turtle_rig_startRN.phl[376]" "skinCluster1.ifcl[2]";
+connectAttr "turtle_rig_startRN.phl[377]" "skinCluster2.ifcl[24]";
 connectAttr "turtle_rig_startRN.phl[378]" "skinCluster3.ifcl[2]";
 connectAttr "turtle_rig_startRN.phl[379]" "skinCluster4.ifcl[22]";
 connectAttr "turtle_rig_startRN.phl[380]" "bindPose1.wm[4]";
-connectAttr "turtle_rig_startRN.phl[381]" "skinCluster2.lw[25]";
-connectAttr "turtle_rig_startRN.phl[382]" "skinCluster1.lw[1]";
+connectAttr "turtle_rig_startRN.phl[381]" "skinCluster1.lw[1]";
+connectAttr "turtle_rig_startRN.phl[382]" "skinCluster2.lw[25]";
 connectAttr "turtle_rig_startRN.phl[383]" "skinCluster3.lw[1]";
 connectAttr "turtle_rig_startRN.phl[384]" "skinCluster4.lw[23]";
 connectAttr "turtle_rig_startRN.phl[385]" "bindPose1.m[4]";
-connectAttr "turtle_rig_startRN.phl[386]" "skinCluster2.ma[25]";
-connectAttr "turtle_rig_startRN.phl[387]" "skinCluster1.ma[1]";
+connectAttr "turtle_rig_startRN.phl[386]" "skinCluster1.ma[1]";
+connectAttr "turtle_rig_startRN.phl[387]" "skinCluster2.ma[25]";
 connectAttr "turtle_rig_startRN.phl[388]" "skinCluster3.ma[1]";
 connectAttr "turtle_rig_startRN.phl[389]" "skinCluster4.ma[23]";
-connectAttr "turtle_rig_startRN.phl[390]" "skinCluster2.ifcl[25]";
-connectAttr "turtle_rig_startRN.phl[391]" "skinCluster1.ifcl[1]";
+connectAttr "turtle_rig_startRN.phl[390]" "skinCluster1.ifcl[1]";
+connectAttr "turtle_rig_startRN.phl[391]" "skinCluster2.ifcl[25]";
 connectAttr "turtle_rig_startRN.phl[392]" "skinCluster3.ifcl[1]";
 connectAttr "turtle_rig_startRN.phl[393]" "skinCluster4.ifcl[23]";
 connectAttr "turtle_rig_startRN.phl[394]" "bindPose1.wm[3]";
-connectAttr "turtle_rig_startRN.phl[395]" "skinCluster2.lw[26]";
-connectAttr "turtle_rig_startRN.phl[396]" "skinCluster1.lw[0]";
+connectAttr "turtle_rig_startRN.phl[395]" "skinCluster1.lw[0]";
+connectAttr "turtle_rig_startRN.phl[396]" "skinCluster2.lw[26]";
 connectAttr "turtle_rig_startRN.phl[397]" "skinCluster3.lw[0]";
 connectAttr "turtle_rig_startRN.phl[398]" "skinCluster4.lw[24]";
 connectAttr "turtle_rig_startRN.phl[399]" "bindPose1.m[3]";
-connectAttr "turtle_rig_startRN.phl[400]" "skinCluster2.ma[26]";
-connectAttr "turtle_rig_startRN.phl[401]" "skinCluster1.ma[0]";
+connectAttr "turtle_rig_startRN.phl[400]" "skinCluster1.ma[0]";
+connectAttr "turtle_rig_startRN.phl[401]" "skinCluster2.ma[26]";
 connectAttr "turtle_rig_startRN.phl[402]" "skinCluster3.ma[0]";
 connectAttr "turtle_rig_startRN.phl[403]" "skinCluster4.ma[24]";
-connectAttr "turtle_rig_startRN.phl[404]" "skinCluster2.ifcl[26]";
-connectAttr "turtle_rig_startRN.phl[405]" "skinCluster1.ifcl[0]";
+connectAttr "turtle_rig_startRN.phl[404]" "skinCluster1.ifcl[0]";
+connectAttr "turtle_rig_startRN.phl[405]" "skinCluster2.ifcl[26]";
 connectAttr "turtle_rig_startRN.phl[406]" "skinCluster3.ifcl[0]";
 connectAttr "turtle_rig_startRN.phl[407]" "skinCluster4.ifcl[24]";
 connectAttr "r_eye_geoShapeDeformed.iog" "turtle_rig_startRN.phl[408]";
