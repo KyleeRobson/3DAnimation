@@ -1,30 +1,30 @@
 //Maya ASCII 2026 scene
 //Name: AlienDadWalkCycle.ma
-//Last modified: Thu, Apr 23, 2026 10:07:34 PM
+//Last modified: Thu, Apr 23, 2026 10:23:14 PM
 //Codeset: 1252
 file -rdi 1 -ns "AleinDad" -rfn "AleinDadRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/Character Dev ll/AleinDad.ma";
 file -r -ns "AleinDad" -dr 1 -rfn "AleinDadRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/MayaProdjects/Spring_2026/Character Dev ll/AleinDad.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.5.4.2";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
+		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A965203B-4316-A065-3876-C39F96911281";
+fileInfo "UUID" "A04833F4-4514-448F-B3DD-E58E9EEC8844";
 createNode transform -s -n "persp";
 	rename -uid "3E5A7E3E-49C1-910B-ED7E-B0965817DEC3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.8978677923332352 3.8341111792721834 11.855587811871722 ;
-	setAttr ".r" -type "double3" -6.8712206344299922 40.599999999956133 5.2361959597576167e-16 ;
+	setAttr ".t" -type "double3" 10.733681755395015 7.5596910560265291 10.645661752492703 ;
+	setAttr ".r" -type "double3" -20.071220634867053 44.999999999958945 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "65B6C045-4D98-84CC-0050-8B8D9AEDC101";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.870236644576627;
+	setAttr ".coi" 15.870236644575778;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -81,7 +81,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pCube1";
 	rename -uid "ED8242E6-492C-AF23-6F43-A2A17A7DC6C7";
-	setAttr ".t" -type "double3" 0 -1.4453068927279129 0 ;
+	setAttr ".t" -type "double3" 0 -1.4444945234714912 0 ;
 	setAttr ".s" -type "double3" 18.066850320723297 18.066850320723297 18.066850320723297 ;
 	setAttr ".rp" -type "double3" 0 1.2032256126403811 0 ;
 	setAttr ".sp" -type "double3" 0 0.066598526654103068 0 ;
@@ -100,6 +100,11 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 		-2.1649349e-15 0.4419682 -2.1649349e-15 2.1649349e-15 -0.4419682 -2.1649349e-15 -2.1649349e-15 
 		-0.4419682 -2.1649349e-15 2.1649349e-15 -0.4419682 2.1649349e-15 -2.1649349e-15 -0.4419682 
 		2.1649349e-15 2.1649349e-15 0.4419682 2.1649349e-15 -2.1649349e-15 0.4419682 2.1649349e-15;
+createNode transform -n "aiSkyDomeLight1";
+	rename -uid "5E605526-4789-EE07-D0C7-C89BB0DB7B5A";
+createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
+	rename -uid "29FA4E39-43A7-E9D1-C96D-8B9BC489E16E";
+	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "5E9D5ECA-48C9-298C-31FE-5198596685DF";
 	setAttr -s 14 ".lnk";
@@ -120,7 +125,7 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "AleinDadRN";
 	rename -uid "4AA28C60-442B-A09E-CC75-7EABB4F3D363";
-	setAttr -s 111 ".phl";
+	setAttr -s 117 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -232,10 +237,16 @@ createNode reference -n "AleinDadRN";
 	setAttr ".phl[109]" 0;
 	setAttr ".phl[110]" 0;
 	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"AleinDadRN"
 		"AleinDadRN" 0
-		"AleinDadRN" 133
+		"AleinDadRN" 138
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl" 
 		"LLegIKFK" " -k 1 1"
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl" 
@@ -264,13 +275,10 @@ createNode reference -n "AleinDadRN";
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl" 
-		"rotate" " -type \"double3\" 21.05417317212461015 25.32647993646888906 -30.5823698743983563"
-		
-		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -432,78 +440,90 @@ createNode reference -n "AleinDadRN";
 		"AleinDadRN.placeHolderList[74]" ""
 		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[75]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[76]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[77]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[78]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[79]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[80]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[81]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[82]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[83]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[84]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[85]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[86]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[87]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[88]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[89]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[90]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[91]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[92]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:R_Shoulder_FK_Ctrl_Grp|AleinDad:R_Shoulder_FK_Ctrl|AleinDad:R_Elbow_FK_Ctrl_Grp|AleinDad:R_Elbow_FK_Ctrl|AleinDad:R_Hand_FK_Ctrl_Grp|AleinDad:R_Hand_FK_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[93]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[94]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[95]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[96]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[97]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[98]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[99]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[100]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[101]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[102]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[103]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[104]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl.rotateZ" 
 		"AleinDadRN.placeHolderList[105]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateX" 
 		"AleinDadRN.placeHolderList[106]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateY" 
 		"AleinDadRN.placeHolderList[107]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateZ" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.translateZ" 
 		"AleinDadRN.placeHolderList[108]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl|AleinDad:Head_Ctrl_Grp|AleinDad:Head_Ctrl.rotateX" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateX" 
 		"AleinDadRN.placeHolderList[109]" ""
-		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl|AleinDad:Head_Ctrl_Grp|AleinDad:Head_Ctrl.rotateY" 
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateY" 
 		"AleinDadRN.placeHolderList[110]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:L_Shoulder_FK_Ctrl_Grp|AleinDad:L_Shoulder_FK_Ctrl|AleinDad:L_Elbow_FK_Ctrl_Grp|AleinDad:L_Elbow_FK_Ctrl|AleinDad:L_Hand_FK_Ctrl_Grp|AleinDad:L_Hand_FK_Ctrl.rotateZ" 
+		"AleinDadRN.placeHolderList[111]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateX" 
+		"AleinDadRN.placeHolderList[112]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateY" 
+		"AleinDadRN.placeHolderList[113]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl.rotateZ" 
+		"AleinDadRN.placeHolderList[114]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl|AleinDad:Head_Ctrl_Grp|AleinDad:Head_Ctrl.rotateX" 
+		"AleinDadRN.placeHolderList[115]" ""
+		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl|AleinDad:Head_Ctrl_Grp|AleinDad:Head_Ctrl.rotateY" 
+		"AleinDadRN.placeHolderList[116]" ""
 		5 4 "AleinDadRN" "|AleinDad:AleinDad|AleinDad:Controls|AleinDad:Transform_Ctrl_Grp|AleinDad:Transform_Ctrl|AleinDad:COG_Ctrl_Grp|AleinDad:COG_Ctrl|AleinDad:Spine_Ctrl_Grp|AleinDad:Spine_Ctrl|AleinDad:Neck_Ctrl_Grp|AleinDad:Neck_Ctrl|AleinDad:Head_Ctrl_Grp|AleinDad:Head_Ctrl.rotateZ" 
-		"AleinDadRN.placeHolderList[111]" "";
+		"AleinDadRN.placeHolderList[117]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
@@ -579,22 +599,19 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode animCurveTL -n "R_Elbow_FK_Ctrl_translateX";
 	rename -uid "7E2970B9-4A39-26E6-3916-2E9B9595DB66";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "R_Elbow_FK_Ctrl_translateY";
 	rename -uid "7D0420F8-4633-032C-CE9F-E7A4CC92F755";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "R_Elbow_FK_Ctrl_translateZ";
 	rename -uid "BEC99AE2-4786-3869-9A83-2A9CD09A2F58";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "COG_Ctrl_translateX";
 	rename -uid "4C721C3B-421C-5283-397D-1CBD533A5B45";
 	setAttr ".tan" 2;
@@ -749,40 +766,39 @@ createNode animCurveTL -n "Transform_Ctrl_translateZ";
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateX";
 	rename -uid "18DB8B0B-4868-1D87-E1DD-A28116712A91";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateY";
 	rename -uid "ECCFB51D-470E-691C-FA75-2EA8871D1F59";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateZ";
 	rename -uid "030D99EE-4339-0178-5B10-398C532D9358";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Elbow_FK_Ctrl_rotateX";
 	rename -uid "873E9F38-43AD-D0AC-AEE6-91AEABC4F37D";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  0 0 48 23.010741161912446 68 28.378589227726746
+		 83 24.009589027771391 95 33.401871843677121 111 30.528793747285725;
 createNode animCurveTA -n "R_Elbow_FK_Ctrl_rotateY";
 	rename -uid "8BBC3957-4EAA-9AF8-6F66-BAACBB418A2A";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 8 ".ktv[0:7]"  0 0 17 42.628869097426808 31 -42.709814652272634
+		 48 18.072723859437438 68 -5.9911031033183697 83 16.684373399100512 95 -10.387934582674681
+		 111 25.344448965355159;
 createNode animCurveTA -n "R_Elbow_FK_Ctrl_rotateZ";
 	rename -uid "F01DDC56-4FAB-E289-126F-709FB750741E";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
-	setAttr ".kot[0]"  5;
+	setAttr -s 7 ".ktv[0:6]"  0 -57.434141056593511 17 -25.393260620631267
+		 48 -16.720359372505179 68 30.361587072643918 83 -13.377300736532227 95 6.3825808775432638
+		 111 -35.335957858831236;
 createNode animCurveTA -n "COG_Ctrl_rotateX";
 	rename -uid "3F982C9D-4259-641E-FB70-1E9534BD9631";
 	setAttr ".tan" 2;
@@ -966,38 +982,42 @@ createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "24B0E323-4583-DCFB-C8E6-8C8B4D1E0E52";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -22.052871589313156 12 0 38 -10.38514597574364
-		 63 -1.899439204977998 99 0 129 3.3761545009928642 151 2.9750722972046009;
+	setAttr -s 7 ".ktv[0:6]"  0 -22.052871589313156 12 -20.75179203356684
+		 38 -30.041017879597153 63 -18.300738387595505 99 -17.80745085155031 129 3.3761545009928642
+		 151 2.9750722972046009;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "5177D390-4DBD-8871-277C-84BCC191AB54";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  0 0 12 0 38 17.792492618607909 63 -15.381225957847372
-		 99 0 129 16.389352794840814 151 -14.02098394085192;
+		 99 19.946478381669767 129 16.389352794840814 151 -14.02098394085192;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "32ACBE12-48A3-9B74-4AE2-DBB7169A35D6";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  0 0 12 0 38 -1.8940274070700662 63 -12.425708687715403
-		 99 0 129 13.504833655373771 151 -10.783291257555939;
+		 99 -3.1216817230634994 129 13.504833655373771 151 -10.783291257555939;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateX";
 	rename -uid "2806428E-4DA0-5032-0884-C198EFF2FDFA";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 9 ".ktv[0:8]"  0 0 12 0 26 63.796257427104422 47 46.375314888769459
+		 61 48.212732884528357 82 84.228735113379926 96 -23.138200123703335 111 -72.368809180721669
+		 123 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateY";
 	rename -uid "510E4556-4580-6269-0572-AA842D15664A";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 9 ".ktv[0:8]"  0 0 12 0 26 23.7363424358049 47 -2.0663426501613893
+		 61 14.022820779880997 82 -43.357059869142873 96 -25.975048872697219 111 17.79062389962462
+		 123 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateZ";
 	rename -uid "72EE7A53-465F-F926-B0BE-56999A03BF6F";
-	setAttr ".tan" 2;
+	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 12 0;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 9 ".ktv[0:8]"  0 0 12 0 26 -38.499848754735055 47 32.219452890838447
+		 61 49.555768347870021 82 -47.239384365944446 96 2.9604237553116435 111 2.1560390744040583
+		 123 0;
 createNode animCurveTU -n "COG_Ctrl_scaleX";
 	rename -uid "D1457DC9-49B9-CE57-29D7-1CB33675C1F7";
 	setAttr ".tan" 2;
@@ -1375,13 +1395,55 @@ createNode animCurveTA -n "R_Knee_FK_Ctrl_rotateZ";
 createNode polyCube -n "polyCube1";
 	rename -uid "B6C3340D-40DC-7636-D448-E5A21EBDECBA";
 	setAttr ".cuv" 4;
+createNode animCurveTL -n "R_Shoulder_FK_Ctrl_translateX";
+	rename -uid "1099CE42-44BD-6213-C842-389AB96552AE";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "R_Shoulder_FK_Ctrl_translateY";
+	rename -uid "E9E9020F-49D9-41E4-C38F-07B05A58D8D1";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "R_Shoulder_FK_Ctrl_translateZ";
+	rename -uid "6F2A2E67-4A88-FF02-8607-1CA5103F1A32";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "R_Shoulder_FK_Ctrl_rotateX";
+	rename -uid "B6CFDB43-4144-F342-33FE-EEBAD9C93977";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 74.597639906133068 18 -46.539975201806534
+		 33 59.6716545417449 50 -58.822345884853569 64 61.704717685032577 80 -67.9629610172329
+		 94 67.926300009081871 114 -66.462042868231308 125 -15.266781206866211;
+	setAttr -s 9 ".kit[8]"  2;
+	setAttr -s 9 ".kot[8]"  5;
+createNode animCurveTA -n "R_Shoulder_FK_Ctrl_rotateY";
+	rename -uid "5B2551DC-481C-AC8D-7D81-02911431AB5E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 52.88865329007232 18 36.117821976524766
+		 33 42.380530621122467 50 43.903568345940847 64 38.103405824344676 80 33.818450097977248
+		 94 25.246050618473092 114 20.93153363336048 125 67.253983213104576;
+	setAttr -s 9 ".kit[8]"  2;
+	setAttr -s 9 ".kot[8]"  5;
+createNode animCurveTA -n "R_Shoulder_FK_Ctrl_rotateZ";
+	rename -uid "4F68F802-4B2B-21B4-D24D-B49472CAE79E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 9 ".ktv[0:8]"  0 34.480613305519206 18 -81.759709202856101
+		 33 61.679797089650819 50 -74.036572510041751 64 64.824219564167095 80 -89.805360187722499
+		 94 77.804504864363849 114 -87.953961466860562 125 -23.286174325981207;
+	setAttr -s 9 ".kit[8]"  2;
+	setAttr -s 9 ".kot[8]"  5;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 125;
-	setAttr -av -k on ".unw" 125;
+	setAttr -k on ".o" 55;
+	setAttr -av -k on ".unw" 55;
 	setAttr -av -k on ".etw";
 	setAttr -av -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -1437,6 +1499,7 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 	setAttr -k on ".ihi";
 	setAttr -s 2 ".r";
+select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 60 ".tx";
 select -ne :standardSurface1;
@@ -1588,6 +1651,7 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".zsl";
 	setAttr -av -k on ".isu";
 	setAttr -av -k on ".pdu";
+select -ne :defaultLightSet;
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -1711,42 +1775,48 @@ connectAttr "Spine_Ctrl_translateZ.o" "AleinDadRN.phl[72]";
 connectAttr "Spine_Ctrl_rotateX.o" "AleinDadRN.phl[73]";
 connectAttr "Spine_Ctrl_rotateY.o" "AleinDadRN.phl[74]";
 connectAttr "Spine_Ctrl_rotateZ.o" "AleinDadRN.phl[75]";
-connectAttr "R_Elbow_FK_Ctrl_translateX.o" "AleinDadRN.phl[76]";
-connectAttr "R_Elbow_FK_Ctrl_translateY.o" "AleinDadRN.phl[77]";
-connectAttr "R_Elbow_FK_Ctrl_translateZ.o" "AleinDadRN.phl[78]";
-connectAttr "R_Elbow_FK_Ctrl_rotateX.o" "AleinDadRN.phl[79]";
-connectAttr "R_Elbow_FK_Ctrl_rotateY.o" "AleinDadRN.phl[80]";
-connectAttr "R_Elbow_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[81]";
-connectAttr "R_Hand_FK_Ctrl_translateX.o" "AleinDadRN.phl[82]";
-connectAttr "R_Hand_FK_Ctrl_translateY.o" "AleinDadRN.phl[83]";
-connectAttr "R_Hand_FK_Ctrl_translateZ.o" "AleinDadRN.phl[84]";
-connectAttr "R_Hand_FK_Ctrl_rotateX.o" "AleinDadRN.phl[85]";
-connectAttr "R_Hand_FK_Ctrl_rotateY.o" "AleinDadRN.phl[86]";
-connectAttr "R_Hand_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[87]";
-connectAttr "L_Shoulder_FK_Ctrl_translateX.o" "AleinDadRN.phl[88]";
-connectAttr "L_Shoulder_FK_Ctrl_translateY.o" "AleinDadRN.phl[89]";
-connectAttr "L_Shoulder_FK_Ctrl_translateZ.o" "AleinDadRN.phl[90]";
-connectAttr "L_Shoulder_FK_Ctrl_rotateX.o" "AleinDadRN.phl[91]";
-connectAttr "L_Shoulder_FK_Ctrl_rotateY.o" "AleinDadRN.phl[92]";
-connectAttr "L_Shoulder_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[93]";
-connectAttr "L_Elbow_FK_Ctrl_translateX.o" "AleinDadRN.phl[94]";
-connectAttr "L_Elbow_FK_Ctrl_translateY.o" "AleinDadRN.phl[95]";
-connectAttr "L_Elbow_FK_Ctrl_translateZ.o" "AleinDadRN.phl[96]";
-connectAttr "L_Elbow_FK_Ctrl_rotateX.o" "AleinDadRN.phl[97]";
-connectAttr "L_Elbow_FK_Ctrl_rotateY.o" "AleinDadRN.phl[98]";
-connectAttr "L_Elbow_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[99]";
-connectAttr "L_Hand_FK_Ctrl_translateX.o" "AleinDadRN.phl[100]";
-connectAttr "L_Hand_FK_Ctrl_translateY.o" "AleinDadRN.phl[101]";
-connectAttr "L_Hand_FK_Ctrl_translateZ.o" "AleinDadRN.phl[102]";
-connectAttr "L_Hand_FK_Ctrl_rotateX.o" "AleinDadRN.phl[103]";
-connectAttr "L_Hand_FK_Ctrl_rotateY.o" "AleinDadRN.phl[104]";
-connectAttr "L_Hand_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[105]";
-connectAttr "Neck_Ctrl_rotateX.o" "AleinDadRN.phl[106]";
-connectAttr "Neck_Ctrl_rotateY.o" "AleinDadRN.phl[107]";
-connectAttr "Neck_Ctrl_rotateZ.o" "AleinDadRN.phl[108]";
-connectAttr "Head_Ctrl_rotateX.o" "AleinDadRN.phl[109]";
-connectAttr "Head_Ctrl_rotateY.o" "AleinDadRN.phl[110]";
-connectAttr "Head_Ctrl_rotateZ.o" "AleinDadRN.phl[111]";
+connectAttr "R_Shoulder_FK_Ctrl_translateX.o" "AleinDadRN.phl[76]";
+connectAttr "R_Shoulder_FK_Ctrl_translateY.o" "AleinDadRN.phl[77]";
+connectAttr "R_Shoulder_FK_Ctrl_translateZ.o" "AleinDadRN.phl[78]";
+connectAttr "R_Shoulder_FK_Ctrl_rotateX.o" "AleinDadRN.phl[79]";
+connectAttr "R_Shoulder_FK_Ctrl_rotateY.o" "AleinDadRN.phl[80]";
+connectAttr "R_Shoulder_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[81]";
+connectAttr "R_Elbow_FK_Ctrl_translateX.o" "AleinDadRN.phl[82]";
+connectAttr "R_Elbow_FK_Ctrl_translateY.o" "AleinDadRN.phl[83]";
+connectAttr "R_Elbow_FK_Ctrl_translateZ.o" "AleinDadRN.phl[84]";
+connectAttr "R_Elbow_FK_Ctrl_rotateX.o" "AleinDadRN.phl[85]";
+connectAttr "R_Elbow_FK_Ctrl_rotateY.o" "AleinDadRN.phl[86]";
+connectAttr "R_Elbow_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[87]";
+connectAttr "R_Hand_FK_Ctrl_translateX.o" "AleinDadRN.phl[88]";
+connectAttr "R_Hand_FK_Ctrl_translateY.o" "AleinDadRN.phl[89]";
+connectAttr "R_Hand_FK_Ctrl_translateZ.o" "AleinDadRN.phl[90]";
+connectAttr "R_Hand_FK_Ctrl_rotateX.o" "AleinDadRN.phl[91]";
+connectAttr "R_Hand_FK_Ctrl_rotateY.o" "AleinDadRN.phl[92]";
+connectAttr "R_Hand_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[93]";
+connectAttr "L_Shoulder_FK_Ctrl_translateX.o" "AleinDadRN.phl[94]";
+connectAttr "L_Shoulder_FK_Ctrl_translateY.o" "AleinDadRN.phl[95]";
+connectAttr "L_Shoulder_FK_Ctrl_translateZ.o" "AleinDadRN.phl[96]";
+connectAttr "L_Shoulder_FK_Ctrl_rotateX.o" "AleinDadRN.phl[97]";
+connectAttr "L_Shoulder_FK_Ctrl_rotateY.o" "AleinDadRN.phl[98]";
+connectAttr "L_Shoulder_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[99]";
+connectAttr "L_Elbow_FK_Ctrl_translateX.o" "AleinDadRN.phl[100]";
+connectAttr "L_Elbow_FK_Ctrl_translateY.o" "AleinDadRN.phl[101]";
+connectAttr "L_Elbow_FK_Ctrl_translateZ.o" "AleinDadRN.phl[102]";
+connectAttr "L_Elbow_FK_Ctrl_rotateX.o" "AleinDadRN.phl[103]";
+connectAttr "L_Elbow_FK_Ctrl_rotateY.o" "AleinDadRN.phl[104]";
+connectAttr "L_Elbow_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[105]";
+connectAttr "L_Hand_FK_Ctrl_translateX.o" "AleinDadRN.phl[106]";
+connectAttr "L_Hand_FK_Ctrl_translateY.o" "AleinDadRN.phl[107]";
+connectAttr "L_Hand_FK_Ctrl_translateZ.o" "AleinDadRN.phl[108]";
+connectAttr "L_Hand_FK_Ctrl_rotateX.o" "AleinDadRN.phl[109]";
+connectAttr "L_Hand_FK_Ctrl_rotateY.o" "AleinDadRN.phl[110]";
+connectAttr "L_Hand_FK_Ctrl_rotateZ.o" "AleinDadRN.phl[111]";
+connectAttr "Neck_Ctrl_rotateX.o" "AleinDadRN.phl[112]";
+connectAttr "Neck_Ctrl_rotateY.o" "AleinDadRN.phl[113]";
+connectAttr "Neck_Ctrl_rotateZ.o" "AleinDadRN.phl[114]";
+connectAttr "Head_Ctrl_rotateX.o" "AleinDadRN.phl[115]";
+connectAttr "Head_Ctrl_rotateY.o" "AleinDadRN.phl[116]";
+connectAttr "Head_Ctrl_rotateZ.o" "AleinDadRN.phl[117]";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -1755,5 +1825,7 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 // End of AlienDadWalkCycle.ma
