@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: AleinDad.ma
-//Last modified: Fri, Apr 24, 2026 09:16:15 PM
+//Last modified: Fri, Apr 24, 2026 09:17:08 PM
 //Codeset: 1252
 file -rdi 1 -ns "sixFootMan__1_" -dr 1 -rfn "sixFootMan__1_RN" -op "mo=1" -typ
 		 "OBJ" "C:/Users/kylee/Documents/3DAnimationPorf/GitHubRepo/3DAnimation/sixFootMan (1).obj";
@@ -16,19 +16,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "D30BB758-4ECA-D06B-702A-BDA1B82C511F";
+fileInfo "UUID" "B1088E8F-44F5-6400-1DB0-51B259A95A1F";
 createNode transform -s -n "persp";
 	rename -uid "30DE45C6-450B-0097-2EA7-4AABAAEDFBBA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 278.38751120356869 368.03790411537869 1017.0404649841364 ;
-	setAttr ".r" -type "double3" -19.199999999998536 15.199999999999166 4.1198190648579121e-16 ;
+	setAttr ".t" -type "double3" 738.29955259402414 291.05025062171069 796.12111265880196 ;
+	setAttr ".r" -type "double3" -13.200000000000069 41.599999999999071 1.0633066337943915e-15 ;
 	setAttr ".rp" -type "double3" 4.6518344731794059e-14 -8.8817841970012523e-15 0 ;
 	setAttr ".rpt" -type "double3" 6.0209690638521961e-14 5.1631908768241874e-17 -2.9548202408975249e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8DF79C36-42FA-47ED-0593-18BCCF90583D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 1112.5761406670636;
+	setAttr ".coi" 1112.5761406666215;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
