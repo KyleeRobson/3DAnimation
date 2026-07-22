@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: AleinDad.ma
-//Last modified: Wed, Jul 22, 2026 03:30:20 PM
+//Last modified: Wed, Jul 22, 2026 03:31:12 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,19 +12,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "3E43BE7F-45E5-8CF0-FE37-39A22813476C";
+fileInfo "UUID" "2EFD23AB-4C22-1904-BA3E-A181BAF4F110";
 createNode transform -s -n "persp";
 	rename -uid "30DE45C6-450B-0097-2EA7-4AABAAEDFBBA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -32.853529364004714 14.735354723001379 647.19136109903252 ;
-	setAttr ".r" -type "double3" 9.5999999999958163 -5.5999999999997012 4.9934484218154243e-16 ;
+	setAttr ".t" -type "double3" 334.76795794568756 286.38365650757055 344.3895943236692 ;
+	setAttr ".r" -type "double3" -21.000000000004817 44.800000000000082 0 ;
 	setAttr ".rp" -type "double3" 4.6518344731794059e-14 -8.8817841970012523e-15 0 ;
 	setAttr ".rpt" -type "double3" 6.0209690638521961e-14 5.1631908768241874e-17 -2.9548202408975249e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8DF79C36-42FA-47ED-0593-18BCCF90583D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 624.19846549057843;
+	setAttr ".coi" 467.5404321318041;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -42696,15 +42696,15 @@ createNode nurbsCurve -n "Head_CtrlShape" -p "Head_Ctrl";
 		-0.79521288718989225 4.3080458944281181 0.82114943262097062
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B689B9B4-4C94-262A-CA24-EEB237FC624D";
+	rename -uid "5376F6A5-4185-E11F-7048-FAB612366E54";
 	setAttr -s 23 ".lnk";
 	setAttr -s 23 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7BE2FC05-405D-D887-DD65-E383F29AB58B";
+	rename -uid "51E6605B-4D97-F1E3-D093-5DBA3256CA26";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E3BAE8BE-4A61-AA8E-7911-13A5B2B36EBE";
+	rename -uid "1B7251CB-4F53-B570-CB56-3A92712F315F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "387DFBB2-4845-3AD5-4CC4-88A2845693FC";
+	rename -uid "4093298C-44FD-CFB6-9C89-7889B8A934E5";
 	setAttr ".cdl" 1;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
@@ -42712,7 +42712,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "6F0039CB-481A-5D0A-25D3-6C9DD46C895C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "07ECFEFC-4C3F-F05C-411F-67AD9F28E3C9";
+	rename -uid "BF352C75-416C-8970-6A08-7A852C2FD6F1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "52636BF2-4074-0724-024B-FA8052B8AEDE";
 	setAttr ".g" yes;
@@ -57813,7 +57813,7 @@ createNode displacementShader -n "displacementShader13";
 createNode bump2d -n "bump2d13";
 	rename -uid "E90F959C-41C2-45B0-C426-30A11578BC84";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.0000001e-05 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture14";
 	rename -uid "2ECE2DA3-42BB-431A-D887-1E8C8D75108D";
