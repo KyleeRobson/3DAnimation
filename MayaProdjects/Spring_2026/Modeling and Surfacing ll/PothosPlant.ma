@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: PothosPlant.ma
-//Last modified: Thu, Jul 23, 2026 03:29:28 PM
+//Last modified: Thu, Jul 23, 2026 03:30:26 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "1992A0B6-43B2-49F6-11B4-ACA80765540D";
+fileInfo "UUID" "92B3F85B-4B51-46FE-5B23-32BE36224DFA";
 createNode transform -s -n "persp";
 	rename -uid "3F68135F-4759-3F80-678D-FB8198F15DF4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.9811436863702738 59.413549981234439 84.084441026860816 ;
-	setAttr ".r" -type "double3" -35.671221119381613 -2902.5999999998976 -8.6127585638274973e-16 ;
+	setAttr ".t" -type "double3" -16.92335508893402 45.143922543212256 72.93842447915452 ;
+	setAttr ".r" -type "double3" -30.271221119516461 -2911.7999999998719 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A6FF7E5D-4E4A-8D11-90F7-14B06456DF1E";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 97.190664330968218;
+	setAttr ".coi" 84.12218529030973;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
